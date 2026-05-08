@@ -1,0 +1,9 @@
+{
+  "name": "vixlens-brand",
+  "version": "0.1.0",
+  "description": "Sistema de marca Vixlens — paleta, tipografia, voz e vocabulário canônico para documentos institucionais B2B",
+  "author": {
+    "name": "Otávio Torres"
+  },
+  "keywords": ["vixlens", "marca", "brand", "laboratorio-optico", "documentos"]
+}

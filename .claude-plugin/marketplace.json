@@ -1,0 +1,24 @@
+{
+  "name": "vixlens-marketplace",
+  "owner": {
+    "name": "Vixlens Laboratório Óptico",
+    "email": "contato@vixlens.com.br"
+  },
+  "metadata": {
+    "description": "Plugins oficiais Vixlens — sistema de marca, documentos institucionais e comunicação B2B",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "vixlens-brand",
+      "source": "vixlens-brand",
+      "description": "Sistema completo de marca Vixlens: paleta, tipografia, voz, vocabulário canônico e skills para comunicado interno, manual de cliente e proposta comercial B2B",
+      "version": "0.1.0",
+      "author": {
+        "name": "Otávio Torres"
+      },
+      "keywords": ["vixlens", "marca", "brand", "laboratorio-optico", "documentos", "b2b"]
+    }
+  ]
+}
