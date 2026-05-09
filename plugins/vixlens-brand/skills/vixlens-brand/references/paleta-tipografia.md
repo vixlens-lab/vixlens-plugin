@@ -153,3 +153,15 @@ Biblioteca padrão para interfaces digitais. CDN: `https://unpkg.com/@phosphor-i
 ### Steps numerados
 - Badge 24×24px, fundo Azul (#0439D9), radius 4px
 - Número: Mont Bold 12pt, Branco
+
+---
+
+## Design System — Links de referência
+
+| Recurso                    | URL                                                      |
+|----------------------------|----------------------------------------------------------|
+| DS publicado (produção)    | https://vixlens-plugin.vercel.app                        |
+| Repositório GitHub         | https://github.com/vixlens-lab/vixlens-plugin            |
+| Branch principal           | `main` — deploy automático via Vercel a cada push        |
+
+> Versão atual: DS 3.0 · Plugin v0.2.0 · Deploy: 08/05/2026
