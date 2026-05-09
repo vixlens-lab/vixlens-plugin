@@ -49,6 +49,6 @@ Antes de gerar output que:
 A Vixlens é um laboratório óptico B2B industrial em escala (meta: 2.000 jobs/dia até 2030, nova fábrica Indústria 4.0). Mentalidade de dono, objetividade industrial. Conteúdo é ativo estratégico, não enfeite. Cada documento serve um propósito explícito.
 
 **Design System publicado:**
-- **URL de produção:** https://vixlens-plugin.vercel.app
+- **URL de produção:** https://ds.vixlens.com.br
 - **Repositório GitHub:** https://github.com/vixlens-lab/vixlens-plugin
 - Deploy automático a cada push na branch `main`

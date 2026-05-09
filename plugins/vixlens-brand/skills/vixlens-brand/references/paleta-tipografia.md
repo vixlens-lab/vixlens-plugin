@@ -160,7 +160,7 @@ Biblioteca padrão para interfaces digitais. CDN: `https://unpkg.com/@phosphor-i
 
 | Recurso                    | URL                                                      |
 |----------------------------|----------------------------------------------------------|
-| DS publicado (produção)    | https://vixlens-plugin.vercel.app                        |
+| DS publicado (produção)    | https://ds.vixlens.com.br                        |
 | Repositório GitHub         | https://github.com/vixlens-lab/vixlens-plugin            |
 | Branch principal           | `main` — deploy automático via Vercel a cada push        |
 
