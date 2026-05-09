@@ -1,53 +1,127 @@
-# Paleta e Tipografia Vixlens
+# Paleta e Tipografia Vixlens — DS 3.0
 
-## Paleta oficial
+## Paleta primária de marca
 
-| Nome    | HEX       | Uso principal                                              |
-|---------|-----------|------------------------------------------------------------|
-| Amarelo | #FAC617   | Faixas de capa, labels de destaque, CTAs, alertas          |
-| Azul    | #0439D9   | Headers, badges de step, callouts de ação, elementos âncora|
-| Branco  | #FFFFFF   | Texto sobre Azul/Preto, fundo geral de página              |
-| Preto   | #000000   | Texto principal, elementos de alto contraste               |
+| Nome         | HEX       | Uso principal                                                  |
+|--------------|-----------|----------------------------------------------------------------|
+| Preto        | #1D1D1F   | Texto principal, fundos escuros, elementos de alto contraste   |
+| Amarelo      | #FAC617   | CTAs, faixas de capa, labels de destaque, identidade de marca  |
+| Azul         | #0439D9   | Headers, badges, elementos âncora, documentos institucionais   |
+| Branco       | #FFFFFF   | Texto sobre Azul/Preto, fundo padrão de página                 |
+| BG Cinza     | #F5F5F7   | Fundo de seção, cards, callouts — nunca dominante de página    |
+| Cinza médio  | #606F7F   | Texto secundário, bordas, metadados                            |
 
 ### Combinações aprovadas
-| Fundo    | Texto     | Uso                        |
-|----------|-----------|----------------------------|
-| #0439D9  | #FFFFFF   | Header, capa, badges       |
-| #FAC617  | #000000   | Faixas de destaque, labels |
-| #000000  | #FFFFFF   | Caixas âncora, seções dark |
-| #FFFFFF  | #000000   | Corpo de texto, fundo padrão|
-| #FAC617  | #0439D9   | Callouts de alto impacto   |
+| Fundo    | Texto    | Uso                             |
+|----------|----------|---------------------------------|
+| #1D1D1F  | #FFFFFF  | Fundos escuros, caixas âncora   |
+| #1D1D1F  | #FAC617  | Amarelo sobre preto — destaque  |
+| #0439D9  | #FFFFFF  | Capa, header, badges            |
+| #FAC617  | #1D1D1F  | Faixas de destaque, CTAs        |
+| #FFFFFF  | #1D1D1F  | Corpo de texto, fundo padrão    |
+| #F5F5F7  | #1D1D1F  | Cards, blocos secundários       |
 
 ---
 
-## Tipografia — Família Mont
+## Paleta de dashboard — estados semânticos
 
-Mont é uma fonte geométrica sem serifa. Pesos disponíveis:
-Thin · ExtraLight · Light · Regular · SemiBold · Bold · ExtraBold · Heavy
+Usada em interfaces digitais, dashboards e callouts de documentos.
 
-### Escala tipográfica
+| Nome        | HEX     | Estado                              |
+|-------------|---------|-------------------------------------|
+| Roxo        | #615FFF | Informativo / neutro UI             |
+| Coral       | #FF6566 | Crítico / alerta / erro             |
+| Amarelo     | #FCD341 | Destaque / atenção / pendente       |
+| Verde       | #30D389 | Sucesso / confirmação / ativo       |
+| Stroke      | #3E4D62 | Bordas e divisores no dashboard     |
+| BG Escuro   | #0B1220 | Background escuro dashboard         |
+| BG Card     | #2B3037 | Cards cinza escuro dashboard        |
 
-| Nível              | Peso Mont   | Tamanho | Caixa      | Uso                                          |
-|--------------------|-------------|---------|------------|----------------------------------------------|
-| Display / Logo     | Heavy       | 48pt    | Alta       | "VIXLENS" na capa                            |
-| Tagline capa       | SemiBold    | 13pt    | Alta       | "LABORATÓRIO ÓPTICO INDUSTRIAL"              |
-| Título documento   | ExtraBold   | 24pt    | Título     | Nome do documento na capa                   |
-| H1                 | Bold        | 20pt    | Título     | Seções principais do documento              |
-| H2                 | SemiBold    | 15pt    | Título     | Subseções                                   |
-| H3 / Label callout | SemiBold    | 11pt    | Alta       | Labels de callout, rótulos de tabela         |
-| Corpo              | Regular     | 11pt    | Normal     | Parágrafos, listas, FAQ                     |
-| Corpo destaque     | SemiBold    | 11pt    | Normal     | Termos canônicos em negrito dentro do corpo |
-| Caption / Footer   | Light       | 9pt     | Normal     | Rodapé, legendas, notas de versão           |
-| Badge step         | Bold        | 12pt    | Normal     | Número dentro do badge de step              |
+### Callouts de documentos — cores atualizadas
+| Tipo        | Barra lateral | Fundo   | Label (texto) |
+|-------------|---------------|---------|---------------|
+| Destaque    | #FCD341       | #FFFBEB | #92730A       |
+| Informativo | #615FFF       | #EFEFFF | #615FFF       |
+| Crítico     | #FF6566       | #FFF0F0 | #E03535       |
+| Sucesso     | #30D389       | #EDFBF4 | #1A9960       |
 
-### Regras de uso
+---
 
-- **Nunca** usar Thin ou ExtraLight em corpo de texto — legibilidade comprometida em impressão
-- **Heavy** reservado para display e logo — não usar em texto corrido
-- **Caixa alta** apenas em: logo, tagline, labels de callout, títulos de seção de alto impacto
-- **Itálico** não faz parte da identidade Vixlens — evitar
-- **Espaçamento de linha:** 1.4× o tamanho da fonte para corpo; 1.2× para títulos
-- **Tracking (espacejamento entre letras):** +50 a +80 em caixa alta (labels, tagline); 0 no corpo
+## Paleta secundária — Linha Reflecta
+
+Cada cor representa o **residual visual do tratamento antirreflexo** — a tonalidade percebida em reflexo na lente quando exposta à luz. Uso restrito a materiais da linha Reflecta.
+
+| Produto               | HEX     | Residual de cor       |
+|-----------------------|---------|-----------------------|
+| Reflecta BlueProtect SH | #134B97 | Residual azul       |
+| Reflecta Guard        | #00782D | Residual verde        |
+| Reflecta Express      | #92BB36 | Residual verde-limão  |
+
+---
+
+## Tipografia
+
+### Família principal — Mont (documentos e identidade)
+
+Font geométrica sem serifa. Pesos: Thin · ExtraLight · Light · Regular · SemiBold · Bold · ExtraBold · Heavy
+
+| Nível              | Peso Mont   | Tamanho | Caixa  | Uso                                           |
+|--------------------|-------------|---------|--------|-----------------------------------------------|
+| Display / Logo     | Heavy       | 48pt    | Alta   | "VIXLENS" na capa                             |
+| Tagline capa       | SemiBold    | 13pt    | Alta   | "LABORATÓRIO ÓPTICO INDUSTRIAL"               |
+| Título documento   | ExtraBold   | 24pt    | Título | Nome do documento na capa                    |
+| H1                 | Bold        | 20pt    | Título | Seções principais                            |
+| H2                 | SemiBold    | 15pt    | Título | Subseções                                    |
+| H3 / Label callout | SemiBold    | 11pt    | Alta   | Labels de callout, rótulos de tabela          |
+| Corpo              | Regular     | 11pt    | Normal | Parágrafos, listas, FAQ                      |
+| Corpo destaque     | SemiBold    | 11pt    | Normal | Termos canônicos em negrito no corpo         |
+| Caption / Footer   | Light       | 9pt     | Normal | Rodapé, legendas, notas de versão            |
+| Badge step         | Bold        | 12pt    | Normal | Número dentro do badge de step               |
+
+### Família secundária — Host Grotesk (interfaces digitais e web)
+
+Usada exclusivamente em contextos digitais: site, plataformas, dashboards, apresentações em tela.
+
+| Nível           | Peso          | Tamanho   | Uso                              |
+|-----------------|---------------|-----------|----------------------------------|
+| Display/Hero    | ExtraBold 800 | 48–64px   | Headlines principais             |
+| H1              | Bold 700      | 36–48px   | Títulos de seção                |
+| H2              | Bold 700      | 28–36px   | Subtítulos                      |
+| H3              | SemiBold 600  | 22–24px   | Cabeçalhos de card              |
+| Corpo grande    | Regular 400   | 18px      | Intro, lead                     |
+| Corpo padrão    | Regular 400   | 16px      | Texto principal                 |
+| Label / Caption | SemiBold 600  | 12–14px   | Labels, badges, navegação       |
+| Micro           | Regular 400   | 11px      | Metadados, notas                |
+
+**Regra:** Mont em documentos (Word, PDF, impressão). Host Grotesk em digital (HTML, app, dashboards). Nunca misturar na mesma peça.
+
+### Regras de tipografia
+
+- **Nunca** usar Thin ou ExtraLight em corpo de texto — legibilidade comprometida
+- **Heavy** reservado para display e logo
+- **Caixa alta** apenas em: logo, tagline, labels de callout, títulos de alto impacto
+- **Itálico** não faz parte da identidade Vixlens
+- **Line-height:** 1.6× para corpo; 1.2× para títulos
+- **Letter-spacing:** +0.1em em labels caixa alta; 0 no corpo
+
+---
+
+## Iconografia
+
+### Ícones de linha de produto (Cards Hero)
+SVG customizados do Figma Vixlens 3.0. Cada ícone é fixo à sua linha:
+- Freevix — círculo (lente)
+- AR Reflecta — símbolo AR (flocos)
+- Essilor — olho (eye)
+- Vix Academy — bookmark
+
+### Ícones de UI — Phosphor Icons
+Biblioteca padrão para interfaces digitais. CDN: `https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js`
+- Peso padrão: **Regular** (`ph ph-nome`)
+- Peso em botões: **Bold** (`ph-bold ph-nome`)
+- Estado ativo: **Fill** (`ph-fill ph-nome`)
+- Tamanho padrão: **24px**
+- Ícones de status usam cores do dashboard semântico
 
 ---
 
@@ -55,35 +129,27 @@ Thin · ExtraLight · Light · Regular · SemiBold · Bold · ExtraBold · Heavy
 
 ### Capa
 - Fundo: Azul (#0439D9)
-- Faixas Amarelo (#FAC617) no topo e na base (altura ~12% da página)
+- Faixas Amarelo (#FAC617) no topo e na base (altura ~12%)
 - Logo "VIXLENS" em Branco, Mont Heavy 48pt, centralizado
-- Tagline "LABORATÓRIO ÓPTICO INDUSTRIAL" em Branco, Mont SemiBold 13pt, tracking +60
-- Caixa "EM UMA FRASE": fundo Preto (#000000), label "EM UMA FRASE" em Amarelo Mont SemiBold 9pt caixa alta, texto em Branco Mont Regular 12pt
+- Tagline: Branco, Mont SemiBold 13pt, tracking +60
+- Caixa "EM UMA FRASE": fundo Preto (#1D1D1F), label Amarelo Mont SemiBold 9pt caixa alta, texto Branco Mont Regular 12pt
 
 ### Header de páginas internas
 - Barra Azul (#0439D9), altura ~10mm
-- "VIXLENS" em Branco Mont Bold à esquerda
-- Título do documento em Branco Mont Regular à direita
+- "VIXLENS" Branco Mont Bold à esquerda · Título do documento Branco Mont Regular à direita
 
 ### Footer de páginas internas
-- Linha divisória em #D1D5DB (cinza claro)
-- Esquerda: "Vixlens Laboratório Óptico — [mês/ano]" em Mont Light 9pt, cor #6B7280
-- Direita: "Página N" em Mont Light 9pt, cor #6B7280
+- Linha divisória #D1D5DB
+- "Vixlens Laboratório Óptico — [mês/ano]" Mont Light 9pt, #606F7F · "Página N" à direita
 
-### Callouts
-- Fundo: Amarelo claro (#FEF3C7) ou Azul claro (#EAF0FF), cantos arredondados 6px
-- Barra lateral 4px: Amarelo (#FAC617) para destaque, Azul (#0439D9) para informativo, Preto (#000000) para crítico
-- Label: Mont SemiBold 9pt caixa alta, cor da barra lateral
+### Callouts — cores atualizadas (DS 3.0)
+- **Destaque** → barra #FCD341, fundo #FFFBEB, label #92730A
+- **Informativo** → barra #615FFF, fundo #EFEFFF, label #615FFF
+- **Crítico** → barra #FF6566, fundo #FFF0F0, label #E03535
+- **Sucesso** → barra #30D389, fundo #EDFBF4, label #1A9960
+- Estrutura: border-radius 0 12px 12px 0 · borda lateral 4px · padding 16px 20px
+- Label: SemiBold 9pt · caixa alta · cor conforme tipo
 
 ### Steps numerados
-- Badge quadrado 24×24px, fundo Azul (#0439D9), cantos arredondados 4px
+- Badge 24×24px, fundo Azul (#0439D9), radius 4px
 - Número: Mont Bold 12pt, Branco
-- Texto do step ao lado: Mont Regular 11pt, Preto
-
-## Logo
-
-- Arquivo de referência: `logo_vixlens.pdf` (vetor — não incluído no plugin)
-- Palavra-marca: **VIXLENS** em Mont Heavy, caixa alta
-- Tagline institucional: **LABORATÓRIO ÓPTICO INDUSTRIAL** em Mont SemiBold, caixa alta
-- Uso em documentos: sempre Branco sobre fundo Azul; nunca sobre fundo claro sem versão adaptada
-- Clearance zone: margem mínima igual à altura da letra "V" em todos os lados
