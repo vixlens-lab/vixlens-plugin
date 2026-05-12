@@ -13,9 +13,11 @@ Ao ser invocada, carregue as três referências abaixo e aplique em qualquer out
 
 ## Comportamento padrão ao gerar qualquer documento Vixlens
 
+> **DS 3.1 — Regra irrefutável:** Cores primárias são Preto e Branco. Amarelo e Azul são accent colors — 60-30-10. Fundo da capa: Preto. Header: Preto. Azul só em dados.
+
 Aplique automaticamente:
 
-- **Paleta primária:** Preto #1D1D1F · Amarelo #FAC617 · Azul #0439D9 · Branco #FFFFFF · BG Cinza #F5F5F7 · Cinza médio #606F7F
+- **Paleta — regra 60-30-10:** Preto #1D1D1F + Branco #FFFFFF = 60% (dominantes) · Amarelo #FAC617 = ~15% (secondary — faixas, CTAs, labels) · Azul #0439D9 = ~5% (accent — apenas dados ou 1 elemento por doc). Fundo de capa: Preto. Header: Preto.
 - **Paleta dashboard (callouts e UI):** Roxo #615FFF · Coral #FF6566 · Amarelo #FCD341 · Verde #30D389
 - **Tipografia documentos:** Mont Heavy/ExtraBold/Bold/SemiBold/Regular/Light nos níveis corretos
 - **Tipografia digital:** Host Grotesk (ExtraBold 800 / Bold 700 / SemiBold 600 / Regular 400)
@@ -34,6 +36,8 @@ Aplique automaticamente:
 - [ ] Termos canônicos aplicados com grafia exata
 - [ ] Preto sempre #1D1D1F — nunca #000000
 - [ ] Callouts usam paleta dashboard, não as cores primárias da marca
+- [ ] Azul (#0439D9) não aparece em header, capa, badges ou bullets — apenas em dados
+- [ ] Amarelo não está em mais de 15% dos elementos visuais
 - [ ] Cliente citado? Verificar se há autorização — se não souber, sinalizar ao usuário
 
 ## Quando escalar para o Otávio

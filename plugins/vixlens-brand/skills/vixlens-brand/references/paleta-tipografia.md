@@ -1,25 +1,47 @@
 # Paleta e Tipografia Vixlens — DS 3.0
 
-## Paleta primária de marca
+> **Regra de ouro (60-30-10):** Preto e Branco são a base dominante (~60%). Amarelo é secondary — faixas finas, CTAs, labels de alto impacto (~15%). Azul é accent de último recurso — apenas em visualizações de dados ou 1 elemento por documento (~5%). Cor usada em excesso perde exclusividade e impacto.
 
-| Nome         | HEX       | Uso principal                                                  |
-|--------------|-----------|----------------------------------------------------------------|
-| Preto        | #1D1D1F   | Texto principal, fundos escuros, elementos de alto contraste   |
-| Amarelo      | #FAC617   | CTAs, faixas de capa, labels de destaque, identidade de marca  |
-| Azul         | #0439D9   | Headers, badges, elementos âncora, documentos institucionais   |
-| Branco       | #FFFFFF   | Texto sobre Azul/Preto, fundo padrão de página                 |
-| BG Cinza     | #F5F5F7   | Fundo de seção, cards, callouts — nunca dominante de página    |
-| Cinza médio  | #606F7F   | Texto secundário, bordas, metadados                            |
+## Paleta primária de marca — Hierarquia 60-30-10
 
-### Combinações aprovadas
-| Fundo    | Texto    | Uso                             |
-|----------|----------|---------------------------------|
-| #1D1D1F  | #FFFFFF  | Fundos escuros, caixas âncora   |
-| #1D1D1F  | #FAC617  | Amarelo sobre preto — destaque  |
-| #0439D9  | #FFFFFF  | Capa, header, badges            |
-| #FAC617  | #1D1D1F  | Faixas de destaque, CTAs        |
-| #FFFFFF  | #1D1D1F  | Corpo de texto, fundo padrão    |
-| #F5F5F7  | #1D1D1F  | Cards, blocos secundários       |
+| Nível      | Nome         | HEX       | Peso visual | Uso principal                                                              |
+|------------|--------------|-----------|-------------|----------------------------------------------------------------------------|
+| Primária   | Preto        | #1D1D1F   | ~60%        | Capa, header, fundos escuros, texto principal, badges de step, estrutura   |
+| Primária   | Branco       | #FFFFFF   | ~60%        | Fundo geral de página, texto sobre preto, áreas de respiro                 |
+| Secondary  | Amarelo      | #FAC617   | ~15%        | Faixas finas de capa/conclusão, labels de alto impacto, CTAs, número em badge |
+| Accent     | Azul         | #0439D9   | ~5%         | APENAS: fatia em gráfico de dados (3ª cor) ou 1 elemento por documento inteiro |
+| Suporte    | BG Cinza     | #F5F5F7   | —           | Fundo de seção, cards, callouts — nunca dominante de página                |
+| Suporte    | Cinza médio  | #606F7F   | —           | Texto secundário, bordas, metadados                                        |
+
+### Combinações aprovadas (revisadas DS 3.1)
+| Fundo    | Texto    | Uso                                                                 |
+|----------|----------|---------------------------------------------------------------------|
+| #1D1D1F  | #FFFFFF  | Capa, headers, slides escuros, elementos âncora — uso dominante     |
+| #FFFFFF  | #1D1D1F  | Fundo geral de slides, cards, corpo de texto — uso dominante        |
+| #FAC617  | #1D1D1F  | Faixas finas de accent, labels de alto impacto                      |
+| #1D1D1F  | #FAC617  | Badge de step, número em destaque sobre preto                       |
+| #F5F5F7  | #1D1D1F  | Cards, blocos secundários                                           |
+| #FAC617  | #0439D9  | Callout de altíssimo impacto — usar com extrema moderação           |
+
+### Elementos que usam Amarelo (aceitável)
+- Faixas finas no topo/base da capa e conclusão
+- Label "EM UMA FRASE" na capa
+- Linha divisória em slides escuros
+- Badge de numeração (número sobre fundo Preto)
+- Borda de destaque em card "CENÁRIO RECOMENDADO"
+- CTAs de alto impacto (máximo 1 por slide)
+
+### Elementos que NÃO devem usar Amarelo nem Azul
+- Bullets de listas → Preto
+- Labels de seção (TÁTICAS, FORMATOS, MÉTRICAS etc.) → Preto
+- Headers de cards e colunas → Preto
+- Barras laterais de conteúdo → Preto
+- Badges de step em slides de conteúdo → Preto com número Amarelo
+
+### Quando usar Azul
+O Azul (#0439D9) é reservado para:
+- Fatia em gráfico de dados (onde é necessária 3ª cor distinta)
+- Máximo 1 elemento de destaque por documento inteiro, quando nem Amarelo nem Preto resolverem o problema visual
 
 ---
 
@@ -128,15 +150,15 @@ Biblioteca padrão para interfaces digitais. CDN: `https://unpkg.com/@phosphor-i
 ## Estrutura de documento padrão
 
 ### Capa
-- Fundo: Azul (#0439D9)
-- Faixas Amarelo (#FAC617) no topo e na base (altura ~12%)
+- Fundo: Preto (#1D1D1F)
+- Faixas Amarelo (#FAC617) finas no topo e na base (altura ~7% — faixas estreitas, não largas)
 - Logo "VIXLENS" em Branco, Mont Heavy 48pt, centralizado
 - Tagline: Branco, Mont SemiBold 13pt, tracking +60
-- Caixa "EM UMA FRASE": fundo Preto (#1D1D1F), label Amarelo Mont SemiBold 9pt caixa alta, texto Branco Mont Regular 12pt
+- Caixa "EM UMA FRASE": fundo Preto (#1D1D1F) com borda Amarelo, label Amarelo Mont SemiBold 9pt caixa alta, texto Branco Mont Regular 12pt
 
 ### Header de páginas internas
-- Barra Azul (#0439D9), altura ~10mm
-- "VIXLENS" Branco Mont Bold à esquerda · Título do documento Branco Mont Regular à direita
+- Barra Preto (#1D1D1F), altura ~10mm
+- "VIXLENS" Branco Mont Bold à esquerda · Título do documento Amarelo Mont Bold à direita
 
 ### Footer de páginas internas
 - Linha divisória #D1D5DB
@@ -151,8 +173,8 @@ Biblioteca padrão para interfaces digitais. CDN: `https://unpkg.com/@phosphor-i
 - Label: SemiBold 9pt · caixa alta · cor conforme tipo
 
 ### Steps numerados
-- Badge 24×24px, fundo Azul (#0439D9), radius 4px
-- Número: Mont Bold 12pt, Branco
+- Badge 24×24px, fundo Preto (#1D1D1F), radius 4px
+- Número: Mont Bold 12pt, Amarelo (#FAC617)
 
 ---
 

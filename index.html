@@ -15,7 +15,7 @@
       /* ── Cores primárias ── */
       --preto:   #1D1D1F;  /* Texto, botões, elementos âncora */
       --amarelo: #FAC617;  /* Destaque, CTAs, labels */
-      --azul:    #0439D9;  /* Headers, badges, callouts */
+      --azul:    #0439D9;  /* ACCENT ~5% — apenas dados/1 elemento por doc */
       --branco:  #FFFFFF;  /* Fundos, texto sobre escuro */
 
       /* ── Cores neutras (extraídas do Figma Vixlens 3.0) ── */
@@ -817,6 +817,28 @@
       </p>
     </div>
 
+    <!-- Regra 60-30-10 -->
+    <div style="background:#1D1D1F;border-radius:12px;padding:24px 28px;margin-bottom:28px;display:flex;flex-wrap:wrap;gap:16px;align-items:stretch;">
+      <div style="flex:1;min-width:200px;">
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#FAC617;margin-bottom:8px;">Regra 60-30-10</div>
+        <div style="font-size:13px;color:#FFFFFF;line-height:1.6;">Preto e Branco dominam. Amarelo aparece com parcimônia. Azul é reserva de último recurso.</div>
+      </div>
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <div style="width:56px;height:56px;background:#1D1D1F;border:2px solid #FFFFFF;border-radius:8px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#FFFFFF;">60%</div>
+          <div style="font-size:9px;color:#9CA3AF;">Preto/Branco</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:48px;height:48px;background:#FAC617;border-radius:8px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#1D1D1F;">15%</div>
+          <div style="font-size:9px;color:#9CA3AF;">Amarelo</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:36px;height:36px;background:#0439D9;border-radius:8px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#FFFFFF;">5%</div>
+          <div style="font-size:9px;color:#9CA3AF;">Azul</div>
+        </div>
+      </div>
+    </div>
+
     <!-- Paleta primária -->
     <div class="subsection-title">Paleta primária</div>
     <div class="color-grid-primary">
@@ -1063,7 +1085,7 @@
         <div class="combo-label"><div class="combo-label-text">Faixas de destaque<br>Labels</div></div>
       </div>
       <div class="combo-card">
-        <div class="combo-preview" style="background:#0439D9;color:#FFFFFF;">Azul / Branco</div>
+        <div class="combo-preview" style="background:#0439D9;color:#FFFFFF;">Azul / Branco<br><small style="font-size:9px;opacity:.8">~5% accent</small></div>
         <div class="combo-label"><div class="combo-label-text">Docs · Badges<br>Headers</div></div>
       </div>
       <div class="combo-card">
@@ -1944,7 +1966,7 @@
       </div>
       <div class="rule-item">
         <div class="rule-icon no">✗</div>
-        <span class="rule-text">Não usar Azul (#0439D9) como cor de botão no site — Azul é reservado para documentos e badges internos.</span>
+        <span class="rule-text">Azul (#0439D9) é accent de último recurso (~5%) — não usar em headers, capas, badges ou bullets. Reservado para gráficos de dados (3ª cor distinta) ou 1 elemento por documento.</span>
       </div>
       <div class="rule-item">
         <div class="rule-icon no">✗</div>
@@ -2099,7 +2121,7 @@
 
       <!-- V5 -->
       <div style="border:1px solid #E5E7EB;border-radius:16px;overflow:hidden;">
-        <div style="background:#0439D9;padding:16px 24px;display:flex;align-items:center;gap:12px;">
+        <div style="background:#1D1D1F;padding:16px 24px;display:flex;align-items:center;gap:12px;">
           <span style="font-family:'Host Grotesk',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FAC617;background:rgba(250,198,23,.15);padding:4px 10px;border-radius:4px;">V5</span>
           <span style="font-family:'Host Grotesk',sans-serif;font-size:15px;font-weight:700;color:#FFFFFF;">Visão estratégica</span>
           <span style="margin-left:auto;font-size:12px;color:rgba(255,255,255,.4);">Otávio (pontual) · Diego Freitas</span>
@@ -3596,7 +3618,7 @@ import &#123; Eye, ShieldCheck, Star &#125;
           </div>
         </div>
         <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;">
-          <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Fundo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Preto #1D1D1F · Fotos escuras · Azul #0439D9</div></div>
+          <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Fundo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Preto #1D1D1F · Fotos escuras · Evitar Azul como fundo</div></div>
           <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Arquivo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Camada_1.svg</div></div>
         </div>
       </div>
