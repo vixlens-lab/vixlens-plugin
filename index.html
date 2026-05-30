@@ -959,6 +959,64 @@
         grid-template-columns: repeat(4, 1fr) !important;
       }
 
+      /* Combinações aprovadas (.combo-grid é classe, não inline) → 2x2 mobile */
+      .combo-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+      .combo-preview { font-size: 13px !important; padding: 16px 14px !important; }
+      .combo-label { padding: 12px 14px !important; }
+      .combo-label-text { font-size: 11px !important; }
+
+      /* Token grid (border-radius) também é classe */
+      .token-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+      }
+
+      /* Coming-soon-grid */
+      .coming-soon-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+
+      /* Typo rules grid */
+      .typo-rules-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Combo-grid já agrupa, mas vamos garantir */
+      [class*="combo-grid"], [class*="token-grid"] {
+        max-width: 100%;
+      }
+
+      /* ── Badges Reflecta no demo (Cores): empilhar vertical ── */
+      /* É um flex container com gap, vou forçar column */
+      .section#cores [style*="background:var(--bg-cinza)"][style*="display:flex"][style*="flex-wrap:wrap"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        padding: 20px 16px !important;
+      }
+      /* Cada badge ocupa linha inteira mas mantém tamanho natural */
+      .section#cores [style*="background:var(--bg-cinza)"][style*="display:flex"] > div {
+        width: 100%;
+        text-align: center;
+      }
+
+      /* ── Regras de uso: ✓ permitidos em cima, ✗ proibidos embaixo ── */
+      .rules-list {
+        display: flex;
+        flex-direction: column;
+      }
+      .rules-list .rule-item:has(.rule-icon.ok) { order: 1; }
+      .rules-list .rule-item:has(.rule-icon.no) { order: 2; }
+      /* Adiciona separador visual entre permitidos e proibidos */
+      .rules-list .rule-item:has(.rule-icon.no):first-of-type {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px dashed var(--gray-200);
+      }
+
       /* ── Tabelas plain HTML (não .scale-table) → fonte menor + scroll fluido ── */
       table:not(.scale-table) {
         font-size: 11px !important;
