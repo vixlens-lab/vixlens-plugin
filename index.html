@@ -817,67 +817,148 @@
 
     /* ── Mobile (≤768px) — sidebar vira drawer ── */
     @media (max-width: 768px) {
-      body { display: block; }
+      html {
+        scroll-padding-top: 16px;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        display: block;
+        -webkit-overflow-scrolling: touch;
+      }
 
       .sidebar {
         width: 280px;
         max-width: 85vw;
         transform: translateX(-100%);
         transition: transform 0.3s cubic-bezier(.4,0,.2,1);
-        box-shadow: 4px 0 24px rgba(0,0,0,0.18);
+        box-shadow: 4px 0 24px rgba(0,0,0,0.22);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
       }
       .sidebar.open { transform: translateX(0); }
 
-      .sidebar-toggle { display: flex; }
+      .sidebar-toggle {
+        display: flex;
+        top: calc(12px + env(safe-area-inset-top));
+        right: calc(12px + env(safe-area-inset-right));
+      }
 
       .main { margin-left: 0; }
 
-      /* Hero & seções: padding e fontes reduzidas */
-      .section {
-        padding: 40px 20px;
-        scroll-margin-top: 20px;
+      /* Hero — borda 3px no mobile (5px fica grosso demais) */
+      .hero { padding: 64px 20px 40px; }
+      .hero::before, .hero::after { height: 3px; }
+      .hero-title {
+        font-size: 32px;
+        letter-spacing: 0.03em;
+        line-height: 1.05;
       }
-      .section-header { margin-bottom: 28px; }
-      .hero { padding: 56px 20px 40px; }
-      .hero-title { font-size: 28px; letter-spacing: 0.04em; }
-      .hero-subtitle { font-size: 11px; margin-bottom: 24px; }
-      .hero-desc { font-size: 13px; }
-      .section-title { font-size: 22px; }
+      .hero-subtitle {
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        margin-bottom: 20px;
+      }
+      .hero-desc { font-size: 13px; line-height: 1.6; }
+      .hero-eyebrow { font-size: 10px; margin-bottom: 12px; }
+
+      /* Sections */
+      .section {
+        padding: 48px 20px;
+        scroll-margin-top: 16px;
+      }
+      .section-header { margin-bottom: 32px; }
+      .section-title { font-size: 22px; line-height: 1.25; }
       .section-eyebrow { font-size: 9px; }
       .section-desc { font-size: 13px; }
-      .subsection-title { font-size: 10px; margin-bottom: 16px; }
+      .subsection-title { font-size: 10px; margin-bottom: 16px; margin-top: 32px; }
 
-      /* Grids inline (style="...repeat(N, 1fr)") → 1 coluna */
+      /* Grids inline → 1 coluna na maioria, 2 colunas onde faz sentido */
       [style*="grid-template-columns:repeat(2,1fr)"],
       [style*="grid-template-columns:repeat(3,1fr)"],
-      [style*="grid-template-columns:repeat(4,1fr)"],
       [style*="grid-template-columns: repeat(2"],
       [style*="grid-template-columns: repeat(3"],
-      [style*="grid-template-columns: repeat(4"],
       [style*="grid-template-columns:1fr 1fr"],
       [style*="grid-template-columns: 1fr 1fr"] {
         grid-template-columns: 1fr !important;
       }
-      /* Grids com primeira coluna fixa (ícones de linha de produto) → stack */
+      /* Grids de 4 colunas (botões estados, etc): viram 2 colunas — melhor aproveitamento */
+      [style*="grid-template-columns:repeat(4,1fr)"],
+      [style*="grid-template-columns: repeat(4"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+      /* Cards de produto ícones (200px 1fr 1fr) → stack vertical */
       [style*="grid-template-columns:200px 1fr 1fr"] {
         grid-template-columns: 1fr !important;
       }
-      /* Grids nomeados */
+      /* font-intro Host/Mont (1fr 1fr) → 1 col */
+      .font-intro {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+      .font-card { padding: 24px; }
+      /* Color grids */
       .color-grid-primary,
       .color-grid-secondary { grid-template-columns: 1fr !important; }
+      .color-swatch { height: 88px; padding: 12px 14px; }
+      .color-swatch-name { font-size: 14px; }
+      .color-meta { padding: 14px; }
 
-      /* Tabelas largas: scroll horizontal com indicação visual */
-      .scale-table {
+      /* ── Tabelas escala viram CARDS no mobile ── */
+      .scale-table,
+      .scale-table tbody { display: block; width: 100%; }
+      .scale-table thead { display: none; }
+      .scale-table tr {
         display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-        font-size: 11px;
+        background: var(--branco);
         border: 1px solid var(--gray-200);
-        border-radius: 8px;
+        border-radius: 12px;
+        margin-bottom: 12px;
+        padding: 16px;
+        page-break-inside: avoid;
       }
-      .scale-table tbody td,
-      .scale-table thead th { padding: 10px 12px; }
-      .scale-row-preview { min-width: 220px; }
+      .scale-table td {
+        display: block;
+        padding: 6px 0 !important;
+        border: none !important;
+        min-width: 0 !important;
+        white-space: normal !important;
+      }
+      /* Linha agrupadora de seção (Display, UI, Body, etc) */
+      .scale-table td[colspan] {
+        background: transparent;
+        padding: 0 0 8px 0 !important;
+      }
+      .scale-table tr:has(td[colspan]) {
+        background: transparent;
+        border: none;
+        padding: 16px 0 4px;
+        margin-bottom: 0;
+      }
+      /* Meta da escala (nome + tags) fica em cima */
+      .scale-row-meta {
+        padding: 0 0 12px 0 !important;
+        border-bottom: 1px solid var(--gray-100) !important;
+        margin-bottom: 12px;
+      }
+      .scale-label { font-size: 11px; margin-bottom: 8px; }
+      .scale-details { gap: 4px; }
+      .scale-tag { font-size: 9px; padding: 2px 6px; }
+      /* Preview do tipo cresce livre */
+      .scale-row-preview {
+        padding: 16px !important;
+        background: var(--bg-cinza);
+        border-radius: 8px;
+        min-width: 0 !important;
+      }
+      .scale-row-preview > div { max-width: 100% !important; }
+      /* Tabela print Mont — 3 colunas viram cards */
+      .scale-table tr td:nth-child(3) {
+        margin-top: 12px;
+        font-size: 11px;
+        color: var(--gray-500);
+      }
 
       /* Download card vira vertical */
       .download-card {
@@ -886,13 +967,17 @@
         text-align: left;
         padding: 24px;
         gap: 16px;
+        border-radius: 16px;
       }
-      .download-card .btn-download { align-self: flex-start; }
+      .download-card .btn-download { align-self: flex-start; padding: 12px 18px; }
+      .download-card-title { font-size: 16px; }
+      .download-card-desc { font-size: 12px; }
 
-      /* Logo principal: padding interno menor */
+      /* Padding interno generoso vira menor */
       [style*="padding:48px"] { padding: 28px 20px !important; }
+      [style*="padding: 48px"] { padding: 28px 20px !important; }
 
-      /* Logotipo cards (4 versões Vixlens): flex column */
+      /* Logotipo cards (4 versões Vixlens): preview vertical */
       .section#logotipo [style*="display:flex;align-items:center;justify-content:space-between"] {
         flex-direction: column;
         align-items: flex-start !important;
@@ -900,22 +985,72 @@
         text-align: left !important;
       }
       .section#logotipo [style*="text-align:right"] { text-align: left !important; }
+      /* Logo SVG dentro do preview não estoura */
+      .section#logotipo svg { max-width: 100%; height: auto; }
 
-      /* Botões download menores */
-      .btn-download { font-size: 12px; padding: 9px 14px; }
+      /* Cards de produto (Iconografia): previews em altura razoável */
+      .section#iconografia [style*="grid-template-columns:200px 1fr 1fr"] > div {
+        min-height: auto !important;
+      }
+      .section#iconografia [style*="padding:40px"] { padding: 32px 20px !important; }
+
+      /* Cards Reflecta: previews em altura razoável e padding ajustado */
+      [style*="min-height:160px"] { min-height: 120px !important; }
+
+      /* Botões download */
+      .btn-download {
+        font-size: 12px;
+        padding: 10px 14px;
+        min-height: 40px;
+      }
+      .download-row { gap: 6px; }
+
+      /* Rules list */
+      .rule-item {
+        flex-direction: row;
+        gap: 10px;
+        padding: 12px;
+      }
+
+      /* Inputs section, etc — input field não estoura */
+      input, textarea, select { max-width: 100%; }
+
+      /* Scroll horizontal pra elementos que precisam (callouts grandes, etc) */
+      [style*="overflow:hidden"]:not(.section):not(.color-card):not(.font-card) {
+        max-width: 100%;
+      }
     }
 
     /* ── Mobile small (≤480px) ── */
     @media (max-width: 480px) {
-      .section { padding: 32px 16px; }
-      .hero { padding: 40px 16px 32px; }
-      .hero-title { font-size: 22px; }
-      .hero-eyebrow { font-size: 10px; }
+      .section { padding: 40px 16px; }
+      .section-header { margin-bottom: 28px; }
+      .hero { padding: 56px 16px 36px; }
+      .hero-title { font-size: 26px; }
+      .hero-subtitle { font-size: 10px; margin-bottom: 18px; }
+      .hero-eyebrow { font-size: 9px; }
       .section-title { font-size: 20px; }
-      .btn-download { font-size: 11px; padding: 8px 12px; }
-      .download-card { padding: 20px; border-radius: 16px; }
-      .download-card-title { font-size: 16px; }
-      .download-card-desc { font-size: 12px; }
+      .section-desc { font-size: 12px; }
+      .subsection-title { font-size: 9px; }
+      .btn-download {
+        font-size: 11px;
+        padding: 9px 12px;
+        min-height: 38px;
+      }
+      .btn-download svg { width: 12px; height: 12px; }
+      .download-card { padding: 20px; border-radius: 14px; }
+      .download-card-title { font-size: 15px; }
+      .download-card-desc { font-size: 11px; line-height: 1.55; }
+      .font-card { padding: 20px; }
+      .color-swatch { height: 76px; }
+      .color-swatch-name { font-size: 13px; }
+      .scale-table tr { padding: 14px; }
+      .sidebar-toggle {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+      }
+      .sidebar-toggle svg { width: 20px; height: 20px; }
     }
   </style>
     <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
