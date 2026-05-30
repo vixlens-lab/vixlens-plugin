@@ -1141,6 +1141,13 @@
         scroll-snap-align: start;
       }
 
+      /* ── Botões Tamanhos — empilha no mobile ── */
+      .btn-sizes {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 24px !important;
+      }
+
       /* ── "O que evitar" — 4 cards viram carrossel scroll-x ── */
       .evitar-grid {
         display: flex !important;
@@ -4290,7 +4297,7 @@ import &#123; Eye, ShieldCheck, Star &#125;
 
     <!-- Tamanhos -->
     <div class="subsection-title">Tamanhos</div>
-    <div class="btn-sizes" style="border:1px solid #E5E7EB;border-radius:16px;padding:40px;background:#F5F5F7;display:flex;flex-direction:column;align-items:center;gap:24px;justify-content:center;margin-bottom:56px;">
+    <div class="btn-sizes" style="border:1px solid #E5E7EB;border-radius:16px;padding:40px;background:#F5F5F7;display:flex;align-items:flex-end;gap:32px;justify-content:center;margin-bottom:56px;">
       <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
         <button style="background:#1D1D1F;color:#F5F5F7;font-family:'Host Grotesk',sans-serif;font-size:14px;font-weight:700;padding:10px 22px;border-radius:32px;border:none;cursor:pointer;">Pequeno →</button>
         <span style="font-size:10px;font-weight:600;color:#6B7280;text-transform:uppercase;letter-spacing:.08em;">SM · 14px · 10/22px</span>
