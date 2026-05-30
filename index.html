@@ -1148,6 +1148,26 @@
         gap: 24px !important;
       }
 
+      /* ── Comparativo AR — badges descem pra base no mobile ── */
+      .comparativo-badge {
+        top: auto !important;
+        bottom: 30px !important;
+        transform: none !important;
+        width: 42%;
+        padding: 14px 12px !important;
+        border-radius: 12px !important;
+      }
+      .comparativo-badge-bad { left: 4% !important; }
+      .comparativo-badge-good { right: 4% !important; }
+      .comparativo-badge > div:first-child {
+        font-size: 11px !important;
+        margin-bottom: 6px !important;
+      }
+      .comparativo-badge > div:last-child {
+        font-size: 10px !important;
+        line-height: 1.4;
+      }
+
       /* ── "O que evitar" — 4 cards viram carrossel scroll-x ── */
       .evitar-grid {
         display: flex !important;
@@ -1992,12 +2012,12 @@
       <!-- Linha divisória central -->
       <div style="position:absolute;top:0;bottom:0;left:50%;width:2px;background:rgba(255,255,255,.6);box-shadow:0 0 8px rgba(255,255,255,.4);"></div>
       <!-- Label esquerda — sem AR -->
-      <div style="position:absolute;top:50%;left:8%;transform:translateY(-50%);background:rgba(220,38,38,.9);backdrop-filter:blur(4px);border-radius:10px;padding:10px 16px;text-align:center;">
+      <div class="comparativo-badge comparativo-badge-bad" style="position:absolute;top:50%;left:8%;transform:translateY(-50%);background:rgba(220,38,38,.9);backdrop-filter:blur(4px);border-radius:10px;padding:10px 16px;text-align:center;">
         <div style="font-size:10px;font-weight:700;color:#fff;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px;">✗ Sem AR</div>
         <div style="font-size:11px;color:rgba(255,255,255,.8);">Reflexo opaco · olhos encobertos</div>
       </div>
       <!-- Label direita — Reflecta AR -->
-      <div style="position:absolute;top:50%;right:8%;transform:translateY(-50%);background:rgba(16,161,102,.9);backdrop-filter:blur(4px);border-radius:10px;padding:10px 16px;text-align:center;">
+      <div class="comparativo-badge comparativo-badge-good" style="position:absolute;top:50%;right:8%;transform:translateY(-50%);background:rgba(16,161,102,.9);backdrop-filter:blur(4px);border-radius:10px;padding:10px 16px;text-align:center;">
         <div style="font-size:10px;font-weight:700;color:#fff;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px;">✓ Reflecta AR</div>
         <div style="font-size:11px;color:rgba(255,255,255,.8);">Residual mínimo · olhos visíveis</div>
       </div>
