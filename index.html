@@ -1134,11 +1134,36 @@
       .section#cards [style*="position:absolute"][style*="bottom:-28px"] {
         display: none !important;
       }
-      /* Preview do card centraliza */
-      .section#cards [style*="position:relative"] {
-        display: flex;
-        justify-content: center;
-        width: 100%;
+      /* Preview do card centraliza e cresce no mobile (mantém proporção 215/340) */
+      .card-anatomy-wrap {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+      }
+      .card-anatomy-frame {
+        width: 290px !important;
+        height: 460px !important;
+        border-radius: 36px !important;
+        padding: 16px 14px !important;
+        gap: 14px !important;
+      }
+      .card-anatomy-image {
+        width: 100% !important;
+        height: 190px !important;
+        border-radius: 26px !important;
+      }
+      .card-anatomy-image span { font-size: 11px !important; }
+      .card-anatomy-cta {
+        height: 38px !important;
+        border-radius: 20px !important;
+      }
+      .card-anatomy-cta span { font-size: 11px !important; }
+      /* Conteúdo skeleton (bars) cresce também */
+      .card-anatomy-frame > div:nth-child(2) > div {
+        height: 14px !important;
+      }
+      .card-anatomy-frame > div:nth-child(2) > div:first-child {
+        height: 18px !important;
       }
       /* font-intro Host/Mont (1fr 1fr) → 1 col */
       .font-intro {
@@ -3357,11 +3382,11 @@
     <div style="display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:start;margin-bottom:56px;">
 
       <!-- Preview do card -->
-      <div style="position:relative;">
+      <div class="card-anatomy-wrap" style="position:relative;">
         <!-- Card frame -->
-        <div style="width:215px;height:340px;border-radius:28px;background:#FFFFFF;border:1px solid #E5E7EB;padding:12px 10px;display:flex;flex-direction:column;align-items:center;gap:10px;box-shadow:0 4px 24px rgba(0,0,0,.06);">
+        <div class="card-anatomy-frame" style="width:215px;height:340px;border-radius:28px;background:#FFFFFF;border:1px solid #E5E7EB;padding:12px 10px;display:flex;flex-direction:column;align-items:center;gap:10px;box-shadow:0 4px 24px rgba(0,0,0,.06);">
           <!-- Imagem principal -->
-          <div style="width:190px;height:140px;border-radius:20px;background:#F5F5F7;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <div class="card-anatomy-image" style="width:190px;height:140px;border-radius:20px;background:#F5F5F7;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
             <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#9CA3AF;">380 × 280px</span>
           </div>
           <!-- Conteúdo -->
@@ -3373,7 +3398,7 @@
           </div>
           <!-- CTA area -->
           <div style="width:100%;padding:0 4px;">
-            <div style="height:28px;border-radius:16px;background:#1D1D1F;width:100%;display:flex;align-items:center;justify-content:center;">
+            <div class="card-anatomy-cta" style="height:28px;border-radius:16px;background:#1D1D1F;width:100%;display:flex;align-items:center;justify-content:center;">
               <span style="font-size:9px;font-weight:700;color:#fff;letter-spacing:.04em;">CTA →</span>
             </div>
           </div>
