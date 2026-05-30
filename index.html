@@ -880,8 +880,11 @@
       [style*="grid-template-columns: repeat(2"],
       [style*="grid-template-columns: repeat(3"],
       [style*="grid-template-columns:1fr 1fr"],
-      [style*="grid-template-columns: 1fr 1fr"] {
+      [style*="grid-template-columns: 1fr 1fr"],
+      [style*="grid-template-columns:auto 1fr"],
+      [style*="grid-template-columns: auto 1fr"] {
         grid-template-columns: 1fr !important;
+        gap: 24px !important;
       }
       /* Grids de 4 colunas (botões estados, etc): viram 2 colunas — melhor aproveitamento */
       [style*="grid-template-columns:repeat(4,1fr)"],
@@ -891,6 +894,59 @@
       /* Cards de produto ícones (200px 1fr 1fr) → stack vertical */
       [style*="grid-template-columns:200px 1fr 1fr"] {
         grid-template-columns: 1fr !important;
+      }
+      /* Tokens de espaçamento (80px 64px 1fr 260px) — 4 cols fixas viram grid 2 cols com áreas */
+      [style*="grid-template-columns:80px 64px 1fr 260px"] {
+        grid-template-columns: 60px 1fr !important;
+        grid-template-areas:
+          "token nome"
+          "barra desc" !important;
+        gap: 6px 12px !important;
+        padding: 12px 14px !important;
+      }
+      [style*="grid-template-columns:80px 64px 1fr 260px"] > *:nth-child(1) { grid-area: token; align-self: center; }
+      [style*="grid-template-columns:80px 64px 1fr 260px"] > *:nth-child(2) { grid-area: nome; align-self: center; }
+      [style*="grid-template-columns:80px 64px 1fr 260px"] > *:nth-child(3) {
+        grid-area: barra;
+        justify-self: start;
+        align-self: center;
+      }
+      [style*="grid-template-columns:80px 64px 1fr 260px"] > *:nth-child(4) {
+        grid-area: desc;
+        font-size: 11px !important;
+        line-height: 1.4 !important;
+      }
+      /* Grid 8 colunas (ícones recomendados Phosphor) → 4 cols */
+      [style*="grid-template-columns:repeat(8,1fr)"],
+      [style*="grid-template-columns: repeat(8"] {
+        grid-template-columns: repeat(4, 1fr) !important;
+      }
+
+      /* ── Tabelas plain HTML (não .scale-table) → fonte menor + scroll fluido ── */
+      table:not(.scale-table) {
+        font-size: 11px !important;
+        min-width: 100%;
+      }
+      table:not(.scale-table) th,
+      table:not(.scale-table) td {
+        padding: 8px 10px !important;
+      }
+      /* Garante que wrappers com overflow-x:auto exibam scroll bonito */
+      [style*="overflow-x:auto"] {
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+      }
+
+      /* ── Cards anatomia (seção 08): cotas absolutas saem do caminho ── */
+      .section#cards [style*="position:absolute"][style*="right:-52px"],
+      .section#cards [style*="position:absolute"][style*="bottom:-28px"] {
+        display: none !important;
+      }
+      /* Preview do card centraliza */
+      .section#cards [style*="position:relative"] {
+        display: flex;
+        justify-content: center;
+        width: 100%;
       }
       /* font-intro Host/Mont (1fr 1fr) → 1 col */
       .font-intro {
