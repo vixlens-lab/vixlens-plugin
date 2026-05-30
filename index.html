@@ -4354,94 +4354,91 @@ import &#123; Eye, ShieldCheck, Star &#125;
       </p>
     </div>
 
-    <!-- Input padrão -->
+    <!-- Input padrão — exemplos full-width seguindo padrão do Formulário Figma -->
     <div class="subsection-title">Input texto — padrão</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:48px;">
-
-      <div style="border:1px solid #E5E7EB;border-radius:16px;overflow:hidden;">
-        <div style="background:#F5F5F7;padding:40px;display:flex;flex-direction:column;gap:14px;">
+    <div style="border:1px solid #E5E7EB;border-radius:16px;overflow:hidden;margin-bottom:24px;">
+      <div style="background:#F5F5F7;padding:40px;display:flex;flex-direction:column;gap:14px;align-items:center;">
+        <div style="display:flex;flex-direction:column;gap:14px;width:400px;max-width:100%;">
           <div style="border:1px solid #606F7F;border-radius:12px;height:56px;display:flex;align-items:center;padding:0 20px;background:#fff;">
-            <span style="font-family:'Host Grotesk',sans-serif;font-size:18px;font-weight:400;color:#606F7F;">Nome da Ótica</span>
+            <span style="font-family:'Host Grotesk',sans-serif;font-size:18px;color:#606F7F;">Nome da Ótica</span>
           </div>
           <div style="border:1px solid #606F7F;border-radius:12px;height:56px;display:flex;align-items:center;padding:0 20px;background:#fff;">
-            <span style="font-family:'Host Grotesk',sans-serif;font-size:18px;font-weight:400;color:#606F7F;">Nome completo</span>
+            <span style="font-family:'Host Grotesk',sans-serif;font-size:18px;color:#606F7F;">Nome completo</span>
           </div>
           <div style="border:1px solid #606F7F;border-radius:12px;height:56px;display:flex;align-items:center;padding:0 20px;background:#fff;">
-            <span style="font-family:'Host Grotesk',sans-serif;font-size:18px;font-weight:400;color:#606F7F;">CNPJ</span>
+            <span style="font-family:'Host Grotesk',sans-serif;font-size:18px;color:#606F7F;">CNPJ</span>
           </div>
           <div style="border:1px solid #1D1D1F;border-radius:12px;height:56px;display:flex;align-items:center;padding:0 20px;background:#fff;">
-            <span style="font-family:'Host Grotesk',sans-serif;font-size:18px;font-weight:400;color:#1D1D1F;">contato@suaotica.com.br</span>
-          </div>
-        </div>
-        <div style="padding:18px 22px;background:#fff;">
-          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:10px;">Padrão / Preenchido</div>
-          <div style="display:flex;flex-direction:column;gap:5px;">
-            <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid #F3F4F6;"><span style="color:#6B7280;">Altura</span><span style="font-weight:700;color:#1D1D1F;">56px</span></div>
-            <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid #F3F4F6;"><span style="color:#6B7280;">Padding</span><span style="font-weight:700;color:#1D1D1F;">14px 20px</span></div>
-            <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid #F3F4F6;"><span style="color:#6B7280;">Border-radius</span><span style="font-weight:700;color:#1D1D1F;">12px</span></div>
-            <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid #F3F4F6;"><span style="color:#6B7280;">Border (default)</span><span style="font-weight:700;color:#1D1D1F;">1px solid #606F7F</span></div>
-            <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid #F3F4F6;"><span style="color:#6B7280;">Border (focus)</span><span style="font-weight:700;color:#1D1D1F;">1px solid #1D1D1F</span></div>
-            <div style="display:flex;justify-content:space-between;font-size:12px;padding:4px 0;"><span style="color:#6B7280;">Fonte placeholder</span><span style="font-weight:700;color:#1D1D1F;">Host Grotesk Regular 18px #606F7F</span></div>
+            <span style="font-family:'Host Grotesk',sans-serif;font-size:18px;color:#1D1D1F;">contato@suaotica.com.br</span>
           </div>
         </div>
       </div>
-
-      <!-- Estados -->
-      <div style="display:flex;flex-direction:column;gap:16px;">
-
-        <!-- Default -->
-        <div style="border:1px solid #E5E7EB;border-radius:12px;overflow:hidden;">
-          <div style="padding:20px;background:#F5F5F7;">
-            <div style="border:1px solid #606F7F;border-radius:12px;height:56px;display:flex;align-items:center;padding:0 20px;background:#fff;">
-              <span style="font-family:'Host Grotesk',sans-serif;font-size:18px;font-weight:400;color:#606F7F;">E-mail</span>
-            </div>
-          </div>
-          <div style="padding:10px 16px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;">Default</span>
-            <span style="font-size:11px;color:#6B7280;">border #606F7F · placeholder #606F7F</span>
-          </div>
-        </div>
-
-        <!-- Focus -->
-        <div style="border:1px solid #E5E7EB;border-radius:12px;overflow:hidden;">
-          <div style="padding:20px;background:#F5F5F7;">
-            <div style="border:2px solid #1D1D1F;border-radius:12px;height:56px;display:flex;align-items:center;padding:0 20px;background:#fff;box-shadow:0 0 0 3px rgba(29,29,31,0.08);">
-              <span style="font-family:'Host Grotesk',sans-serif;font-size:18px;font-weight:400;color:#1D1D1F;">contato@</span>
-            </div>
-          </div>
-          <div style="padding:10px 16px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#0439D9;">Focus</span>
-            <span style="font-size:11px;color:#6B7280;">border 2px #1D1D1F · ring rgba(29,29,31,.08)</span>
-          </div>
-        </div>
-
-        <!-- Filled -->
-        <div style="border:1px solid #E5E7EB;border-radius:12px;overflow:hidden;">
-          <div style="padding:20px;background:#F5F5F7;">
-            <div style="border:1px solid #1D1D1F;border-radius:12px;height:56px;display:flex;align-items:center;padding:0 20px;background:#fff;">
-              <span style="font-family:'Host Grotesk',sans-serif;font-size:18px;font-weight:400;color:#1D1D1F;">contato@suaotica.com.br</span>
-            </div>
-          </div>
-          <div style="padding:10px 16px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#10B981;">Filled</span>
-            <span style="font-size:11px;color:#6B7280;">border #1D1D1F · texto #1D1D1F</span>
-          </div>
-        </div>
-
-        <!-- Disabled -->
-        <div style="border:1px solid #E5E7EB;border-radius:12px;overflow:hidden;">
-          <div style="padding:20px;background:#F5F5F7;">
-            <div style="border:1px solid #E5E7EB;border-radius:12px;height:56px;display:flex;align-items:center;padding:0 20px;background:#F9FAFB;cursor:not-allowed;">
-              <span style="font-family:'Host Grotesk',sans-serif;font-size:18px;font-weight:400;color:#D1D5DB;">Campo desabilitado</span>
-            </div>
-          </div>
-          <div style="padding:10px 16px;display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;">Disabled</span>
-            <span style="font-size:11px;color:#6B7280;">bg #F9FAFB · border #E5E7EB · texto #D1D5DB</span>
-          </div>
-        </div>
-
+      <div style="padding:18px 22px;background:#fff;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+        <div style="display:flex;flex-direction:column;gap:3px;"><span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;">Altura</span><span style="font-size:13px;font-weight:700;color:#1D1D1F;">56px</span></div>
+        <div style="display:flex;flex-direction:column;gap:3px;"><span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;">Padding</span><span style="font-size:13px;font-weight:700;color:#1D1D1F;">14px 20px</span></div>
+        <div style="display:flex;flex-direction:column;gap:3px;"><span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;">Border-radius</span><span style="font-size:13px;font-weight:700;color:#1D1D1F;">12px</span></div>
+        <div style="display:flex;flex-direction:column;gap:3px;"><span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;">Border default</span><span style="font-size:13px;font-weight:700;color:#1D1D1F;">1px solid #606F7F</span></div>
+        <div style="display:flex;flex-direction:column;gap:3px;"><span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;">Border focus</span><span style="font-size:13px;font-weight:700;color:#1D1D1F;">1px solid #1D1D1F</span></div>
+        <div style="display:flex;flex-direction:column;gap:3px;"><span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;">Fonte placeholder</span><span style="font-size:13px;font-weight:700;color:#1D1D1F;">Host Grotesk 18px #606F7F</span></div>
       </div>
+    </div>
+
+    <!-- Estados em grid responsivo -->
+    <div class="subsection-title">Estados</div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:48px;">
+
+      <!-- Default -->
+      <div style="border:1px solid #E5E7EB;border-radius:12px;overflow:hidden;">
+        <div style="padding:20px;background:#F5F5F7;">
+          <div style="border:1px solid #606F7F;border-radius:12px;height:56px;display:flex;align-items:center;padding:0 20px;background:#fff;">
+            <span style="font-family:'Host Grotesk',sans-serif;font-size:18px;color:#606F7F;">E-mail</span>
+          </div>
+        </div>
+        <div style="padding:10px 16px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;">Default</span>
+          <span style="font-size:11px;color:#6B7280;">border #606F7F</span>
+        </div>
+      </div>
+
+      <!-- Focus -->
+      <div style="border:1px solid #E5E7EB;border-radius:12px;overflow:hidden;">
+        <div style="padding:20px;background:#F5F5F7;">
+          <div style="border:2px solid #1D1D1F;border-radius:12px;height:56px;display:flex;align-items:center;padding:0 20px;background:#fff;box-shadow:0 0 0 3px rgba(29,29,31,0.08);">
+            <span style="font-family:'Host Grotesk',sans-serif;font-size:18px;color:#1D1D1F;">contato@</span>
+          </div>
+        </div>
+        <div style="padding:10px 16px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#0439D9;">Focus</span>
+          <span style="font-size:11px;color:#6B7280;">border 2px + ring</span>
+        </div>
+      </div>
+
+      <!-- Filled -->
+      <div style="border:1px solid #E5E7EB;border-radius:12px;overflow:hidden;">
+        <div style="padding:20px;background:#F5F5F7;">
+          <div style="border:1px solid #1D1D1F;border-radius:12px;height:56px;display:flex;align-items:center;padding:0 20px;background:#fff;">
+            <span style="font-family:'Host Grotesk',sans-serif;font-size:18px;color:#1D1D1F;">contato@suaotica.com.br</span>
+          </div>
+        </div>
+        <div style="padding:10px 16px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#10B981;">Filled</span>
+          <span style="font-size:11px;color:#6B7280;">texto #1D1D1F</span>
+        </div>
+      </div>
+
+      <!-- Disabled -->
+      <div style="border:1px solid #E5E7EB;border-radius:12px;overflow:hidden;">
+        <div style="padding:20px;background:#F5F5F7;">
+          <div style="border:1px solid #E5E7EB;border-radius:12px;height:56px;display:flex;align-items:center;padding:0 20px;background:#F9FAFB;cursor:not-allowed;">
+            <span style="font-family:'Host Grotesk',sans-serif;font-size:18px;color:#D1D5DB;">Campo desabilitado</span>
+          </div>
+        </div>
+        <div style="padding:10px 16px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;">Disabled</span>
+          <span style="font-size:11px;color:#6B7280;">bg #F9FAFB · texto #D1D5DB</span>
+        </div>
+      </div>
+
     </div>
 
     <!-- Form completo (exato do Figma) -->
