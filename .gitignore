@@ -1,0 +1,22 @@
+# Google Drive lixo (sync cria desktop.ini em cada subpasta)
+desktop.ini
+**/desktop.ini
+
+# OS lixo
+.DS_Store
+Thumbs.db
+
+# Editor temp
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Node (se for usado em alguma subpasta)
+node_modules/
+npm-debug.log*
+
+# Build / cache local
+.cache/
+dist/

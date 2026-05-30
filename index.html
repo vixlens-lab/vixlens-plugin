@@ -288,6 +288,86 @@
       border-bottom: 2px solid var(--gray-100);
     }
 
+    /* ─── DOWNLOAD BUTTONS ─────────────────────────────────────────── */
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--preto);
+      color: #FFFFFF;
+      font-family: var(--font-web);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: var(--radius-btn);
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .15s ease, box-shadow .15s ease, transform .15s ease;
+    }
+    .btn-download:hover {
+      background: #333333;
+      box-shadow: 0 6px 16px rgba(29,29,31,0.35);
+      transform: translateY(-1px);
+    }
+    .btn-download:focus-visible {
+      outline: 3px solid var(--amarelo);
+      outline-offset: 3px;
+    }
+    .btn-download svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+    .btn-download.btn-download-ghost {
+      background: transparent;
+      color: var(--preto);
+      border: 1.5px solid var(--gray-300);
+    }
+    .btn-download.btn-download-ghost:hover {
+      background: var(--bg-cinza);
+      border-color: var(--preto);
+      box-shadow: none;
+    }
+    .download-card {
+      background: var(--preto);
+      color: #FFFFFF;
+      border-radius: 20px;
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .download-card-info { flex: 1; }
+    .download-card-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .download-card-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,.6);
+      line-height: 1.5;
+    }
+    .download-card .btn-download {
+      background: var(--amarelo);
+      color: var(--preto);
+      font-size: 14px;
+      padding: 14px 24px;
+    }
+    .download-card .btn-download:hover {
+      background: #E5A800;
+      box-shadow: 0 6px 16px rgba(250,198,23,0.45);
+    }
+    .download-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
     /* ─── CORES ─────────────────────────────────────────────────────── */
     .color-grid-primary {
       display: grid;
@@ -1270,8 +1350,47 @@
       </div>
     </div>
 
+    <!-- ── Downloads de fontes ── -->
+    <div class="subsection-title">Baixar as fontes</div>
+    <div class="download-row" style="margin-bottom:24px;">
+      <a href="https://fonts.google.com/specimen/Host+Grotesk" target="_blank" rel="noopener" class="btn-download btn-download-ghost" aria-label="Abrir Host Grotesk no Google Fonts">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4h4v4M15 4l-7 7M6 4H3v10h10v-3"/></svg>
+        Host Grotesk (Google Fonts)
+      </a>
+      <a href="https://fonts.google.com/specimen/Montserrat" target="_blank" rel="noopener" class="btn-download btn-download-ghost" aria-label="Abrir Montserrat no Google Fonts">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4h4v4M15 4l-7 7M6 4H3v10h10v-3"/></svg>
+        Montserrat (Google Fonts)
+      </a>
+    </div>
+
+    <div class="download-card">
+      <div class="download-card-info">
+        <div class="download-card-title">Mont — pacote completo (.otf)</div>
+        <div class="download-card-desc">9 pesos × 2 estilos (Thin → Heavy, com itálicos). Uso oficial em propostas, manuais e PDFs. Para uso interno do time Vixlens.</div>
+      </div>
+      <a href="./assets/fontes/mont/vixlens-mont.zip" download class="btn-download" aria-label="Baixar pacote completo Mont em ZIP">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+        Baixar Mont (ZIP)
+      </a>
+    </div>
+
+    <details style="margin-top:16px;">
+      <summary style="cursor:pointer;font-size:12px;font-weight:600;color:var(--gray-500);padding:8px 0;">Baixar pesos individuais da Mont (.otf)</summary>
+      <div class="download-row" style="margin-top:12px;flex-wrap:wrap;">
+        <a href="./assets/fontes/mont/Mont-Thin.otf" download class="btn-download btn-download-ghost">Thin</a>
+        <a href="./assets/fontes/mont/Mont-ExtraLight.otf" download class="btn-download btn-download-ghost">ExtraLight</a>
+        <a href="./assets/fontes/mont/Mont-Light.otf" download class="btn-download btn-download-ghost">Light</a>
+        <a href="./assets/fontes/mont/Mont-Book.otf" download class="btn-download btn-download-ghost">Book</a>
+        <a href="./assets/fontes/mont/Mont-Regular.otf" download class="btn-download btn-download-ghost">Regular</a>
+        <a href="./assets/fontes/mont/Mont-SemiBold.otf" download class="btn-download btn-download-ghost">SemiBold</a>
+        <a href="./assets/fontes/mont/Mont-Bold.otf" download class="btn-download btn-download-ghost">Bold</a>
+        <a href="./assets/fontes/mont/Mont-Heavy.otf" download class="btn-download btn-download-ghost">Heavy</a>
+        <a href="./assets/fontes/mont/Mont-Black.otf" download class="btn-download btn-download-ghost">Black</a>
+      </div>
+    </details>
+
     <!-- ── Escala Web (Host Grotesk) ── -->
-    <div class="subsection-title">Escala tipográfica — Host Grotesk (versão final)</div>
+    <div class="subsection-title" style="margin-top:48px;">Escala tipográfica — Host Grotesk (versão final)</div>
 
     <!-- Nota de leitura -->
     <div style="background:#FEF3C7;border-left:3px solid #FAC617;border-radius:0 8px 8px 0;padding:12px 16px;margin-bottom:28px;font-size:12px;color:#4B5563;line-height:1.5;">
@@ -3235,7 +3354,10 @@
         <div style="padding:24px 20px;background:#fff;display:flex;flex-direction:column;justify-content:center;gap:6px;">
           <div style="font-size:14px;font-weight:700;color:var(--preto);">Freevix</div>
           <div style="font-size:11px;color:var(--gray-500);line-height:1.5;">Lentes próprias — linha principal</div>
-          <code style="margin-top:8px;font-size:10px;background:var(--bg-cinza);color:var(--gray-500);padding:3px 8px;border-radius:4px;display:inline-block;">icon-freevix.svg</code>
+          <a href="./assets/icones/icon-freevix.svg" download class="btn-download btn-download-ghost" style="margin-top:8px;align-self:flex-start;" aria-label="Baixar ícone Freevix em SVG">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+            Baixar SVG
+          </a>
         </div>
         <!-- Dark -->
         <div style="background:#1D1D1F;display:flex;align-items:center;justify-content:center;padding:40px;">
@@ -3252,7 +3374,10 @@
         <div style="padding:24px 20px;background:#fff;display:flex;flex-direction:column;justify-content:center;gap:6px;">
           <div style="font-size:14px;font-weight:700;color:var(--preto);">AR Reflecta</div>
           <div style="font-size:11px;color:var(--gray-500);line-height:1.5;">Tratamentos antirreflexo</div>
-          <code style="margin-top:8px;font-size:10px;background:var(--bg-cinza);color:var(--gray-500);padding:3px 8px;border-radius:4px;display:inline-block;">icon-reflecta.svg</code>
+          <a href="./assets/icones/icon-reflecta.svg" download class="btn-download btn-download-ghost" style="margin-top:8px;align-self:flex-start;" aria-label="Baixar ícone AR Reflecta em SVG">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+            Baixar SVG
+          </a>
         </div>
         <div style="background:#1D1D1F;display:flex;align-items:center;justify-content:center;padding:40px;">
           <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="58" height="58" rx="16" fill="white" fill-opacity="0.28"/><rect x="0.5" y="0.5" width="57" height="57" rx="15.5" stroke="white" stroke-opacity="0.46"/><path d="M42.8749 31.5516H36.1258C34.9848 31.5516 34.0759 30.6234 34.0759 29.5018C34.0759 28.3801 35.0042 27.4519 36.1258 27.4519H42.8749C44.0159 27.4519 44.9248 28.3801 44.9248 29.5018C44.9248 30.6234 43.9966 31.5516 42.8749 31.5516Z" fill="white"/><path d="M33.5542 25.2665C33.2061 25.2665 32.8581 25.1891 32.5486 24.9957C31.5624 24.4349 31.2143 23.1779 31.7558 22.1917L34.6372 17.0477C35.198 16.0614 36.455 15.7133 37.4413 16.2548C38.4275 16.8156 38.7756 18.0726 38.2341 19.0589L35.3527 24.2029C34.9659 24.8797 34.2697 25.2471 33.5542 25.2471V25.2665Z" fill="white"/><path d="M36.4547 42.9807C35.7391 42.9807 35.043 42.594 34.6562 41.9365L31.7747 36.7924C31.2139 35.8062 31.562 34.5492 32.5676 33.9884C33.5539 33.4276 34.8109 33.7756 35.3717 34.7812L38.2531 39.9253C38.8139 40.9115 38.4658 42.1685 37.4602 42.7293C37.1508 42.9034 36.8028 43.0001 36.4547 43.0001V42.9807Z" fill="white"/><path d="M32.1999 29.4819L25.0447 41.9358C24.6579 42.5933 23.9811 42.9608 23.2655 42.9608C22.9175 42.9608 22.5694 42.8641 22.2406 42.69C21.2544 42.1292 20.9256 40.8722 21.4864 39.8859L26.2823 31.5318H16.7872C15.6462 31.5318 14.7373 30.6035 14.7373 29.4819C14.7373 28.3603 15.6655 27.432 16.7872 27.432H26.263L21.3897 19.0972C20.8096 18.1109 21.1383 16.8539 22.1246 16.2931C23.1108 15.7129 24.3679 16.0417 24.9287 17.028L32.1999 29.4819Z" fill="white"/></svg>
@@ -3267,7 +3392,10 @@
         <div style="padding:24px 20px;background:#fff;display:flex;flex-direction:column;justify-content:center;gap:6px;">
           <div style="font-size:14px;font-weight:700;color:var(--preto);">Essilor</div>
           <div style="font-size:11px;color:var(--gray-500);line-height:1.5;">Tecnologias EssilorLuxottica</div>
-          <code style="margin-top:8px;font-size:10px;background:var(--bg-cinza);color:var(--gray-500);padding:3px 8px;border-radius:4px;display:inline-block;">icon-essilor.svg</code>
+          <a href="./assets/icones/icon-essilor.svg" download class="btn-download btn-download-ghost" style="margin-top:8px;align-self:flex-start;" aria-label="Baixar ícone Essilor em SVG">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+            Baixar SVG
+          </a>
         </div>
         <div style="background:#1D1D1F;display:flex;align-items:center;justify-content:center;padding:40px;">
           <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="58" height="58" rx="16" fill="white" fill-opacity="0.28"/><rect x="0.5" y="0.5" width="57" height="57" rx="15.5" stroke="white" stroke-opacity="0.46"/><path d="M11 29.5C11 29.5 17.6166 16 29.1957 16C40.7747 16 47.3913 29.5 47.3913 29.5C47.3913 29.5 40.7747 43 29.1957 43C17.6166 43 11 29.5 11 29.5Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M29.1957 34.7825C32.1132 34.7825 34.4783 32.4174 34.4783 29.4999C34.4783 26.5824 32.1132 24.2173 29.1957 24.2173C26.2782 24.2173 23.9131 26.5824 23.9131 29.4999C23.9131 32.4174 26.2782 34.7825 29.1957 34.7825Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -3282,7 +3410,10 @@
         <div style="padding:24px 20px;background:#fff;display:flex;flex-direction:column;justify-content:center;gap:6px;">
           <div style="font-size:14px;font-weight:700;color:var(--preto);">Vix Academy</div>
           <div style="font-size:11px;color:var(--gray-500);line-height:1.5;">Treinamento e conteúdo</div>
-          <code style="margin-top:8px;font-size:10px;background:var(--bg-cinza);color:var(--gray-500);padding:3px 8px;border-radius:4px;display:inline-block;">icon-vixacademy.svg</code>
+          <a href="./assets/icones/icon-vixacademy.svg" download class="btn-download btn-download-ghost" style="margin-top:8px;align-self:flex-start;" aria-label="Baixar ícone Vix Academy em SVG">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+            Baixar SVG
+          </a>
         </div>
         <div style="background:#1D1D1F;display:flex;align-items:center;justify-content:center;padding:40px;">
           <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="58" height="58" rx="16" fill="white" fill-opacity="0.28"/><rect x="0.5" y="0.5" width="57" height="57" rx="15.5" stroke="white" stroke-opacity="0.46"/><path d="M39 43L28.5 35.5L18 43V19C18 18.2044 18.3161 17.4413 18.8787 16.8787C19.4413 16.3161 20.2044 16 21 16H36C36.7956 16 37.5587 16.3161 38.1213 16.8787C38.6839 17.4413 39 18.2044 39 19V43Z" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -3617,9 +3748,12 @@ import &#123; Eye, ShieldCheck, Star &#125;
             <div style="font-size:12px;color:rgba(255,255,255,.5);">Uso em fundos escuros — versão preferencial</div>
           </div>
         </div>
-        <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;">
+        <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;align-items:center;">
           <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Fundo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Preto #1D1D1F · Fotos escuras · Evitar Azul como fundo</div></div>
-          <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Arquivo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Camada_1.svg</div></div>
+          <a href="./assets/marca/vixlens-logo-branco-amarelo.svg" download class="btn-download" aria-label="Baixar logo Vixlens branco + amarelo em SVG">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+            Baixar SVG
+          </a>
         </div>
       </div>
 
@@ -3633,9 +3767,12 @@ import &#123; Eye, ShieldCheck, Star &#125;
             <div style="font-size:12px;color:rgba(255,255,255,.55);">Para fundos coloridos onde o amarelo conflita</div>
           </div>
         </div>
-        <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;">
+        <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;align-items:center;">
           <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Fundo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Cinza escuro · Azul · Qualquer fundo médio</div></div>
-          <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Arquivo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Camada_1-1.svg</div></div>
+          <a href="./assets/marca/vixlens-logo-branco-mono.svg" download class="btn-download" aria-label="Baixar logo Vixlens branco monocromático em SVG">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+            Baixar SVG
+          </a>
         </div>
       </div>
 
@@ -3649,9 +3786,12 @@ import &#123; Eye, ShieldCheck, Star &#125;
             <div style="font-size:12px;color:var(--gray-500);">Uso em fundos claros — documentos, impressão</div>
           </div>
         </div>
-        <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;">
+        <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;align-items:center;">
           <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Fundo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Branco #FFFFFF · Cinza #F5F5F7 · Papel</div></div>
-          <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Arquivo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Camada_1-2.svg</div></div>
+          <a href="./assets/marca/vixlens-logo-preto-mono.svg" download class="btn-download" aria-label="Baixar logo Vixlens preto monocromático em SVG">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+            Baixar SVG
+          </a>
         </div>
       </div>
 
@@ -3665,16 +3805,188 @@ import &#123; Eye, ShieldCheck, Star &#125;
             <div style="font-size:12px;color:var(--gray-500);">Fundo claro com identidade completa de marca</div>
           </div>
         </div>
-        <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;">
+        <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;align-items:center;">
           <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Fundo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Branco #FFFFFF · Cinza #F5F5F7</div></div>
-          <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Arquivo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Camada_1-2.svg + fill #FAC617</div></div>
+          <a href="./assets/marca/vixlens-logo-preto-amarelo.svg" download class="btn-download" aria-label="Baixar logo Vixlens preto + amarelo em SVG">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+            Baixar SVG
+          </a>
         </div>
       </div>
 
     </div>
 
+    <!-- Outros formatos -->
+    <div class="subsection-title">Outros formatos</div>
+    <div class="download-row">
+      <a href="./assets/marca/vixlens-logo.pdf" download class="btn-download btn-download-ghost" aria-label="Baixar logo em PDF para impressão">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+        Logo PDF (impressão)
+      </a>
+      <a href="./assets/marca/vixlens-logo.png" download class="btn-download btn-download-ghost" aria-label="Baixar logo em PNG raster">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+        Logo PNG (440×130)
+      </a>
+    </div>
+
+    <!-- Brand Kit completo -->
+    <div class="download-card">
+      <div class="download-card-info">
+        <div class="download-card-title">Brand Kit completo (.zip)</div>
+        <div class="download-card-desc">Pacote único com tudo: 4 versões do logo (SVG), PDF, PNG, 4 ícones de linha de produto e a fonte Mont completa. Para quando precisar de tudo de uma vez.</div>
+      </div>
+      <a href="./assets/vixlens-brand-kit.zip" download class="btn-download" aria-label="Baixar pacote completo Vixlens Brand Kit em ZIP">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+        Baixar Brand Kit
+      </a>
+    </div>
+
+    <!-- ── Linha Reflecta ── -->
+    <div class="subsection-title" style="margin-top:64px;">Linha Reflecta</div>
+    <p style="font-size:13px;color:var(--gray-500);line-height:1.7;margin-bottom:24px;max-width:680px;">
+      Linha de tratamentos antirreflexo Vixlens. 4 produtos herdando da matriz <strong style="color:var(--preto);">Reflecta</strong>, cada um com identidade visual própria.
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:32px;">
+
+      <!-- Reflecta master -->
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
+        <div style="background:#FFFFFF;padding:48px 32px;display:flex;align-items:center;justify-content:center;min-height:160px;">
+          <img src="./assets/marca/reflecta/reflecta-logo-preto.svg" alt="Reflecta — logo principal" style="height:42px;width:auto;max-width:80%;"/>
+        </div>
+        <div style="background:var(--bg-cinza);padding:16px 20px;border-top:1px solid var(--gray-200);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);">Matriz</div>
+              <div style="font-size:14px;font-weight:700;color:var(--preto);">Reflecta</div>
+            </div>
+          </div>
+          <div class="download-row">
+            <a href="./assets/marca/reflecta/reflecta-logo-preto.svg" download class="btn-download" aria-label="Baixar logo Reflecta em SVG">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              SVG
+            </a>
+            <a href="./assets/marca/reflecta/reflecta-logo-preto.webp" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta em WebP">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              WebP
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reflecta Blue -->
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
+        <div style="background:#FFFFFF;padding:48px 32px;display:flex;align-items:center;justify-content:center;min-height:160px;">
+          <img src="./assets/marca/reflecta/reflecta-blue.svg" alt="Reflecta Blue — BlueProtect SH" style="height:50px;width:auto;max-width:80%;"/>
+        </div>
+        <div style="background:var(--bg-cinza);padding:16px 20px;border-top:1px solid var(--gray-200);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);">BlueProtect SH</div>
+              <div style="font-size:14px;font-weight:700;color:var(--preto);">Reflecta Blue</div>
+            </div>
+            <span style="width:14px;height:14px;border-radius:50%;background:#134B97;"></span>
+          </div>
+          <div class="download-row">
+            <a href="./assets/marca/reflecta/reflecta-blue.svg" download class="btn-download" aria-label="Baixar logo Reflecta Blue em SVG">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              SVG
+            </a>
+            <a href="./assets/marca/reflecta/reflecta-blue.webp" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta Blue em WebP">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              WebP
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reflecta Guard -->
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
+        <div style="background:#FFFFFF;padding:48px 32px;display:flex;align-items:center;justify-content:center;min-height:160px;">
+          <img src="./assets/marca/reflecta/reflecta-guard.svg" alt="Reflecta Guard" style="height:50px;width:auto;max-width:80%;"/>
+        </div>
+        <div style="background:var(--bg-cinza);padding:16px 20px;border-top:1px solid var(--gray-200);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);">Proteção</div>
+              <div style="font-size:14px;font-weight:700;color:var(--preto);">Reflecta Guard</div>
+            </div>
+            <span style="width:14px;height:14px;border-radius:50%;background:#00782D;"></span>
+          </div>
+          <div class="download-row">
+            <a href="./assets/marca/reflecta/reflecta-guard.svg" download class="btn-download" aria-label="Baixar logo Reflecta Guard em SVG">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              SVG
+            </a>
+            <a href="./assets/marca/reflecta/reflecta-guard.webp" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta Guard em WebP">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              WebP
+            </a>
+            <a href="./assets/marca/reflecta/reflecta-guard.pdf" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta Guard em PDF">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reflecta Express -->
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
+        <div style="background:#FFFFFF;padding:48px 32px;display:flex;align-items:center;justify-content:center;min-height:160px;">
+          <img src="./assets/marca/reflecta/reflecta-express.svg" alt="Reflecta Express" style="height:50px;width:auto;max-width:80%;"/>
+        </div>
+        <div style="background:var(--bg-cinza);padding:16px 20px;border-top:1px solid var(--gray-200);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);">Performance</div>
+              <div style="font-size:14px;font-weight:700;color:var(--preto);">Reflecta Express</div>
+            </div>
+            <span style="width:14px;height:14px;border-radius:50%;background:#92BB36;"></span>
+          </div>
+          <div class="download-row">
+            <a href="./assets/marca/reflecta/reflecta-express.svg" download class="btn-download" aria-label="Baixar logo Reflecta Express em SVG">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              SVG
+            </a>
+            <a href="./assets/marca/reflecta/reflecta-express.webp" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta Express em WebP">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              WebP
+            </a>
+            <a href="./assets/marca/reflecta/reflecta-express.pdf" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta Express em PDF">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Ícones Reflecta + bloco "alimentando" -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
+        <div style="background:var(--bg-cinza);padding:32px;display:flex;align-items:center;justify-content:center;min-height:120px;">
+          <img src="./assets/marca/reflecta/reflecta-icones.svg" alt="Ícones Reflecta" style="height:60px;width:auto;max-width:90%;"/>
+        </div>
+        <div style="background:#fff;padding:16px 20px;border-top:1px solid var(--gray-200);">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-bottom:2px;">Conjunto</div>
+          <div style="font-size:14px;font-weight:700;color:var(--preto);margin-bottom:10px;">Ícones Reflecta</div>
+          <div class="download-row">
+            <a href="./assets/marca/reflecta/reflecta-icones.svg" download class="btn-download"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>SVG</a>
+            <a href="./assets/marca/reflecta/reflecta-icones.webp" download class="btn-download btn-download-ghost"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>WebP</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-radius:16px;border:1.5px dashed var(--gray-300);padding:24px;display:flex;flex-direction:column;justify-content:center;background:var(--bg-cinza);">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-bottom:6px;">Em construção</div>
+        <div style="font-size:14px;font-weight:700;color:var(--preto);margin-bottom:6px;">Mais variantes em breve</div>
+        <div style="font-size:12px;color:var(--gray-500);line-height:1.5;">Variantes monocromáticas (preto/branco), PDFs do logo principal e WebPs das versões Vixlens serão adicionados aqui conforme forem produzidos.</div>
+      </div>
+    </div>
+
     <!-- Regras -->
-    <div class="subsection-title">Regras de uso</div>
+    <div class="subsection-title" style="margin-top:48px;">Regras de uso</div>
     <div class="rules-list">
       <div class="rule-item"><div class="rule-icon ok">✓</div><span class="rule-text">Sempre usar o arquivo SVG original. Nunca recriar o logotipo manualmente ou em texto.</span></div>
       <div class="rule-item"><div class="rule-icon ok">✓</div><span class="rule-text">Versão Branco + Amarelo é a preferencial. Use monocromático apenas quando o contexto não permitir duas cores.</span></div>
