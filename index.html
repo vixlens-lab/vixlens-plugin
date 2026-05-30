@@ -1409,6 +1409,21 @@
   </div>
 
   <nav class="sidebar-nav">
+    <div class="nav-section-label">Marca</div>
+    <a class="nav-item active" href="#logotipo">
+      <span class="nav-dot" style="background:#FAC617"></span>
+      Logo &amp; Clearance
+    </a>
+    <a class="nav-item active" href="#fotografia">
+      <span class="nav-dot" style="background:#606F7F"></span>
+      Fotografia
+    </a>
+    <a class="nav-item soon">
+      <span class="nav-dot"></span>
+      Grafismos
+      <span class="nav-badge">EM BREVE</span>
+    </a>
+
     <div class="nav-section-label">Fundamentos</div>
     <a class="nav-item active" href="#cores">
       <span class="nav-dot" style="background:#FAC617"></span>
@@ -1422,38 +1437,13 @@
       <span class="nav-dot" style="background:#606F7F"></span>
       Tokens de forma
     </a>
-    <a class="nav-item" href="#iconografia" onclick="setActive(this)">
-      <span class="nav-dot"></span>
+    <a class="nav-item active" href="#iconografia">
+      <span class="nav-dot" style="background:#606F7F"></span>
       Iconografia
     </a>
-    <a class="nav-item" href="#espacamento" onclick="setActive(this)">
-      <span class="nav-dot"></span>
+    <a class="nav-item active" href="#espacamento">
+      <span class="nav-dot" style="background:#606F7F"></span>
       Espaçamento
-    </a>
-
-    <div class="nav-section-label">Marca</div>
-    <a class="nav-item" href="#logotipo" onclick="setActive(this)">
-      <span class="nav-dot"></span>
-      Logo &amp; Clearance
-    </a>
-    <a class="nav-item" href="#fotografia" onclick="setActive(this)">
-      <span class="nav-dot"></span>
-      Fotografia
-    </a>
-    <a class="nav-item soon">
-      <span class="nav-dot"></span>
-      Grafismos
-      <span class="nav-badge">EM BREVE</span>
-    </a>
-
-    <div class="nav-section-label">Voz</div>
-    <a class="nav-item active" href="#voz-tom">
-      <span class="nav-dot" style="background:#606F7F"></span>
-      Voz &amp; Tom
-    </a>
-    <a class="nav-item active" href="#vocabulario">
-      <span class="nav-dot" style="background:#606F7F"></span>
-      Vocabulário Canônico
     </a>
 
     <div class="nav-section-label">Componentes</div>
@@ -1472,6 +1462,16 @@
     <a class="nav-item active" href="#callouts">
       <span class="nav-dot" style="background:#FAC617"></span>
       Callouts
+    </a>
+
+    <div class="nav-section-label">Voz</div>
+    <a class="nav-item active" href="#voz-tom">
+      <span class="nav-dot" style="background:#606F7F"></span>
+      Voz &amp; Tom
+    </a>
+    <a class="nav-item active" href="#vocabulario">
+      <span class="nav-dot" style="background:#606F7F"></span>
+      Vocabulário Canônico
     </a>
   </nav>
 
@@ -1523,12 +1523,287 @@
     </p>
   </div>
 
+
+  <!-- ════════════════════════════════════════════════════════════════
+       01 — LOGOTIPO & CLEARANCE
+  ════════════════════════════════════════════════════════════════ -->
+  <section class="section" id="logotipo">
+    <div class="section-header">
+      <div class="section-eyebrow">01 — Marca</div>
+      <h2 class="section-title">Logotipo & Clearance</h2>
+      <p class="section-desc">
+        Três versões oficiais do logotipo Vixlens. O logotipo nunca deve ser recolorido, distorcido ou recriado. Use sempre os arquivos SVG originais.
+      </p>
+    </div>
+
+    <!-- Versões -->
+    <div class="subsection-title">Versões oficiais</div>
+    <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:48px;">
+
+      <!-- Principal: branco + amarelo / fundo escuro -->
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
+        <div style="background:#1D1D1F;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:40px;">
+          <svg width="147" height="43" viewBox="0 0 147 43" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.90735e-05 11.4378H3.23988L11.7037 31.6064L20.1676 11.4378H23.4075L13.1083 36.0442H10.2992L1.90735e-05 11.4378Z" fill="white"/><path d="M137.583 36.0443C134.842 36.0443 132.552 35.3193 130.759 33.8667C130.004 33.2913 129.399 32.6076 128.944 31.8387C128.514 31.0698 128.276 30.3242 128.276 29.6405H131.278C131.278 29.8314 131.385 30.1307 131.623 30.4945C131.84 30.8789 132.184 31.2401 132.615 31.5626C133.868 32.5869 135.531 33.1004 137.581 33.1004C139.784 33.1004 141.468 32.6953 142.611 31.9058C143.517 31.3304 143.972 30.5616 143.972 29.643C143.972 28.5542 143.389 27.6589 142.222 26.9339C141.379 26.4437 139.998 25.9303 138.032 25.3549L136.39 24.8647C134.21 24.2455 132.568 23.6056 131.511 22.9451C130.54 22.3904 129.806 21.7299 129.266 20.9403C128.618 19.9805 128.273 18.9356 128.273 17.7823C128.273 16.8019 128.511 15.904 128.965 15.0732C129.44 14.263 130.109 13.5793 130.973 13.0246C132.636 11.8945 134.86 11.3398 137.688 11.3398C140.515 11.3398 142.718 12.0648 144.512 13.5174C145.266 14.0928 145.872 14.7765 146.326 15.5454C146.781 16.3349 146.995 17.0599 146.995 17.7849H144.016C144.016 17.5707 143.909 17.2508 143.671 16.8896C143.434 16.5051 143.11 16.1439 142.679 15.8214C141.405 14.7971 139.742 14.3069 137.69 14.3069C135.466 14.3069 133.782 14.6913 132.615 15.4808C131.709 16.0794 131.276 16.8457 131.276 17.7849C131.276 18.853 131.858 19.7277 133.069 20.4527C133.889 20.9661 135.294 21.5209 137.236 22.0756L138.878 22.5245C141.082 23.1438 142.7 23.7836 143.757 24.4441C144.729 25.0195 145.486 25.7032 146.003 26.4489C146.629 27.4087 146.953 28.4768 146.953 29.6508C146.953 30.6106 146.736 31.4852 146.285 32.3186C145.83 33.1288 145.183 33.8125 144.319 34.3878C142.656 35.4973 140.411 36.052 137.581 36.052L137.583 36.0443Z" fill="white"/><path d="M105.433 11.4378V14.4255C106.297 13.507 107.312 12.8026 108.521 12.2711C109.881 11.7164 111.458 11.4378 113.249 11.4378C115.04 11.4378 116.661 11.7164 118.022 12.2711C120.115 13.1897 121.713 14.7687 122.794 16.9876C123.376 18.1409 123.723 19.5264 123.851 21.1493C123.982 22.7722 124.044 24.6711 124.044 26.8462V36.0442H121.066V26.8462C121.066 24.9266 121 23.2392 120.914 21.7659C120.807 20.2927 120.546 19.1187 120.115 18.2234C119.361 16.6857 118.366 15.6614 117.178 15.1505C115.99 14.6371 114.675 14.3817 113.249 14.3817C111.824 14.3817 110.508 14.6371 109.297 15.1505C108.109 15.664 107.158 16.6883 106.425 18.2234C105.994 19.1187 105.712 20.2927 105.605 21.7659C105.475 23.2392 105.433 24.924 105.433 26.8462V36.0442H102.43V11.4378H105.433Z" fill="white"/><path d="M86.5155 26.3119L95.478 19.5469L96.8173 18.5432C94.8306 14.317 90.5125 11.3938 85.5026 11.3938C78.6365 11.3938 73.0653 16.8997 73.0653 23.6854C73.0653 30.4711 78.6365 35.9976 85.5026 35.9976C91.16 35.9976 95.9323 32.2642 97.4439 27.1634H94.2693C92.8647 30.6001 89.4761 33.0099 85.5026 33.0099C80.2995 33.0099 76.065 28.8482 76.065 23.6828C76.065 18.5174 80.2969 14.3557 85.5026 14.3557C88.4605 14.3557 91.1182 15.7206 92.8438 17.8337L84.4009 24.1937C84.9831 25.0038 85.7193 25.7082 86.5182 26.3068L86.5155 26.3119Z" fill="white"/><path d="M70.157 36.0446C68.3635 36.0446 66.8963 35.2757 65.7737 33.7406C64.9305 32.5873 64.3065 31.0082 63.8731 29.0035C63.5494 27.5303 63.3327 26.0364 63.2466 24.5219C63.1813 23.028 63.1395 21.3845 63.1395 19.6145V1.60022H66.1183V19.6119C66.1183 23.4098 66.335 26.3563 66.7658 28.4049C67.1339 29.9839 67.5855 31.1785 68.1703 32.0119C68.7316 32.7369 69.3791 33.1007 70.157 33.1007V36.0446Z" fill="white"/><path d="M44.4835 23.732L35.2181 11.4378H38.954L46.3606 21.2757L53.7906 11.4378H57.5265L48.2194 23.732L57.5265 36.0442H53.7906L46.3606 26.2063L38.954 36.0442H35.2181L44.4835 23.732Z" fill="white"/><path d="M30.6861 11.4378H27.6838V36.0442H30.6861V11.4378Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M29.0648 0.000183105H29.3024C30.036 0.000183105 30.7696 0.299475 31.3962 0.959982C31.9366 1.53534 32.1742 2.21907 32.1742 2.87958V3.02922C32.1742 3.8626 31.8296 4.62889 31.0934 5.24811C30.5321 5.71769 29.9055 5.93184 29.258 5.93184H29.0857C28.2216 5.93184 27.4436 5.54741 26.8197 4.77854C26.3654 4.22381 26.1931 3.64845 26.1931 3.09373V2.8383C26.1931 2.09265 26.475 1.38828 27.1434 0.769054C27.7256 0.234973 28.3965 0.000183105 29.0648 0.000183105Z" fill="#FAC617"/><path fill-rule="evenodd" clip-rule="evenodd" d="M99.0626 36.3849C95.6948 40.4176 90.5988 43.0002 84.897 43.0002C81.6572 43.0002 78.5922 42.1669 75.9345 40.6962L77.3391 39.0965C79.7357 40.3118 82.456 40.9955 85.3513 40.9955C90.1236 40.9955 94.4417 39.1172 97.5954 36.0443L99.0626 36.3849Z" fill="#FAC617"/></svg>
+          <div style="text-align:right;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:6px;">Principal</div>
+            <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;">Branco + Amarelo</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.5);">Uso em fundos escuros — versão preferencial</div>
+          </div>
+        </div>
+        <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;align-items:center;">
+          <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Fundo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Preto #1D1D1F · Fotos escuras · Evitar Azul como fundo</div></div>
+          <a href="./assets/marca/vixlens-logo-branco-amarelo.svg" download class="btn-download" aria-label="Baixar logo Vixlens branco + amarelo em SVG">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+            Baixar SVG
+          </a>
+        </div>
+      </div>
+
+      <!-- Monocromático branco -->
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
+        <div style="background:#606F7F;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:40px;">
+          <svg width="147" height="43" viewBox="0 0 147 43" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.90735e-05 11.4378H3.23988L11.7037 31.6064L20.1676 11.4378H23.4075L13.1083 36.0442H10.2992L1.90735e-05 11.4378Z" fill="white"/><path d="M137.583 36.0443C134.842 36.0443 132.552 35.3193 130.759 33.8667C130.004 33.2913 129.399 32.6076 128.944 31.8387C128.514 31.0698 128.276 30.3242 128.276 29.6405H131.278C131.278 29.8314 131.385 30.1307 131.623 30.4945C131.84 30.8789 132.184 31.2401 132.615 31.5626C133.868 32.5869 135.531 33.1004 137.581 33.1004C139.784 33.1004 141.468 32.6953 142.611 31.9058C143.517 31.3304 143.972 30.5616 143.972 29.643C143.972 28.5542 143.389 27.6589 142.222 26.9339C141.379 26.4437 139.998 25.9303 138.032 25.3549L136.39 24.8647C134.21 24.2455 132.568 23.6056 131.511 22.9451C130.54 22.3904 129.806 21.7299 129.266 20.9403C128.618 19.9805 128.273 18.9356 128.273 17.7823C128.273 16.8019 128.511 15.904 128.965 15.0732C129.44 14.263 130.109 13.5793 130.973 13.0246C132.636 11.8945 134.86 11.3398 137.688 11.3398C140.515 11.3398 142.718 12.0648 144.512 13.5174C145.266 14.0928 145.872 14.7765 146.326 15.5454C146.781 16.3349 146.995 17.0599 146.995 17.7849H144.016C144.016 17.5707 143.909 17.2508 143.671 16.8896C143.434 16.5051 143.11 16.1439 142.679 15.8214C141.405 14.7971 139.742 14.3069 137.69 14.3069C135.466 14.3069 133.782 14.6913 132.615 15.4808C131.709 16.0794 131.276 16.8457 131.276 17.7849C131.276 18.853 131.858 19.7277 133.069 20.4527C133.889 20.9661 135.294 21.5209 137.236 22.0756L138.878 22.5245C141.082 23.1438 142.7 23.7836 143.757 24.4441C144.729 25.0195 145.486 25.7032 146.003 26.4489C146.629 27.4087 146.953 28.4768 146.953 29.6508C146.953 30.6106 146.736 31.4852 146.285 32.3186C145.83 33.1288 145.183 33.8125 144.319 34.3878C142.656 35.4973 140.411 36.052 137.581 36.052L137.583 36.0443Z" fill="white"/><path d="M105.433 11.4378V14.4255C106.297 13.507 107.312 12.8026 108.521 12.2711C109.881 11.7164 111.458 11.4378 113.249 11.4378C115.04 11.4378 116.661 11.7164 118.022 12.2711C120.115 13.1897 121.713 14.7687 122.794 16.9876C123.376 18.1409 123.723 19.5264 123.851 21.1493C123.982 22.7722 124.044 24.6711 124.044 26.8462V36.0442H121.066V26.8462C121.066 24.9266 121 23.2392 120.914 21.7659C120.807 20.2927 120.546 19.1187 120.115 18.2234C119.361 16.6857 118.366 15.6614 117.178 15.1505C115.99 14.6371 114.675 14.3817 113.249 14.3817C111.824 14.3817 110.508 14.6371 109.297 15.1505C108.109 15.664 107.158 16.6883 106.425 18.2234C105.994 19.1187 105.712 20.2927 105.605 21.7659C105.475 23.2392 105.433 24.924 105.433 26.8462V36.0442H102.43V11.4378H105.433Z" fill="white"/><path d="M86.5155 26.3119L95.478 19.5469L96.8173 18.5432C94.8306 14.317 90.5125 11.3938 85.5026 11.3938C78.6365 11.3938 73.0653 16.8997 73.0653 23.6854C73.0653 30.4711 78.6365 35.9976 85.5026 35.9976C91.16 35.9976 95.9323 32.2642 97.4439 27.1634H94.2693C92.8647 30.6001 89.4761 33.0099 85.5026 33.0099C80.2995 33.0099 76.065 28.8482 76.065 23.6828C76.065 18.5174 80.2969 14.3557 85.5026 14.3557C88.4605 14.3557 91.1182 15.7206 92.8438 17.8337L84.4009 24.1937C84.9831 25.0038 85.7193 25.7082 86.5182 26.3068L86.5155 26.3119Z" fill="white"/><path d="M70.157 36.0446C68.3635 36.0446 66.8963 35.2757 65.7737 33.7406C64.9305 32.5873 64.3065 31.0082 63.8731 29.0035C63.5494 27.5303 63.3327 26.0364 63.2466 24.5219C63.1813 23.028 63.1395 21.3845 63.1395 19.6145V1.60022H66.1183V19.6119C66.1183 23.4098 66.335 26.3563 66.7658 28.4049C67.1339 29.9839 67.5855 31.1785 68.1703 32.0119C68.7316 32.7369 69.3791 33.1007 70.157 33.1007V36.0446Z" fill="white"/><path d="M44.4835 23.732L35.2181 11.4378H38.954L46.3606 21.2757L53.7906 11.4378H57.5265L48.2194 23.732L57.5265 36.0442H53.7906L46.3606 26.2063L38.954 36.0442H35.2181L44.4835 23.732Z" fill="white"/><path d="M30.6861 11.4378H27.6838V36.0442H30.6861V11.4378Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M29.0648 0.000183105H29.3024C30.036 0.000183105 30.7696 0.299475 31.3962 0.959982C31.9366 1.53534 32.1742 2.21907 32.1742 2.87958V3.02922C32.1742 3.8626 31.8296 4.62889 31.0934 5.24811C30.5321 5.71769 29.9055 5.93184 29.258 5.93184H29.0857C28.2216 5.93184 27.4436 5.54741 26.8197 4.77854C26.3654 4.22381 26.1931 3.64845 26.1931 3.09373V2.8383C26.1931 2.09265 26.475 1.38828 27.1434 0.769054C27.7256 0.234973 28.3965 0.000183105 29.0648 0.000183105Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M99.0626 36.3849C95.6948 40.4176 90.5988 43.0002 84.897 43.0002C81.6572 43.0002 78.5922 42.1669 75.9345 40.6962L77.3391 39.0965C79.7357 40.3118 82.456 40.9955 85.3513 40.9955C90.1236 40.9955 94.4417 39.1172 97.5954 36.0443L99.0626 36.3849Z" fill="white"/></svg>
+          <div style="text-align:right;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:6px;">Secundária</div>
+            <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;">Branco monocromático</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.55);">Para fundos coloridos onde o amarelo conflita</div>
+          </div>
+        </div>
+        <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;align-items:center;">
+          <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Fundo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Cinza escuro · Azul · Qualquer fundo médio</div></div>
+          <a href="./assets/marca/vixlens-logo-branco-mono.svg" download class="btn-download" aria-label="Baixar logo Vixlens branco monocromático em SVG">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+            Baixar SVG
+          </a>
+        </div>
+      </div>
+
+      <!-- Preto / fundo claro -->
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
+        <div style="background:#F5F5F7;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:40px;">
+          <svg width="147" height="43" viewBox="0 0 147 43" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.90735e-05 11.4377H3.23988L11.7037 31.6064L20.1676 11.4377H23.4075L13.1083 36.0442H10.2992L1.90735e-05 11.4377Z" fill="#1D1D1F"/><path d="M137.583 36.0443C134.842 36.0443 132.552 35.3193 130.759 33.8667C130.004 33.2913 129.399 32.6076 128.944 31.8387C128.514 31.0698 128.276 30.3242 128.276 29.6405H131.278C131.278 29.8314 131.385 30.1307 131.623 30.4945C131.84 30.8789 132.184 31.2401 132.615 31.5626C133.868 32.5869 135.531 33.1004 137.581 33.1004C139.784 33.1004 141.468 32.6953 142.611 31.9058C143.517 31.3304 143.972 30.5616 143.972 29.643C143.972 28.5542 143.389 27.6589 142.222 26.9339C141.379 26.4437 139.998 25.9303 138.032 25.3549L136.39 24.8647C134.21 24.2455 132.568 23.6056 131.511 22.9451C130.54 22.3904 129.806 21.7299 129.266 20.9403C128.618 19.9805 128.273 18.9356 128.273 17.7823C128.273 16.8019 128.511 15.904 128.965 15.0732C129.44 14.263 130.109 13.5793 130.973 13.0246C132.636 11.8945 134.86 11.3398 137.688 11.3398C140.515 11.3398 142.718 12.0648 144.512 13.5174C145.266 14.0928 145.872 14.7765 146.326 15.5454C146.781 16.3349 146.995 17.0599 146.995 17.7849H144.016C144.016 17.5707 143.909 17.2508 143.671 16.8896C143.434 16.5051 143.11 16.1439 142.679 15.8214C141.405 14.7971 139.742 14.3069 137.69 14.3069C135.466 14.3069 133.782 14.6913 132.615 15.4808C131.709 16.0794 131.276 16.8457 131.276 17.7849C131.276 18.853 131.858 19.7277 133.069 20.4527C133.889 20.9661 135.294 21.5209 137.236 22.0756L138.878 22.5245C141.082 23.1438 142.7 23.7836 143.757 24.4441C144.729 25.0195 145.486 25.7032 146.003 26.4489C146.629 27.4087 146.953 28.4768 146.953 29.6508C146.953 30.6106 146.736 31.4852 146.285 32.3186C145.83 33.1288 145.183 33.8125 144.319 34.3878C142.656 35.4973 140.411 36.052 137.581 36.052L137.583 36.0443Z" fill="#1D1D1F"/><path d="M105.433 11.4377V14.4255C106.297 13.507 107.312 12.8026 108.521 12.2711C109.881 11.7164 111.458 11.4377 113.249 11.4377C115.04 11.4377 116.661 11.7164 118.022 12.2711C120.115 13.1897 121.713 14.7687 122.794 16.9876C123.376 18.1409 123.723 19.5264 123.851 21.1493C123.982 22.7722 124.044 24.6711 124.044 26.8462V36.0442H121.066V26.8462C121.066 24.9266 121 23.2392 120.914 21.7659C120.807 20.2927 120.546 19.1187 120.115 18.2234C119.361 16.6857 118.366 15.6614 117.178 15.1505C115.99 14.6371 114.675 14.3817 113.249 14.3817C111.824 14.3817 110.508 14.6371 109.297 15.1505C108.109 15.664 107.158 16.6883 106.425 18.2234C105.994 19.1187 105.712 20.2927 105.605 21.7659C105.475 23.2392 105.433 24.924 105.433 26.8462V36.0442H102.43V11.4377H105.433Z" fill="#1D1D1F"/><path d="M86.5155 26.3119L95.478 19.5469L96.8173 18.5432C94.8306 14.317 90.5125 11.3938 85.5026 11.3938C78.6365 11.3938 73.0653 16.8997 73.0653 23.6854C73.0653 30.4711 78.6365 35.9976 85.5026 35.9976C91.16 35.9976 95.9323 32.2642 97.4439 27.1634H94.2693C92.8647 30.6001 89.4761 33.0099 85.5026 33.0099C80.2995 33.0099 76.065 28.8482 76.065 23.6828C76.065 18.5174 80.2969 14.3557 85.5026 14.3557C88.4605 14.3557 91.1182 15.7206 92.8438 17.8337L84.4009 24.1937C84.9831 25.0038 85.7193 25.7082 86.5182 26.3068L86.5155 26.3119Z" fill="#1D1D1F"/><path d="M70.157 36.0446C68.3635 36.0446 66.8963 35.2757 65.7737 33.7406C64.9305 32.5873 64.3065 31.0082 63.8731 29.0035C63.5494 27.5303 63.3327 26.0364 63.2466 24.5219C63.1813 23.028 63.1395 21.3845 63.1395 19.6145V1.60022H66.1183V19.6119C66.1183 23.4098 66.335 26.3563 66.7658 28.4049C67.1339 29.9839 67.5855 31.1785 68.1703 32.0119C68.7316 32.7369 69.3791 33.1007 70.157 33.1007V36.0446Z" fill="#1D1D1F"/><path d="M44.4835 23.732L35.2181 11.4377H38.954L46.3606 21.2757L53.7906 11.4377H57.5265L48.2194 23.732L57.5265 36.0442H53.7906L46.3606 26.2063L38.954 36.0442H35.2181L44.4835 23.732Z" fill="#1D1D1F"/><path d="M30.6861 11.4377H27.6838V36.0442H30.6861V11.4377Z" fill="#1D1D1F"/><path fill-rule="evenodd" clip-rule="evenodd" d="M29.0648 0.000183105H29.3024C30.036 0.000183105 30.7696 0.299475 31.3962 0.959982C31.9366 1.53534 32.1742 2.21907 32.1742 2.87958V3.02922C32.1742 3.8626 31.8296 4.62889 31.0934 5.24811C30.5321 5.71769 29.9055 5.93184 29.258 5.93184H29.0857C28.2216 5.93184 27.4436 5.54741 26.8197 4.77854C26.3654 4.22381 26.1931 3.64845 26.1931 3.09373V2.8383C26.1931 2.09265 26.475 1.38828 27.1434 0.769054C27.7256 0.234973 28.3965 0.000183105 29.0648 0.000183105Z" fill="#1D1D1F"/><path fill-rule="evenodd" clip-rule="evenodd" d="M99.0626 36.3849C95.6948 40.4176 90.5988 43.0002 84.897 43.0002C81.6572 43.0002 78.5922 42.1669 75.9345 40.6962L77.3391 39.0965C79.7357 40.3118 82.456 40.9955 85.3513 40.9955C90.1236 40.9955 94.4417 39.1172 97.5954 36.0443L99.0626 36.3849Z" fill="#1D1D1F"/></svg>
+          <div style="text-align:right;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-400);margin-bottom:6px;">Terciária</div>
+            <div style="font-size:14px;font-weight:700;color:var(--preto);margin-bottom:4px;">Preto monocromático</div>
+            <div style="font-size:12px;color:var(--gray-500);">Uso em fundos claros — documentos, impressão</div>
+          </div>
+        </div>
+        <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;align-items:center;">
+          <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Fundo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Branco #FFFFFF · Cinza #F5F5F7 · Papel</div></div>
+          <a href="./assets/marca/vixlens-logo-preto-mono.svg" download class="btn-download" aria-label="Baixar logo Vixlens preto monocromático em SVG">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+            Baixar SVG
+          </a>
+        </div>
+      </div>
+
+      <!-- Preto + Amarelo / fundo claro -->
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
+        <div style="background:#FFFFFF;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:40px;border-bottom:1px solid var(--gray-200);">
+          <svg width="147" height="43" viewBox="0 0 147 43" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.90735e-05 11.4377H3.23988L11.7037 31.6064L20.1676 11.4377H23.4075L13.1083 36.0442H10.2992L1.90735e-05 11.4377Z" fill="#1D1D1F"/><path d="M137.583 36.0443C134.842 36.0443 132.552 35.3193 130.759 33.8667C130.004 33.2913 129.399 32.6076 128.944 31.8387C128.514 31.0698 128.276 30.3242 128.276 29.6405H131.278C131.278 29.8314 131.385 30.1307 131.623 30.4945C131.84 30.8789 132.184 31.2401 132.615 31.5626C133.868 32.5869 135.531 33.1004 137.581 33.1004C139.784 33.1004 141.468 32.6953 142.611 31.9058C143.517 31.3304 143.972 30.5616 143.972 29.643C143.972 28.5542 143.389 27.6589 142.222 26.9339C141.379 26.4437 139.998 25.9303 138.032 25.3549L136.39 24.8647C134.21 24.2455 132.568 23.6056 131.511 22.9451C130.54 22.3904 129.806 21.7299 129.266 20.9403C128.618 19.9805 128.273 18.9356 128.273 17.7823C128.273 16.8019 128.511 15.904 128.965 15.0732C129.44 14.263 130.109 13.5793 130.973 13.0246C132.636 11.8945 134.86 11.3398 137.688 11.3398C140.515 11.3398 142.718 12.0648 144.512 13.5174C145.266 14.0928 145.872 14.7765 146.326 15.5454C146.781 16.3349 146.995 17.0599 146.995 17.7849H144.016C144.016 17.5707 143.909 17.2508 143.671 16.8896C143.434 16.5051 143.11 16.1439 142.679 15.8214C141.405 14.7971 139.742 14.3069 137.69 14.3069C135.466 14.3069 133.782 14.6913 132.615 15.4808C131.709 16.0794 131.276 16.8457 131.276 17.7849C131.276 18.853 131.858 19.7277 133.069 20.4527C133.889 20.9661 135.294 21.5209 137.236 22.0756L138.878 22.5245C141.082 23.1438 142.7 23.7836 143.757 24.4441C144.729 25.0195 145.486 25.7032 146.003 26.4489C146.629 27.4087 146.953 28.4768 146.953 29.6508C146.953 30.6106 146.736 31.4852 146.285 32.3186C145.83 33.1288 145.183 33.8125 144.319 34.3878C142.656 35.4973 140.411 36.052 137.581 36.052L137.583 36.0443Z" fill="#1D1D1F"/><path d="M105.433 11.4377V14.4255C106.297 13.507 107.312 12.8026 108.521 12.2711C109.881 11.7164 111.458 11.4377 113.249 11.4377C115.04 11.4377 116.661 11.7164 118.022 12.2711C120.115 13.1897 121.713 14.7687 122.794 16.9876C123.376 18.1409 123.723 19.5264 123.851 21.1493C123.982 22.7722 124.044 24.6711 124.044 26.8462V36.0442H121.066V26.8462C121.066 24.9266 121 23.2392 120.914 21.7659C120.807 20.2927 120.546 19.1187 120.115 18.2234C119.361 16.6857 118.366 15.6614 117.178 15.1505C115.99 14.6371 114.675 14.3817 113.249 14.3817C111.824 14.3817 110.508 14.6371 109.297 15.1505C108.109 15.664 107.158 16.6883 106.425 18.2234C105.994 19.1187 105.712 20.2927 105.605 21.7659C105.475 23.2392 105.433 24.924 105.433 26.8462V36.0442H102.43V11.4377H105.433Z" fill="#1D1D1F"/><path d="M86.5155 26.3119L95.478 19.5469L96.8173 18.5432C94.8306 14.317 90.5125 11.3938 85.5026 11.3938C78.6365 11.3938 73.0653 16.8997 73.0653 23.6854C73.0653 30.4711 78.6365 35.9976 85.5026 35.9976C91.16 35.9976 95.9323 32.2642 97.4439 27.1634H94.2693C92.8647 30.6001 89.4761 33.0099 85.5026 33.0099C80.2995 33.0099 76.065 28.8482 76.065 23.6828C76.065 18.5174 80.2969 14.3557 85.5026 14.3557C88.4605 14.3557 91.1182 15.7206 92.8438 17.8337L84.4009 24.1937C84.9831 25.0038 85.7193 25.7082 86.5182 26.3068L86.5155 26.3119Z" fill="#1D1D1F"/><path d="M70.157 36.0446C68.3635 36.0446 66.8963 35.2757 65.7737 33.7406C64.9305 32.5873 64.3065 31.0082 63.8731 29.0035C63.5494 27.5303 63.3327 26.0364 63.2466 24.5219C63.1813 23.028 63.1395 21.3845 63.1395 19.6145V1.60022H66.1183V19.6119C66.1183 23.4098 66.335 26.3563 66.7658 28.4049C67.1339 29.9839 67.5855 31.1785 68.1703 32.0119C68.7316 32.7369 69.3791 33.1007 70.157 33.1007V36.0446Z" fill="#1D1D1F"/><path d="M44.4835 23.732L35.2181 11.4377H38.954L46.3606 21.2757L53.7906 11.4377H57.5265L48.2194 23.732L57.5265 36.0442H53.7906L46.3606 26.2063L38.954 36.0442H35.2181L44.4835 23.732Z" fill="#1D1D1F"/><path d="M30.6861 11.4377H27.6838V36.0442H30.6861V11.4377Z" fill="#1D1D1F"/><path fill-rule="evenodd" clip-rule="evenodd" d="M29.0648 0.000183105H29.3024C30.036 0.000183105 30.7696 0.299475 31.3962 0.959982C31.9366 1.53534 32.1742 2.21907 32.1742 2.87958V3.02922C32.1742 3.8626 31.8296 4.62889 31.0934 5.24811C30.5321 5.71769 29.9055 5.93184 29.258 5.93184H29.0857C28.2216 5.93184 27.4436 5.54741 26.8197 4.77854C26.3654 4.22381 26.1931 3.64845 26.1931 3.09373V2.8383C26.1931 2.09265 26.475 1.38828 27.1434 0.769054C27.7256 0.234973 28.3965 0.000183105 29.0648 0.000183105Z" fill="#FAC617"/><path fill-rule="evenodd" clip-rule="evenodd" d="M99.0626 36.3849C95.6948 40.4176 90.5988 43.0002 84.897 43.0002C81.6572 43.0002 78.5922 42.1669 75.9345 40.6962L77.3391 39.0965C79.7357 40.3118 82.456 40.9955 85.3513 40.9955C90.1236 40.9955 94.4417 39.1172 97.5954 36.0443L99.0626 36.3849Z" fill="#FAC617"/></svg>
+          <div style="text-align:right;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-400);margin-bottom:6px;">Quaternária</div>
+            <div style="font-size:14px;font-weight:700;color:var(--preto);margin-bottom:4px;">Preto + Amarelo</div>
+            <div style="font-size:12px;color:var(--gray-500);">Fundo claro com identidade completa de marca</div>
+          </div>
+        </div>
+        <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;align-items:center;">
+          <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Fundo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Branco #FFFFFF · Cinza #F5F5F7</div></div>
+          <a href="./assets/marca/vixlens-logo-preto-amarelo.svg" download class="btn-download" aria-label="Baixar logo Vixlens preto + amarelo em SVG">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+            Baixar SVG
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Outros formatos -->
+    <div class="subsection-title">Outros formatos</div>
+    <div class="download-row">
+      <a href="./assets/marca/vixlens-logo.pdf" download class="btn-download btn-download-ghost" aria-label="Baixar logo em PDF para impressão">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+        Logo PDF (impressão)
+      </a>
+      <a href="./assets/marca/vixlens-logo.png" download class="btn-download btn-download-ghost" aria-label="Baixar logo em PNG raster">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+        Logo PNG (440×130)
+      </a>
+    </div>
+
+    <!-- Brand Kit completo -->
+    <div class="download-card">
+      <div class="download-card-info">
+        <div class="download-card-title">Brand Kit completo (.zip)</div>
+        <div class="download-card-desc">Pacote único com tudo: 4 versões do logo (SVG), PDF, PNG, 4 ícones de linha de produto e a fonte Mont completa. Para quando precisar de tudo de uma vez.</div>
+      </div>
+      <a href="./assets/vixlens-brand-kit.zip" download class="btn-download" aria-label="Baixar pacote completo Vixlens Brand Kit em ZIP">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+        Baixar Brand Kit
+      </a>
+    </div>
+
+    <!-- ── Linha Reflecta ── -->
+    <div class="subsection-title" style="margin-top:64px;">Linha Reflecta</div>
+    <p style="font-size:13px;color:var(--gray-500);line-height:1.7;margin-bottom:24px;max-width:680px;">
+      Linha de tratamentos antirreflexo Vixlens. 4 produtos herdando da matriz <strong style="color:var(--preto);">Reflecta</strong>, cada um com identidade visual própria.
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:32px;">
+
+      <!-- Reflecta master -->
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
+        <div style="background:#FFFFFF;padding:48px 32px;display:flex;align-items:center;justify-content:center;min-height:160px;">
+          <img src="./assets/marca/reflecta/reflecta-logo-preto.svg" alt="Reflecta — logo principal" style="height:42px;width:auto;max-width:80%;"/>
+        </div>
+        <div style="background:var(--bg-cinza);padding:16px 20px;border-top:1px solid var(--gray-200);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);">Matriz</div>
+              <div style="font-size:14px;font-weight:700;color:var(--preto);">Reflecta</div>
+            </div>
+          </div>
+          <div class="download-row">
+            <a href="./assets/marca/reflecta/reflecta-logo-preto.svg" download class="btn-download" aria-label="Baixar logo Reflecta em SVG">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              SVG
+            </a>
+            <a href="./assets/marca/reflecta/reflecta-logo-preto.webp" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta em WebP">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              WebP
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reflecta Blue -->
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
+        <div style="background:#FFFFFF;padding:48px 32px;display:flex;align-items:center;justify-content:center;min-height:160px;">
+          <img src="./assets/marca/reflecta/reflecta-blue.svg" alt="Reflecta Blue — BlueProtect SH" style="height:50px;width:auto;max-width:80%;"/>
+        </div>
+        <div style="background:var(--bg-cinza);padding:16px 20px;border-top:1px solid var(--gray-200);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);">BlueProtect SH</div>
+              <div style="font-size:14px;font-weight:700;color:var(--preto);">Reflecta Blue</div>
+            </div>
+            <span style="width:14px;height:14px;border-radius:50%;background:#134B97;"></span>
+          </div>
+          <div class="download-row">
+            <a href="./assets/marca/reflecta/reflecta-blue.svg" download class="btn-download" aria-label="Baixar logo Reflecta Blue em SVG">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              SVG
+            </a>
+            <a href="./assets/marca/reflecta/reflecta-blue.webp" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta Blue em WebP">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              WebP
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reflecta Guard -->
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
+        <div style="background:#FFFFFF;padding:48px 32px;display:flex;align-items:center;justify-content:center;min-height:160px;">
+          <img src="./assets/marca/reflecta/reflecta-guard.svg" alt="Reflecta Guard" style="height:50px;width:auto;max-width:80%;"/>
+        </div>
+        <div style="background:var(--bg-cinza);padding:16px 20px;border-top:1px solid var(--gray-200);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);">Proteção</div>
+              <div style="font-size:14px;font-weight:700;color:var(--preto);">Reflecta Guard</div>
+            </div>
+            <span style="width:14px;height:14px;border-radius:50%;background:#00782D;"></span>
+          </div>
+          <div class="download-row">
+            <a href="./assets/marca/reflecta/reflecta-guard.svg" download class="btn-download" aria-label="Baixar logo Reflecta Guard em SVG">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              SVG
+            </a>
+            <a href="./assets/marca/reflecta/reflecta-guard.webp" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta Guard em WebP">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              WebP
+            </a>
+            <a href="./assets/marca/reflecta/reflecta-guard.pdf" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta Guard em PDF">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reflecta Express -->
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
+        <div style="background:#FFFFFF;padding:48px 32px;display:flex;align-items:center;justify-content:center;min-height:160px;">
+          <img src="./assets/marca/reflecta/reflecta-express.svg" alt="Reflecta Express" style="height:50px;width:auto;max-width:80%;"/>
+        </div>
+        <div style="background:var(--bg-cinza);padding:16px 20px;border-top:1px solid var(--gray-200);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+            <div>
+              <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);">Performance</div>
+              <div style="font-size:14px;font-weight:700;color:var(--preto);">Reflecta Express</div>
+            </div>
+            <span style="width:14px;height:14px;border-radius:50%;background:#92BB36;"></span>
+          </div>
+          <div class="download-row">
+            <a href="./assets/marca/reflecta/reflecta-express.svg" download class="btn-download" aria-label="Baixar logo Reflecta Express em SVG">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              SVG
+            </a>
+            <a href="./assets/marca/reflecta/reflecta-express.webp" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta Express em WebP">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              WebP
+            </a>
+            <a href="./assets/marca/reflecta/reflecta-express.pdf" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta Express em PDF">
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
+              PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Ícones Reflecta + bloco "alimentando" -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
+        <div style="background:var(--bg-cinza);padding:32px;display:flex;align-items:center;justify-content:center;min-height:120px;">
+          <img src="./assets/marca/reflecta/reflecta-icones.svg" alt="Ícones Reflecta" style="height:60px;width:auto;max-width:90%;"/>
+        </div>
+        <div style="background:#fff;padding:16px 20px;border-top:1px solid var(--gray-200);">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-bottom:2px;">Conjunto</div>
+          <div style="font-size:14px;font-weight:700;color:var(--preto);margin-bottom:10px;">Ícones Reflecta</div>
+          <div class="download-row">
+            <a href="./assets/marca/reflecta/reflecta-icones.svg" download class="btn-download"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>SVG</a>
+            <a href="./assets/marca/reflecta/reflecta-icones.webp" download class="btn-download btn-download-ghost"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>WebP</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-radius:16px;border:1.5px dashed var(--gray-300);padding:24px;display:flex;flex-direction:column;justify-content:center;background:var(--bg-cinza);">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-bottom:6px;">Em construção</div>
+        <div style="font-size:14px;font-weight:700;color:var(--preto);margin-bottom:6px;">Mais variantes em breve</div>
+        <div style="font-size:12px;color:var(--gray-500);line-height:1.5;">Variantes monocromáticas (preto/branco), PDFs do logo principal e WebPs das versões Vixlens serão adicionados aqui conforme forem produzidos.</div>
+      </div>
+    </div>
+
+    <!-- Regras -->
+    <div class="subsection-title" style="margin-top:48px;">Regras de uso</div>
+    <div class="rules-list">
+      <div class="rule-item"><div class="rule-icon ok">✓</div><span class="rule-text">Sempre usar o arquivo SVG original. Nunca recriar o logotipo manualmente ou em texto.</span></div>
+      <div class="rule-item"><div class="rule-icon ok">✓</div><span class="rule-text">Versão Branco + Amarelo é a preferencial. Use monocromático apenas quando o contexto não permitir duas cores.</span></div>
+      <div class="rule-item"><div class="rule-icon ok">✓</div><span class="rule-text">Versão Preta apenas em fundos claros (#FFFFFF, #F5F5F7) ou impressão sem cor.</span></div>
+      <div class="rule-item"><div class="rule-icon no">✗</div><span class="rule-text">Não alterar proporções, cores ou opacidade do logotipo. Não aplicar sombras, contornos ou efeitos.</span></div>
+      <div class="rule-item"><div class="rule-icon no">✗</div><span class="rule-text">Não usar sobre fundos que gerem baixo contraste. O mínimo de contraste é 4.5:1 (WCAG AA).</span></div>
+    </div>
+  </section>
+
   <!-- ═══════════════════════════════════════════════════════════════
-       01 — CORES
+       02 — CORES
   ════════════════════════════════════════════════════════════════ -->
   <section class="section" id="cores">
     <div class="section-header">
-      <div class="section-eyebrow">01 — Fundamentos</div>
+      <div class="section-eyebrow">02 — Fundamentos</div>
       <h2 class="section-title">Cores</h2>
       <p class="section-desc">
         A paleta Vixlens é intencionalmente restrita. Quatro cores primárias, usadas com rigor. Preto lidera — é a cor de maior presença no site e na comunicação. Amarelo e Azul são de impacto. Branco é estrutural.
@@ -1890,11 +2165,11 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════
-       02 — TIPOGRAFIA
+       03 — TIPOGRAFIA
   ════════════════════════════════════════════════════════════════ -->
   <section class="section" id="tipografia">
     <div class="section-header">
-      <div class="section-eyebrow">02 — Fundamentos</div>
+      <div class="section-eyebrow">03 — Fundamentos</div>
       <h2 class="section-title">Tipografia</h2>
       <p class="section-desc">
         Duas famílias, dois contextos. <strong>Host Grotesk</strong> para tudo digital — site, plataformas, materiais em tela. <strong>Mont</strong> para documentos impressos — propostas, manuais, apresentações em PDF.
@@ -2357,11 +2632,11 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════
-       03 — TOKENS DE FORMA
+       04 — TOKENS DE FORMA
   ════════════════════════════════════════════════════════════════ -->
   <section class="section" id="tokens">
     <div class="section-header">
-      <div class="section-eyebrow">03 — Fundamentos</div>
+      <div class="section-eyebrow">04 — Fundamentos</div>
       <h2 class="section-title">Tokens de forma</h2>
       <p class="section-desc">
         Border radius extraídos diretamente do Figma Vixlens 3.0. Cada valor tem um papel específico — não usar livremente entre contextos.
@@ -2401,11 +2676,11 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════
-       04 — BOTÕES
+       05 — BOTÕES
   ════════════════════════════════════════════════════════════════ -->
   <section class="section" id="botoes">
     <div class="section-header">
-      <div class="section-eyebrow">04 — Componentes</div>
+      <div class="section-eyebrow">05 — Componentes</div>
       <h2 class="section-title">Botões</h2>
       <p class="section-desc">
         Dois tipos: Primário (ação principal da página) e Secundário (ação alternativa). Border-radius sempre 30px — pill. Fonte Host Grotesk Bold 18px. Nunca usar mais de um Primário por seção.
@@ -2737,11 +3012,11 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════
-       05 — VOZ & TOM
+       06 — VOZ & TOM
   ════════════════════════════════════════════════════════════════ -->
   <section class="section" id="voz-tom">
     <div class="section-header">
-      <div class="section-eyebrow">05 — Voz</div>
+      <div class="section-eyebrow">06 — Voz</div>
       <h2 class="section-title">Voz &amp; Tom</h2>
       <p class="section-desc">
         Institucional, mas direto. Anti-corporativo-vazio. Cada frase serve um propósito. Nenhuma palavra desperdiçada. A Vixlens tem cinco vozes — cada uma com contexto de uso definido.
@@ -3045,11 +3320,11 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════
-       06 — VOCABULÁRIO CANÔNICO
+       07 — VOCABULÁRIO CANÔNICO
   ════════════════════════════════════════════════════════════════ -->
   <section class="section" id="vocabulario">
     <div class="section-header">
-      <div class="section-eyebrow">06 — Voz</div>
+      <div class="section-eyebrow">07 — Voz</div>
       <h2 class="section-title">Vocabulário Canônico</h2>
       <p class="section-desc">
         Termos que devem aparecer <strong>sempre com esta grafia exata</strong>. Nunca abreviar, nunca parafrasear. Qualquer desvio cria inconsistência de marca e confunde o cliente.
@@ -3289,11 +3564,11 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════
-       07 — INPUTS
+       08 — INPUTS
   ════════════════════════════════════════════════════════════════ -->
   <section class="section" id="inputs">
     <div class="section-header">
-      <div class="section-eyebrow">07 — Componentes</div>
+      <div class="section-eyebrow">08 — Componentes</div>
       <h2 class="section-title">Inputs</h2>
       <p class="section-desc">
         Campos de texto extraídos diretamente do formulário de cadastro de parceiros no Figma Vixlens 3.0. Borda sutil, raio contido, placeholder no tom Cinza.
@@ -3421,11 +3696,11 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════
-       08 — CARDS
+       09 — CARDS
   ════════════════════════════════════════════════════════════════ -->
   <section class="section" id="cards">
     <div class="section-header">
-      <div class="section-eyebrow">08 — Componentes</div>
+      <div class="section-eyebrow">09 — Componentes</div>
       <h2 class="section-title">Cards</h2>
       <p class="section-desc">
         Três tipos de card, todos com border-radius 57px — token exclusivo da Vixlens. Extraídos diretamente das seções EssilorLuxottica, VixClub e Vantagens do Figma 3.0.
@@ -3799,11 +4074,11 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════
-       09 — CALLOUTS
+       10 — CALLOUTS
   ════════════════════════════════════════════════════════════════ -->
   <section class="section" id="callouts">
     <div class="section-header">
-      <div class="section-eyebrow">09 — Componentes</div>
+      <div class="section-eyebrow">10 — Componentes</div>
       <h2 class="section-title">Callouts</h2>
       <p class="section-desc">
         Componentes de destaque em documentos e comunicações internas. Quatro tipos — Destaque (Amarelo), Informativo (Roxo), Crítico (Coral) e Sucesso (Verde) — com barra lateral 4px e label em caixa alta. Cores alinhadas ao sistema de dashboard Vixlens.
@@ -3907,11 +4182,11 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════
-       10 — ICONOGRAFIA
+       11 — ICONOGRAFIA
   ════════════════════════════════════════════════════════════════ -->
   <section class="section" id="iconografia">
     <div class="section-header">
-      <div class="section-eyebrow">10 — Fundamentos</div>
+      <div class="section-eyebrow">11 — Fundamentos</div>
       <h2 class="section-title">Iconografia</h2>
       <p class="section-desc">
         Dois sistemas de ícones convivem no ecossistema Vixlens: os <strong>ícones de linha de produto</strong> (SVG customizados do Figma, exclusivos para Cards Hero) e os <strong>ícones de UI</strong> da biblioteca Phosphor Icons — usados em interfaces, documentos e comunicações.
@@ -4226,11 +4501,11 @@ import &#123; Eye, ShieldCheck, Star &#125;
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════
-       11 — ESPAÇAMENTO
+       12 — ESPAÇAMENTO
   ════════════════════════════════════════════════════════════════ -->
   <section class="section" id="espacamento">
     <div class="section-header">
-      <div class="section-eyebrow">11 — Fundamentos</div>
+      <div class="section-eyebrow">12 — Fundamentos</div>
       <h2 class="section-title">Espaçamento</h2>
       <p class="section-desc">
         Sistema derivado dos valores extraídos do Figma Vixlens 3.0. Base 8px com escala multiplicada. Usado consistentemente em gaps entre elementos, padding de componentes e margens de seção.
@@ -4359,281 +4634,6 @@ import &#123; Eye, ShieldCheck, Star &#125;
       <div class="rule-item"><div class="rule-icon no">✗</div><span class="rule-text">Não inventar valores intermediários como 35px ou 45px. Usar sempre os tokens definidos.</span></div>
     </div>
   </section>
-
-  <!-- ════════════════════════════════════════════════════════════════
-       12 — LOGOTIPO & CLEARANCE
-  ════════════════════════════════════════════════════════════════ -->
-  <section class="section" id="logotipo">
-    <div class="section-header">
-      <div class="section-eyebrow">12 — Marca</div>
-      <h2 class="section-title">Logotipo & Clearance</h2>
-      <p class="section-desc">
-        Três versões oficiais do logotipo Vixlens. O logotipo nunca deve ser recolorido, distorcido ou recriado. Use sempre os arquivos SVG originais.
-      </p>
-    </div>
-
-    <!-- Versões -->
-    <div class="subsection-title">Versões oficiais</div>
-    <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:48px;">
-
-      <!-- Principal: branco + amarelo / fundo escuro -->
-      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
-        <div style="background:#1D1D1F;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:40px;">
-          <svg width="147" height="43" viewBox="0 0 147 43" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.90735e-05 11.4378H3.23988L11.7037 31.6064L20.1676 11.4378H23.4075L13.1083 36.0442H10.2992L1.90735e-05 11.4378Z" fill="white"/><path d="M137.583 36.0443C134.842 36.0443 132.552 35.3193 130.759 33.8667C130.004 33.2913 129.399 32.6076 128.944 31.8387C128.514 31.0698 128.276 30.3242 128.276 29.6405H131.278C131.278 29.8314 131.385 30.1307 131.623 30.4945C131.84 30.8789 132.184 31.2401 132.615 31.5626C133.868 32.5869 135.531 33.1004 137.581 33.1004C139.784 33.1004 141.468 32.6953 142.611 31.9058C143.517 31.3304 143.972 30.5616 143.972 29.643C143.972 28.5542 143.389 27.6589 142.222 26.9339C141.379 26.4437 139.998 25.9303 138.032 25.3549L136.39 24.8647C134.21 24.2455 132.568 23.6056 131.511 22.9451C130.54 22.3904 129.806 21.7299 129.266 20.9403C128.618 19.9805 128.273 18.9356 128.273 17.7823C128.273 16.8019 128.511 15.904 128.965 15.0732C129.44 14.263 130.109 13.5793 130.973 13.0246C132.636 11.8945 134.86 11.3398 137.688 11.3398C140.515 11.3398 142.718 12.0648 144.512 13.5174C145.266 14.0928 145.872 14.7765 146.326 15.5454C146.781 16.3349 146.995 17.0599 146.995 17.7849H144.016C144.016 17.5707 143.909 17.2508 143.671 16.8896C143.434 16.5051 143.11 16.1439 142.679 15.8214C141.405 14.7971 139.742 14.3069 137.69 14.3069C135.466 14.3069 133.782 14.6913 132.615 15.4808C131.709 16.0794 131.276 16.8457 131.276 17.7849C131.276 18.853 131.858 19.7277 133.069 20.4527C133.889 20.9661 135.294 21.5209 137.236 22.0756L138.878 22.5245C141.082 23.1438 142.7 23.7836 143.757 24.4441C144.729 25.0195 145.486 25.7032 146.003 26.4489C146.629 27.4087 146.953 28.4768 146.953 29.6508C146.953 30.6106 146.736 31.4852 146.285 32.3186C145.83 33.1288 145.183 33.8125 144.319 34.3878C142.656 35.4973 140.411 36.052 137.581 36.052L137.583 36.0443Z" fill="white"/><path d="M105.433 11.4378V14.4255C106.297 13.507 107.312 12.8026 108.521 12.2711C109.881 11.7164 111.458 11.4378 113.249 11.4378C115.04 11.4378 116.661 11.7164 118.022 12.2711C120.115 13.1897 121.713 14.7687 122.794 16.9876C123.376 18.1409 123.723 19.5264 123.851 21.1493C123.982 22.7722 124.044 24.6711 124.044 26.8462V36.0442H121.066V26.8462C121.066 24.9266 121 23.2392 120.914 21.7659C120.807 20.2927 120.546 19.1187 120.115 18.2234C119.361 16.6857 118.366 15.6614 117.178 15.1505C115.99 14.6371 114.675 14.3817 113.249 14.3817C111.824 14.3817 110.508 14.6371 109.297 15.1505C108.109 15.664 107.158 16.6883 106.425 18.2234C105.994 19.1187 105.712 20.2927 105.605 21.7659C105.475 23.2392 105.433 24.924 105.433 26.8462V36.0442H102.43V11.4378H105.433Z" fill="white"/><path d="M86.5155 26.3119L95.478 19.5469L96.8173 18.5432C94.8306 14.317 90.5125 11.3938 85.5026 11.3938C78.6365 11.3938 73.0653 16.8997 73.0653 23.6854C73.0653 30.4711 78.6365 35.9976 85.5026 35.9976C91.16 35.9976 95.9323 32.2642 97.4439 27.1634H94.2693C92.8647 30.6001 89.4761 33.0099 85.5026 33.0099C80.2995 33.0099 76.065 28.8482 76.065 23.6828C76.065 18.5174 80.2969 14.3557 85.5026 14.3557C88.4605 14.3557 91.1182 15.7206 92.8438 17.8337L84.4009 24.1937C84.9831 25.0038 85.7193 25.7082 86.5182 26.3068L86.5155 26.3119Z" fill="white"/><path d="M70.157 36.0446C68.3635 36.0446 66.8963 35.2757 65.7737 33.7406C64.9305 32.5873 64.3065 31.0082 63.8731 29.0035C63.5494 27.5303 63.3327 26.0364 63.2466 24.5219C63.1813 23.028 63.1395 21.3845 63.1395 19.6145V1.60022H66.1183V19.6119C66.1183 23.4098 66.335 26.3563 66.7658 28.4049C67.1339 29.9839 67.5855 31.1785 68.1703 32.0119C68.7316 32.7369 69.3791 33.1007 70.157 33.1007V36.0446Z" fill="white"/><path d="M44.4835 23.732L35.2181 11.4378H38.954L46.3606 21.2757L53.7906 11.4378H57.5265L48.2194 23.732L57.5265 36.0442H53.7906L46.3606 26.2063L38.954 36.0442H35.2181L44.4835 23.732Z" fill="white"/><path d="M30.6861 11.4378H27.6838V36.0442H30.6861V11.4378Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M29.0648 0.000183105H29.3024C30.036 0.000183105 30.7696 0.299475 31.3962 0.959982C31.9366 1.53534 32.1742 2.21907 32.1742 2.87958V3.02922C32.1742 3.8626 31.8296 4.62889 31.0934 5.24811C30.5321 5.71769 29.9055 5.93184 29.258 5.93184H29.0857C28.2216 5.93184 27.4436 5.54741 26.8197 4.77854C26.3654 4.22381 26.1931 3.64845 26.1931 3.09373V2.8383C26.1931 2.09265 26.475 1.38828 27.1434 0.769054C27.7256 0.234973 28.3965 0.000183105 29.0648 0.000183105Z" fill="#FAC617"/><path fill-rule="evenodd" clip-rule="evenodd" d="M99.0626 36.3849C95.6948 40.4176 90.5988 43.0002 84.897 43.0002C81.6572 43.0002 78.5922 42.1669 75.9345 40.6962L77.3391 39.0965C79.7357 40.3118 82.456 40.9955 85.3513 40.9955C90.1236 40.9955 94.4417 39.1172 97.5954 36.0443L99.0626 36.3849Z" fill="#FAC617"/></svg>
-          <div style="text-align:right;">
-            <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:6px;">Principal</div>
-            <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;">Branco + Amarelo</div>
-            <div style="font-size:12px;color:rgba(255,255,255,.5);">Uso em fundos escuros — versão preferencial</div>
-          </div>
-        </div>
-        <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;align-items:center;">
-          <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Fundo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Preto #1D1D1F · Fotos escuras · Evitar Azul como fundo</div></div>
-          <a href="./assets/marca/vixlens-logo-branco-amarelo.svg" download class="btn-download" aria-label="Baixar logo Vixlens branco + amarelo em SVG">
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-            Baixar SVG
-          </a>
-        </div>
-      </div>
-
-      <!-- Monocromático branco -->
-      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
-        <div style="background:#606F7F;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:40px;">
-          <svg width="147" height="43" viewBox="0 0 147 43" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.90735e-05 11.4378H3.23988L11.7037 31.6064L20.1676 11.4378H23.4075L13.1083 36.0442H10.2992L1.90735e-05 11.4378Z" fill="white"/><path d="M137.583 36.0443C134.842 36.0443 132.552 35.3193 130.759 33.8667C130.004 33.2913 129.399 32.6076 128.944 31.8387C128.514 31.0698 128.276 30.3242 128.276 29.6405H131.278C131.278 29.8314 131.385 30.1307 131.623 30.4945C131.84 30.8789 132.184 31.2401 132.615 31.5626C133.868 32.5869 135.531 33.1004 137.581 33.1004C139.784 33.1004 141.468 32.6953 142.611 31.9058C143.517 31.3304 143.972 30.5616 143.972 29.643C143.972 28.5542 143.389 27.6589 142.222 26.9339C141.379 26.4437 139.998 25.9303 138.032 25.3549L136.39 24.8647C134.21 24.2455 132.568 23.6056 131.511 22.9451C130.54 22.3904 129.806 21.7299 129.266 20.9403C128.618 19.9805 128.273 18.9356 128.273 17.7823C128.273 16.8019 128.511 15.904 128.965 15.0732C129.44 14.263 130.109 13.5793 130.973 13.0246C132.636 11.8945 134.86 11.3398 137.688 11.3398C140.515 11.3398 142.718 12.0648 144.512 13.5174C145.266 14.0928 145.872 14.7765 146.326 15.5454C146.781 16.3349 146.995 17.0599 146.995 17.7849H144.016C144.016 17.5707 143.909 17.2508 143.671 16.8896C143.434 16.5051 143.11 16.1439 142.679 15.8214C141.405 14.7971 139.742 14.3069 137.69 14.3069C135.466 14.3069 133.782 14.6913 132.615 15.4808C131.709 16.0794 131.276 16.8457 131.276 17.7849C131.276 18.853 131.858 19.7277 133.069 20.4527C133.889 20.9661 135.294 21.5209 137.236 22.0756L138.878 22.5245C141.082 23.1438 142.7 23.7836 143.757 24.4441C144.729 25.0195 145.486 25.7032 146.003 26.4489C146.629 27.4087 146.953 28.4768 146.953 29.6508C146.953 30.6106 146.736 31.4852 146.285 32.3186C145.83 33.1288 145.183 33.8125 144.319 34.3878C142.656 35.4973 140.411 36.052 137.581 36.052L137.583 36.0443Z" fill="white"/><path d="M105.433 11.4378V14.4255C106.297 13.507 107.312 12.8026 108.521 12.2711C109.881 11.7164 111.458 11.4378 113.249 11.4378C115.04 11.4378 116.661 11.7164 118.022 12.2711C120.115 13.1897 121.713 14.7687 122.794 16.9876C123.376 18.1409 123.723 19.5264 123.851 21.1493C123.982 22.7722 124.044 24.6711 124.044 26.8462V36.0442H121.066V26.8462C121.066 24.9266 121 23.2392 120.914 21.7659C120.807 20.2927 120.546 19.1187 120.115 18.2234C119.361 16.6857 118.366 15.6614 117.178 15.1505C115.99 14.6371 114.675 14.3817 113.249 14.3817C111.824 14.3817 110.508 14.6371 109.297 15.1505C108.109 15.664 107.158 16.6883 106.425 18.2234C105.994 19.1187 105.712 20.2927 105.605 21.7659C105.475 23.2392 105.433 24.924 105.433 26.8462V36.0442H102.43V11.4378H105.433Z" fill="white"/><path d="M86.5155 26.3119L95.478 19.5469L96.8173 18.5432C94.8306 14.317 90.5125 11.3938 85.5026 11.3938C78.6365 11.3938 73.0653 16.8997 73.0653 23.6854C73.0653 30.4711 78.6365 35.9976 85.5026 35.9976C91.16 35.9976 95.9323 32.2642 97.4439 27.1634H94.2693C92.8647 30.6001 89.4761 33.0099 85.5026 33.0099C80.2995 33.0099 76.065 28.8482 76.065 23.6828C76.065 18.5174 80.2969 14.3557 85.5026 14.3557C88.4605 14.3557 91.1182 15.7206 92.8438 17.8337L84.4009 24.1937C84.9831 25.0038 85.7193 25.7082 86.5182 26.3068L86.5155 26.3119Z" fill="white"/><path d="M70.157 36.0446C68.3635 36.0446 66.8963 35.2757 65.7737 33.7406C64.9305 32.5873 64.3065 31.0082 63.8731 29.0035C63.5494 27.5303 63.3327 26.0364 63.2466 24.5219C63.1813 23.028 63.1395 21.3845 63.1395 19.6145V1.60022H66.1183V19.6119C66.1183 23.4098 66.335 26.3563 66.7658 28.4049C67.1339 29.9839 67.5855 31.1785 68.1703 32.0119C68.7316 32.7369 69.3791 33.1007 70.157 33.1007V36.0446Z" fill="white"/><path d="M44.4835 23.732L35.2181 11.4378H38.954L46.3606 21.2757L53.7906 11.4378H57.5265L48.2194 23.732L57.5265 36.0442H53.7906L46.3606 26.2063L38.954 36.0442H35.2181L44.4835 23.732Z" fill="white"/><path d="M30.6861 11.4378H27.6838V36.0442H30.6861V11.4378Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M29.0648 0.000183105H29.3024C30.036 0.000183105 30.7696 0.299475 31.3962 0.959982C31.9366 1.53534 32.1742 2.21907 32.1742 2.87958V3.02922C32.1742 3.8626 31.8296 4.62889 31.0934 5.24811C30.5321 5.71769 29.9055 5.93184 29.258 5.93184H29.0857C28.2216 5.93184 27.4436 5.54741 26.8197 4.77854C26.3654 4.22381 26.1931 3.64845 26.1931 3.09373V2.8383C26.1931 2.09265 26.475 1.38828 27.1434 0.769054C27.7256 0.234973 28.3965 0.000183105 29.0648 0.000183105Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M99.0626 36.3849C95.6948 40.4176 90.5988 43.0002 84.897 43.0002C81.6572 43.0002 78.5922 42.1669 75.9345 40.6962L77.3391 39.0965C79.7357 40.3118 82.456 40.9955 85.3513 40.9955C90.1236 40.9955 94.4417 39.1172 97.5954 36.0443L99.0626 36.3849Z" fill="white"/></svg>
-          <div style="text-align:right;">
-            <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:6px;">Secundária</div>
-            <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:4px;">Branco monocromático</div>
-            <div style="font-size:12px;color:rgba(255,255,255,.55);">Para fundos coloridos onde o amarelo conflita</div>
-          </div>
-        </div>
-        <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;align-items:center;">
-          <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Fundo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Cinza escuro · Azul · Qualquer fundo médio</div></div>
-          <a href="./assets/marca/vixlens-logo-branco-mono.svg" download class="btn-download" aria-label="Baixar logo Vixlens branco monocromático em SVG">
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-            Baixar SVG
-          </a>
-        </div>
-      </div>
-
-      <!-- Preto / fundo claro -->
-      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
-        <div style="background:#F5F5F7;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:40px;">
-          <svg width="147" height="43" viewBox="0 0 147 43" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.90735e-05 11.4377H3.23988L11.7037 31.6064L20.1676 11.4377H23.4075L13.1083 36.0442H10.2992L1.90735e-05 11.4377Z" fill="#1D1D1F"/><path d="M137.583 36.0443C134.842 36.0443 132.552 35.3193 130.759 33.8667C130.004 33.2913 129.399 32.6076 128.944 31.8387C128.514 31.0698 128.276 30.3242 128.276 29.6405H131.278C131.278 29.8314 131.385 30.1307 131.623 30.4945C131.84 30.8789 132.184 31.2401 132.615 31.5626C133.868 32.5869 135.531 33.1004 137.581 33.1004C139.784 33.1004 141.468 32.6953 142.611 31.9058C143.517 31.3304 143.972 30.5616 143.972 29.643C143.972 28.5542 143.389 27.6589 142.222 26.9339C141.379 26.4437 139.998 25.9303 138.032 25.3549L136.39 24.8647C134.21 24.2455 132.568 23.6056 131.511 22.9451C130.54 22.3904 129.806 21.7299 129.266 20.9403C128.618 19.9805 128.273 18.9356 128.273 17.7823C128.273 16.8019 128.511 15.904 128.965 15.0732C129.44 14.263 130.109 13.5793 130.973 13.0246C132.636 11.8945 134.86 11.3398 137.688 11.3398C140.515 11.3398 142.718 12.0648 144.512 13.5174C145.266 14.0928 145.872 14.7765 146.326 15.5454C146.781 16.3349 146.995 17.0599 146.995 17.7849H144.016C144.016 17.5707 143.909 17.2508 143.671 16.8896C143.434 16.5051 143.11 16.1439 142.679 15.8214C141.405 14.7971 139.742 14.3069 137.69 14.3069C135.466 14.3069 133.782 14.6913 132.615 15.4808C131.709 16.0794 131.276 16.8457 131.276 17.7849C131.276 18.853 131.858 19.7277 133.069 20.4527C133.889 20.9661 135.294 21.5209 137.236 22.0756L138.878 22.5245C141.082 23.1438 142.7 23.7836 143.757 24.4441C144.729 25.0195 145.486 25.7032 146.003 26.4489C146.629 27.4087 146.953 28.4768 146.953 29.6508C146.953 30.6106 146.736 31.4852 146.285 32.3186C145.83 33.1288 145.183 33.8125 144.319 34.3878C142.656 35.4973 140.411 36.052 137.581 36.052L137.583 36.0443Z" fill="#1D1D1F"/><path d="M105.433 11.4377V14.4255C106.297 13.507 107.312 12.8026 108.521 12.2711C109.881 11.7164 111.458 11.4377 113.249 11.4377C115.04 11.4377 116.661 11.7164 118.022 12.2711C120.115 13.1897 121.713 14.7687 122.794 16.9876C123.376 18.1409 123.723 19.5264 123.851 21.1493C123.982 22.7722 124.044 24.6711 124.044 26.8462V36.0442H121.066V26.8462C121.066 24.9266 121 23.2392 120.914 21.7659C120.807 20.2927 120.546 19.1187 120.115 18.2234C119.361 16.6857 118.366 15.6614 117.178 15.1505C115.99 14.6371 114.675 14.3817 113.249 14.3817C111.824 14.3817 110.508 14.6371 109.297 15.1505C108.109 15.664 107.158 16.6883 106.425 18.2234C105.994 19.1187 105.712 20.2927 105.605 21.7659C105.475 23.2392 105.433 24.924 105.433 26.8462V36.0442H102.43V11.4377H105.433Z" fill="#1D1D1F"/><path d="M86.5155 26.3119L95.478 19.5469L96.8173 18.5432C94.8306 14.317 90.5125 11.3938 85.5026 11.3938C78.6365 11.3938 73.0653 16.8997 73.0653 23.6854C73.0653 30.4711 78.6365 35.9976 85.5026 35.9976C91.16 35.9976 95.9323 32.2642 97.4439 27.1634H94.2693C92.8647 30.6001 89.4761 33.0099 85.5026 33.0099C80.2995 33.0099 76.065 28.8482 76.065 23.6828C76.065 18.5174 80.2969 14.3557 85.5026 14.3557C88.4605 14.3557 91.1182 15.7206 92.8438 17.8337L84.4009 24.1937C84.9831 25.0038 85.7193 25.7082 86.5182 26.3068L86.5155 26.3119Z" fill="#1D1D1F"/><path d="M70.157 36.0446C68.3635 36.0446 66.8963 35.2757 65.7737 33.7406C64.9305 32.5873 64.3065 31.0082 63.8731 29.0035C63.5494 27.5303 63.3327 26.0364 63.2466 24.5219C63.1813 23.028 63.1395 21.3845 63.1395 19.6145V1.60022H66.1183V19.6119C66.1183 23.4098 66.335 26.3563 66.7658 28.4049C67.1339 29.9839 67.5855 31.1785 68.1703 32.0119C68.7316 32.7369 69.3791 33.1007 70.157 33.1007V36.0446Z" fill="#1D1D1F"/><path d="M44.4835 23.732L35.2181 11.4377H38.954L46.3606 21.2757L53.7906 11.4377H57.5265L48.2194 23.732L57.5265 36.0442H53.7906L46.3606 26.2063L38.954 36.0442H35.2181L44.4835 23.732Z" fill="#1D1D1F"/><path d="M30.6861 11.4377H27.6838V36.0442H30.6861V11.4377Z" fill="#1D1D1F"/><path fill-rule="evenodd" clip-rule="evenodd" d="M29.0648 0.000183105H29.3024C30.036 0.000183105 30.7696 0.299475 31.3962 0.959982C31.9366 1.53534 32.1742 2.21907 32.1742 2.87958V3.02922C32.1742 3.8626 31.8296 4.62889 31.0934 5.24811C30.5321 5.71769 29.9055 5.93184 29.258 5.93184H29.0857C28.2216 5.93184 27.4436 5.54741 26.8197 4.77854C26.3654 4.22381 26.1931 3.64845 26.1931 3.09373V2.8383C26.1931 2.09265 26.475 1.38828 27.1434 0.769054C27.7256 0.234973 28.3965 0.000183105 29.0648 0.000183105Z" fill="#1D1D1F"/><path fill-rule="evenodd" clip-rule="evenodd" d="M99.0626 36.3849C95.6948 40.4176 90.5988 43.0002 84.897 43.0002C81.6572 43.0002 78.5922 42.1669 75.9345 40.6962L77.3391 39.0965C79.7357 40.3118 82.456 40.9955 85.3513 40.9955C90.1236 40.9955 94.4417 39.1172 97.5954 36.0443L99.0626 36.3849Z" fill="#1D1D1F"/></svg>
-          <div style="text-align:right;">
-            <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-400);margin-bottom:6px;">Terciária</div>
-            <div style="font-size:14px;font-weight:700;color:var(--preto);margin-bottom:4px;">Preto monocromático</div>
-            <div style="font-size:12px;color:var(--gray-500);">Uso em fundos claros — documentos, impressão</div>
-          </div>
-        </div>
-        <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;align-items:center;">
-          <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Fundo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Branco #FFFFFF · Cinza #F5F5F7 · Papel</div></div>
-          <a href="./assets/marca/vixlens-logo-preto-mono.svg" download class="btn-download" aria-label="Baixar logo Vixlens preto monocromático em SVG">
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-            Baixar SVG
-          </a>
-        </div>
-      </div>
-
-      <!-- Preto + Amarelo / fundo claro -->
-      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
-        <div style="background:#FFFFFF;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:40px;border-bottom:1px solid var(--gray-200);">
-          <svg width="147" height="43" viewBox="0 0 147 43" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.90735e-05 11.4377H3.23988L11.7037 31.6064L20.1676 11.4377H23.4075L13.1083 36.0442H10.2992L1.90735e-05 11.4377Z" fill="#1D1D1F"/><path d="M137.583 36.0443C134.842 36.0443 132.552 35.3193 130.759 33.8667C130.004 33.2913 129.399 32.6076 128.944 31.8387C128.514 31.0698 128.276 30.3242 128.276 29.6405H131.278C131.278 29.8314 131.385 30.1307 131.623 30.4945C131.84 30.8789 132.184 31.2401 132.615 31.5626C133.868 32.5869 135.531 33.1004 137.581 33.1004C139.784 33.1004 141.468 32.6953 142.611 31.9058C143.517 31.3304 143.972 30.5616 143.972 29.643C143.972 28.5542 143.389 27.6589 142.222 26.9339C141.379 26.4437 139.998 25.9303 138.032 25.3549L136.39 24.8647C134.21 24.2455 132.568 23.6056 131.511 22.9451C130.54 22.3904 129.806 21.7299 129.266 20.9403C128.618 19.9805 128.273 18.9356 128.273 17.7823C128.273 16.8019 128.511 15.904 128.965 15.0732C129.44 14.263 130.109 13.5793 130.973 13.0246C132.636 11.8945 134.86 11.3398 137.688 11.3398C140.515 11.3398 142.718 12.0648 144.512 13.5174C145.266 14.0928 145.872 14.7765 146.326 15.5454C146.781 16.3349 146.995 17.0599 146.995 17.7849H144.016C144.016 17.5707 143.909 17.2508 143.671 16.8896C143.434 16.5051 143.11 16.1439 142.679 15.8214C141.405 14.7971 139.742 14.3069 137.69 14.3069C135.466 14.3069 133.782 14.6913 132.615 15.4808C131.709 16.0794 131.276 16.8457 131.276 17.7849C131.276 18.853 131.858 19.7277 133.069 20.4527C133.889 20.9661 135.294 21.5209 137.236 22.0756L138.878 22.5245C141.082 23.1438 142.7 23.7836 143.757 24.4441C144.729 25.0195 145.486 25.7032 146.003 26.4489C146.629 27.4087 146.953 28.4768 146.953 29.6508C146.953 30.6106 146.736 31.4852 146.285 32.3186C145.83 33.1288 145.183 33.8125 144.319 34.3878C142.656 35.4973 140.411 36.052 137.581 36.052L137.583 36.0443Z" fill="#1D1D1F"/><path d="M105.433 11.4377V14.4255C106.297 13.507 107.312 12.8026 108.521 12.2711C109.881 11.7164 111.458 11.4377 113.249 11.4377C115.04 11.4377 116.661 11.7164 118.022 12.2711C120.115 13.1897 121.713 14.7687 122.794 16.9876C123.376 18.1409 123.723 19.5264 123.851 21.1493C123.982 22.7722 124.044 24.6711 124.044 26.8462V36.0442H121.066V26.8462C121.066 24.9266 121 23.2392 120.914 21.7659C120.807 20.2927 120.546 19.1187 120.115 18.2234C119.361 16.6857 118.366 15.6614 117.178 15.1505C115.99 14.6371 114.675 14.3817 113.249 14.3817C111.824 14.3817 110.508 14.6371 109.297 15.1505C108.109 15.664 107.158 16.6883 106.425 18.2234C105.994 19.1187 105.712 20.2927 105.605 21.7659C105.475 23.2392 105.433 24.924 105.433 26.8462V36.0442H102.43V11.4377H105.433Z" fill="#1D1D1F"/><path d="M86.5155 26.3119L95.478 19.5469L96.8173 18.5432C94.8306 14.317 90.5125 11.3938 85.5026 11.3938C78.6365 11.3938 73.0653 16.8997 73.0653 23.6854C73.0653 30.4711 78.6365 35.9976 85.5026 35.9976C91.16 35.9976 95.9323 32.2642 97.4439 27.1634H94.2693C92.8647 30.6001 89.4761 33.0099 85.5026 33.0099C80.2995 33.0099 76.065 28.8482 76.065 23.6828C76.065 18.5174 80.2969 14.3557 85.5026 14.3557C88.4605 14.3557 91.1182 15.7206 92.8438 17.8337L84.4009 24.1937C84.9831 25.0038 85.7193 25.7082 86.5182 26.3068L86.5155 26.3119Z" fill="#1D1D1F"/><path d="M70.157 36.0446C68.3635 36.0446 66.8963 35.2757 65.7737 33.7406C64.9305 32.5873 64.3065 31.0082 63.8731 29.0035C63.5494 27.5303 63.3327 26.0364 63.2466 24.5219C63.1813 23.028 63.1395 21.3845 63.1395 19.6145V1.60022H66.1183V19.6119C66.1183 23.4098 66.335 26.3563 66.7658 28.4049C67.1339 29.9839 67.5855 31.1785 68.1703 32.0119C68.7316 32.7369 69.3791 33.1007 70.157 33.1007V36.0446Z" fill="#1D1D1F"/><path d="M44.4835 23.732L35.2181 11.4377H38.954L46.3606 21.2757L53.7906 11.4377H57.5265L48.2194 23.732L57.5265 36.0442H53.7906L46.3606 26.2063L38.954 36.0442H35.2181L44.4835 23.732Z" fill="#1D1D1F"/><path d="M30.6861 11.4377H27.6838V36.0442H30.6861V11.4377Z" fill="#1D1D1F"/><path fill-rule="evenodd" clip-rule="evenodd" d="M29.0648 0.000183105H29.3024C30.036 0.000183105 30.7696 0.299475 31.3962 0.959982C31.9366 1.53534 32.1742 2.21907 32.1742 2.87958V3.02922C32.1742 3.8626 31.8296 4.62889 31.0934 5.24811C30.5321 5.71769 29.9055 5.93184 29.258 5.93184H29.0857C28.2216 5.93184 27.4436 5.54741 26.8197 4.77854C26.3654 4.22381 26.1931 3.64845 26.1931 3.09373V2.8383C26.1931 2.09265 26.475 1.38828 27.1434 0.769054C27.7256 0.234973 28.3965 0.000183105 29.0648 0.000183105Z" fill="#FAC617"/><path fill-rule="evenodd" clip-rule="evenodd" d="M99.0626 36.3849C95.6948 40.4176 90.5988 43.0002 84.897 43.0002C81.6572 43.0002 78.5922 42.1669 75.9345 40.6962L77.3391 39.0965C79.7357 40.3118 82.456 40.9955 85.3513 40.9955C90.1236 40.9955 94.4417 39.1172 97.5954 36.0443L99.0626 36.3849Z" fill="#FAC617"/></svg>
-          <div style="text-align:right;">
-            <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-400);margin-bottom:6px;">Quaternária</div>
-            <div style="font-size:14px;font-weight:700;color:var(--preto);margin-bottom:4px;">Preto + Amarelo</div>
-            <div style="font-size:12px;color:var(--gray-500);">Fundo claro com identidade completa de marca</div>
-          </div>
-        </div>
-        <div style="background:#fff;padding:16px 24px;display:flex;gap:16px;align-items:center;">
-          <div style="background:var(--bg-cinza);border-radius:8px;padding:10px 14px;flex:1;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#9CA3AF;margin-bottom:3px;">Fundo</div><div style="font-size:12px;font-weight:700;color:var(--preto);">Branco #FFFFFF · Cinza #F5F5F7</div></div>
-          <a href="./assets/marca/vixlens-logo-preto-amarelo.svg" download class="btn-download" aria-label="Baixar logo Vixlens preto + amarelo em SVG">
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-            Baixar SVG
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Outros formatos -->
-    <div class="subsection-title">Outros formatos</div>
-    <div class="download-row">
-      <a href="./assets/marca/vixlens-logo.pdf" download class="btn-download btn-download-ghost" aria-label="Baixar logo em PDF para impressão">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-        Logo PDF (impressão)
-      </a>
-      <a href="./assets/marca/vixlens-logo.png" download class="btn-download btn-download-ghost" aria-label="Baixar logo em PNG raster">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-        Logo PNG (440×130)
-      </a>
-    </div>
-
-    <!-- Brand Kit completo -->
-    <div class="download-card">
-      <div class="download-card-info">
-        <div class="download-card-title">Brand Kit completo (.zip)</div>
-        <div class="download-card-desc">Pacote único com tudo: 4 versões do logo (SVG), PDF, PNG, 4 ícones de linha de produto e a fonte Mont completa. Para quando precisar de tudo de uma vez.</div>
-      </div>
-      <a href="./assets/vixlens-brand-kit.zip" download class="btn-download" aria-label="Baixar pacote completo Vixlens Brand Kit em ZIP">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-        Baixar Brand Kit
-      </a>
-    </div>
-
-    <!-- ── Linha Reflecta ── -->
-    <div class="subsection-title" style="margin-top:64px;">Linha Reflecta</div>
-    <p style="font-size:13px;color:var(--gray-500);line-height:1.7;margin-bottom:24px;max-width:680px;">
-      Linha de tratamentos antirreflexo Vixlens. 4 produtos herdando da matriz <strong style="color:var(--preto);">Reflecta</strong>, cada um com identidade visual própria.
-    </p>
-
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:32px;">
-
-      <!-- Reflecta master -->
-      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
-        <div style="background:#FFFFFF;padding:48px 32px;display:flex;align-items:center;justify-content:center;min-height:160px;">
-          <img src="./assets/marca/reflecta/reflecta-logo-preto.svg" alt="Reflecta — logo principal" style="height:42px;width:auto;max-width:80%;"/>
-        </div>
-        <div style="background:var(--bg-cinza);padding:16px 20px;border-top:1px solid var(--gray-200);">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-            <div>
-              <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);">Matriz</div>
-              <div style="font-size:14px;font-weight:700;color:var(--preto);">Reflecta</div>
-            </div>
-          </div>
-          <div class="download-row">
-            <a href="./assets/marca/reflecta/reflecta-logo-preto.svg" download class="btn-download" aria-label="Baixar logo Reflecta em SVG">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-              SVG
-            </a>
-            <a href="./assets/marca/reflecta/reflecta-logo-preto.webp" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta em WebP">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-              WebP
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Reflecta Blue -->
-      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
-        <div style="background:#FFFFFF;padding:48px 32px;display:flex;align-items:center;justify-content:center;min-height:160px;">
-          <img src="./assets/marca/reflecta/reflecta-blue.svg" alt="Reflecta Blue — BlueProtect SH" style="height:50px;width:auto;max-width:80%;"/>
-        </div>
-        <div style="background:var(--bg-cinza);padding:16px 20px;border-top:1px solid var(--gray-200);">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-            <div>
-              <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);">BlueProtect SH</div>
-              <div style="font-size:14px;font-weight:700;color:var(--preto);">Reflecta Blue</div>
-            </div>
-            <span style="width:14px;height:14px;border-radius:50%;background:#134B97;"></span>
-          </div>
-          <div class="download-row">
-            <a href="./assets/marca/reflecta/reflecta-blue.svg" download class="btn-download" aria-label="Baixar logo Reflecta Blue em SVG">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-              SVG
-            </a>
-            <a href="./assets/marca/reflecta/reflecta-blue.webp" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta Blue em WebP">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-              WebP
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Reflecta Guard -->
-      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
-        <div style="background:#FFFFFF;padding:48px 32px;display:flex;align-items:center;justify-content:center;min-height:160px;">
-          <img src="./assets/marca/reflecta/reflecta-guard.svg" alt="Reflecta Guard" style="height:50px;width:auto;max-width:80%;"/>
-        </div>
-        <div style="background:var(--bg-cinza);padding:16px 20px;border-top:1px solid var(--gray-200);">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-            <div>
-              <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);">Proteção</div>
-              <div style="font-size:14px;font-weight:700;color:var(--preto);">Reflecta Guard</div>
-            </div>
-            <span style="width:14px;height:14px;border-radius:50%;background:#00782D;"></span>
-          </div>
-          <div class="download-row">
-            <a href="./assets/marca/reflecta/reflecta-guard.svg" download class="btn-download" aria-label="Baixar logo Reflecta Guard em SVG">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-              SVG
-            </a>
-            <a href="./assets/marca/reflecta/reflecta-guard.webp" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta Guard em WebP">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-              WebP
-            </a>
-            <a href="./assets/marca/reflecta/reflecta-guard.pdf" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta Guard em PDF">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-              PDF
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Reflecta Express -->
-      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
-        <div style="background:#FFFFFF;padding:48px 32px;display:flex;align-items:center;justify-content:center;min-height:160px;">
-          <img src="./assets/marca/reflecta/reflecta-express.svg" alt="Reflecta Express" style="height:50px;width:auto;max-width:80%;"/>
-        </div>
-        <div style="background:var(--bg-cinza);padding:16px 20px;border-top:1px solid var(--gray-200);">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-            <div>
-              <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);">Performance</div>
-              <div style="font-size:14px;font-weight:700;color:var(--preto);">Reflecta Express</div>
-            </div>
-            <span style="width:14px;height:14px;border-radius:50%;background:#92BB36;"></span>
-          </div>
-          <div class="download-row">
-            <a href="./assets/marca/reflecta/reflecta-express.svg" download class="btn-download" aria-label="Baixar logo Reflecta Express em SVG">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-              SVG
-            </a>
-            <a href="./assets/marca/reflecta/reflecta-express.webp" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta Express em WebP">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-              WebP
-            </a>
-            <a href="./assets/marca/reflecta/reflecta-express.pdf" download class="btn-download btn-download-ghost" aria-label="Baixar logo Reflecta Express em PDF">
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>
-              PDF
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Ícones Reflecta + bloco "alimentando" -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;">
-      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--gray-200);">
-        <div style="background:var(--bg-cinza);padding:32px;display:flex;align-items:center;justify-content:center;min-height:120px;">
-          <img src="./assets/marca/reflecta/reflecta-icones.svg" alt="Ícones Reflecta" style="height:60px;width:auto;max-width:90%;"/>
-        </div>
-        <div style="background:#fff;padding:16px 20px;border-top:1px solid var(--gray-200);">
-          <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-bottom:2px;">Conjunto</div>
-          <div style="font-size:14px;font-weight:700;color:var(--preto);margin-bottom:10px;">Ícones Reflecta</div>
-          <div class="download-row">
-            <a href="./assets/marca/reflecta/reflecta-icones.svg" download class="btn-download"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>SVG</a>
-            <a href="./assets/marca/reflecta/reflecta-icones.webp" download class="btn-download btn-download-ghost"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>WebP</a>
-          </div>
-        </div>
-      </div>
-
-      <div style="border-radius:16px;border:1.5px dashed var(--gray-300);padding:24px;display:flex;flex-direction:column;justify-content:center;background:var(--bg-cinza);">
-        <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-bottom:6px;">Em construção</div>
-        <div style="font-size:14px;font-weight:700;color:var(--preto);margin-bottom:6px;">Mais variantes em breve</div>
-        <div style="font-size:12px;color:var(--gray-500);line-height:1.5;">Variantes monocromáticas (preto/branco), PDFs do logo principal e WebPs das versões Vixlens serão adicionados aqui conforme forem produzidos.</div>
-      </div>
-    </div>
-
-    <!-- Regras -->
-    <div class="subsection-title" style="margin-top:48px;">Regras de uso</div>
-    <div class="rules-list">
-      <div class="rule-item"><div class="rule-icon ok">✓</div><span class="rule-text">Sempre usar o arquivo SVG original. Nunca recriar o logotipo manualmente ou em texto.</span></div>
-      <div class="rule-item"><div class="rule-icon ok">✓</div><span class="rule-text">Versão Branco + Amarelo é a preferencial. Use monocromático apenas quando o contexto não permitir duas cores.</span></div>
-      <div class="rule-item"><div class="rule-icon ok">✓</div><span class="rule-text">Versão Preta apenas em fundos claros (#FFFFFF, #F5F5F7) ou impressão sem cor.</span></div>
-      <div class="rule-item"><div class="rule-icon no">✗</div><span class="rule-text">Não alterar proporções, cores ou opacidade do logotipo. Não aplicar sombras, contornos ou efeitos.</span></div>
-      <div class="rule-item"><div class="rule-icon no">✗</div><span class="rule-text">Não usar sobre fundos que gerem baixo contraste. O mínimo de contraste é 4.5:1 (WCAG AA).</span></div>
-    </div>
-  </section>
-
   <!-- ═══════════════════════════════════════════════════════════════
        13 — FOTOGRAFIA
   ════════════════════════════════════════════════════════════════ -->
@@ -4702,11 +4702,11 @@ import &#123; Eye, ShieldCheck, Star &#125;
       </div>
     </div>
 
-    <!-- ── Galeria — fotos aprovadas ───────────────────────────── -->
-    <div class="subsection-title">Galeria — fotos aprovadas</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:12px;">
+    <!-- ── Galeria — 1 exemplo de cada tipo ───────────────────── -->
+    <div class="subsection-title">Galeria — 1 exemplo de cada tipo</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:48px;">
 
-      <!-- Foto 1 -->
+      <!-- Retrato -->
       <div style="border-radius:20px;overflow:hidden;position:relative;aspect-ratio:3/4;">
         <img src="fotos/Frame 33-1.jpg" alt="Retrato — mulher com óculos, luz natural"
              style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
@@ -4714,42 +4714,15 @@ import &#123; Eye, ShieldCheck, Star &#125;
         <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.7));padding:20px 14px 14px;font-size:11px;color:rgba(255,255,255,.8);">Luz natural · lente transparente · expressão genuína</div>
       </div>
 
-      <!-- Foto 2 -->
-      <div style="border-radius:20px;overflow:hidden;position:relative;aspect-ratio:3/4;">
-        <img src="fotos/Frame 33-2.jpg" alt="Retrato — homem com óculos, fundo neutro"
-             style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
-        <div style="position:absolute;top:12px;left:12px;background:rgba(29,29,31,.72);backdrop-filter:blur(4px);border-radius:8px;padding:5px 10px;font-size:10px;font-weight:700;color:#fff;letter-spacing:.06em;text-transform:uppercase;">Retrato</div>
-        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.7));padding:20px 14px 14px;font-size:11px;color:rgba(255,255,255,.8);">Armação destacada · olhos visíveis · sem reflexo</div>
-      </div>
-
-      <!-- Foto 3 -->
+      <!-- Lifestyle -->
       <div style="border-radius:20px;overflow:hidden;position:relative;aspect-ratio:3/4;">
         <img src="fotos/Frame 33-3.jpg" alt="Lifestyle — pessoa com óculos em ambiente"
              style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
         <div style="position:absolute;top:12px;left:12px;background:rgba(29,29,31,.72);backdrop-filter:blur(4px);border-radius:8px;padding:5px 10px;font-size:10px;font-weight:700;color:#fff;letter-spacing:.06em;text-transform:uppercase;">Lifestyle</div>
         <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.7));padding:20px 14px 14px;font-size:11px;color:rgba(255,255,255,.8);">Contexto real · luz ambiente · natural</div>
       </div>
-    </div>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:48px;">
-
-      <!-- Foto 4 -->
-      <div style="border-radius:20px;overflow:hidden;position:relative;aspect-ratio:3/4;">
-        <img src="fotos/Frame 33-4.jpg" alt="Retrato feminino com óculos"
-             style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
-        <div style="position:absolute;top:12px;left:12px;background:rgba(29,29,31,.72);backdrop-filter:blur(4px);border-radius:8px;padding:5px 10px;font-size:10px;font-weight:700;color:#fff;letter-spacing:.06em;text-transform:uppercase;">Retrato</div>
-        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.7));padding:20px 14px 14px;font-size:11px;color:rgba(255,255,255,.8);">Pele natural · textura real · sem filtro excessivo</div>
-      </div>
-
-      <!-- Foto 5 -->
-      <div style="border-radius:20px;overflow:hidden;position:relative;aspect-ratio:3/4;">
-        <img src="fotos/Frame 33.jpg" alt="Lifestyle — óculos em uso cotidiano"
-             style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
-        <div style="position:absolute;top:12px;left:12px;background:rgba(29,29,31,.72);backdrop-filter:blur(4px);border-radius:8px;padding:5px 10px;font-size:10px;font-weight:700;color:#fff;letter-spacing:.06em;text-transform:uppercase;">Lifestyle</div>
-        <div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.7));padding:20px 14px 14px;font-size:11px;color:rgba(255,255,255,.8);">Produto integrado ao momento · não protagonista</div>
-      </div>
-
-      <!-- Foto 6 -->
+      <!-- Detalhe -->
       <div style="border-radius:20px;overflow:hidden;position:relative;aspect-ratio:3/4;">
         <img src="fotos/Frame 34.jpg" alt="Detalhe — armação e lente"
              style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
@@ -4789,41 +4762,6 @@ import &#123; Eye, ShieldCheck, Star &#125;
       <div style="background:#EDFBF4;border-left:3px solid #30D389;border-radius:0 8px 8px 0;padding:12px 16px;">
         <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#1A9960;margin-bottom:4px;">✓ Reflecta AR</div>
         <div style="font-size:12px;color:#374151;line-height:1.5;">Reflexo residual mínimo · lente transparente · olhos legíveis · imagem clara e premium</div>
-      </div>
-    </div>
-
-    <!-- ── Fotos adicionais ─────────────────────────────────────── -->
-    <div class="subsection-title">Banco de imagens — seleção completa</div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:48px;">
-      <div style="border-radius:16px;overflow:hidden;aspect-ratio:1;position:relative;">
-        <img src="fotos/Frame 32.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
-        <div style="position:absolute;inset:0;background:rgba(0,0,0,.2);display:flex;align-items:flex-end;padding:10px;">
-          <span style="font-size:9px;color:rgba(255,255,255,.7);font-weight:600;">Frame 32</span>
-        </div>
-      </div>
-      <div style="border-radius:16px;overflow:hidden;aspect-ratio:1;position:relative;">
-        <img src="fotos/Frame 32-1.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
-        <div style="position:absolute;inset:0;background:rgba(0,0,0,.2);display:flex;align-items:flex-end;padding:10px;">
-          <span style="font-size:9px;color:rgba(255,255,255,.7);font-weight:600;">Frame 32-1</span>
-        </div>
-      </div>
-      <div style="border-radius:16px;overflow:hidden;aspect-ratio:1;position:relative;">
-        <img src="fotos/Frame 32-2.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
-        <div style="position:absolute;inset:0;background:rgba(0,0,0,.2);display:flex;align-items:flex-end;padding:10px;">
-          <span style="font-size:9px;color:rgba(255,255,255,.7);font-weight:600;">Frame 32-2</span>
-        </div>
-      </div>
-      <div style="border-radius:16px;overflow:hidden;aspect-ratio:1;position:relative;">
-        <img src="fotos/Frame 32-4.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
-        <div style="position:absolute;inset:0;background:rgba(0,0,0,.2);display:flex;align-items:flex-end;padding:10px;">
-          <span style="font-size:9px;color:rgba(255,255,255,.7);font-weight:600;">Frame 32-4</span>
-        </div>
-      </div>
-      <div style="border-radius:16px;overflow:hidden;aspect-ratio:1;position:relative;">
-        <img src="fotos/Frame 48095592.jpg" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
-        <div style="position:absolute;inset:0;background:rgba(0,0,0,.2);display:flex;align-items:flex-end;padding:10px;">
-          <span style="font-size:9px;color:rgba(255,255,255,.7);font-weight:600;">Frame 48095592</span>
-        </div>
       </div>
     </div>
 
