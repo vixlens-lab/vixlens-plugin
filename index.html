@@ -817,13 +817,50 @@
 
     /* ── Mobile (≤768px) — sidebar vira drawer ── */
     @media (max-width: 768px) {
+      /* CRÍTICO: trava scroll horizontal global no mobile.
+         Qualquer elemento que estoura viewport não deve gerar deslocamento da página. */
       html {
         scroll-padding-top: 16px;
         -webkit-text-size-adjust: 100%;
+        overflow-x: hidden;
       }
       body {
         display: block;
         -webkit-overflow-scrolling: touch;
+        overflow-x: hidden;
+        max-width: 100vw;
+        width: 100%;
+      }
+      /* Containers principais */
+      .main {
+        margin-left: 0;
+        max-width: 100vw;
+        overflow-x: hidden;
+      }
+      .section, .hero {
+        max-width: 100vw;
+        overflow-x: hidden;
+      }
+      /* Mídia nunca estoura viewport */
+      img, svg, video, iframe, picture {
+        max-width: 100%;
+        height: auto;
+      }
+      /* Permite que flex/grid children encolham (default min-content quebra layout) */
+      .main *, .hero * {
+        min-width: 0;
+        max-width: 100%;
+      }
+      /* Mas pre/code precisam de scroll horizontal próprio se conteúdo for largo */
+      pre, code, [style*="overflow-x"] {
+        overflow-x: auto !important;
+        max-width: 100% !important;
+        word-break: normal !important;
+      }
+      /* Tabelas wrapeadas em overflow-x:auto ficam OK */
+      [style*="overflow-x:auto"] table {
+        min-width: 0;
+        width: 100%;
       }
 
       .sidebar {
