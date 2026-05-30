@@ -759,6 +759,16 @@
 
     .toast.show { opacity: 1; transform: translateY(0); }
 
+    /* ─── Form Figma + Feature cards + Product carousel ──────────────── */
+    /* Desktop padrão */
+    .product-carousel-track {
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .product-carousel-track > div {
+      scroll-snap-align: center;
+    }
+
     /* ─── RESPONSIVO ─────────────────────────────────────────────────── */
 
     /* Botão hamburger e overlay — visíveis só no mobile */
@@ -957,6 +967,73 @@
       [style*="grid-template-columns:repeat(8,1fr)"],
       [style*="grid-template-columns: repeat(8"] {
         grid-template-columns: repeat(4, 1fr) !important;
+      }
+
+      /* ── Form figma — inputs ocupam 100%, padding reduzido ── */
+      .form-figma {
+        padding: 32px 20px !important;
+        border-radius: 32px !important;
+        max-width: 100% !important;
+      }
+      .form-figma-title {
+        font-size: 26px !important;
+        line-height: 1.1 !important;
+      }
+      .form-figma-fields {
+        width: 100% !important;
+      }
+      .form-figma-fields > div {
+        font-size: 15px !important;
+      }
+      .form-figma-fields > div > span {
+        font-size: 15px !important;
+      }
+
+      /* ── Feature cards — só mostra o 1º card no mobile, ocupa 100% ── */
+      .feature-cards { padding: 24px !important; border-radius: 20px !important; }
+      .feature-cards-row > div:nth-child(n+2) {
+        display: none !important;
+      }
+      .feature-cards-row > div:first-child {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 360px !important;
+        padding: 28px !important;
+      }
+      .feature-cards-row > div:first-child > div:first-child {
+        height: 180px !important;
+      }
+      .feature-cards-row > div:first-child > div:nth-child(2) > div:first-child {
+        font-size: 26px !important;
+      }
+
+      /* ── Product carousel — scroll horizontal real no mobile ── */
+      .product-carousel {
+        padding: 24px 16px !important;
+        border-radius: 32px !important;
+      }
+      .product-carousel-track {
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        justify-content: flex-start !important;
+        gap: 16px !important;
+        padding-bottom: 8px;
+        margin: 0 -8px;
+        padding-left: 8px;
+        padding-right: 8px;
+        scroll-padding-left: 8px;
+        scrollbar-width: thin;
+      }
+      .product-carousel-track::-webkit-scrollbar {
+        height: 6px;
+      }
+      .product-carousel-track::-webkit-scrollbar-thumb {
+        background: var(--gray-300);
+        border-radius: 3px;
+      }
+      .product-carousel-track > div {
+        scroll-snap-align: center;
+        flex-shrink: 0;
       }
 
       /* Combinações aprovadas (.combo-grid é classe, não inline) → 2x2 mobile */
@@ -3233,12 +3310,12 @@
 
     <!-- Form completo (exato do Figma) -->
     <div class="subsection-title">Formulário completo — exato do Figma</div>
-    <div style="background:#F5F5F7;border-radius:56px;padding:60px 83px;display:flex;flex-direction:column;gap:30px;align-items:center;margin-bottom:48px;max-width:580px;">
+    <div class="form-figma" style="background:#F5F5F7;border-radius:56px;padding:60px 83px;display:flex;flex-direction:column;gap:30px;align-items:center;margin-bottom:48px;width:100%;max-width:580px;">
       <div style="text-align:center;">
-        <div style="font-family:'Host Grotesk',sans-serif;font-size:44px;font-weight:700;line-height:1;color:#1D1D1F;margin-bottom:16px;">Seja uma ótica<br>parceira da Vixlens</div>
+        <div class="form-figma-title" style="font-family:'Host Grotesk',sans-serif;font-size:44px;font-weight:700;line-height:1;color:#1D1D1F;margin-bottom:16px;">Seja uma ótica<br>parceira da Vixlens</div>
         <div style="font-family:'Host Grotesk',sans-serif;font-size:18px;font-weight:400;line-height:1.5;color:#1D1D1F;">Preencha o formulário e nosso time entra em contato.</div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:14px;width:400px;">
+      <div class="form-figma-fields" style="display:flex;flex-direction:column;gap:14px;width:400px;max-width:100%;">
         <div style="border:1px solid #606F7F;border-radius:12px;height:56px;display:flex;align-items:center;padding:0 20px;background:#fff;"><span style="font-family:'Host Grotesk',sans-serif;font-size:18px;color:#606F7F;">Nome da Ótica</span></div>
         <div style="border:1px solid #606F7F;border-radius:12px;height:56px;display:flex;align-items:center;padding:0 20px;background:#fff;"><span style="font-family:'Host Grotesk',sans-serif;font-size:18px;color:#606F7F;">Nome completo</span></div>
         <div style="border:1px solid #606F7F;border-radius:12px;height:56px;display:flex;align-items:center;padding:0 20px;background:#fff;"><span style="font-family:'Host Grotesk',sans-serif;font-size:18px;color:#606F7F;">CNPJ</span></div>
@@ -3371,8 +3448,8 @@
 
     <!-- Card Feature (branco sobre cinza) -->
     <div class="subsection-title">Card Feature — branco sobre BG Cinza</div>
-    <div style="background:#F5F5F7;border-radius:24px;padding:40px;margin-bottom:16px;">
-      <div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;">
+    <div class="feature-cards" style="background:#F5F5F7;border-radius:24px;padding:40px;margin-bottom:16px;">
+      <div class="feature-cards-row" style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;">
 
         <div style="background:#FFFFFF;border-radius:56px;width:260px;padding:24px;display:flex;flex-direction:column;gap:0;min-height:340px;">
           <!-- image area -->
@@ -3488,9 +3565,9 @@
 
     <!-- Card Produto — carrossel Freevix -->
     <div class="subsection-title">Card Produto — carrossel de linha (Freevix)</div>
-    <p style="font-size:13px;color:var(--gray-500);margin-bottom:24px;line-height:1.6;">Usado no carrossel de produtos Freevix. Estrutura fixa: badge de categoria, imagem de produto, título, tagline e descrição. Background #F5F5F7 no container, cards internos brancos.</p>
-    <div style="background:#F5F5F7;border-radius:56px;padding:40px 32px;margin-bottom:16px;overflow:hidden;">
-      <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+    <p style="font-size:13px;color:var(--gray-500);margin-bottom:24px;line-height:1.6;">Usado no carrossel de produtos Freevix. Estrutura fixa: badge de categoria, imagem de produto, título, tagline e descrição. Background #F5F5F7 no container, cards internos brancos. <span style="color:var(--gray-400);font-size:12px;">No mobile, deslize para o lado →</span></p>
+    <div class="product-carousel" style="background:#F5F5F7;border-radius:56px;padding:40px 32px;margin-bottom:16px;overflow:hidden;">
+      <div class="product-carousel-track" style="display:flex;gap:20px;justify-content:center;flex-wrap:nowrap;">
 
         <!-- Card 1 — Multifocal -->
         <div style="background:#FFFFFF;border-radius:56px;width:240px;flex-shrink:0;padding:24px 20px 28px;display:flex;flex-direction:column;align-items:center;gap:16px;">
