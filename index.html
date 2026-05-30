@@ -666,7 +666,7 @@
     /* ─── Border Radius section ────────────────────────────────────── */
     .token-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 16px;
       margin-bottom: 48px;
     }
@@ -977,6 +977,26 @@
       /* Coming-soon-grid */
       .coming-soon-grid {
         grid-template-columns: repeat(2, 1fr) !important;
+      }
+
+      /* Botões — estados (Default/Hover/Focus/Disabled) viram 1 por linha no mobile */
+      .section#botoes [style*="grid-template-columns:repeat(4,1fr)"] {
+        grid-template-columns: 1fr !important;
+      }
+      .section#botoes [style*="grid-template-columns:repeat(4,1fr)"] > div {
+        border-right: none !important;
+        border-bottom: 1px solid #E5E7EB;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        gap: 16px !important;
+        padding: 16px 20px !important;
+      }
+      .section#botoes [style*="grid-template-columns:repeat(4,1fr)"] > div:last-child {
+        border-bottom: none;
+      }
+      .section#botoes [style*="grid-template-columns:repeat(4,1fr)"] > div > div[style*="text-align:center"] {
+        text-align: left !important;
+        flex: 1;
       }
 
       /* Typo rules grid */
@@ -3072,7 +3092,7 @@
                 <div style="font-weight:700;font-size:13px;color:#1D1D1F;margin-bottom:2px;">Reflecta Express</div>
                 <div style="font-size:12px;color:#6B7280;">Standard Shield · 10 camadas</div>
               </div>
-              <span style="font-size:10px;font-weight:700;background:#F3F4F6;color:#6B7280;padding:3px 8px;border-radius:4px;white-space:nowrap;">3 meses</span>
+              <span style="font-size:10px;font-weight:700;background:#FEF3C7;color:#92400E;padding:3px 8px;border-radius:4px;white-space:nowrap;">12 meses</span>
             </div>
           </div>
         </div>
