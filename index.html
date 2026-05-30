@@ -1012,28 +1012,85 @@
         padding: 24px 16px !important;
         border-radius: 32px !important;
       }
-      .product-carousel-track {
+      .product-carousel-track,
+      .hero-cards-track,
+      .phosphor-weights,
+      .phosphor-sizes {
         flex-wrap: nowrap !important;
         overflow-x: auto !important;
         justify-content: flex-start !important;
         gap: 16px !important;
         padding-bottom: 8px;
-        margin: 0 -8px;
-        padding-left: 8px;
-        padding-right: 8px;
-        scroll-padding-left: 8px;
         scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
       }
-      .product-carousel-track::-webkit-scrollbar {
+      .product-carousel-track::-webkit-scrollbar,
+      .hero-cards-track::-webkit-scrollbar,
+      .phosphor-weights::-webkit-scrollbar,
+      .phosphor-sizes::-webkit-scrollbar {
         height: 6px;
       }
-      .product-carousel-track::-webkit-scrollbar-thumb {
+      .product-carousel-track::-webkit-scrollbar-thumb,
+      .hero-cards-track::-webkit-scrollbar-thumb,
+      .phosphor-weights::-webkit-scrollbar-thumb,
+      .phosphor-sizes::-webkit-scrollbar-thumb {
         background: var(--gray-300);
         border-radius: 3px;
       }
-      .product-carousel-track > div {
+      .product-carousel-track > div,
+      .hero-cards-track > div {
         scroll-snap-align: center;
         flex-shrink: 0;
+      }
+
+      /* ── Card Hero — linha de produto (Freevix/Reflecta/Essilor/VixAcademy) ── */
+      .hero-cards-wrap {
+        padding: 24px 16px !important;
+        border-radius: 32px !important;
+      }
+      .hero-cards-track {
+        scroll-snap-type: x mandatory;
+      }
+      .hero-cards-track > div {
+        width: 280px !important;
+        height: 400px !important;
+        padding: 32px !important;
+        gap: 18px !important;
+        flex-shrink: 0 !important;
+        border-radius: 48px !important;
+      }
+      .hero-cards-track > div > div[style*="font-size:20px"] {
+        font-size: 24px !important;
+      }
+      .hero-cards-track > div > div[style*="font-size:14px"] {
+        font-size: 15px !important;
+      }
+      .hero-cards-track > div > div[style*="font-size:15px"] {
+        font-size: 17px !important;
+      }
+
+      /* ── Phosphor weights: 6 cards em scroll-x ── */
+      .phosphor-weights {
+        display: flex !important;
+        grid-template-columns: none !important;
+        scroll-snap-type: x mandatory;
+        gap: 10px !important;
+      }
+      .phosphor-weights > div {
+        flex-shrink: 0 !important;
+        width: 100px !important;
+        scroll-snap-align: start;
+      }
+
+      /* ── Phosphor sizes: 5 ícones em scroll-x ── */
+      .phosphor-sizes {
+        padding: 20px 16px !important;
+        gap: 24px !important;
+      }
+      .phosphor-sizes > div {
+        flex-shrink: 0 !important;
+        min-width: 60px;
+        scroll-snap-align: start;
       }
 
       /* Combinações aprovadas (.combo-grid é classe, não inline) → 2x2 mobile */
@@ -3662,9 +3719,9 @@
 
     <!-- Card Hero — linha de produto (foto + ícone frosted glass) -->
     <div class="subsection-title">Card Hero — linha de produto (foto + overlay)</div>
-    <p style="font-size:13px;color:var(--gray-500);margin-bottom:24px;line-height:1.6;">Usado na seção "Tudo que sua ótica precisa". Foto em full bleed, overlay escuro ou colorido, ícone com frosted glass 58×58px e CTA em texto simples com seta.</p>
-    <div style="background:#F5F5F7;border-radius:56px;padding:40px;margin-bottom:16px;">
-      <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;">
+    <p style="font-size:13px;color:var(--gray-500);margin-bottom:24px;line-height:1.6;">Usado na seção "Tudo que sua ótica precisa". Foto em full bleed, overlay escuro ou colorido, ícone com frosted glass 58×58px e CTA em texto simples com seta. <span style="color:var(--gray-400);font-size:12px;">No mobile, deslize para o lado →</span></p>
+    <div class="hero-cards-wrap" style="background:#F5F5F7;border-radius:56px;padding:40px;margin-bottom:16px;overflow:hidden;">
+      <div class="hero-cards-track" style="display:flex;gap:20px;justify-content:center;flex-wrap:nowrap;">
 
         <!-- Freevix — Group 50: ícone lente/círculo -->
         <div style="background:linear-gradient(145deg,#1a1a2e,#16213e);border-radius:60px;width:220px;height:320px;padding:28px 28px 32px;display:flex;flex-direction:column;gap:16px;justify-content:flex-start;position:relative;overflow:hidden;">
@@ -4030,7 +4087,7 @@
 
     <!-- Pesos disponíveis -->
     <div class="subsection-title" style="font-size:11px;">Pesos disponíveis</div>
-    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:40px;">
+    <div class="phosphor-weights" style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:40px;">
       <!-- Thin -->
       <div style="background:var(--bg-cinza);border-radius:12px;padding:20px 12px;text-align:center;">
         <i class="ph-thin ph-eye" style="font-size:28px;color:var(--preto);display:block;margin-bottom:8px;"></i>
@@ -4071,7 +4128,7 @@
 
     <!-- Tamanhos -->
     <div class="subsection-title" style="font-size:11px;">Tamanhos padrão</div>
-    <div style="display:flex;align-items:flex-end;gap:32px;margin-bottom:40px;padding:28px 32px;background:var(--bg-cinza);border-radius:16px;">
+    <div class="phosphor-sizes" style="display:flex;align-items:flex-end;gap:32px;margin-bottom:40px;padding:28px 32px;background:var(--bg-cinza);border-radius:16px;">
       <div style="text-align:center;">
         <i class="ph ph-magnifying-glass" style="font-size:16px;color:var(--preto);display:block;margin-bottom:6px;"></i>
         <div style="font-size:10px;font-weight:700;color:var(--gray-400);">16px</div>
