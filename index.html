@@ -760,6 +760,53 @@
 
     .toast.show { opacity: 1; transform: translateY(0); }
 
+    /* ─── Back to Top ────────────────────────────────────────────────── */
+    .back-to-top {
+      position: fixed;
+      bottom: calc(24px + env(safe-area-inset-bottom));
+      right: calc(24px + env(safe-area-inset-right));
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--preto);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity .25s ease, transform .25s ease, background .15s ease, color .15s ease;
+      z-index: 150;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .back-to-top:hover {
+      background: var(--amarelo);
+      color: var(--preto);
+      box-shadow: 0 6px 20px rgba(250,198,23,0.45);
+    }
+    .back-to-top:focus-visible {
+      outline: 3px solid var(--amarelo);
+      outline-offset: 3px;
+    }
+    .back-to-top svg { width: 20px; height: 20px; }
+    @media (max-width: 480px) {
+      .back-to-top {
+        width: 44px;
+        height: 44px;
+        bottom: calc(16px + env(safe-area-inset-bottom));
+        right: calc(16px + env(safe-area-inset-right));
+      }
+      .back-to-top svg { width: 18px; height: 18px; }
+    }
+
     /* ─── Form Figma + Feature cards + Product carousel ──────────────── */
     /* Desktop padrão */
     .product-carousel-track {
@@ -1432,7 +1479,7 @@
       <path fill-rule="evenodd" clip-rule="evenodd" d="M99.0626 36.3847C95.6948 40.4174 90.5988 43.0001 84.897 43.0001C81.6572 43.0001 78.5922 42.1667 75.9345 40.696L77.3391 39.0964C79.7357 40.3116 82.456 40.9953 85.3513 40.9953C90.1236 40.9953 94.4417 39.117 97.5954 36.0441L99.0626 36.3847Z" fill="#FAC617"/>
     </svg>
     <span class="sidebar-tagline">Laboratório Óptico</span>
-    <div class="sidebar-version">Design System · v0.3.0</div>
+    <div class="sidebar-version">Design System · v0.3.1</div>
   </div>
 
   <nav class="sidebar-nav">
@@ -1521,6 +1568,14 @@
   </svg>
 </button>
 <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" type="button" aria-label="Voltar ao topo">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <line x1="12" y1="19" x2="12" y2="5"/>
+    <polyline points="5 12 12 5 19 12"/>
+  </svg>
+</button>
 
 <!-- ═══════════════════════════════════════════════════════════════════
      MAIN
@@ -4980,6 +5035,24 @@ import &#123; Eye, ShieldCheck, Star &#125;
     // Se redimensionar pra desktop com drawer aberto, fecha
     window.addEventListener('resize', () => {
       if (window.innerWidth > 768 && sidebar.classList.contains('open')) closeDrawer();
+    });
+  })();
+
+  /* ── Back to Top ─────────────────────────────────────── */
+  (function() {
+    const btn = document.getElementById('backToTop');
+    if (!btn) return;
+
+    function checkScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      btn.classList.toggle('visible', scrollTop > 400);
+    }
+
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    checkScroll();
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   })();
 </script>
