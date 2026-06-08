@@ -33,7 +33,7 @@ Push pra `main` → Vercel publica automaticamente em ds.vixlens.com.br.
 ### Instalação via Claude Code
 
 ```bash
-claude plugin marketplace add vixlens-lab/vixlens-plugin
+claude plugin marketplace add vixlenslab/vixlens-ds
 claude plugin install vixlens-brand
 ```
 

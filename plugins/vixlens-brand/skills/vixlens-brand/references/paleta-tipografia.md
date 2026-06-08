@@ -183,7 +183,7 @@ Biblioteca padrão para interfaces digitais. CDN: `https://unpkg.com/@phosphor-i
 | Recurso                    | URL                                                      |
 |----------------------------|----------------------------------------------------------|
 | DS publicado (produção)    | https://ds.vixlens.com.br                        |
-| Repositório GitHub         | https://github.com/vixlens-lab/vixlens-plugin            |
+| Repositório GitHub         | https://github.com/vixlenslab/vixlens-ds                 |
 | Branch principal           | `main` — deploy automático via Vercel a cada push        |
 
 > Versão atual: DS 3.0 · Plugin v0.2.0 · Deploy: 08/05/2026

@@ -54,5 +54,5 @@ A Vixlens é um laboratório óptico B2B industrial em escala (meta: 2.000 jobs/
 
 **Design System publicado:**
 - **URL de produção:** https://ds.vixlens.com.br
-- **Repositório GitHub:** https://github.com/vixlens-lab/vixlens-plugin
+- **Repositório GitHub:** https://github.com/vixlenslab/vixlens-ds
 - Deploy automático a cada push na branch `main`
