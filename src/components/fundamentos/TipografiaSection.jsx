@@ -15,7 +15,11 @@ const META = {
   caption: { name: 'Caption', tracking: '0' },
   overline: { name: 'Overline', tracking: '0.08em' },
 }
-const sampleSize = (px) => Math.min(parseInt(px, 10), 52)
+const px = (v) => parseInt(v, 10)
+const lhNum = (v) => (v ? px(v) / 100 : 1.15)
+// escala real preservada: fator único por linha p/ caber sem perder a proporção desktop↔mobile
+const CAP = 60
+const factor = (dpx) => Math.min(1, CAP / px(dpx))
 
 export default function TipografiaSection() {
   return (
@@ -91,26 +95,60 @@ export default function TipografiaSection() {
         </div>
       </div>
 
-      {/* Escala completa */}
-      <SubTitle>Escala (Host Grotesk)</SubTitle>
-      <div className="flex flex-col divide-y divide-gray-100 overflow-x-auto">
-        {Object.entries(scale).map(([key, s]) => (
-          <div key={key} className="flex items-baseline gap-6 py-4">
-            <div className="w-44 shrink-0">
-              <div className="text-[13px] font-bold text-vix-preto">{META[key].name}</div>
-              <div className="font-mono text-[11px] leading-relaxed text-gray-500">
-                {s.desktop} / {s.mobile} · peso {s.weight}
-                {s.lineHeight ? ` · lh ${s.lineHeight}` : ''} · track {META[key].tracking}
+      {/* Escala completa — equivalência desktop ↔ mobile */}
+      <SubTitle>Escala (Host Grotesk) — desktop ↔ mobile</SubTitle>
+      <p className="-mt-2 mb-6 max-w-2xl text-[13px] leading-relaxed text-gray-500">
+        Cada nível colapsa de desktop para mobile mantendo a proporção. As amostras abaixo estão
+        renderizadas na escala real (H1 cai de <b className="text-vix-preto">96&nbsp;px → 48&nbsp;px</b>),
+        com o line-height e o tracking exatos de cada nível.
+      </p>
+      <div className="flex flex-col gap-3">
+        {Object.entries(scale).map(([key, s]) => {
+          const same = s.desktop === s.mobile
+          const f = factor(s.desktop)
+          const lh = lhNum(s.lineHeight)
+          const tk = META[key].tracking
+          return (
+            <div key={key} className="rounded-vix-card border border-gray-200 p-5 md:p-6">
+              {/* cabeçalho da linha: nome + specs */}
+              <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
+                <div className="mr-1 text-[13px] font-bold text-vix-preto">{META[key].name}</div>
+                <span className="rounded-full bg-vix-preto px-2.5 py-0.5 font-mono text-[11px] font-medium text-white">
+                  {s.desktop} → {s.mobile}
+                </span>
+                <span className="rounded-full bg-gray-100 px-2.5 py-0.5 font-mono text-[11px] text-gray-600">peso {s.weight}</span>
+                <span className="rounded-full bg-gray-100 px-2.5 py-0.5 font-mono text-[11px] text-gray-600">lh {s.lineHeight || 'auto'}</span>
+                <span className="rounded-full bg-gray-100 px-2.5 py-0.5 font-mono text-[11px] text-gray-600">track {tk}</span>
+              </div>
+              {/* amostras lado a lado, na proporção real */}
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:gap-10">
+                <div className="min-w-0 flex-1">
+                  <div className="mb-1.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.1em] text-gray-400">
+                    Desktop <span className="font-mono text-vix-azul">{s.desktop}</span>
+                  </div>
+                  <div
+                    className="truncate text-vix-preto"
+                    style={{ fontSize: px(s.desktop) * f, fontWeight: s.weight, lineHeight: lh, letterSpacing: tk }}
+                  >
+                    Vixlens
+                  </div>
+                </div>
+                <div className="min-w-0 flex-1 border-t border-gray-100 pt-4 sm:border-l sm:border-t-0 sm:pl-10 sm:pt-0">
+                  <div className="mb-1.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.1em] text-gray-400">
+                    Mobile <span className="font-mono text-vix-azul">{s.mobile}</span>
+                    {same && <span className="font-sans font-medium normal-case tracking-normal text-gray-300">· igual</span>}
+                  </div>
+                  <div
+                    className="truncate text-vix-preto"
+                    style={{ fontSize: px(s.mobile) * f, fontWeight: s.weight, lineHeight: lh, letterSpacing: tk }}
+                  >
+                    Vixlens
+                  </div>
+                </div>
               </div>
             </div>
-            <div
-              className="min-w-0 flex-1 truncate text-vix-preto"
-              style={{ fontSize: sampleSize(s.desktop), fontWeight: s.weight, lineHeight: 1.1, letterSpacing: META[key].tracking }}
-            >
-              Vixlens
-            </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
 
       {/* Escala print — Mont */}
