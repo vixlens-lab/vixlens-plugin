@@ -1,0 +1,1130 @@
+{
+ "lines": [
+  {
+   "id": "vixlens",
+   "title": "Vixlens",
+   "desc": "Marca principal. Nunca recolorir, distorcer ou recriar — use sempre os arquivos originais.",
+   "groups": [
+    {
+     "prod": "vixlens",
+     "label": null,
+     "concepts": [
+      {
+       "slug": "vixlens-mono-negativo",
+       "prod": "vixlens",
+       "label": "Mono · fundo escuro",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/vixlens/vixlens-mono-negativo.svg",
+        "png": "/assets/marca/vixlens/vixlens-mono-negativo.png",
+        "pdf": "/assets/marca/vixlens/vixlens-mono-negativo.pdf",
+        "webp": "/assets/marca/vixlens/vixlens-mono-negativo.webp"
+       }
+      },
+      {
+       "slug": "vixlens-mono-positivo",
+       "prod": "vixlens",
+       "label": "Mono · fundo claro",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/vixlens/vixlens-mono-positivo.svg",
+        "png": "/assets/marca/vixlens/vixlens-mono-positivo.png",
+        "pdf": "/assets/marca/vixlens/vixlens-mono-positivo.pdf",
+        "webp": "/assets/marca/vixlens/vixlens-mono-positivo.webp"
+       }
+      },
+      {
+       "slug": "vixlens-negativo",
+       "prod": "vixlens",
+       "label": "Negativo",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/vixlens/vixlens-negativo.svg",
+        "png": "/assets/marca/vixlens/vixlens-negativo.png",
+        "pdf": "/assets/marca/vixlens/vixlens-negativo.pdf",
+        "webp": "/assets/marca/vixlens/vixlens-negativo.webp"
+       }
+      },
+      {
+       "slug": "vixlens-positivo",
+       "prod": "vixlens",
+       "label": "Positivo",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/vixlens/vixlens-positivo.svg",
+        "png": "/assets/marca/vixlens/vixlens-positivo.png",
+        "pdf": "/assets/marca/vixlens/vixlens-positivo.pdf",
+        "webp": "/assets/marca/vixlens/vixlens-positivo.webp"
+       }
+      }
+     ]
+    }
+   ],
+   "kit": "/assets/kits/vixlens-brand-kit.zip"
+  },
+  {
+   "id": "freevix",
+   "title": "Freevix",
+   "desc": "Marca da linha de lentes Freevix.",
+   "groups": [
+    {
+     "prod": "freevix",
+     "label": null,
+     "concepts": [
+      {
+       "slug": "freevix-mono-negativo",
+       "prod": "freevix",
+       "label": "Mono · fundo escuro",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/freevix/freevix-mono-negativo.svg",
+        "png": "/assets/marca/freevix/freevix-mono-negativo.png",
+        "pdf": "/assets/marca/freevix/freevix-mono-negativo.pdf",
+        "webp": "/assets/marca/freevix/freevix-mono-negativo.webp"
+       }
+      },
+      {
+       "slug": "freevix-mono-positivo",
+       "prod": "freevix",
+       "label": "Mono · fundo claro",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/freevix/freevix-mono-positivo.svg",
+        "png": "/assets/marca/freevix/freevix-mono-positivo.png",
+        "pdf": "/assets/marca/freevix/freevix-mono-positivo.pdf",
+        "webp": "/assets/marca/freevix/freevix-mono-positivo.webp"
+       }
+      },
+      {
+       "slug": "freevix-negativo",
+       "prod": "freevix",
+       "label": "Negativo",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/freevix/freevix-negativo.svg",
+        "png": "/assets/marca/freevix/freevix-negativo.png",
+        "pdf": "/assets/marca/freevix/freevix-negativo.pdf",
+        "webp": "/assets/marca/freevix/freevix-negativo.webp"
+       }
+      },
+      {
+       "slug": "freevix-positivo",
+       "prod": "freevix",
+       "label": "Positivo",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/freevix/freevix-positivo.svg",
+        "png": "/assets/marca/freevix/freevix-positivo.png",
+        "pdf": "/assets/marca/freevix/freevix-positivo.pdf",
+        "webp": "/assets/marca/freevix/freevix-positivo.webp"
+       }
+      }
+     ]
+    }
+   ],
+   "kit": "/assets/kits/freevix-brand-kit.zip"
+  },
+  {
+   "id": "vix-academy",
+   "title": "Vix Academy",
+   "desc": null,
+   "groups": [
+    {
+     "prod": "horizontal",
+     "label": "Horizontal",
+     "concepts": [
+      {
+       "slug": "vix-academy-horizontal-mono-negativo",
+       "prod": "vix-academy",
+       "label": "Horizontal · Mono · fundo escuro",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/vix-academy/vix-academy-horizontal-mono-negativo.svg",
+        "png": "/assets/marca/vix-academy/vix-academy-horizontal-mono-negativo.png",
+        "pdf": "/assets/marca/vix-academy/vix-academy-horizontal-mono-negativo.pdf",
+        "webp": "/assets/marca/vix-academy/vix-academy-horizontal-mono-negativo.webp"
+       }
+      },
+      {
+       "slug": "vix-academy-horizontal-mono-positivo",
+       "prod": "vix-academy",
+       "label": "Horizontal · Mono · fundo claro",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/vix-academy/vix-academy-horizontal-mono-positivo.svg",
+        "png": "/assets/marca/vix-academy/vix-academy-horizontal-mono-positivo.png",
+        "pdf": "/assets/marca/vix-academy/vix-academy-horizontal-mono-positivo.pdf",
+        "webp": "/assets/marca/vix-academy/vix-academy-horizontal-mono-positivo.webp"
+       }
+      },
+      {
+       "slug": "vix-academy-horizontal-negativo",
+       "prod": "vix-academy",
+       "label": "Horizontal · Negativo",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/vix-academy/vix-academy-horizontal-negativo.svg",
+        "png": "/assets/marca/vix-academy/vix-academy-horizontal-negativo.png",
+        "pdf": "/assets/marca/vix-academy/vix-academy-horizontal-negativo.pdf",
+        "webp": "/assets/marca/vix-academy/vix-academy-horizontal-negativo.webp"
+       }
+      },
+      {
+       "slug": "vix-academy-horizontal-positivo",
+       "prod": "vix-academy",
+       "label": "Horizontal · Positivo",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/vix-academy/vix-academy-horizontal-positivo.svg",
+        "png": "/assets/marca/vix-academy/vix-academy-horizontal-positivo.png",
+        "pdf": "/assets/marca/vix-academy/vix-academy-horizontal-positivo.pdf",
+        "webp": "/assets/marca/vix-academy/vix-academy-horizontal-positivo.webp"
+       }
+      }
+     ]
+    },
+    {
+     "prod": "vertical",
+     "label": "Vertical",
+     "concepts": [
+      {
+       "slug": "vix-academy-vertical-mono-negativo",
+       "prod": "vix-academy",
+       "label": "Vertical · Mono · fundo escuro",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/vix-academy/vix-academy-vertical-mono-negativo.svg",
+        "png": "/assets/marca/vix-academy/vix-academy-vertical-mono-negativo.png",
+        "pdf": "/assets/marca/vix-academy/vix-academy-vertical-mono-negativo.pdf",
+        "webp": "/assets/marca/vix-academy/vix-academy-vertical-mono-negativo.webp"
+       }
+      },
+      {
+       "slug": "vix-academy-vertical-mono-positivo",
+       "prod": "vix-academy",
+       "label": "Vertical · Mono · fundo claro",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/vix-academy/vix-academy-vertical-mono-positivo.svg",
+        "png": "/assets/marca/vix-academy/vix-academy-vertical-mono-positivo.png",
+        "pdf": "/assets/marca/vix-academy/vix-academy-vertical-mono-positivo.pdf",
+        "webp": "/assets/marca/vix-academy/vix-academy-vertical-mono-positivo.webp"
+       }
+      },
+      {
+       "slug": "vix-academy-vertical-negativo",
+       "prod": "vix-academy",
+       "label": "Vertical · Negativo",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/vix-academy/vix-academy-vertical-negativo.svg",
+        "png": "/assets/marca/vix-academy/vix-academy-vertical-negativo.png",
+        "pdf": "/assets/marca/vix-academy/vix-academy-vertical-negativo.pdf",
+        "webp": "/assets/marca/vix-academy/vix-academy-vertical-negativo.webp"
+       }
+      },
+      {
+       "slug": "vix-academy-vertical-positivo",
+       "prod": "vix-academy",
+       "label": "Vertical · Positivo",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/vix-academy/vix-academy-vertical-positivo.svg",
+        "png": "/assets/marca/vix-academy/vix-academy-vertical-positivo.png",
+        "pdf": "/assets/marca/vix-academy/vix-academy-vertical-positivo.pdf",
+        "webp": "/assets/marca/vix-academy/vix-academy-vertical-positivo.webp"
+       }
+      }
+     ]
+    }
+   ],
+   "kit": "/assets/kits/vix-academy-brand-kit.zip"
+  },
+  {
+   "id": "reflecta",
+   "title": "Reflecta",
+   "desc": "Cada cor é um tipo de tratamento antirreflexo. Guard (verde), Express (verde-claro), Blue Protect SH (azul).",
+   "groups": [
+    {
+     "prod": "reflecta",
+     "label": "Reflecta (matriz)",
+     "concepts": [
+      {
+       "slug": "reflecta-completo-mono-negativo",
+       "prod": "reflecta",
+       "label": "Assinatura completa · Mono · fundo escuro",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-completo-mono-negativo.svg",
+        "png": "/assets/marca/reflecta/reflecta-completo-mono-negativo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-completo-mono-negativo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-completo-mono-negativo.webp"
+       }
+      },
+      {
+       "slug": "reflecta-completo-mono-positivo",
+       "prod": "reflecta",
+       "label": "Assinatura completa · Mono · fundo claro",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-completo-mono-positivo.svg",
+        "png": "/assets/marca/reflecta/reflecta-completo-mono-positivo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-completo-mono-positivo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-completo-mono-positivo.webp"
+       }
+      },
+      {
+       "slug": "reflecta-completo-negativo",
+       "prod": "reflecta",
+       "label": "Assinatura completa · Negativo",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-completo-negativo.svg",
+        "png": "/assets/marca/reflecta/reflecta-completo-negativo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-completo-negativo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-completo-negativo.webp"
+       }
+      },
+      {
+       "slug": "reflecta-completo-positivo",
+       "prod": "reflecta",
+       "label": "Assinatura completa · Positivo",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-completo-positivo.svg",
+        "png": "/assets/marca/reflecta/reflecta-completo-positivo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-completo-positivo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-completo-positivo.webp"
+       }
+      },
+      {
+       "slug": "reflecta-reduzido-mono-negativo",
+       "prod": "reflecta",
+       "label": "Reduzida · Mono · fundo escuro",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-reduzido-mono-negativo.svg",
+        "png": "/assets/marca/reflecta/reflecta-reduzido-mono-negativo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-reduzido-mono-negativo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-reduzido-mono-negativo.webp"
+       }
+      },
+      {
+       "slug": "reflecta-reduzido-mono-positivo",
+       "prod": "reflecta",
+       "label": "Reduzida · Mono · fundo claro",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-reduzido-mono-positivo.svg",
+        "png": "/assets/marca/reflecta/reflecta-reduzido-mono-positivo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-reduzido-mono-positivo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-reduzido-mono-positivo.webp"
+       }
+      }
+     ]
+    },
+    {
+     "prod": "reflecta-guard",
+     "label": "Reflecta Guard",
+     "concepts": [
+      {
+       "slug": "reflecta-guard-completo-negativo",
+       "prod": "reflecta-guard",
+       "label": "Assinatura completa · Negativo",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-guard-completo-negativo.svg",
+        "png": "/assets/marca/reflecta/reflecta-guard-completo-negativo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-guard-completo-negativo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-guard-completo-negativo.webp"
+       }
+      },
+      {
+       "slug": "reflecta-guard-completo-positivo",
+       "prod": "reflecta-guard",
+       "label": "Assinatura completa · Positivo",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-guard-completo-positivo.svg",
+        "png": "/assets/marca/reflecta/reflecta-guard-completo-positivo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-guard-completo-positivo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-guard-completo-positivo.webp"
+       }
+      },
+      {
+       "slug": "reflecta-guard-simbolo-cor",
+       "prod": "reflecta-guard",
+       "label": "Símbolo · Cor",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-guard-simbolo-cor.svg",
+        "png": "/assets/marca/reflecta/reflecta-guard-simbolo-cor.png",
+        "pdf": "/assets/marca/reflecta/reflecta-guard-simbolo-cor.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-guard-simbolo-cor.webp"
+       }
+      },
+      {
+       "slug": "reflecta-guard-simbolo-mono-negativo",
+       "prod": "reflecta-guard",
+       "label": "Símbolo · Mono · fundo escuro",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-guard-simbolo-mono-negativo.svg",
+        "png": "/assets/marca/reflecta/reflecta-guard-simbolo-mono-negativo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-guard-simbolo-mono-negativo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-guard-simbolo-mono-negativo.webp"
+       }
+      },
+      {
+       "slug": "reflecta-guard-simbolo-mono-positivo",
+       "prod": "reflecta-guard",
+       "label": "Símbolo · Mono · fundo claro",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-guard-simbolo-mono-positivo.svg",
+        "png": "/assets/marca/reflecta/reflecta-guard-simbolo-mono-positivo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-guard-simbolo-mono-positivo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-guard-simbolo-mono-positivo.webp"
+       }
+      }
+     ]
+    },
+    {
+     "prod": "reflecta-express",
+     "label": "Reflecta Express",
+     "concepts": [
+      {
+       "slug": "reflecta-express-completo-negativo",
+       "prod": "reflecta-express",
+       "label": "Assinatura completa · Negativo",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-express-completo-negativo.svg",
+        "png": "/assets/marca/reflecta/reflecta-express-completo-negativo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-express-completo-negativo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-express-completo-negativo.webp"
+       }
+      },
+      {
+       "slug": "reflecta-express-completo-positivo",
+       "prod": "reflecta-express",
+       "label": "Assinatura completa · Positivo",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-express-completo-positivo.svg",
+        "png": "/assets/marca/reflecta/reflecta-express-completo-positivo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-express-completo-positivo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-express-completo-positivo.webp"
+       }
+      },
+      {
+       "slug": "reflecta-express-simbolo-cor",
+       "prod": "reflecta-express",
+       "label": "Símbolo · Cor",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-express-simbolo-cor.svg",
+        "png": "/assets/marca/reflecta/reflecta-express-simbolo-cor.png",
+        "pdf": "/assets/marca/reflecta/reflecta-express-simbolo-cor.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-express-simbolo-cor.webp"
+       }
+      },
+      {
+       "slug": "reflecta-express-simbolo-mono-negativo",
+       "prod": "reflecta-express",
+       "label": "Símbolo · Mono · fundo escuro",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-express-simbolo-mono-negativo.svg",
+        "png": "/assets/marca/reflecta/reflecta-express-simbolo-mono-negativo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-express-simbolo-mono-negativo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-express-simbolo-mono-negativo.webp"
+       }
+      },
+      {
+       "slug": "reflecta-express-simbolo-mono-positivo",
+       "prod": "reflecta-express",
+       "label": "Símbolo · Mono · fundo claro",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-express-simbolo-mono-positivo.svg",
+        "png": "/assets/marca/reflecta/reflecta-express-simbolo-mono-positivo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-express-simbolo-mono-positivo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-express-simbolo-mono-positivo.webp"
+       }
+      }
+     ]
+    },
+    {
+     "prod": "reflecta-blue-protect-sh",
+     "label": "Reflecta Blue Protect SH",
+     "concepts": [
+      {
+       "slug": "reflecta-blue-protect-sh-completo-negativo",
+       "prod": "reflecta-blue-protect-sh",
+       "label": "Assinatura completa · Negativo",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-blue-protect-sh-completo-negativo.svg",
+        "png": "/assets/marca/reflecta/reflecta-blue-protect-sh-completo-negativo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-blue-protect-sh-completo-negativo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-blue-protect-sh-completo-negativo.webp"
+       }
+      },
+      {
+       "slug": "reflecta-blue-protect-sh-completo-positivo",
+       "prod": "reflecta-blue-protect-sh",
+       "label": "Assinatura completa · Positivo",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-blue-protect-sh-completo-positivo.svg",
+        "png": "/assets/marca/reflecta/reflecta-blue-protect-sh-completo-positivo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-blue-protect-sh-completo-positivo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-blue-protect-sh-completo-positivo.webp"
+       }
+      },
+      {
+       "slug": "reflecta-blue-protect-sh-simbolo-cor",
+       "prod": "reflecta-blue-protect-sh",
+       "label": "Símbolo · Cor",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-blue-protect-sh-simbolo-cor.svg",
+        "png": "/assets/marca/reflecta/reflecta-blue-protect-sh-simbolo-cor.png",
+        "pdf": "/assets/marca/reflecta/reflecta-blue-protect-sh-simbolo-cor.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-blue-protect-sh-simbolo-cor.webp"
+       }
+      },
+      {
+       "slug": "reflecta-blue-protect-sh-simbolo-mono-negativo",
+       "prod": "reflecta-blue-protect-sh",
+       "label": "Símbolo · Mono · fundo escuro",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-blue-protect-sh-simbolo-mono-negativo.svg",
+        "png": "/assets/marca/reflecta/reflecta-blue-protect-sh-simbolo-mono-negativo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-blue-protect-sh-simbolo-mono-negativo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-blue-protect-sh-simbolo-mono-negativo.webp"
+       }
+      },
+      {
+       "slug": "reflecta-blue-protect-sh-simbolo-mono-positivo",
+       "prod": "reflecta-blue-protect-sh",
+       "label": "Símbolo · Mono · fundo claro",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/reflecta/reflecta-blue-protect-sh-simbolo-mono-positivo.svg",
+        "png": "/assets/marca/reflecta/reflecta-blue-protect-sh-simbolo-mono-positivo.png",
+        "pdf": "/assets/marca/reflecta/reflecta-blue-protect-sh-simbolo-mono-positivo.pdf",
+        "webp": "/assets/marca/reflecta/reflecta-blue-protect-sh-simbolo-mono-positivo.webp"
+       }
+      }
+     ]
+    }
+   ],
+   "kit": "/assets/kits/reflecta-brand-kit.zip"
+  },
+  {
+   "id": "lentes",
+   "title": "Lentes Freevix",
+   "desc": "Assinatura de cada lente, vertical e horizontal, positiva (fundo claro) e negativa (fundo escuro).",
+   "groups": [
+    {
+     "prod": "astera",
+     "label": "Astera",
+     "concepts": [
+      {
+       "slug": "astera-horizontal-negativa",
+       "prod": "astera",
+       "label": "Horizontal · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/astera-horizontal-negativa.svg",
+        "png": "/assets/marca/lentes/astera-horizontal-negativa.png",
+        "pdf": "/assets/marca/lentes/astera-horizontal-negativa.pdf",
+        "webp": "/assets/marca/lentes/astera-horizontal-negativa.webp"
+       }
+      },
+      {
+       "slug": "astera-horizontal-positiva",
+       "prod": "astera",
+       "label": "Horizontal · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/astera-horizontal-positiva.svg",
+        "png": "/assets/marca/lentes/astera-horizontal-positiva.png",
+        "pdf": "/assets/marca/lentes/astera-horizontal-positiva.pdf",
+        "webp": "/assets/marca/lentes/astera-horizontal-positiva.webp"
+       }
+      },
+      {
+       "slug": "astera-vertical-negativa",
+       "prod": "astera",
+       "label": "Vertical · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/astera-vertical-negativa.svg",
+        "png": "/assets/marca/lentes/astera-vertical-negativa.png",
+        "pdf": "/assets/marca/lentes/astera-vertical-negativa.pdf",
+        "webp": "/assets/marca/lentes/astera-vertical-negativa.webp"
+       }
+      },
+      {
+       "slug": "astera-vertical-positiva",
+       "prod": "astera",
+       "label": "Vertical · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/astera-vertical-positiva.svg",
+        "png": "/assets/marca/lentes/astera-vertical-positiva.png",
+        "pdf": "/assets/marca/lentes/astera-vertical-positiva.pdf",
+        "webp": "/assets/marca/lentes/astera-vertical-positiva.webp"
+       }
+      }
+     ]
+    },
+    {
+     "prod": "freevix-deskview-1-3m",
+     "label": "Freevix Deskview 1.3M",
+     "concepts": [
+      {
+       "slug": "freevix-deskview-1-3m-horizontal-negativa",
+       "prod": "freevix-deskview-1-3m",
+       "label": "Horizontal · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-deskview-1-3m-horizontal-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-deskview-1-3m-horizontal-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-deskview-1-3m-horizontal-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-deskview-1-3m-horizontal-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-deskview-1-3m-horizontal-positiva",
+       "prod": "freevix-deskview-1-3m",
+       "label": "Horizontal · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-deskview-1-3m-horizontal-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-deskview-1-3m-horizontal-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-deskview-1-3m-horizontal-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-deskview-1-3m-horizontal-positiva.webp"
+       }
+      },
+      {
+       "slug": "freevix-deskview-1-3m-vertical-negativa",
+       "prod": "freevix-deskview-1-3m",
+       "label": "Vertical · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-deskview-1-3m-vertical-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-deskview-1-3m-vertical-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-deskview-1-3m-vertical-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-deskview-1-3m-vertical-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-deskview-1-3m-vertical-positiva",
+       "prod": "freevix-deskview-1-3m",
+       "label": "Vertical · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-deskview-1-3m-vertical-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-deskview-1-3m-vertical-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-deskview-1-3m-vertical-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-deskview-1-3m-vertical-positiva.webp"
+       }
+      }
+     ]
+    },
+    {
+     "prod": "freevix-deskview-2m",
+     "label": "Freevix Deskview 2M",
+     "concepts": [
+      {
+       "slug": "freevix-deskview-2m-horizontal-negativa",
+       "prod": "freevix-deskview-2m",
+       "label": "Horizontal · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-deskview-2m-horizontal-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-deskview-2m-horizontal-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-deskview-2m-horizontal-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-deskview-2m-horizontal-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-deskview-2m-horizontal-positiva",
+       "prod": "freevix-deskview-2m",
+       "label": "Horizontal · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-deskview-2m-horizontal-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-deskview-2m-horizontal-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-deskview-2m-horizontal-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-deskview-2m-horizontal-positiva.webp"
+       }
+      },
+      {
+       "slug": "freevix-deskview-2m-vertical-negativa",
+       "prod": "freevix-deskview-2m",
+       "label": "Vertical · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-deskview-2m-vertical-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-deskview-2m-vertical-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-deskview-2m-vertical-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-deskview-2m-vertical-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-deskview-2m-vertical-positiva",
+       "prod": "freevix-deskview-2m",
+       "label": "Vertical · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-deskview-2m-vertical-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-deskview-2m-vertical-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-deskview-2m-vertical-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-deskview-2m-vertical-positiva.webp"
+       }
+      }
+     ]
+    },
+    {
+     "prod": "freevix-freedom",
+     "label": "Freevix Freedom",
+     "concepts": [
+      {
+       "slug": "freevix-freedom-horizontal-negativa",
+       "prod": "freevix-freedom",
+       "label": "Horizontal · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-freedom-horizontal-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-freedom-horizontal-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-freedom-horizontal-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-freedom-horizontal-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-freedom-horizontal-positiva",
+       "prod": "freevix-freedom",
+       "label": "Horizontal · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-freedom-horizontal-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-freedom-horizontal-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-freedom-horizontal-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-freedom-horizontal-positiva.webp"
+       }
+      },
+      {
+       "slug": "freevix-freedom-vertical-negativa",
+       "prod": "freevix-freedom",
+       "label": "Vertical · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-freedom-vertical-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-freedom-vertical-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-freedom-vertical-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-freedom-vertical-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-freedom-vertical-positiva",
+       "prod": "freevix-freedom",
+       "label": "Vertical · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-freedom-vertical-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-freedom-vertical-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-freedom-vertical-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-freedom-vertical-positiva.webp"
+       }
+      }
+     ]
+    },
+    {
+     "prod": "freevix-ia-tech",
+     "label": "Freevix IA Tech",
+     "concepts": [
+      {
+       "slug": "freevix-ia-tech-horizontal-negativa",
+       "prod": "freevix-ia-tech",
+       "label": "Horizontal · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-ia-tech-horizontal-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-ia-tech-horizontal-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-ia-tech-horizontal-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-ia-tech-horizontal-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-ia-tech-horizontal-positiva",
+       "prod": "freevix-ia-tech",
+       "label": "Horizontal · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-ia-tech-horizontal-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-ia-tech-horizontal-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-ia-tech-horizontal-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-ia-tech-horizontal-positiva.webp"
+       }
+      },
+      {
+       "slug": "freevix-ia-tech-vertical-negativa",
+       "prod": "freevix-ia-tech",
+       "label": "Vertical · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-ia-tech-vertical-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-ia-tech-vertical-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-ia-tech-vertical-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-ia-tech-vertical-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-ia-tech-vertical-positiva",
+       "prod": "freevix-ia-tech",
+       "label": "Vertical · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-ia-tech-vertical-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-ia-tech-vertical-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-ia-tech-vertical-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-ia-tech-vertical-positiva.webp"
+       }
+      }
+     ]
+    },
+    {
+     "prod": "freevix-office-ate-4m",
+     "label": "Freevix Office até 4M",
+     "concepts": [
+      {
+       "slug": "freevix-office-ate-4m-horizontal-negativa",
+       "prod": "freevix-office-ate-4m",
+       "label": "Horizontal · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-office-ate-4m-horizontal-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-office-ate-4m-horizontal-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-office-ate-4m-horizontal-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-office-ate-4m-horizontal-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-office-ate-4m-horizontal-positiva",
+       "prod": "freevix-office-ate-4m",
+       "label": "Horizontal · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-office-ate-4m-horizontal-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-office-ate-4m-horizontal-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-office-ate-4m-horizontal-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-office-ate-4m-horizontal-positiva.webp"
+       }
+      },
+      {
+       "slug": "freevix-office-ate-4m-vertical-negativa",
+       "prod": "freevix-office-ate-4m",
+       "label": "Vertical · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-office-ate-4m-vertical-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-office-ate-4m-vertical-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-office-ate-4m-vertical-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-office-ate-4m-vertical-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-office-ate-4m-vertical-positiva",
+       "prod": "freevix-office-ate-4m",
+       "label": "Vertical · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-office-ate-4m-vertical-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-office-ate-4m-vertical-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-office-ate-4m-vertical-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-office-ate-4m-vertical-positiva.webp"
+       }
+      }
+     ]
+    },
+    {
+     "prod": "freevix-one",
+     "label": "Freevix One",
+     "concepts": [
+      {
+       "slug": "freevix-one-horizontal-negativa",
+       "prod": "freevix-one",
+       "label": "Horizontal · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-one-horizontal-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-one-horizontal-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-one-horizontal-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-one-horizontal-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-one-horizontal-positiva",
+       "prod": "freevix-one",
+       "label": "Horizontal · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-one-horizontal-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-one-horizontal-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-one-horizontal-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-one-horizontal-positiva.webp"
+       }
+      },
+      {
+       "slug": "freevix-one-vertical-negativa",
+       "prod": "freevix-one",
+       "label": "Vertical · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-one-vertical-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-one-vertical-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-one-vertical-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-one-vertical-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-one-vertical-positiva",
+       "prod": "freevix-one",
+       "label": "Vertical · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-one-vertical-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-one-vertical-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-one-vertical-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-one-vertical-positiva.webp"
+       }
+      }
+     ]
+    },
+    {
+     "prod": "freevix-premium",
+     "label": "Freevix Premium",
+     "concepts": [
+      {
+       "slug": "freevix-premium-horizontal-negativa",
+       "prod": "freevix-premium",
+       "label": "Horizontal · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-premium-horizontal-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-premium-horizontal-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-premium-horizontal-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-premium-horizontal-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-premium-horizontal-positiva",
+       "prod": "freevix-premium",
+       "label": "Horizontal · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-premium-horizontal-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-premium-horizontal-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-premium-horizontal-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-premium-horizontal-positiva.webp"
+       }
+      },
+      {
+       "slug": "freevix-premium-vertical-negativa",
+       "prod": "freevix-premium",
+       "label": "Vertical · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-premium-vertical-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-premium-vertical-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-premium-vertical-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-premium-vertical-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-premium-vertical-positiva",
+       "prod": "freevix-premium",
+       "label": "Vertical · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-premium-vertical-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-premium-vertical-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-premium-vertical-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-premium-vertical-positiva.webp"
+       }
+      }
+     ]
+    },
+    {
+     "prod": "freevix-relax",
+     "label": "Freevix Relax",
+     "concepts": [
+      {
+       "slug": "freevix-relax-horizontal-negativa",
+       "prod": "freevix-relax",
+       "label": "Horizontal · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-relax-horizontal-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-relax-horizontal-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-relax-horizontal-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-relax-horizontal-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-relax-horizontal-positiva",
+       "prod": "freevix-relax",
+       "label": "Horizontal · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-relax-horizontal-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-relax-horizontal-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-relax-horizontal-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-relax-horizontal-positiva.webp"
+       }
+      },
+      {
+       "slug": "freevix-relax-vertical-negativa",
+       "prod": "freevix-relax",
+       "label": "Vertical · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-relax-vertical-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-relax-vertical-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-relax-vertical-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-relax-vertical-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-relax-vertical-positiva",
+       "prod": "freevix-relax",
+       "label": "Vertical · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-relax-vertical-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-relax-vertical-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-relax-vertical-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-relax-vertical-positiva.webp"
+       }
+      }
+     ]
+    },
+    {
+     "prod": "freevix-vs-hd",
+     "label": "Freevix VS HD",
+     "concepts": [
+      {
+       "slug": "freevix-vs-hd-horizontal-negativa",
+       "prod": "freevix-vs-hd",
+       "label": "Horizontal · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-vs-hd-horizontal-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-vs-hd-horizontal-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-vs-hd-horizontal-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-vs-hd-horizontal-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-vs-hd-horizontal-positiva",
+       "prod": "freevix-vs-hd",
+       "label": "Horizontal · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-vs-hd-horizontal-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-vs-hd-horizontal-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-vs-hd-horizontal-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-vs-hd-horizontal-positiva.webp"
+       }
+      },
+      {
+       "slug": "freevix-vs-hd-vertical-negativa",
+       "prod": "freevix-vs-hd",
+       "label": "Vertical · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-vs-hd-vertical-negativa.svg",
+        "png": "/assets/marca/lentes/freevix-vs-hd-vertical-negativa.png",
+        "pdf": "/assets/marca/lentes/freevix-vs-hd-vertical-negativa.pdf",
+        "webp": "/assets/marca/lentes/freevix-vs-hd-vertical-negativa.webp"
+       }
+      },
+      {
+       "slug": "freevix-vs-hd-vertical-positiva",
+       "prod": "freevix-vs-hd",
+       "label": "Vertical · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/freevix-vs-hd-vertical-positiva.svg",
+        "png": "/assets/marca/lentes/freevix-vs-hd-vertical-positiva.png",
+        "pdf": "/assets/marca/lentes/freevix-vs-hd-vertical-positiva.pdf",
+        "webp": "/assets/marca/lentes/freevix-vs-hd-vertical-positiva.webp"
+       }
+      }
+     ]
+    },
+    {
+     "prod": "vix-total",
+     "label": "VixTotal",
+     "concepts": [
+      {
+       "slug": "vix-total-horizontal-negativa",
+       "prod": "vix-total",
+       "label": "Horizontal · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/vix-total-horizontal-negativa.svg",
+        "png": "/assets/marca/lentes/vix-total-horizontal-negativa.png",
+        "pdf": "/assets/marca/lentes/vix-total-horizontal-negativa.pdf",
+        "webp": "/assets/marca/lentes/vix-total-horizontal-negativa.webp"
+       }
+      },
+      {
+       "slug": "vix-total-horizontal-positiva",
+       "prod": "vix-total",
+       "label": "Horizontal · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/vix-total-horizontal-positiva.svg",
+        "png": "/assets/marca/lentes/vix-total-horizontal-positiva.png",
+        "pdf": "/assets/marca/lentes/vix-total-horizontal-positiva.pdf",
+        "webp": "/assets/marca/lentes/vix-total-horizontal-positiva.webp"
+       }
+      },
+      {
+       "slug": "vix-total-vertical-negativa",
+       "prod": "vix-total",
+       "label": "Vertical · Negativa",
+       "bg": "dark",
+       "fmt": {
+        "svg": "/assets/marca/lentes/vix-total-vertical-negativa.svg",
+        "png": "/assets/marca/lentes/vix-total-vertical-negativa.png",
+        "pdf": "/assets/marca/lentes/vix-total-vertical-negativa.pdf",
+        "webp": "/assets/marca/lentes/vix-total-vertical-negativa.webp"
+       }
+      },
+      {
+       "slug": "vix-total-vertical-positiva",
+       "prod": "vix-total",
+       "label": "Vertical · Positiva",
+       "bg": "light",
+       "fmt": {
+        "svg": "/assets/marca/lentes/vix-total-vertical-positiva.svg",
+        "png": "/assets/marca/lentes/vix-total-vertical-positiva.png",
+        "pdf": "/assets/marca/lentes/vix-total-vertical-positiva.pdf",
+        "webp": "/assets/marca/lentes/vix-total-vertical-positiva.webp"
+       }
+      }
+     ]
+    }
+   ],
+   "kit": "/assets/kits/lentes-brand-kit.zip"
+  }
+ ]
+}
