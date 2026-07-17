@@ -8,6 +8,12 @@ import TipografiaSection from './components/fundamentos/TipografiaSection.jsx'
 import TokensSection from './components/fundamentos/TokensSection.jsx'
 import IconografiaSection from './components/fundamentos/IconografiaSection.jsx'
 import EspacamentoSection from './components/fundamentos/EspacamentoSection.jsx'
+import VozTomSection from './components/voz/VozTomSection.jsx'
+import VocabularioSection from './components/voz/VocabularioSection.jsx'
+import BotoesSection from './components/componentes/BotoesSection.jsx'
+import InputsSection from './components/componentes/InputsSection.jsx'
+import CardsSection from './components/componentes/CardsSection.jsx'
+import CalloutsSection from './components/componentes/CalloutsSection.jsx'
 
 export default function App() {
   const [navOpen, setNavOpen] = useState(false)
@@ -36,16 +42,21 @@ export default function App() {
         <TokensSection />
         <IconografiaSection />
         <EspacamentoSection />
+        <VozTomSection />
+        <VocabularioSection />
+        <BotoesSection />
+        <InputsSection />
+        <CardsSection />
+        <CalloutsSection />
 
-        {/* Próximas seções em migração fatiada */}
+        {/* Materiais (14) — próxima fase */}
         <section className="border-t border-gray-100 px-8 py-16 md:px-16">
           <div className="mx-auto w-full max-w-vix-site">
             <div className="text-xs font-bold uppercase tracking-[0.14em] text-vix-azul">
               Rebuild em andamento
             </div>
             <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
-              Voz, Componentes e Materiais estão sendo portados em fases. Produção intacta até a
-              paridade total.
+              Falta só Materiais (14). Depois: paridade final e merge pra produção.
             </p>
           </div>
         </section>

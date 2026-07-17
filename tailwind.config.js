@@ -1,4 +1,5 @@
 import { readFileSync } from 'node:fs'
+import tailwindcssAnimate from 'tailwindcss-animate'
 
 // Single source: lê os tokens do DS (mesmo JSON que serve o site/skill).
 const t = JSON.parse(readFileSync(new URL('./assets/tokens/vixlens-tokens.json', import.meta.url), 'utf8'))
@@ -30,5 +31,5 @@ export default {
       fontFamily: { vix: ['Host Grotesk', 'sans-serif'] },
     },
   },
-  plugins: [],
+  plugins: [tailwindcssAnimate],
 }
