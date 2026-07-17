@@ -11,7 +11,23 @@
     "amarelo":      { "value": "#FAC617", "comment": "CTA/destaque. Sempre com texto preto." },
     "amarelo-hover":{ "value": "#E5A800" },
     "azul":         { "value": "#0439D9", "comment": "Acento ~5%. Nunca dominante, nunca em hero/header." },
-    "cinza-borda":  { "value": "#606F7F", "comment": "Bordas e placeholder." },
+    "azul-tint": {
+      "10": { "value": "#EAF0FF" },
+      "20": { "value": "#C0CDFA" }
+    },
+    "amarelo-light":{ "value": "#FEF3C7", "comment": "Fundo suave / highlight." },
+    "cinza-borda":  { "value": "#606F7F", "comment": "Borda/placeholder oficial (--cinza)." },
+    "gray": {
+      "comment": "Rampa neutra do DS (escala Tailwind). Texto secundário, bordas, fundos sutis.",
+      "50":  { "value": "#F9FAFB" },
+      "100": { "value": "#F3F4F6" },
+      "200": { "value": "#E5E7EB" },
+      "300": { "value": "#D1D5DB" },
+      "400": { "value": "#9CA3AF" },
+      "500": { "value": "#6B7280" },
+      "600": { "value": "#4B5563" },
+      "700": { "value": "#374151" }
+    },
     "reflecta": {
       "guard":          { "value": "#00782D" },
       "express":        { "value": "#92BB36", "comment": "Texto sempre preto sobre esta cor." },
