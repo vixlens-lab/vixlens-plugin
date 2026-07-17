@@ -93,6 +93,47 @@ export default function VozTomSection() {
           </ul>
         </div>
       </div>
+
+      {/* Checklist antes de publicar */}
+      <SubTitle className="mt-14">Checklist antes de publicar</SubTitle>
+      <div className="mb-14 grid grid-cols-1 gap-2 sm:grid-cols-2">
+        {CHECKLIST.map((t) => (
+          <label key={t} className="flex cursor-pointer items-center gap-2.5 rounded-lg border border-gray-100 px-3.5 py-2.5">
+            <input type="checkbox" className="h-4 w-4 accent-vix-preto" />
+            <span className="text-[13px] text-gray-600">{t}</span>
+          </label>
+        ))}
+      </div>
+
+      {/* Frases-âncora */}
+      <SubTitle>Frases-âncora — calibração de tom</SubTitle>
+      <div className="flex flex-col gap-2.5">
+        {FRASES.map((f, i) => (
+          <div key={i} className="flex items-start gap-3.5 rounded-xl bg-vix-preto px-5 py-4">
+            <span className="mt-0.5 shrink-0 rounded-vix-chip bg-vix-amarelo/10 px-2 py-1 font-mono text-[11px] font-bold text-vix-amarelo">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+            <span className="text-sm leading-relaxed text-white">&ldquo;{f}&rdquo;</span>
+          </div>
+        ))}
+      </div>
     </Section>
   )
 }
+
+const CHECKLIST = [
+  'Tem travessão (—)? Remover.',
+  'Tem expressão proibida? Substituir.',
+  'Tem comparação com concorrente? Cortar.',
+  'Tem valor exato? Converter para faixa ou remover.',
+  'Tem referência a M&A/exit/valuation? Cortar completamente.',
+  '"Essilor" aparece isolado? Corrigir para "EssilorLuxottica".',
+  'Cliente citado? Verificar autorização prévia.',
+]
+const FRASES = [
+  '1 lente Matriz = 1 lente Vixlens equivalente. Material, índice e desenho da lente espelhados automaticamente.',
+  'Toda nova tecnologia incorporada ao portfólio campeão Vixlens fica disponível na sua tabela no mesmo momento em que entra na tabela Vixlens.',
+  'Sem atualização de cadastro, sem renegociação. O estado da arte chega por padrão.',
+  'Material, índice e desenho da lente espelhados automaticamente da Matriz, eliminando erro de cadastro.',
+  'O tratamento permanece sendo selecionado pelo cliente, sem interferência do sistema.',
+]

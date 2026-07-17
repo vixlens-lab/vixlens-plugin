@@ -25,6 +25,49 @@ export default function TipografiaSection() {
       title="Tipografia"
       desc="Host Grotesk em todos os elementos digitais. Montserrat/Mont é reservada para impressos. Nunca itálico, nunca caixa alta em parágrafo, no máximo dois pesos por bloco."
     >
+      {/* Baixar as fontes */}
+      <SubTitle>Baixar as fontes</SubTitle>
+      <div className="mb-14 grid grid-cols-1 gap-5 md:grid-cols-2">
+        {/* Host Grotesk */}
+        <div className="rounded-vix-card bg-vix-preto p-8">
+          <div className="text-[11px] font-medium uppercase tracking-[0.08em] text-white/40">Web · Digital</div>
+          <div className="mt-2 text-5xl font-bold leading-none text-white" style={{ fontFamily: "'Host Grotesk', sans-serif" }}>Host Grotesk</div>
+          <div className="mt-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-vix-amarelo">Site · Plataformas · UI</div>
+          <p className="mt-4 text-xs leading-relaxed text-white/45">Disponível via Google Fonts. Pesos 300 · 400 · 500 · 600 · 700 · 800.</p>
+          <div className="mt-5 flex flex-col gap-1.5">
+            {[['Regular', 400], ['SemiBold', 600], ['Bold', 700], ['ExtraBold', 800]].map(([n, w]) => (
+              <div key={n} className="flex items-center border-b border-white/5 py-1.5 last:border-0">
+                <span className="w-24 shrink-0 text-xs text-white/45">{n}</span>
+                <span className="flex-1 text-right text-white" style={{ fontWeight: w, color: w === 800 ? '#FAC617' : '#fff' }}>Aa Bb Cc</span>
+                <span className="w-8 shrink-0 text-right text-[10px] text-white/30">{w}</span>
+              </div>
+            ))}
+          </div>
+          <a href="https://fonts.google.com/specimen/Host+Grotesk" target="_blank" rel="noopener" className="mt-6 inline-flex rounded-full bg-vix-amarelo px-5 py-2.5 text-sm font-bold text-vix-preto transition-colors hover:bg-vix-amarelo-hover">
+            Abrir no Google Fonts
+          </a>
+        </div>
+        {/* Mont */}
+        <div className="rounded-vix-card border border-gray-200 bg-white p-8">
+          <div className="text-[11px] font-medium uppercase tracking-[0.08em] text-gray-400">Print · Documentos</div>
+          <div className="mt-2 text-5xl font-black leading-none tracking-[0.04em] text-vix-preto">Mont</div>
+          <div className="mt-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-vix-cinza">Propostas · Manuais · PDFs</div>
+          <p className="mt-4 text-xs leading-relaxed text-gray-400">Licença comercial requerida. Substituta web: Montserrat (Google Fonts).</p>
+          <div className="mt-5 flex flex-col gap-1.5">
+            {[['Light', 300], ['Regular', 400], ['SemiBold', 600], ['Black', 900]].map(([n, w]) => (
+              <div key={n} className="flex items-center border-b border-gray-100 py-1.5 text-vix-preto last:border-0">
+                <span className="w-24 shrink-0 text-xs text-gray-400">{n}</span>
+                <span className="flex-1 text-right" style={{ fontWeight: w }}>Aa Bb Cc</span>
+                <span className="w-8 shrink-0 text-right text-[10px] text-gray-300">{w}</span>
+              </div>
+            ))}
+          </div>
+          <a href="/assets/fontes/mont/vixlens-mont.zip" download className="mt-6 inline-flex items-center gap-2 rounded-full bg-vix-preto px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#333333]">
+            Baixar Mont (.zip)
+          </a>
+        </div>
+      </div>
+
       {/* Exemplo de texto — a tipografia em ação */}
       <SubTitle>Exemplo em uso</SubTitle>
       <div className="mb-14 rounded-vix-card border border-gray-200 bg-white p-8 md:p-12">
@@ -66,6 +109,43 @@ export default function TipografiaSection() {
             >
               Vixlens
             </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Escala print — Mont */}
+      <SubTitle className="mt-14">Escala print — Mont (propostas, manuais, documentos)</SubTitle>
+      <div className="mb-14 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {[
+          ['Título capa', '48 pt · Black', 'Mont Black — capas de proposta'],
+          ['Título de seção', '24 pt · Bold', 'Abertura de blocos'],
+          ['Subtítulo', '18 pt · SemiBold', 'Destaques dentro da seção'],
+          ['Corpo', '11 pt · Regular', 'Texto corrido, lh 1.5'],
+          ['Legenda', '9 pt · Regular', 'Notas, rodapés'],
+          ['Dados / números', '11 pt · SemiBold', 'Tabelas e valores'],
+        ].map(([n, s, u]) => (
+          <div key={n} className="rounded-vix-input border border-gray-200 p-4">
+            <div className="text-[13px] font-bold text-vix-preto">{n}</div>
+            <div className="mt-0.5 font-mono text-xs text-vix-azul">{s}</div>
+            <div className="mt-1 text-[11px] text-gray-500">{u}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Regras de uso */}
+      <SubTitle>Regras de uso</SubTitle>
+      <div className="flex flex-col gap-2.5">
+        {[
+          'Nunca itálico, em nenhum elemento.',
+          'Nunca caixa alta em parágrafo corrido — só em logo, tagline e labels de callout.',
+          'No máximo dois pesos no mesmo bloco de texto.',
+          'Underline reservado a links — nunca como ênfase.',
+          'Peso Heavy/900 só em logo e display de impressos — nunca na web.',
+          'Host Grotesk no digital, Mont/Montserrat só em impressos.',
+        ].map((r) => (
+          <div key={r} className="flex items-start gap-3 rounded-lg border border-gray-100 p-3.5">
+            <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-vix-amarelo text-[11px] font-bold text-vix-preto">·</div>
+            <span className="text-[13px] leading-relaxed text-gray-600">{r}</span>
           </div>
         ))}
       </div>

@@ -23,7 +23,6 @@ const GRUPOS = [
     cards: [
       { t: 'Apresentação institucional', d: 'Quem é a Vixlens — pra parceiros, eventos e imprensa.', b: [['Abrir no Google Slides', 'open'], ['Baixar PDF', 'pdf']] },
       { t: 'Flyer / folder', d: 'Material de divulgação pra ótica e ponto de venda.', b: [['Baixar PDF', 'pdf']] },
-      { t: 'Painel de estande', d: 'Arte de painel/banner pra feiras e eventos.', b: [['Baixar PDF', 'pdf']] },
     ],
   },
 ]

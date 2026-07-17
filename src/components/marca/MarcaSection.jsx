@@ -48,17 +48,17 @@ function MarcaCard({ concept }) {
 function KitCard({ line }) {
   const n = line.groups.reduce((a, g) => a + g.concepts.length, 0)
   return (
-    <div className="mb-2 mt-6 flex flex-col items-start gap-4 rounded-vix-card bg-vix-preto p-8 md:flex-row md:items-center md:justify-between">
+    <div className="mb-2 mt-6 flex flex-col items-start gap-4 rounded-vix-card border border-gray-200 bg-vix-cinza-card p-8 md:flex-row md:items-center md:justify-between">
       <div>
-        <div className="text-lg font-bold text-white">Brand Kit — {line.title}</div>
-        <div className="mt-1.5 text-[13px] leading-relaxed text-white/60">
+        <div className="text-lg font-bold text-vix-preto">Brand Kit — {line.title}</div>
+        <div className="mt-1.5 text-[13px] leading-relaxed text-gray-500">
           Pacote com tudo: {n} variações × 4 formatos (SVG, PNG, PDF, WebP) num único .zip.
         </div>
       </div>
       <a
         href={line.kit}
         download
-        className="inline-flex shrink-0 items-center gap-2 self-stretch justify-center rounded-full bg-vix-amarelo px-6 py-3.5 text-sm font-bold text-vix-preto transition-colors hover:bg-vix-amarelo-hover md:self-auto"
+        className="inline-flex shrink-0 items-center gap-2 self-stretch justify-center rounded-full bg-vix-preto px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-[#333333] md:self-auto"
       >
         <DownloadIcon />
         Baixar .zip

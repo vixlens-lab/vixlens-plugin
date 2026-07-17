@@ -97,6 +97,46 @@ export default function CardsSection() {
           </p>
         </div>
       </div>
+
+      {/* Card Produto — carrossel de linha (radius shadcn) */}
+      <SubTitle className="mt-14">Card Produto — carrossel de linha (Freevix)</SubTitle>
+      <div className="mb-14 flex gap-4 overflow-x-auto pb-2">
+        {CARROSSEL.map((p) => (
+          <div key={p.n} className="flex w-[200px] shrink-0 flex-col rounded-xl border border-gray-200 bg-white p-4">
+            <div className="mb-4 flex h-28 items-center justify-center rounded-lg bg-vix-cinza-card">
+              <Eye size={28} className="text-gray-300" />
+            </div>
+            <div className="text-[15px] font-bold text-vix-preto">{p.n}</div>
+            <div className="mt-0.5 text-xs text-vix-cinza">{p.t}</div>
+            <div className="mt-3 flex justify-end">
+              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-vix-preto">
+                <ArrowRight size={14} weight="bold" className="text-white" />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Card Hero — linha de produto (foto + overlay, radius shadcn) */}
+      <SubTitle>Card Hero — linha de produto (foto + overlay)</SubTitle>
+      <div className="relative overflow-hidden rounded-2xl">
+        <img src="/fotos/Frame 33-1.jpg" alt="Linha Freevix" className="h-[340px] w-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 flex flex-col justify-end gap-3 p-8 md:p-12">
+          <span className="w-fit rounded-vix-chip bg-vix-amarelo px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-vix-preto">Linha Freevix</span>
+          <div className="max-w-md text-3xl font-bold leading-tight text-white md:text-4xl">Lentes para cada perfil de cliente.</div>
+          <Button variant="dark" className="w-fit gap-2">Ver linha completa <ArrowRight size={16} weight="bold" /></Button>
+        </div>
+      </div>
     </Section>
   )
 }
+
+const CARROSSEL = [
+  { n: 'Freevix ONE', t: 'Multifocal · entrada' },
+  { n: 'Freevix PREMIUM', t: 'Multifocal' },
+  { n: 'Freevix FREEDOM', t: 'Multifocal' },
+  { n: 'Freevix IA TECH', t: 'Multifocal · IA' },
+  { n: 'Freevix VS HD', t: 'Visão simples · HD' },
+  { n: 'Astera', t: 'Controle de miopia' },
+]
