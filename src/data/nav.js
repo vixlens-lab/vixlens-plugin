@@ -33,6 +33,7 @@ export const navGroups = [
       { label: 'Inputs', href: '#inputs', dot: '#606F7F' },
       { label: 'Cards', href: '#cards', dot: '#F5F5F7' },
       { label: 'Callouts', href: '#callouts', dot: '#FAC617' },
+      { label: 'Biblioteca shadcn', href: '#shadcn', dot: '#0439D9' },
     ],
   },
   {

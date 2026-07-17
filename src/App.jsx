@@ -14,6 +14,7 @@ import BotoesSection from './components/componentes/BotoesSection.jsx'
 import InputsSection from './components/componentes/InputsSection.jsx'
 import CardsSection from './components/componentes/CardsSection.jsx'
 import CalloutsSection from './components/componentes/CalloutsSection.jsx'
+import ShadcnShowcase from './components/componentes/ShadcnShowcase.jsx'
 import MateriaisSection from './components/materiais/MateriaisSection.jsx'
 
 export default function App() {
@@ -49,6 +50,7 @@ export default function App() {
         <InputsSection />
         <CardsSection />
         <CalloutsSection />
+        <ShadcnShowcase />
         <MateriaisSection />
 
         <footer className="border-t border-gray-100 px-8 py-10 text-center text-[13px] text-gray-400 md:px-16">

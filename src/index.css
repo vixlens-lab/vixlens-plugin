@@ -3,6 +3,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Tema shadcn/ui — vars mapeadas aos tokens Vixlens (HSL). Todo componente
+   shadcn nasce on-brand. Preto #1D1D1F, Amarelo #FAC617, cinzas do DS. */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 3% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 3% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 3% 12%;
+    --primary: 45 96% 54%;
+    --primary-foreground: 240 3% 12%;
+    --secondary: 240 10% 96%;
+    --secondary-foreground: 240 3% 12%;
+    --muted: 240 10% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 240 10% 96%;
+    --accent-foreground: 240 3% 12%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 240 3% 12%;
+    --radius: 0.75rem;
+  }
+  * {
+    border-color: hsl(var(--border));
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
