@@ -14,6 +14,7 @@ import BotoesSection from './components/componentes/BotoesSection.jsx'
 import InputsSection from './components/componentes/InputsSection.jsx'
 import CardsSection from './components/componentes/CardsSection.jsx'
 import CalloutsSection from './components/componentes/CalloutsSection.jsx'
+import MateriaisSection from './components/materiais/MateriaisSection.jsx'
 
 export default function App() {
   const [navOpen, setNavOpen] = useState(false)
@@ -48,18 +49,11 @@ export default function App() {
         <InputsSection />
         <CardsSection />
         <CalloutsSection />
+        <MateriaisSection />
 
-        {/* Materiais (14) — próxima fase */}
-        <section className="border-t border-gray-100 px-8 py-16 md:px-16">
-          <div className="mx-auto w-full max-w-vix-site">
-            <div className="text-xs font-bold uppercase tracking-[0.14em] text-vix-azul">
-              Rebuild em andamento
-            </div>
-            <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
-              Falta só Materiais (14). Depois: paridade final e merge pra produção.
-            </p>
-          </div>
-        </section>
+        <footer className="border-t border-gray-100 px-8 py-10 text-center text-[13px] text-gray-400 md:px-16">
+          Vixlens Design System · v0.4.0 · ds.vixlens.com.br
+        </footer>
       </main>
     </div>
   )
