@@ -6,7 +6,7 @@ export default function Hero() {
           Design System
         </div>
         <img
-          src="/assets/marca/vixlens/vixlens-mono-negativo.svg"
+          src="/assets/marca/vixlens/vixlens-negativo.svg"
           alt="Vixlens"
           className="mb-3 mt-6 h-16 w-auto md:h-[80px]"
         />

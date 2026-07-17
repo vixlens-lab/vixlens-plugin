@@ -1,3 +1,4 @@
+import { Check } from '@phosphor-icons/react'
 import { Section, SubTitle } from '../Section.jsx'
 import tokens from '../../data/tokens.js'
 
@@ -109,7 +110,7 @@ export default function TipografiaSection() {
           const lh = lhNum(s.lineHeight)
           const tk = META[key].tracking
           return (
-            <div key={key} className="rounded-vix-card border border-gray-200 p-5 md:p-6">
+            <div key={key} className="rounded-2xl border border-gray-200 p-5 md:p-6">
               {/* cabeçalho da linha: nome + specs */}
               <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
                 <div className="mr-1 text-[13px] font-bold text-vix-preto">{META[key].name}</div>
@@ -151,21 +152,29 @@ export default function TipografiaSection() {
         })}
       </div>
 
-      {/* Escala print — Mont */}
+      {/* Escala print — Mont (amostras renderizadas no tamanho real) */}
       <SubTitle className="mt-14">Escala print — Mont (propostas, manuais, documentos)</SubTitle>
-      <div className="mb-14 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mb-14 flex flex-col gap-3">
         {[
-          ['Título capa', '48 pt · Black', 'Mont Black — capas de proposta'],
-          ['Título de seção', '24 pt · Bold', 'Abertura de blocos'],
-          ['Subtítulo', '18 pt · SemiBold', 'Destaques dentro da seção'],
-          ['Corpo', '11 pt · Regular', 'Texto corrido, lh 1.5'],
-          ['Legenda', '9 pt · Regular', 'Notas, rodapés'],
-          ['Dados / números', '11 pt · SemiBold', 'Tabelas e valores'],
-        ].map(([n, s, u]) => (
-          <div key={n} className="rounded-vix-input border border-gray-200 p-4">
-            <div className="text-[13px] font-bold text-vix-preto">{n}</div>
-            <div className="mt-0.5 font-mono text-xs text-vix-azul">{s}</div>
-            <div className="mt-1 text-[11px] text-gray-500">{u}</div>
+          ['Título capa', 48, 900, 'Black', 'Capas de proposta'],
+          ['Título de seção', 24, 700, 'Bold', 'Abertura de blocos'],
+          ['Subtítulo', 18, 600, 'SemiBold', 'Destaques dentro da seção'],
+          ['Corpo', 11, 400, 'Regular', 'Texto corrido, lh 1.5'],
+          ['Dados / números', 11, 600, 'SemiBold', 'Tabelas e valores'],
+          ['Legenda', 9, 400, 'Regular', 'Notas, rodapés'],
+        ].map(([n, pt, w, wName, u]) => (
+          <div key={n} className="flex flex-col gap-3 rounded-vix-input border border-gray-200 p-5 sm:flex-row sm:items-center sm:gap-6">
+            <div className="w-40 shrink-0">
+              <div className="text-[13px] font-bold text-vix-preto">{n}</div>
+              <div className="mt-0.5 font-mono text-[11px] text-vix-azul">{pt} pt · {wName}</div>
+              <div className="mt-0.5 text-[11px] text-gray-500">{u}</div>
+            </div>
+            <div
+              className="min-w-0 flex-1 truncate text-vix-preto"
+              style={{ fontFamily: "'Montserrat', 'Host Grotesk', sans-serif", fontSize: pt, fontWeight: w, lineHeight: 1.15 }}
+            >
+              Vixlens
+            </div>
           </div>
         ))}
       </div>
@@ -182,7 +191,9 @@ export default function TipografiaSection() {
           'Host Grotesk no digital, Mont/Montserrat só em impressos.',
         ].map((r) => (
           <div key={r} className="flex items-start gap-3 rounded-lg border border-gray-100 p-3.5">
-            <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-vix-amarelo text-[11px] font-bold text-vix-preto">·</div>
+            <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-vix-amarelo text-vix-preto">
+              <Check size={12} weight="bold" />
+            </div>
             <span className="text-[13px] leading-relaxed text-gray-600">{r}</span>
           </div>
         ))}

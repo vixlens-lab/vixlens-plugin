@@ -1,3 +1,4 @@
+import { Check } from '@phosphor-icons/react'
 import { Section, SubTitle } from '../Section.jsx'
 
 const TERMOS = [
@@ -121,7 +122,9 @@ export default function VocabularioSection() {
       <div className="flex flex-col gap-2.5">
         {REGRAS.map((r) => (
           <div key={r} className="flex items-start gap-3 rounded-lg border border-gray-100 p-3.5">
-            <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-vix-amarelo text-[11px] font-bold text-vix-preto">·</div>
+            <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-vix-amarelo text-vix-preto">
+              <Check size={12} weight="bold" />
+            </div>
             <span className="text-[13px] leading-relaxed text-gray-600">{r}</span>
           </div>
         ))}
