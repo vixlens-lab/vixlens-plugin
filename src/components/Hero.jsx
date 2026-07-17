@@ -8,12 +8,12 @@ export default function Hero() {
         <img
           src="/assets/marca/vixlens/vixlens-negativo.svg"
           alt="Vixlens"
-          className="my-6 h-14 w-auto md:h-[72px]"
+          className="mb-3 mt-6 h-16 w-auto md:h-[80px]"
         />
-        <div className="text-sm font-bold uppercase tracking-[0.14em] text-white/45">
+        <div className="text-sm font-bold uppercase tracking-[0.18em] text-vix-amarelo">
           Laboratório Óptico
         </div>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/70">
+        <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/70">
           A referência oficial de identidade visual Vixlens. Cores, tipografia, tokens e voz — tudo
           que define como a marca aparece em qualquer ponto de contato, do site aos documentos
           internos.

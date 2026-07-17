@@ -14,7 +14,7 @@ export default function Sidebar({ open, onClose }) {
         {/* brand */}
         <div className="border-b border-white/10 px-6 py-7">
           <img src="/assets/marca/vixlens/vixlens-negativo.svg" alt="Vixlens" className="h-8 w-auto" />
-          <div className="mt-3 text-[10px] font-bold uppercase tracking-[0.18em] text-white/40">
+          <div className="mt-3 text-[10px] font-bold uppercase tracking-[0.18em] text-vix-amarelo">
             Laboratório Óptico
           </div>
           <div className="mt-1 text-[11px] text-white/30">Design System · {version}</div>

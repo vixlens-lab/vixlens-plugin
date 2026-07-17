@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Sidebar from './components/Sidebar.jsx'
 import Hero from './components/Hero.jsx'
+import BackToTop from './components/BackToTop.jsx'
 import MarcaSection from './components/marca/MarcaSection.jsx'
 import FotografiaSection from './components/marca/FotografiaSection.jsx'
 import CoresSection from './components/fundamentos/CoresSection.jsx'
@@ -53,10 +54,12 @@ export default function App() {
         <ShadcnShowcase />
         <MateriaisSection />
 
-        <footer className="border-t border-gray-100 px-8 py-10 text-center text-[13px] text-gray-400 md:px-16">
-          Vixlens Design System · v0.4.0 · ds.vixlens.com.br
+        <footer className="border-t border-gray-100 px-8 py-10 text-center text-[13px] text-muted-foreground md:px-16">
+          Vixlens Design System · v0.5.0 · ds.vixlens.com.br
         </footer>
       </main>
+
+      <BackToTop />
     </div>
   )
 }
