@@ -1,0 +1,61 @@
+/* Vixlens Design System 3.0 — tokens canônicos.
+   Fonte: https://ds.vixlens.com.br/assets/tokens/vixlens-tokens.json
+   Uso: @import ou copie as :root vars. NÃO edite valores aqui — edite o JSON. */
+@import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* cor */
+  --vix-preto: #1D1D1F;
+  --vix-branco: #FFFFFF;
+  --vix-cinza-card: #F5F5F7;
+  --vix-amarelo: #FAC617;
+  --vix-amarelo-hover: #E5A800;
+  --vix-azul: #0439D9;
+  --vix-cinza-borda: #606F7F;
+  --vix-reflecta-guard: #00782D;
+  --vix-reflecta-express: #92BB36;
+  --vix-reflecta-blue-protect-sh: #134B97;
+  --vix-callout-highlight-bg: #FFFBEB; --vix-callout-highlight-bar: #FCD341;
+  --vix-callout-informative-bg: #EFEFFF; --vix-callout-informative-bar: #615FFF;
+  --vix-callout-critical-bg: #FFF0F0; --vix-callout-critical-bar: #FF6566;
+  --vix-callout-success-bg: #EDFBF4; --vix-callout-success-bar: #30D389;
+  /* raio */
+  --vix-radius-card: 57px;
+  --vix-radius-button: 30px;
+  --vix-radius-input: 12px;
+  --vix-radius-chip: 6px;
+  /* espaçamento (âncora 40px) */
+  --vix-space-1: 4px;
+  --vix-space-2: 8px;
+  --vix-space-3: 12px;
+  --vix-space-4: 16px;
+  --vix-space-5: 20px;
+  --vix-space-6: 24px;
+  --vix-space-7: 30px;
+  --vix-space-8: 40px;
+  --vix-space-9: 48px;
+  --vix-space-10: 60px;
+  --vix-space-11: 64px;
+  --vix-space-12: 80px;
+  --vix-anchor: 40px;
+  /* layout */
+  --vix-container-produto: 1422px;
+  --vix-container-ds-site: 1100px;
+  --vix-section-padding-x: 64px;
+  --vix-section-padding-y: 80px;
+  --vix-card-gutter: 30px;
+  /* tipografia */
+  --vix-font-digital: 'Host Grotesk', sans-serif;
+  --vix-font-print: 'Montserrat', 'Mont', sans-serif;
+  --vix-font-h1: 96px; --vix-font-h1-mobile: 48px;
+  --vix-font-h2: 64px; --vix-font-h2-mobile: 36px;
+  --vix-font-h3: 48px; --vix-font-h3-mobile: 28px;
+  --vix-font-h4: 32px; --vix-font-h4-mobile: 24px;
+  --vix-font-h5: 24px; --vix-font-h5-mobile: 20px;
+  --vix-font-h6: 20px; --vix-font-h6-mobile: 18px;
+  --vix-font-paragraph: 18px; --vix-font-paragraph-mobile: 16px;
+  --vix-font-bold: 18px; --vix-font-bold-mobile: 16px;
+  --vix-font-label: 14px; --vix-font-label-mobile: 14px;
+  --vix-font-caption: 12px; --vix-font-caption-mobile: 12px;
+  --vix-font-overline: 11px; --vix-font-overline-mobile: 11px;
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "name": "Vixlens Design System",
+  "version": "3.0",
+  "source": "https://ds.vixlens.com.br",
+  "description": "Fonte única de tokens do DS Vixlens. Site, skill de UI e qualquer produto consomem daqui.",
+  "color": {
+    "preto":        { "value": "#1D1D1F", "comment": "Preto Vixlens. Nunca #000000 puro." },
+    "branco":       { "value": "#FFFFFF" },
+    "cinza-card":   { "value": "#F5F5F7", "comment": "Fundo de card/subseção. Nunca cor dominante da página." },
+    "amarelo":      { "value": "#FAC617", "comment": "CTA/destaque. Sempre com texto preto." },
+    "amarelo-hover":{ "value": "#E5A800" },
+    "azul":         { "value": "#0439D9", "comment": "Acento ~5%. Nunca dominante, nunca em hero/header." },
+    "cinza-borda":  { "value": "#606F7F", "comment": "Bordas e placeholder." },
+    "reflecta": {
+      "guard":          { "value": "#00782D" },
+      "express":        { "value": "#92BB36", "comment": "Texto sempre preto sobre esta cor." },
+      "blue-protect-sh":{ "value": "#134B97" }
+    },
+    "callout": {
+      "highlight":   { "bg": "#FFFBEB", "bar": "#FCD341" },
+      "informative": { "bg": "#EFEFFF", "bar": "#615FFF" },
+      "critical":    { "bg": "#FFF0F0", "bar": "#FF6566" },
+      "success":     { "bg": "#EDFBF4", "bar": "#30D389" }
+    }
+  },
+  "distribution": { "comment": "60-30-10", "base": "60% preto/branco", "accent": "30% amarelo", "last-resort": "10% azul" },
+  "radius": {
+    "card":   { "value": "57px", "comment": "Cards de conteúdo, seções em destaque." },
+    "button": { "value": "30px", "comment": "Todos os botões (pill)." },
+    "input":  { "value": "12px", "comment": "Campos de formulário." },
+    "chip":   { "value": "6px",  "comment": "Tags, badges, chips." }
+  },
+  "spacing": {
+    "comment": "Base 8px, âncora 40px (space-8). Nunca inventar 35/45px.",
+    "space-1": "4px", "space-2": "8px", "space-3": "12px", "space-4": "16px",
+    "space-5": "20px", "space-6": "24px", "space-7": "30px", "space-8": "40px",
+    "space-9": "48px", "space-10": "60px", "space-11": "64px", "space-12": "80px",
+    "anchor": "40px"
+  },
+  "layout": {
+    "container-produto": { "value": "1422px", "comment": "Canvas premium Figma 3.0 (páginas de produto)." },
+    "container-ds-site": { "value": "1100px", "comment": "Layout do próprio site do DS." },
+    "section-padding-x": "64px",
+    "section-padding-y": "80px",
+    "card-gutter": "30px"
+  },
+  "typography": {
+    "font-digital": { "value": "'Host Grotesk', sans-serif", "import": "https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700;800&display=swap" },
+    "font-print":   { "value": "'Montserrat', 'Mont', sans-serif", "comment": "Só impressos. Nunca em web." },
+    "scale": {
+      "h1":        { "desktop": "96px", "mobile": "48px", "weight": 700, "lineHeight": "100%" },
+      "h2":        { "desktop": "64px", "mobile": "36px", "weight": 700, "lineHeight": "100%" },
+      "h3":        { "desktop": "48px", "mobile": "28px", "weight": 700, "lineHeight": "100%" },
+      "h4":        { "desktop": "32px", "mobile": "24px", "weight": 600, "lineHeight": "120%" },
+      "h5":        { "desktop": "24px", "mobile": "20px", "weight": 500, "lineHeight": "120%" },
+      "h6":        { "desktop": "20px", "mobile": "18px", "weight": 500, "lineHeight": "120%" },
+      "paragraph": { "desktop": "18px", "mobile": "16px", "weight": 400, "lineHeight": "150%" },
+      "bold":      { "desktop": "18px", "mobile": "16px", "weight": 600, "lineHeight": "150%" },
+      "label":     { "desktop": "14px", "mobile": "14px", "weight": 500 },
+      "caption":   { "desktop": "12px", "mobile": "12px", "weight": 400 },
+      "overline":  { "desktop": "11px", "mobile": "11px", "weight": 500 }
+    },
+    "rules": ["Nunca itálico", "Nunca caixa alta em parágrafo", "Máximo 2 pesos por bloco", "Underline só em link"]
+  },
+  "assets": {
+    "base-url": "https://ds.vixlens.com.br/assets/marca/<linha>/<slug>.<formato>",
+    "kits-url": "https://ds.vixlens.com.br/assets/kits/<linha>-brand-kit.zip",
+    "linhas": ["vixlens", "freevix", "vix-academy", "reflecta", "lentes"],
+    "formatos": ["svg", "png", "pdf", "webp"],
+    "variacao": ["positivo", "negativo", "mono-positivo", "mono-negativo", "cor"]
+  }
+}
