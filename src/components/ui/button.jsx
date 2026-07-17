@@ -23,10 +23,11 @@ const buttonVariants = cva(
         outlineDark: "border-2 border-white bg-transparent text-white hover:bg-white/10",
       },
       size: {
-        default: "px-7 py-3 text-base",
-        sm: "px-5 py-2 text-sm",
-        lg: "px-9 py-4 text-lg",
-        icon: "h-11 w-11",
+        // Tamanhos-base do shadcn (h-8/h-9/h-10, ícone size-9), pill Vixlens mantido.
+        default: "h-9 px-4 py-2 text-sm has-[>svg]:px-3",
+        sm: "h-8 gap-1.5 px-3 text-sm has-[>svg]:px-2.5",
+        lg: "h-10 px-6 text-base has-[>svg]:px-4",
+        icon: "size-9",
       },
     },
     defaultVariants: {
