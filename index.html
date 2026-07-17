@@ -438,6 +438,64 @@
       .marca-preview { height: 120px; }
     }
 
+    /* ─── MATERIAIS — templates (scaffold) ──────────────────────────── */
+    .soon-chip {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      vertical-align: middle;
+      background: var(--bg-cinza);
+      color: var(--gray-500);
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-left: 10px;
+    }
+    .material-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .material-card {
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      padding: 22px;
+      background: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 0;
+    }
+    .material-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .material-card-title { font-size: 15px; font-weight: 700; color: var(--preto); }
+    .material-badge {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      background: var(--bg-cinza);
+      color: var(--gray-500);
+      padding: 3px 8px;
+      border-radius: 5px;
+      flex-shrink: 0;
+    }
+    .material-card-desc { font-size: 13px; color: var(--gray-500); line-height: 1.55; flex: 1; margin: 0; }
+    .btn-download.is-disabled {
+      background: var(--bg-cinza);
+      color: var(--gray-400);
+      border: 1px solid var(--gray-200);
+      pointer-events: none;
+      box-shadow: none;
+      cursor: default;
+    }
+    @media (max-width: 480px) {
+      .material-grid { grid-template-columns: 1fr; }
+    }
+
     /* ─── CORES ─────────────────────────────────────────────────────── */
     .color-grid-primary {
       display: grid;
@@ -1641,6 +1699,13 @@
     <a class="nav-item active" href="#callouts">
       <span class="nav-dot" style="background:#FAC617"></span>
       Callouts
+    </a>
+
+    <div class="nav-section-label">Materiais</div>
+    <a class="nav-item active" href="#materiais">
+      <span class="nav-dot" style="background:#0439D9"></span>
+      Templates
+      <span class="nav-badge">EM BREVE</span>
     </a>
   </nav>
 
@@ -4779,6 +4844,15 @@ import &#123; Eye, ShieldCheck, Star &#125;
     </div>
   </section>
 
+
+  <section class="section" id="materiais">
+    <div class="section-header">
+      <div class="section-eyebrow">14 — Materiais</div>
+      <h2 class="section-title">Materiais <span class="soon-chip">Em breve</span></h2>
+      <p class="section-desc">Modelos prontos pro dia a dia — papelaria, comercial e institucional. Editáveis no Google (Docs, Sheets, Slides) e no celular. Os arquivos estão sendo organizados; em breve com download e link de edição.</p>
+    </div>
+<div class="subsection-title">Papelaria</div><div class="material-grid"><figure class="material-card is-soon"><div class="material-card-head"><figcaption class="material-card-title">Cartão de visita</figcaption><span class="material-badge">EM BREVE</span></div><p class="material-card-desc">Modelo com os dados do consultor. Edita, troca nome e telefone, exporta pra gráfica.</p><div class="download-row"><span class="btn-download btn-fmt btn-download-ghost is-disabled" aria-disabled="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2H2v12h12v-4M10 2h4v4M14 2L7 9"/></svg>Abrir no Google</span><span class="btn-download btn-fmt is-disabled" aria-disabled="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>Baixar PDF</span></div></figure><figure class="material-card is-soon"><div class="material-card-head"><figcaption class="material-card-title">Papel timbrado</figcaption><span class="material-badge">EM BREVE</span></div><p class="material-card-desc">Cabeçalho oficial pra cartas, ofícios e documentos internos.</p><div class="download-row"><span class="btn-download btn-fmt btn-download-ghost is-disabled" aria-disabled="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2H2v12h12v-4M10 2h4v4M14 2L7 9"/></svg>Abrir no Google Docs</span><span class="btn-download btn-fmt is-disabled" aria-disabled="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>Baixar PDF</span></div></figure><figure class="material-card is-soon"><div class="material-card-head"><figcaption class="material-card-title">Assinatura de e-mail</figcaption><span class="material-badge">EM BREVE</span></div><p class="material-card-desc">Assinatura padronizada pra Gmail/Outlook, com logo e contatos.</p><div class="download-row"><span class="btn-download btn-fmt btn-download-ghost is-disabled" aria-disabled="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2H2v12h12v-4M10 2h4v4M14 2L7 9"/></svg>Copiar assinatura</span></div></figure></div><div class="subsection-title" style="margin-top:56px;">Comercial</div><div class="material-grid"><figure class="material-card is-soon"><div class="material-card-head"><figcaption class="material-card-title">Proposta comercial</figcaption><span class="material-badge">EM BREVE</span></div><p class="material-card-desc">Modelo de proposta pronto pra preencher e enviar ao cliente.</p><div class="download-row"><span class="btn-download btn-fmt btn-download-ghost is-disabled" aria-disabled="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2H2v12h12v-4M10 2h4v4M14 2L7 9"/></svg>Abrir no Google Docs</span><span class="btn-download btn-fmt is-disabled" aria-disabled="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>Baixar PDF</span></div></figure><figure class="material-card is-soon"><div class="material-card-head"><figcaption class="material-card-title">Apresentação de vendas</figcaption><span class="material-badge">EM BREVE</span></div><p class="material-card-desc">Deck de vendas pro consultor apresentar a Vixlens.</p><div class="download-row"><span class="btn-download btn-fmt btn-download-ghost is-disabled" aria-disabled="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2H2v12h12v-4M10 2h4v4M14 2L7 9"/></svg>Abrir no Google Slides</span><span class="btn-download btn-fmt is-disabled" aria-disabled="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>Baixar PDF</span></div></figure><figure class="material-card is-soon"><div class="material-card-head"><figcaption class="material-card-title">Tabela de preços</figcaption><span class="material-badge">EM BREVE</span></div><p class="material-card-desc">Planilha de preços atualizada, pronta pra consulta e envio.</p><div class="download-row"><span class="btn-download btn-fmt btn-download-ghost is-disabled" aria-disabled="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2H2v12h12v-4M10 2h4v4M14 2L7 9"/></svg>Abrir no Google Sheets</span><span class="btn-download btn-fmt is-disabled" aria-disabled="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>Baixar PDF</span></div></figure></div><div class="subsection-title" style="margin-top:56px;">Institucional</div><div class="material-grid"><figure class="material-card is-soon"><div class="material-card-head"><figcaption class="material-card-title">Apresentação institucional</figcaption><span class="material-badge">EM BREVE</span></div><p class="material-card-desc">Quem é a Vixlens — pra parceiros, eventos e imprensa.</p><div class="download-row"><span class="btn-download btn-fmt btn-download-ghost is-disabled" aria-disabled="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2H2v12h12v-4M10 2h4v4M14 2L7 9"/></svg>Abrir no Google Slides</span><span class="btn-download btn-fmt is-disabled" aria-disabled="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>Baixar PDF</span></div></figure><figure class="material-card is-soon"><div class="material-card-head"><figcaption class="material-card-title">Flyer / folder</figcaption><span class="material-badge">EM BREVE</span></div><p class="material-card-desc">Material de divulgação pra ótica e ponto de venda.</p><div class="download-row"><span class="btn-download btn-fmt is-disabled" aria-disabled="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>Baixar PDF</span></div></figure><figure class="material-card is-soon"><div class="material-card-head"><figcaption class="material-card-title">Painel de estande</figcaption><span class="material-badge">EM BREVE</span></div><p class="material-card-desc">Arte de painel/banner pra feiras e eventos.</p><div class="download-row"><span class="btn-download btn-fmt is-disabled" aria-disabled="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v9M4 7l4 4 4-4M2 14h12"/></svg>Baixar PDF</span></div></figure></div>
+  </section>
 
 </main>
 
