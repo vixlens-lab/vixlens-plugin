@@ -100,7 +100,7 @@ export default function TipografiaSection() {
       <SubTitle>Escala (Host Grotesk) — desktop ↔ mobile</SubTitle>
       <p className="-mt-2 mb-6 max-w-2xl text-[13px] leading-relaxed text-gray-500">
         Cada nível colapsa de desktop para mobile mantendo a proporção. As amostras abaixo estão
-        renderizadas na escala real (H1 cai de <b className="text-vix-preto">96&nbsp;px → 48&nbsp;px</b>),
+        renderizadas na escala real (H1 cai de <b className="text-vix-preto">64&nbsp;px → 40&nbsp;px</b>),
         com o line-height e o tracking exatos de cada nível.
       </p>
       <div className="flex flex-col gap-3">
