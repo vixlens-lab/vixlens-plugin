@@ -40,8 +40,30 @@ export default function CoresSection() {
       id="cores"
       eyebrow="03 — Fundamentos"
       title="Cores"
-      desc="A paleta Vixlens é intencionalmente restrita. Quatro cores primárias, usadas com rigor. Preto lidera — é a cor de maior presença. Amarelo e Azul são de impacto. Branco é estrutural. Distribuição 60-30-10."
+      desc="A paleta Vixlens é intencionalmente restrita. Quatro cores primárias, usadas com rigor. Preto lidera — é a cor de maior presença. Amarelo e Azul são de impacto. Branco é estrutural."
     >
+      {/* Regra 60-30-10 — bloco de destaque */}
+      <div className="mb-14 overflow-hidden rounded-vix-card border border-gray-200">
+        <div className="flex h-40 w-full">
+          <div className="flex w-[60%] flex-col justify-end bg-vix-preto p-5">
+            <div className="text-3xl font-extrabold text-white md:text-5xl">60%</div>
+            <div className="mt-1 text-[13px] font-medium text-white/60">Preto &amp; Branco — dominam todo layout</div>
+          </div>
+          <div className="flex w-[30%] flex-col justify-end bg-vix-amarelo p-5">
+            <div className="text-3xl font-extrabold text-vix-preto md:text-5xl">30%</div>
+            <div className="mt-1 text-[13px] font-medium text-vix-preto/70">Amarelo — destaques, CTAs, faixas</div>
+          </div>
+          <div className="flex w-[10%] flex-col justify-end bg-vix-azul p-3">
+            <div className="text-xl font-extrabold text-white md:text-3xl">10%</div>
+            <div className="mt-1 hidden text-[11px] font-medium text-white/70 lg:block">Azul — acento</div>
+          </div>
+        </div>
+        <div className="flex items-center gap-2 border-t border-gray-200 bg-white px-5 py-3">
+          <span className="text-xs font-bold uppercase tracking-[0.1em] text-vix-preto">Regra 60-30-10</span>
+          <span className="text-[13px] text-gray-500">— a proporção que mantém a identidade coesa. Azul nunca domina; nunca em hero ou header.</span>
+        </div>
+      </div>
+
       <SubTitle>Primárias</SubTitle>
       <div className="mb-12 grid grid-cols-2 gap-[30px] md:grid-cols-4">
         {primary.map((s) => <Swatch key={s.name} {...s} big />)}

@@ -1,7 +1,20 @@
-import { Section } from '../Section.jsx'
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../ui/card.jsx'
+import { Section, SubTitle } from '../Section.jsx'
+import { ArrowRight, Eye } from '@phosphor-icons/react'
 import { Button } from '../ui/button.jsx'
-import { Eye } from '@phosphor-icons/react'
+
+const FEATURES = [
+  { t: 'Lentes avançadas', d: 'Free-Form, tratamentos premium e linha completa para todos os perfis.' },
+  { t: 'Suporte especializado', d: 'Treinamentos técnicos, apoio comercial e consultoria personalizada.' },
+  { t: 'Logística eficiente', d: 'Entrega rápida, operação estruturada e atendimento ágil.' },
+]
+const SPECS = [
+  ['Background', '#FFFFFF sobre #F5F5F7'],
+  ['Border-radius', '57 px'],
+  ['Título', 'H5 Bold 24px · center'],
+  ['Corpo', 'Regular 18px · lh 1.5'],
+  ['Padding', '20px'],
+  ['Ação', 'Chevron → canto inferior'],
+]
 
 export default function CardsSection() {
   return (
@@ -9,44 +22,80 @@ export default function CardsSection() {
       id="cards"
       eyebrow="12 — Componentes"
       title="Cards"
-      desc="Cards de conteúdo com radius Card Large (57px). Composição shadcn/ui (Header, Title, Content, Footer), skin nos tokens Vixlens. Fundo branco ou preto — nunca cinza dominante."
+      desc="Três tipos de card, todos com border-radius 57px — token exclusivo da Vixlens. Extraídos das seções EssilorLuxottica, VixClub e Vantagens do Figma 3.0."
     >
-      <div className="grid grid-cols-1 gap-[30px] md:grid-cols-2">
-        {/* card claro */}
-        <Card>
-          <CardHeader>
-            <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-vix-input bg-vix-amarelo">
-              <Eye size={24} weight="regular" className="text-vix-preto" />
+      {/* Card Feature — branco sobre BG cinza */}
+      <SubTitle>Card Feature — branco sobre fundo cinza</SubTitle>
+      <div className="mb-5 rounded-vix-card bg-vix-cinza-card p-6 md:p-10">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {FEATURES.map((f) => (
+            <div key={f.t} className="flex min-h-[320px] flex-col rounded-vix-card bg-white p-6">
+              <div className="mb-5 flex h-32 items-center justify-center rounded-[36px] bg-vix-cinza-card">
+                <Eye size={32} weight="regular" className="text-gray-300" />
+              </div>
+              <div className="flex flex-1 flex-col gap-2.5">
+                <div className="text-[22px] font-bold leading-tight text-vix-preto">{f.t}</div>
+                <div className="text-sm leading-relaxed text-vix-cinza">{f.d}</div>
+              </div>
+              <div className="flex justify-end pt-4">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-vix-preto">
+                  <ArrowRight size={16} weight="bold" className="text-white" />
+                </div>
+              </div>
             </div>
-            <CardTitle>Tratamento AR Reflecta</CardTitle>
-            <CardDescription>
-              Reflexo residual mínimo, transparência de qualidade. Cada cor representa um tipo de
-              tratamento antirreflexo.
-            </CardDescription>
-          </CardHeader>
-          <CardFooter>
-            <Button variant="primaryDark" size="sm">Saiba mais</Button>
-            <Button variant="secondary" size="sm">Comparar</Button>
-          </CardFooter>
-        </Card>
+          ))}
+        </div>
+      </div>
+      <div className="mb-14 grid grid-cols-2 gap-3 md:grid-cols-3">
+        {SPECS.map(([k, v]) => (
+          <div key={k} className="rounded-lg bg-vix-cinza-card px-3.5 py-3">
+            <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-gray-400">{k}</div>
+            <div className="mt-0.5 text-[13px] font-bold text-vix-preto">{v}</div>
+          </div>
+        ))}
+      </div>
 
-        {/* card escuro */}
-        <Card className="border-transparent bg-vix-preto">
-          <CardHeader>
-            <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-vix-input bg-white/10">
-              <Eye size={24} weight="regular" className="text-vix-amarelo" />
-            </div>
-            <CardTitle className="text-white">Linha de produto</CardTitle>
-            <CardDescription className="text-white/60">
-              Freevix, Reflecta, Vix Academy. Card escuro com acento amarelo para as linhas de produto
-              do ecossistema.
-            </CardDescription>
-          </CardHeader>
-          <CardFooter>
-            <Button variant="primary" size="sm">Ver linha</Button>
-            <Button variant="secondaryDark" size="sm">Catálogo</Button>
-          </CardFooter>
-        </Card>
+      {/* Card Conteúdo — texto + imagem */}
+      <SubTitle>Card Conteúdo — texto + imagem (57px radius)</SubTitle>
+      <div className="mb-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="flex min-h-[380px] flex-col justify-center gap-6 rounded-vix-card bg-vix-cinza-card p-10 md:p-12">
+          <div className="text-3xl font-bold leading-[1.05] text-vix-preto md:text-[40px]">
+            Sua ótica cresce.<br />Seus benefícios acompanham.
+          </div>
+          <p className="text-base leading-relaxed text-vix-preto/80">
+            O VixClub transforma volume em vantagem comercial. À medida que sua ótica evolui, você
+            acumula benefícios que fortalecem margem e previsibilidade.
+          </p>
+          <div>
+            <Button variant="dark" className="gap-2">Entender o VixClub <ArrowRight size={16} weight="bold" /></Button>
+          </div>
+        </div>
+        <div className="flex min-h-[380px] items-center justify-center rounded-vix-card bg-vix-preto">
+          <Eye size={48} weight="regular" className="text-white/20" />
+        </div>
+      </div>
+
+      {/* Card produto — claro + escuro (base shadcn) */}
+      <SubTitle>Card produto — linha de marca</SubTitle>
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="rounded-vix-card border border-gray-200 bg-white p-8">
+          <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-vix-input bg-vix-amarelo">
+            <Eye size={24} className="text-vix-preto" />
+          </div>
+          <div className="text-xl font-bold text-vix-preto">Tratamento AR Reflecta</div>
+          <p className="mt-2 text-[15px] leading-relaxed text-gray-500">
+            Reflexo residual mínimo. Cada cor representa um tipo de tratamento antirreflexo.
+          </p>
+        </div>
+        <div className="rounded-vix-card bg-vix-preto p-8">
+          <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-vix-input bg-white/10">
+            <Eye size={24} className="text-vix-amarelo" />
+          </div>
+          <div className="text-xl font-bold text-white">Linha de produto</div>
+          <p className="mt-2 text-[15px] leading-relaxed text-white/60">
+            Freevix, Reflecta, Vix Academy — card escuro com acento amarelo.
+          </p>
+        </div>
       </div>
     </Section>
   )
