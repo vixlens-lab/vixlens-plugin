@@ -1,0 +1,15 @@
+@import '../assets/tokens/vixlens-tokens.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: 'Host Grotesk', sans-serif;
+  background: var(--vix-branco);
+  color: var(--vix-preto);
+  -webkit-font-smoothing: antialiased;
+}
