@@ -58,7 +58,7 @@ function KitCard({ line }) {
       <a
         href={line.kit}
         download
-        className="inline-flex shrink-0 items-center gap-2 self-stretch justify-center rounded-full bg-vix-preto px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-[#333333] md:self-auto"
+        className="inline-flex shrink-0 items-center gap-2 self-stretch justify-center rounded-vix-button bg-vix-preto px-6 py-3.5 text-sm font-bold text-white transition-colors hover:bg-[#333333] md:self-auto"
       >
         <DownloadIcon />
         Baixar .zip

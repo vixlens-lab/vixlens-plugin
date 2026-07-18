@@ -109,20 +109,20 @@
   },
   "radius": {
     "card": {
-      "value": "57px",
-      "comment": "Cards de conteúdo, seções em destaque."
+      "value": "14px",
+      "comment": "Cards de conteúdo (shadcn xl = --radius ×1.4)."
     },
     "button": {
-      "value": "30px",
-      "comment": "Todos os botões (pill)."
+      "value": "8px",
+      "comment": "Botões e inputs (shadcn md = --radius ×0.8)."
     },
     "input": {
-      "value": "12px",
-      "comment": "Campos de formulário."
+      "value": "8px",
+      "comment": "Campos de formulário (shadcn md)."
     },
     "chip": {
       "value": "6px",
-      "comment": "Tags, badges, chips."
+      "comment": "Tags, badges, chips (shadcn sm = --radius ×0.6)."
     }
   },
   "spacing": {

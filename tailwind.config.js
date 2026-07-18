@@ -37,6 +37,7 @@ export default {
       },
       borderRadius: {
         ...Object.fromEntries(Object.entries(t.radius).map(([k, v]) => ['vix-' + k, v.value])),
+        xl: 'calc(var(--radius) + 4px)',
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',

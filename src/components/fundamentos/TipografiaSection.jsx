@@ -48,7 +48,7 @@ export default function TipografiaSection() {
               </div>
             ))}
           </div>
-          <a href="https://fonts.google.com/specimen/Host+Grotesk" target="_blank" rel="noopener" className="mt-6 inline-flex rounded-full bg-vix-amarelo px-5 py-2.5 text-sm font-bold text-vix-preto transition-colors hover:bg-vix-amarelo-hover">
+          <a href="https://fonts.google.com/specimen/Host+Grotesk" target="_blank" rel="noopener" className="mt-6 inline-flex rounded-vix-button bg-vix-amarelo px-5 py-2.5 text-sm font-bold text-vix-preto transition-colors hover:bg-vix-amarelo-hover">
             Abrir no Google Fonts
           </a>
         </div>
@@ -67,7 +67,7 @@ export default function TipografiaSection() {
               </div>
             ))}
           </div>
-          <a href="/assets/fontes/mont/vixlens-mont.zip" download className="mt-6 inline-flex items-center gap-2 rounded-full bg-vix-preto px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#333333]">
+          <a href="/assets/fontes/mont/vixlens-mont.zip" download className="mt-6 inline-flex items-center gap-2 rounded-vix-button bg-vix-preto px-5 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#333333]">
             Baixar Mont (.zip)
           </a>
         </div>
@@ -110,7 +110,7 @@ export default function TipografiaSection() {
           const lh = lhNum(s.lineHeight)
           const tk = META[key].tracking
           return (
-            <div key={key} className="rounded-2xl border border-gray-200 p-5 md:p-6">
+            <div key={key} className="rounded-vix-card border border-gray-200 p-5 md:p-6">
               {/* cabeçalho da linha: nome + specs */}
               <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-2">
                 <div className="mr-1 text-[13px] font-bold text-vix-preto">{META[key].name}</div>

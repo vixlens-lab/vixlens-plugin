@@ -8,7 +8,7 @@ export default function InputsSection() {
       id="inputs"
       eyebrow="11 — Componentes"
       title="Inputs"
-      desc="Base shadcn/ui: altura 36px (pareia com o botão default), radius 12px, borda cinza #606F7F, foco preto e texto 14px. Fundo sempre branco."
+      desc="Base shadcn/ui: altura 36px (pareia com o botão default), radius 8px (preset shadcn/luma), borda cinza #606F7F, foco preto e texto 14px. Fundo sempre branco."
     >
       <div className="max-w-md">
         <div className="flex flex-col gap-5">
@@ -33,7 +33,7 @@ export default function InputsSection() {
         {[
           ['Altura', '36px'],
           ['Padding lateral', '12px'],
-          ['Radius', '12px'],
+          ['Radius', '8px'],
           ['Texto', '14px'],
           ['Borda', '#606F7F'],
           ['Foco', '#1D1D1F'],

@@ -43,7 +43,7 @@ export default function CoresSection() {
       desc="A paleta Vixlens é intencionalmente restrita. Quatro cores primárias, usadas com rigor. Preto lidera — é a cor de maior presença. Amarelo e Azul são de impacto. Branco é estrutural."
     >
       {/* Regra 60-30-10 — bloco de destaque */}
-      <div className="mb-14 overflow-hidden rounded-2xl border border-gray-200">
+      <div className="mb-14 overflow-hidden rounded-vix-card border border-gray-200">
         <div className="flex h-40 w-full">
           <div className="flex w-[60%] flex-col justify-end bg-vix-preto p-5">
             <div className="text-3xl font-extrabold text-white md:text-5xl">60%</div>

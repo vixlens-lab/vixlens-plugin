@@ -32,7 +32,7 @@ function DisabledBtn({ label, kind }) {
   return (
     <span
       aria-disabled="true"
-      className="inline-flex cursor-default items-center gap-1.5 rounded-full border border-gray-200 bg-vix-cinza-card px-3 py-1.5 text-[11px] font-bold text-gray-400"
+      className="inline-flex cursor-default items-center gap-1.5 rounded-vix-button border border-gray-200 bg-vix-cinza-card px-3 py-1.5 text-[11px] font-bold text-gray-400"
     >
       <Icon size={13} weight="bold" />
       {label}
@@ -48,7 +48,7 @@ export default function MateriaisSection() {
       title={
         <span className="inline-flex flex-wrap items-center gap-3">
           Materiais
-          <span className="rounded-full bg-vix-cinza-card px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.06em] text-gray-500">
+          <span className="relative -top-0.5 rounded-vix-chip bg-vix-amarelo-light px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.1em] text-vix-preto">
             Em breve
           </span>
         </span>

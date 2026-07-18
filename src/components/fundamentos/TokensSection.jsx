@@ -3,7 +3,7 @@ import tokens from '../../data/tokens.js'
 
 const RADIUS = [
   { key: 'card', name: 'Card Large', use: 'Cards de conteúdo, seções em destaque' },
-  { key: 'button', name: 'Button', use: 'Todos os botões (pill)' },
+  { key: 'button', name: 'Button', use: 'Botões e inputs' },
   { key: 'input', name: 'Input', use: 'Campos de formulário' },
   { key: 'chip', name: 'Chip / Badge', use: 'Tags, badges, chips' },
 ]
@@ -14,7 +14,7 @@ export default function TokensSection() {
       id="tokens"
       eyebrow="05 — Fundamentos"
       title="Tokens de forma"
-      desc="Border radius extraídos do Figma Vixlens 3.0. Cada valor tem um papel específico — não usar livremente entre contextos."
+      desc="Border radius no sistema do preset shadcn/luma (base --radius 10px). Cada valor tem um papel específico — não usar livremente entre contextos."
     >
       <div className="mb-14 grid grid-cols-2 gap-4 md:grid-cols-4">
         {RADIUS.map((r) => {
@@ -49,7 +49,7 @@ export default function TokensSection() {
               key={f.label}
               href={f.href}
               download
-              className={`rounded-full px-4 py-2.5 text-sm font-bold transition-colors ${
+              className={`rounded-vix-button px-4 py-2.5 text-sm font-bold transition-colors ${
                 f.primary ? 'bg-vix-amarelo text-vix-preto hover:bg-vix-amarelo-hover' : 'border border-white/25 text-white hover:bg-white/10'
               }`}
             >
