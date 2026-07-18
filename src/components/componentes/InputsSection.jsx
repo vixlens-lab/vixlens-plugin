@@ -8,7 +8,7 @@ export default function InputsSection() {
       id="inputs"
       eyebrow="11 — Componentes"
       title="Inputs"
-      desc="Campos com altura fixa de 56px, radius 12px, borda cinza #606F7F e foco preto. Fundo sempre branco. Do formulário de cadastro de parceiro (Vixlens 3.0). Sobre shadcn/ui."
+      desc="Base shadcn/ui: altura 36px (pareia com o botão default), radius 12px, borda cinza #606F7F, foco preto e texto 14px. Fundo sempre branco."
     >
       <div className="max-w-md">
         <div className="flex flex-col gap-5">
@@ -24,15 +24,17 @@ export default function InputsSection() {
             <span className="text-sm font-medium text-vix-preto">Desabilitado</span>
             <Input placeholder="Indisponível" disabled />
           </label>
-          <Button variant="primaryDark" className="mt-1 w-full">Enviar cadastro</Button>
+          <Button variant="dark" className="mt-1 w-full">Enviar cadastro</Button>
         </div>
       </div>
 
       <SubTitle className="mt-12">Especificação</SubTitle>
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         {[
-          ['Altura', '56px'],
+          ['Altura', '36px'],
+          ['Padding lateral', '12px'],
           ['Radius', '12px'],
+          ['Texto', '14px'],
           ['Borda', '#606F7F'],
           ['Foco', '#1D1D1F'],
         ].map(([k, v]) => (

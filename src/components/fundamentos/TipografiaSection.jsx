@@ -152,6 +152,39 @@ export default function TipografiaSection() {
         })}
       </div>
 
+      {/* Escala utilitária Tailwind/shadcn — ligada ao token */}
+      <SubTitle className="mt-14">Escala utilitária (Tailwind / shadcn)</SubTitle>
+      <p className="-mt-2 mb-5 max-w-2xl text-[13px] leading-relaxed text-gray-500">
+        As classes utilitárias que o shadcn usa na UI. <b className="text-vix-preto">text-xs / text-sm / text-base
+        saem do token</b> (caption 12 · label 14 · parágrafo 16) — mudar o token muda as utilities. O shadcn não
+        tem escala própria: usa essas classes do Tailwind direto no componente.
+      </p>
+      <div className="mb-14 overflow-x-auto rounded-vix-input border border-gray-200">
+        <table className="w-full min-w-[560px] text-left text-[13px]">
+          <thead>
+            <tr className="border-b border-gray-200 bg-gray-50 text-[11px] font-bold uppercase tracking-[0.08em] text-gray-500">
+              <th className="px-5 py-3 font-bold">Utility</th>
+              <th className="px-5 py-3 font-bold">px</th>
+              <th className="px-5 py-3 font-bold">Onde o shadcn usa</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-100">
+            {[
+              ['text-xs', '12', 'Badges, captions, hints', false],
+              ['text-sm', '14', 'Botão, input, select, label, tabela, dropdown — a maioria da UI', true],
+              ['text-base', '16', 'Texto de conteúdo', false],
+              ['text-lg +', '18 +', 'Títulos (mas o shadcn quase não estiliza heading — deixa pro app)', false],
+            ].map(([u, px, uso, hi]) => (
+              <tr key={u} className={hi ? 'bg-vix-amarelo-light/40' : ''}>
+                <td className="px-5 py-3.5 font-mono text-[12px] text-vix-azul">{u}</td>
+                <td className="px-5 py-3.5 font-mono text-[13px] font-bold text-vix-preto">{px}</td>
+                <td className={`px-5 py-3.5 ${hi ? 'font-semibold text-vix-preto' : 'text-gray-600'}`}>{uso}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
       {/* Escala print — Mont (amostras renderizadas no tamanho real) */}
       <SubTitle className="mt-14">Escala print — Mont (propostas, manuais, documentos)</SubTitle>
       <div className="mb-14 flex flex-col gap-3">
