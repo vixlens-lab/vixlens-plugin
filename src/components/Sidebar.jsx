@@ -1,6 +1,30 @@
+import { useEffect, useState } from 'react'
 import { navGroups, version } from '../data/nav.js'
 
 export default function Sidebar({ open, onClose }) {
+  const [active, setActive] = useState('')
+
+  // scroll-spy — destaca a seção atual (toque luma: item ativo preenchido)
+  useEffect(() => {
+    const ids = navGroups
+      .flatMap((g) => g.items)
+      .filter((i) => i.href)
+      .map((i) => i.href.slice(1))
+    const els = ids.map((id) => document.getElementById(id)).filter(Boolean)
+    if (!els.length) return
+    const obs = new IntersectionObserver(
+      (entries) => {
+        const vis = entries
+          .filter((e) => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
+        if (vis[0]) setActive(vis[0].target.id)
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 },
+    )
+    els.forEach((el) => obs.observe(el))
+    return () => obs.disconnect()
+  }, [])
+
   return (
     <>
       {/* backdrop mobile */}
@@ -31,11 +55,11 @@ export default function Sidebar({ open, onClose }) {
                 item.soon ? (
                   <span
                     key={item.label}
-                    className="flex cursor-default items-center gap-2.5 rounded-lg px-3 py-2 text-[13px] font-medium text-white/35"
+                    className="flex cursor-default items-center gap-2.5 rounded-xl px-3 py-2 text-[13px] font-medium text-white/35"
                   >
                     <span className="h-1.5 w-1.5 rounded-full bg-white/20" />
                     {item.label}
-                    <span className="ml-auto rounded bg-white/10 px-1.5 py-0.5 text-[9px] font-bold text-white/40">
+                    <span className="ml-auto rounded-full bg-white/10 px-1.5 py-0.5 text-[9px] font-bold text-white/40">
                       EM BREVE
                     </span>
                   </span>
@@ -44,9 +68,17 @@ export default function Sidebar({ open, onClose }) {
                     key={item.label}
                     href={item.href}
                     onClick={onClose}
-                    className="flex items-center gap-2.5 rounded-lg px-3 py-2 text-[13px] font-medium text-white/80 transition-colors hover:bg-white/5 hover:text-white"
+                    aria-current={active === item.href.slice(1) ? 'true' : undefined}
+                    className={`flex items-center gap-2.5 rounded-xl px-3 py-2 text-[13px] transition-colors ${
+                      active === item.href.slice(1)
+                        ? 'bg-white/10 font-semibold text-white'
+                        : 'font-medium text-white/70 hover:bg-white/[0.06] hover:text-white'
+                    }`}
                   >
-                    <span className="h-1.5 w-1.5 rounded-full" style={{ background: item.dot }} />
+                    <span
+                      className="h-1.5 w-1.5 shrink-0 rounded-full"
+                      style={{ background: active === item.href.slice(1) ? '#FAC617' : item.dot }}
+                    />
                     {item.label}
                   </a>
                 ),

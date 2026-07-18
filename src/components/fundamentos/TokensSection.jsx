@@ -58,6 +58,26 @@ export default function TokensSection() {
           ))}
         </div>
       </div>
+
+      {/* Handoff para devs — mesmo estilo em qualquer projeto novo */}
+      <SubTitle className="mt-12">Para desenvolvedores — mesmo estilo</SubTitle>
+      <div className="rounded-vix-card border border-gray-200 p-6 md:p-8">
+        <p className="max-w-2xl text-[13px] leading-relaxed text-gray-600">
+          Qualquer dev que for criar telas pra gente parte do mesmo preset shadcn — estilo{' '}
+          <b className="text-vix-preto">luma</b>, base color <b className="text-vix-preto">mauve</b>,
+          tema Vixlens (amarelo), ícones Lucide. Um comando reproduz a base:
+        </p>
+        <div className="mt-4 flex items-center gap-3 overflow-x-auto rounded-vix-input bg-vix-preto px-4 py-3">
+          <span className="select-none font-mono text-xs text-vix-amarelo">$</span>
+          <code className="whitespace-nowrap font-mono text-[13px] text-white">
+            npx shadcn@latest init --preset b6GgLgzgW
+          </code>
+        </div>
+        <p className="mt-3 text-[12px] leading-relaxed text-gray-500">
+          Depois é só aplicar os tokens Vixlens (JSON/CSS/Tailwind acima) por cima — cores, radius e
+          tipografia já saem on-brand.
+        </p>
+      </div>
     </Section>
   )
 }

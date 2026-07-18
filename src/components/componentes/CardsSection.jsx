@@ -22,7 +22,7 @@ export default function CardsSection() {
       id="cards"
       eyebrow="12 — Componentes"
       title="Cards"
-      desc="Cards no estilo luma — geometria arredondada (radius 32px), superfície branca com elevação suave (sombra + ring sutil). Extraídos das seções EssilorLuxottica, VixClub e Vantagens."
+      desc="Três tipos de card, todos arredondados no estilo luma (radius 32px)."
     >
       {/* Card Feature — branco sobre BG cinza */}
       <SubTitle>Card Feature — branco sobre fundo cinza</SubTitle>
