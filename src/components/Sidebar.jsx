@@ -33,10 +33,10 @@ export default function Sidebar({ open, onClose }) {
         className={`fixed inset-0 z-30 bg-black/40 transition-opacity md:hidden ${open ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
       />
       <aside
-        className={`fixed inset-y-0 left-0 z-40 flex w-[260px] max-w-[85vw] flex-col overflow-y-auto bg-vix-preto text-white transition-transform duration-300 md:translate-x-0 ${open ? 'translate-x-0' : '-translate-x-full'}`}
+        className={`fixed inset-y-0 left-0 z-40 flex w-[260px] max-w-[85vw] flex-col overflow-hidden bg-vix-preto text-white transition-transform duration-300 md:translate-x-0 ${open ? 'translate-x-0' : '-translate-x-full'}`}
       >
-        {/* brand */}
-        <div className="border-b border-white/10 px-6 py-7">
+        {/* brand — fixo no topo */}
+        <div className="shrink-0 border-b border-white/10 px-6 py-7">
           <img src="/assets/marca/vixlens/vixlens-negativo.svg" alt="Vixlens" className="h-8 w-auto" />
           <div className="mt-3 text-[10px] font-bold uppercase tracking-[0.18em] text-vix-amarelo">
             Laboratório Óptico
@@ -44,8 +44,8 @@ export default function Sidebar({ open, onClose }) {
           <div className="mt-1 text-[11px] text-white/30">Design System · {version}</div>
         </div>
 
-        {/* nav */}
-        <nav className="flex-1 px-3 py-4">
+        {/* nav — única área que scrolla */}
+        <nav className="flex-1 overflow-y-auto overscroll-contain px-3 py-4 [scrollbar-color:rgba(255,255,255,0.15)_transparent] [scrollbar-width:thin]">
           {navGroups.map((group) => (
             <div key={group.label} className="mb-4">
               <div className="px-3 pb-2 pt-3 text-[10px] font-bold uppercase tracking-[0.12em] text-white/35">
@@ -87,7 +87,7 @@ export default function Sidebar({ open, onClose }) {
           ))}
         </nav>
 
-        <div className="border-t border-white/10 px-6 py-5 text-[11px] text-white/30">
+        <div className="shrink-0 border-t border-white/10 px-6 py-5 text-[11px] text-white/30">
           Vixlens © 2026
         </div>
       </aside>

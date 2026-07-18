@@ -1,3 +1,4 @@
+import { ArrowSquareOut } from '@phosphor-icons/react'
 import { Section, SubTitle } from '../Section.jsx'
 import tokens from '../../data/tokens.js'
 
@@ -77,6 +78,24 @@ export default function TokensSection() {
           Depois é só aplicar os tokens Vixlens (JSON/CSS/Tailwind acima) por cima — cores, radius e
           tipografia já saem on-brand.
         </p>
+        <div className="mt-5 flex flex-wrap gap-2 border-t border-gray-100 pt-5">
+          <a
+            href="https://lucide.dev/icons/"
+            target="_blank"
+            rel="noopener"
+            className="inline-flex items-center gap-1.5 rounded-vix-button border border-gray-200 px-3.5 py-2 text-[12px] font-bold text-vix-preto transition-colors hover:bg-gray-50"
+          >
+            <ArrowSquareOut size={14} weight="bold" /> Icon Library — Lucide
+          </a>
+          <a
+            href="https://ui.shadcn.com/create?preset=b6GgLgzgW"
+            target="_blank"
+            rel="noopener"
+            className="inline-flex items-center gap-1.5 rounded-vix-button border border-gray-200 px-3.5 py-2 text-[12px] font-bold text-vix-preto transition-colors hover:bg-gray-50"
+          >
+            <ArrowSquareOut size={14} weight="bold" /> Preset shadcn
+          </a>
+        </div>
       </div>
     </Section>
   )
