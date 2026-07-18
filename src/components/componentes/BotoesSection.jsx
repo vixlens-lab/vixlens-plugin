@@ -49,26 +49,27 @@ export default function BotoesSection() {
       {/* Guia de tamanhos — base shadcn, com sugestão de texto */}
       <SubTitle>Guia de tamanhos</SubTitle>
       <p className="-mt-2 mb-5 max-w-2xl text-[13px] leading-relaxed text-gray-500">
-        Alturas herdadas do shadcn/ui (<span className="font-mono text-vix-azul">h-8 / h-9 / h-10</span>), com o
-        pill Vixlens (radius 30px) por cima. O texto segue a escala do shadcn: <b className="text-vix-preto">14px
-        (text-sm)</b> no padrão, subindo a 16px só no Large para CTAs.
+        Tudo em <b className="text-vix-preto">px</b>. <b className="text-vix-preto">Altura</b> = altura total do botão.{' '}
+        <b className="text-vix-preto">Padding lateral</b> = espaço interno à esquerda e à direita do texto
+        (ex.: 12px de cada lado). Radius sempre 30px (pill Vixlens). Texto 14px no padrão, 16px só no Large.
       </p>
       <div className="overflow-x-auto rounded-vix-input border border-gray-200">
-        <table className="w-full min-w-[640px] text-left text-[13px]">
+        <table className="w-full min-w-[720px] text-left text-[13px]">
           <thead>
             <tr className="border-b border-gray-200 bg-gray-50 text-[11px] font-bold uppercase tracking-[0.08em] text-gray-500">
               <th className="px-5 py-3 font-bold">Exemplo</th>
               <th className="px-5 py-3 font-bold">Tamanho</th>
               <th className="px-5 py-3 font-bold">Altura</th>
-              <th className="px-5 py-3 font-bold">Texto sugerido</th>
+              <th className="px-5 py-3 font-bold">Padding lateral</th>
+              <th className="px-5 py-3 font-bold">Texto</th>
               <th className="px-5 py-3 font-bold">Quando usar</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-100">
             {[
-              { size: 'sm', label: 'Small', h: '32px · h-8', px: 'px-3', txt: '14px · text-sm', use: 'Toolbars, tabelas, ações densas' },
-              { size: 'default', label: 'Default', h: '36px · h-9', px: 'px-4', txt: '14px · text-sm', use: 'Padrão — maioria dos casos' },
-              { size: 'lg', label: 'Large', h: '40px · h-10', px: 'px-6', txt: '16px · text-base', use: 'CTAs, hero, formulário-chave' },
+              { size: 'sm', label: 'Small', alt: '32px', pad: '12px', txt: '14px', use: 'Toolbars, tabelas, ações densas' },
+              { size: 'default', label: 'Default', alt: '36px', pad: '16px', txt: '14px', use: 'Padrão — maioria dos casos' },
+              { size: 'lg', label: 'Large', alt: '40px', pad: '24px', txt: '16px', use: 'CTAs, hero, formulário-chave' },
             ].map((r) => (
               <tr key={r.size} className="align-middle">
                 <td className="px-5 py-4">
@@ -78,8 +79,9 @@ export default function BotoesSection() {
                   <div className="font-bold text-vix-preto">{r.label}</div>
                   <div className="font-mono text-[11px] text-gray-500">size="{r.size}"</div>
                 </td>
-                <td className="px-5 py-4 font-mono text-[12px] text-gray-600">{r.h} · {r.px}</td>
-                <td className="px-5 py-4 font-mono text-[12px] text-vix-azul">{r.txt}</td>
+                <td className="px-5 py-4 font-mono text-[13px] font-bold text-vix-preto">{r.alt}</td>
+                <td className="px-5 py-4 font-mono text-[13px] text-gray-600">{r.pad}</td>
+                <td className="px-5 py-4 font-mono text-[13px] text-vix-azul">{r.txt}</td>
                 <td className="px-5 py-4 text-gray-600">{r.use}</td>
               </tr>
             ))}
@@ -91,8 +93,9 @@ export default function BotoesSection() {
                 <div className="font-bold text-vix-preto">Icon</div>
                 <div className="font-mono text-[11px] text-gray-500">size="icon"</div>
               </td>
-              <td className="px-5 py-4 font-mono text-[12px] text-gray-600">36×36px · size-9</td>
-              <td className="px-5 py-4 font-mono text-[12px] text-gray-600">ícone 16px</td>
+              <td className="px-5 py-4 font-mono text-[13px] font-bold text-vix-preto">36×36px</td>
+              <td className="px-5 py-4 font-mono text-[13px] text-gray-600">—</td>
+              <td className="px-5 py-4 font-mono text-[13px] text-gray-600">ícone 16px</td>
               <td className="px-5 py-4 text-gray-600">Só ícone — sempre com aria-label</td>
             </tr>
           </tbody>

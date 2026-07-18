@@ -23,11 +23,11 @@ const buttonVariants = cva(
         outlineDark: "border-2 border-white bg-transparent text-white hover:bg-white/10",
       },
       size: {
-        // Tamanhos-base do shadcn (h-8/h-9/h-10, ícone size-9), pill Vixlens mantido.
-        default: "h-9 px-4 py-2 text-sm has-[>svg]:px-3",
-        sm: "h-8 gap-1.5 px-3 text-sm has-[>svg]:px-2.5",
-        lg: "h-10 px-6 text-base has-[>svg]:px-4",
-        icon: "size-9",
+        // Tamanhos-base do shadcn escritos em px. Altura / padding-x explícitos.
+        default: "h-[36px] px-[16px] text-sm has-[>svg]:px-[12px]",
+        sm: "h-[32px] gap-1.5 px-[12px] text-sm has-[>svg]:px-[10px]",
+        lg: "h-[40px] px-[24px] text-base has-[>svg]:px-[16px]",
+        icon: "h-[36px] w-[36px]",
       },
     },
     defaultVariants: {

@@ -168,64 +168,75 @@
         "desktop": "64px",
         "mobile": "40px",
         "weight": 700,
-        "lineHeight": "100%"
+        "lineHeight": "100%",
+        "tracking": "-0.02em"
       },
       "h2": {
         "desktop": "48px",
         "mobile": "32px",
         "weight": 700,
-        "lineHeight": "100%"
+        "lineHeight": "100%",
+        "tracking": "-0.02em"
       },
       "h3": {
         "desktop": "40px",
         "mobile": "28px",
         "weight": 700,
-        "lineHeight": "100%"
+        "lineHeight": "100%",
+        "tracking": "-0.02em"
       },
       "h4": {
         "desktop": "32px",
         "mobile": "24px",
         "weight": 600,
-        "lineHeight": "120%"
+        "lineHeight": "120%",
+        "tracking": "-0.01em"
       },
       "h5": {
         "desktop": "24px",
         "mobile": "20px",
         "weight": 500,
-        "lineHeight": "120%"
+        "lineHeight": "120%",
+        "tracking": "-0.01em"
       },
       "h6": {
         "desktop": "20px",
         "mobile": "16px",
         "weight": 500,
-        "lineHeight": "120%"
+        "lineHeight": "120%",
+        "tracking": "0em"
       },
       "paragraph": {
         "desktop": "16px",
         "mobile": "16px",
         "weight": 400,
-        "lineHeight": "150%"
+        "lineHeight": "150%",
+        "tracking": "0em"
       },
       "bold": {
         "desktop": "16px",
         "mobile": "16px",
         "weight": 600,
-        "lineHeight": "150%"
+        "lineHeight": "150%",
+        "tracking": "0em"
       },
       "label": {
         "desktop": "14px",
         "mobile": "14px",
-        "weight": 500
+        "weight": 500,
+        "tracking": "0.02em"
       },
       "caption": {
         "desktop": "12px",
         "mobile": "12px",
-        "weight": 400
+        "weight": 400,
+        "tracking": "0em"
       },
       "overline": {
         "desktop": "11px",
         "mobile": "11px",
-        "weight": 500
+        "weight": 500,
+        "tracking": "0.08em"
       }
     },
     "rules": [

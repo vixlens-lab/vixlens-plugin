@@ -47,6 +47,21 @@ export default {
         'vix-site': t.layout['container-ds-site'].value,
       },
       fontFamily: { vix: ['Host Grotesk', 'sans-serif'] },
+      // Escala tipográfica gerada do token (single source): text-vix-h1 … text-vix-overline
+      // (desktop) + variante -m (mobile). Carrega size + line-height + peso + tracking.
+      fontSize: Object.fromEntries(
+        Object.entries(t.typography.scale).flatMap(([k, v]) => {
+          const meta = {
+            lineHeight: v.lineHeight ? String(parseInt(v.lineHeight, 10) / 100) : '1.4',
+            fontWeight: String(v.weight),
+            letterSpacing: v.tracking || '0em',
+          }
+          return [
+            ['vix-' + k, [v.desktop, meta]],
+            ['vix-' + k + '-m', [v.mobile, meta]],
+          ]
+        }),
+      ),
     },
   },
   plugins: [tailwindcssAnimate],
