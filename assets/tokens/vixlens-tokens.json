@@ -109,20 +109,20 @@
   },
   "radius": {
     "card": {
-      "value": "14px",
-      "comment": "Cards de conteúdo (shadcn xl = --radius ×1.4)."
+      "value": "32px",
+      "comment": "Cards e blocos (luma rounded-4xl)."
     },
     "button": {
-      "value": "8px",
-      "comment": "Botões e inputs (shadcn md = --radius ×0.8)."
+      "value": "32px",
+      "comment": "Botões (luma rounded-4xl, quase pill)."
     },
     "input": {
-      "value": "8px",
-      "comment": "Campos de formulário (shadcn md)."
+      "value": "24px",
+      "comment": "Inputs, selects, popovers (luma rounded-3xl)."
     },
     "chip": {
-      "value": "6px",
-      "comment": "Tags, badges, chips (shadcn sm = --radius ×0.6)."
+      "value": "12px",
+      "comment": "Chips/tags pequenas."
     }
   },
   "spacing": {

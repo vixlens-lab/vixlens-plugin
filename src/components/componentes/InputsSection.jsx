@@ -8,7 +8,7 @@ export default function InputsSection() {
       id="inputs"
       eyebrow="11 — Componentes"
       title="Inputs"
-      desc="Base shadcn/ui: altura 36px (pareia com o botão default), radius 8px (preset shadcn/luma), borda cinza #606F7F, foco preto e texto 14px. Fundo sempre branco."
+      desc="Estilo luma: campo PREENCHIDO (fill cinza suave, sem borda), altura 36px, radius 24px, foco preto com ring sutil e texto 14px."
     >
       <div className="max-w-md">
         <div className="flex flex-col gap-5">
@@ -32,10 +32,10 @@ export default function InputsSection() {
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         {[
           ['Altura', '36px'],
-          ['Padding lateral', '12px'],
-          ['Radius', '8px'],
+          ['Padding lateral', '14px'],
+          ['Radius', '24px'],
           ['Texto', '14px'],
-          ['Borda', '#606F7F'],
+          ['Fundo', 'cinza suave'],
           ['Foco', '#1D1D1F'],
         ].map(([k, v]) => (
           <div key={k} className="rounded-vix-input border border-gray-200 p-4">

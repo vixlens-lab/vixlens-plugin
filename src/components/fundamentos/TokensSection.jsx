@@ -14,7 +14,7 @@ export default function TokensSection() {
       id="tokens"
       eyebrow="05 — Fundamentos"
       title="Tokens de forma"
-      desc="Border radius no sistema do preset shadcn/luma (base --radius 10px). Cada valor tem um papel específico — não usar livremente entre contextos."
+      desc="Border radius no estilo luma — geometria arredondada. Cards e botões bem redondos. Cada valor tem um papel específico — não usar livremente entre contextos."
     >
       <div className="mb-14 grid grid-cols-2 gap-4 md:grid-cols-4">
         {RADIUS.map((r) => {

@@ -9,7 +9,7 @@ const FEATURES = [
 ]
 const SPECS = [
   ['Background', '#FFFFFF sobre #F5F5F7'],
-  ['Border-radius', '57 px'],
+  ['Border-radius', '32 px'],
   ['Título', 'H5 Bold 24px · center'],
   ['Corpo', 'Regular 18px · lh 1.5'],
   ['Padding', '20px'],
@@ -22,7 +22,7 @@ export default function CardsSection() {
       id="cards"
       eyebrow="12 — Componentes"
       title="Cards"
-      desc="Três tipos de card, todos com border-radius 57px — token exclusivo da Vixlens. Extraídos das seções EssilorLuxottica, VixClub e Vantagens do Figma 3.0."
+      desc="Cards no estilo luma — geometria arredondada (radius 32px), superfície branca com elevação suave (sombra + ring sutil). Extraídos das seções EssilorLuxottica, VixClub e Vantagens."
     >
       {/* Card Feature — branco sobre BG cinza */}
       <SubTitle>Card Feature — branco sobre fundo cinza</SubTitle>
@@ -56,7 +56,7 @@ export default function CardsSection() {
       </div>
 
       {/* Card Conteúdo — texto + imagem */}
-      <SubTitle>Card Conteúdo — texto + imagem (57px radius)</SubTitle>
+      <SubTitle>Card Conteúdo — texto + imagem</SubTitle>
       <div className="mb-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
         <div className="flex min-h-[380px] flex-col justify-center gap-6 rounded-vix-card bg-vix-cinza-card p-10 md:p-12">
           <div className="text-3xl font-bold leading-[1.05] text-vix-preto md:text-[40px]">

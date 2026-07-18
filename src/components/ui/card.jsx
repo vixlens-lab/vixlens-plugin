@@ -1,8 +1,8 @@
 import { cn } from '../../lib/utils.js'
 
-// shadcn/ui Card — radius Vixlens (card token 57px), composição shadcn.
+// Card estilo luma — radius grande (token 32px), elevação suave (shadow-md + ring sutil).
 export function Card({ className, ...props }) {
-  return <div className={cn('rounded-vix-card border border-gray-200 bg-white', className)} {...props} />
+  return <div className={cn('rounded-vix-card bg-white shadow-md ring-1 ring-black/5', className)} {...props} />
 }
 export function CardHeader({ className, ...props }) {
   return <div className={cn('flex flex-col gap-1.5 p-8', className)} {...props} />

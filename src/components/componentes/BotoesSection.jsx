@@ -8,7 +8,7 @@ export default function BotoesSection() {
       id="botoes"
       eyebrow="10 — Componentes"
       title="Botões"
-      desc="Sobre shadcn/ui, skin nos tokens Vixlens. Radius 8px (preset shadcn/luma), Host Grotesk Bold. Primário = amarelo (CTA) ou preto (fundo claro). Nunca mais de um Primário por seção."
+      desc="Sobre shadcn/ui, skin nos tokens Vixlens. Radius arredondado luma (32px), quase pill. Host Grotesk. Primário = amarelo (CTA) ou preto (fundo claro). Nunca mais de um Primário por seção."
     >
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
         <div className="rounded-vix-card border border-gray-200 bg-white p-8">
@@ -51,7 +51,7 @@ export default function BotoesSection() {
       <p className="-mt-2 mb-5 max-w-2xl text-[13px] leading-relaxed text-gray-500">
         Tudo em <b className="text-vix-preto">px</b>. <b className="text-vix-preto">Altura</b> = altura total do botão.{' '}
         <b className="text-vix-preto">Padding lateral</b> = espaço interno à esquerda e à direita do texto
-        (ex.: 12px de cada lado). Radius 8px (preset shadcn/luma). Texto 14px no padrão, 16px só no Large.
+        (ex.: 12px de cada lado). Radius 32px (luma, quase pill). Texto 14px no padrão, 16px só no Large.
       </p>
       <div className="overflow-x-auto rounded-vix-input border border-gray-200">
         <table className="w-full min-w-[720px] text-left text-[13px]">
