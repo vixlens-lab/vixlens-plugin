@@ -76,9 +76,18 @@ export default function TokensSection() {
         </div>
         <p className="mt-3 text-[12px] leading-relaxed text-gray-500">
           Depois é só aplicar os tokens Vixlens (JSON/CSS/Tailwind acima) por cima — cores, radius e
-          tipografia já saem on-brand.
+          tipografia já saem on-brand. O mesmo sistema está no <b className="text-vix-preto">Figma</b>{' '}
+          (foundations, 14 componentes, dark & light) pra quem desenha.
         </p>
         <div className="mt-5 flex flex-wrap gap-2 border-t border-gray-100 pt-5">
+          <a
+            href="https://www.figma.com/design/xVXZpMF3PY5khaGElq0Mvz/Vixlens-DS-Luma"
+            target="_blank"
+            rel="noopener"
+            className="inline-flex items-center gap-1.5 rounded-vix-button bg-vix-preto px-3.5 py-2 text-[12px] font-bold text-white transition-colors hover:bg-[#333333]"
+          >
+            <ArrowSquareOut size={14} weight="bold" /> Figma — Biblioteca
+          </a>
           <a
             href="https://lucide.dev/icons/"
             target="_blank"
