@@ -1,4 +1,5 @@
 import { Section, SubTitle } from '../Section.jsx'
+import { CopyValue } from '../Copy.jsx'
 import tokens from '../../data/tokens.js'
 
 const c = tokens.color
@@ -12,7 +13,7 @@ function Swatch({ name, hex, note, big }) {
       </div>
       <div className="px-3 py-2.5">
         <div className="text-[13px] font-bold text-vix-preto">{name}</div>
-        <div className="font-mono text-[11px] uppercase text-gray-500">{hex}</div>
+        <CopyValue value={hex} className="text-[11px] uppercase text-gray-500">{hex}</CopyValue>
         {note && <div className="mt-1 text-[11px] leading-snug text-gray-400">{note}</div>}
       </div>
     </div>

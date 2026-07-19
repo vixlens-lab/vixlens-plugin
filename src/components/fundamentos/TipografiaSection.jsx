@@ -1,5 +1,6 @@
 import { Check } from '@phosphor-icons/react'
 import { Section, SubTitle } from '../Section.jsx'
+import { CopyValue } from '../Copy.jsx'
 import tokens from '../../data/tokens.js'
 
 const scale = tokens.typography.scale
@@ -176,7 +177,9 @@ export default function TipografiaSection() {
               ['text-lg +', '18 +', 'Títulos (mas o shadcn quase não estiliza heading — deixa pro app)', false],
             ].map(([u, px, uso, hi]) => (
               <tr key={u} className={hi ? 'bg-vix-amarelo-light/40' : ''}>
-                <td className="px-5 py-3.5 font-mono text-[12px] text-vix-azul">{u}</td>
+                <td className="px-5 py-3.5">
+                  <CopyValue value={u} className="text-[12px] text-vix-azul">{u}</CopyValue>
+                </td>
                 <td className="px-5 py-3.5 font-mono text-[13px] font-bold text-vix-preto">{px}</td>
                 <td className={`px-5 py-3.5 ${hi ? 'font-semibold text-vix-preto' : 'text-gray-600'}`}>{uso}</td>
               </tr>

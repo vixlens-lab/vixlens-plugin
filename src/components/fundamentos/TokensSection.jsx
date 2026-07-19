@@ -1,5 +1,6 @@
 import { ArrowSquareOut } from '@phosphor-icons/react'
 import { Section, SubTitle } from '../Section.jsx'
+import { CopyValue, CopyButton } from '../Copy.jsx'
 import tokens from '../../data/tokens.js'
 
 const RADIUS = [
@@ -24,7 +25,7 @@ export default function TokensSection() {
             <div key={r.key} className="rounded-vix-input border border-gray-200 p-6 text-center">
               <div className="mx-auto mb-4 h-14 w-20 bg-vix-preto" style={{ borderRadius: v }} />
               <div className="text-[13px] font-bold text-vix-preto">{r.name}</div>
-              <div className="font-mono text-sm font-bold text-vix-azul">{v}</div>
+              <CopyValue value={v} className="text-sm font-bold text-vix-azul">{v}</CopyValue>
               <div className="mt-1.5 text-[11px] leading-snug text-gray-500">{r.use}</div>
             </div>
           )
@@ -68,11 +69,12 @@ export default function TokensSection() {
           <b className="text-vix-preto">luma</b>, base color <b className="text-vix-preto">mauve</b>,
           tema Vixlens (amarelo), ícones Lucide. Um comando reproduz a base:
         </p>
-        <div className="mt-4 flex items-center gap-3 overflow-x-auto rounded-vix-input bg-vix-preto px-4 py-3">
+        <div className="mt-4 flex items-center gap-3 rounded-vix-input bg-vix-preto px-4 py-3">
           <span className="select-none font-mono text-xs text-vix-amarelo">$</span>
-          <code className="whitespace-nowrap font-mono text-[13px] text-white">
+          <code className="min-w-0 flex-1 overflow-x-auto whitespace-nowrap font-mono text-[13px] text-white">
             npx shadcn@latest init --preset b6GgLgzgW
           </code>
+          <CopyButton value="npx shadcn@latest init --preset b6GgLgzgW" label="comando" tone="dark" className="ml-auto" />
         </div>
         <p className="mt-3 text-[12px] leading-relaxed text-gray-500">
           Depois é só aplicar os tokens Vixlens (JSON/CSS/Tailwind acima) por cima — cores, radius e

@@ -1,4 +1,5 @@
 import { Section } from '../Section.jsx'
+import { CopyValue } from '../Copy.jsx'
 import tokens from '../../data/tokens.js'
 
 const USE = {
@@ -38,7 +39,14 @@ export default function EspacamentoSection() {
               <div className={`text-[11px] font-bold uppercase tracking-[0.06em] ${anchor ? 'text-gray-400' : 'text-gray-500'}`}>
                 {token}
               </div>
-              <div className={`text-[13px] font-bold ${anchor ? 'text-vix-amarelo' : 'text-vix-preto'}`}>{value}</div>
+              <CopyValue
+                value={value}
+                mono={false}
+                tone={anchor ? 'dark' : 'light'}
+                className={`text-[13px] font-bold ${anchor ? 'text-vix-amarelo' : 'text-vix-preto'}`}
+              >
+                {value}
+              </CopyValue>
               <div className="h-1 rounded-full" style={{ width: value, background: anchor ? '#FAC617' : '#1D1D1F' }} />
               <div className={`hidden text-xs md:block ${anchor ? 'text-white/70' : 'text-gray-500'}`}>{USE[token]}</div>
             </div>

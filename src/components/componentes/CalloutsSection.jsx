@@ -1,4 +1,5 @@
 import { Section } from '../Section.jsx'
+import { CopyValue } from '../Copy.jsx'
 import tokens from '../../data/tokens.js'
 import { Star, Info, WarningCircle, CheckCircle } from '@phosphor-icons/react'
 
@@ -29,8 +30,9 @@ export default function CalloutsSection() {
             <div>
               <div className="text-sm font-bold text-vix-preto">{title}</div>
               <div className="mt-0.5 text-[13px] leading-relaxed text-gray-600">{text}</div>
-              <div className="mt-1.5 font-mono text-[10px] uppercase text-gray-400">
-                bg {c[key].bg} · bar {c[key].bar}
+              <div className="mt-1.5 flex flex-wrap items-center gap-x-0.5 font-mono text-[10px] uppercase text-gray-400">
+                bg <CopyValue value={c[key].bg} size={11} className="text-[10px] uppercase text-gray-400" />
+                · bar <CopyValue value={c[key].bar} size={11} className="text-[10px] uppercase text-gray-400" />
               </div>
             </div>
           </div>
