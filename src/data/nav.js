@@ -1,4 +1,4 @@
-export const version = 'v0.6.0'
+export const version = 'v0.7.0'
 
 export const navGroups = [
   {
@@ -49,6 +49,7 @@ export const navGroups = [
     label: 'Sobre o sistema',
     items: [
       { label: 'Changelog', href: '#changelog', dot: '#FAC617' },
+      { label: 'Contribuir', href: '#contribuir', dot: '#0439D9' },
     ],
   },
 ]

@@ -22,6 +22,7 @@ import CalloutsSection from './components/componentes/CalloutsSection.jsx'
 import ShadcnShowcase from './components/componentes/ShadcnShowcase.jsx'
 import MateriaisSection from './components/materiais/MateriaisSection.jsx'
 import ChangelogSection from './components/sobre/ChangelogSection.jsx'
+import ContribuirSection from './components/sobre/ContribuirSection.jsx'
 
 export default function App() {
   const [navOpen, setNavOpen] = useState(false)
@@ -63,9 +64,10 @@ export default function App() {
         <ShadcnShowcase />
         <MateriaisSection />
         <ChangelogSection />
+        <ContribuirSection />
 
         <footer className="border-t border-gray-100 px-8 py-10 text-center text-[13px] text-muted-foreground md:px-16">
-          Vixlens Design System · v0.6.0 · ds.vixlens.com.br
+          Vixlens Design System · v0.7.0 · ds.vixlens.com.br
         </footer>
       </main>
 

@@ -1,6 +1,5 @@
-/* Vixlens Design System 5.0 — tokens canônicos.
-   Fonte: https://ds.vixlens.com.br/assets/tokens/vixlens-tokens.json
-   Uso: @import ou copie as :root vars. NÃO edite valores aqui — edite o JSON. */
+/* Vixlens Design System — tokens canônicos. GERADO por scripts/build-tokens.mjs.
+   Fonte: assets/tokens/vixlens-tokens.json — NÃO edite este arquivo na mão, edite o JSON. */
 @import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;600;700;800&display=swap');
 
 :root {
@@ -10,11 +9,11 @@
   --vix-cinza-card: #F5F5F7;
   --vix-amarelo: #FAC617;
   --vix-amarelo-hover: #E5A800;
-  --vix-amarelo-light: #FEF3C7;
   --vix-azul: #0439D9;
-  --vix-cinza-borda: #606F7F;
   --vix-azul-10: #EAF0FF;
   --vix-azul-20: #C0CDFA;
+  --vix-amarelo-light: #FEF3C7;
+  --vix-cinza-borda: #606F7F;
   --vix-gray-50: #F9FAFB;
   --vix-gray-100: #F3F4F6;
   --vix-gray-200: #E5E7EB;
@@ -31,10 +30,10 @@
   --vix-callout-critical-bg: #FFF0F0; --vix-callout-critical-bar: #FF6566;
   --vix-callout-success-bg: #EDFBF4; --vix-callout-success-bar: #30D389;
   /* raio */
-  --vix-radius-card: 57px;
-  --vix-radius-button: 30px;
-  --vix-radius-input: 12px;
-  --vix-radius-chip: 6px;
+  --vix-radius-card: 32px;
+  --vix-radius-button: 32px;
+  --vix-radius-input: 24px;
+  --vix-radius-chip: 12px;
   /* espaçamento (âncora 40px) */
   --vix-space-1: 4px;
   --vix-space-2: 8px;
@@ -58,14 +57,14 @@
   /* tipografia */
   --vix-font-digital: 'Host Grotesk', sans-serif;
   --vix-font-print: 'Montserrat', 'Mont', sans-serif;
-  --vix-font-h1: 96px; --vix-font-h1-mobile: 48px;
-  --vix-font-h2: 64px; --vix-font-h2-mobile: 36px;
-  --vix-font-h3: 48px; --vix-font-h3-mobile: 28px;
+  --vix-font-h1: 64px; --vix-font-h1-mobile: 40px;
+  --vix-font-h2: 48px; --vix-font-h2-mobile: 32px;
+  --vix-font-h3: 40px; --vix-font-h3-mobile: 28px;
   --vix-font-h4: 32px; --vix-font-h4-mobile: 24px;
   --vix-font-h5: 24px; --vix-font-h5-mobile: 20px;
-  --vix-font-h6: 20px; --vix-font-h6-mobile: 18px;
-  --vix-font-paragraph: 18px; --vix-font-paragraph-mobile: 16px;
-  --vix-font-bold: 18px; --vix-font-bold-mobile: 16px;
+  --vix-font-h6: 20px; --vix-font-h6-mobile: 16px;
+  --vix-font-paragraph: 16px; --vix-font-paragraph-mobile: 16px;
+  --vix-font-bold: 16px; --vix-font-bold-mobile: 16px;
   --vix-font-label: 14px; --vix-font-label-mobile: 14px;
   --vix-font-caption: 12px; --vix-font-caption-mobile: 12px;
   --vix-font-overline: 11px; --vix-font-overline-mobile: 11px;
