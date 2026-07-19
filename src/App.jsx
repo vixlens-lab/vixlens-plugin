@@ -9,6 +9,7 @@ import TipografiaSection from './components/fundamentos/TipografiaSection.jsx'
 import TokensSection from './components/fundamentos/TokensSection.jsx'
 import IconografiaSection from './components/fundamentos/IconografiaSection.jsx'
 import EspacamentoSection from './components/fundamentos/EspacamentoSection.jsx'
+import AcessibilidadeSection from './components/fundamentos/AcessibilidadeSection.jsx'
 import VozTomSection from './components/voz/VozTomSection.jsx'
 import VocabularioSection from './components/voz/VocabularioSection.jsx'
 import BotoesSection from './components/componentes/BotoesSection.jsx'
@@ -17,6 +18,7 @@ import CardsSection from './components/componentes/CardsSection.jsx'
 import CalloutsSection from './components/componentes/CalloutsSection.jsx'
 import ShadcnShowcase from './components/componentes/ShadcnShowcase.jsx'
 import MateriaisSection from './components/materiais/MateriaisSection.jsx'
+import ChangelogSection from './components/sobre/ChangelogSection.jsx'
 
 export default function App() {
   const [navOpen, setNavOpen] = useState(false)
@@ -45,6 +47,7 @@ export default function App() {
         <TokensSection />
         <IconografiaSection />
         <EspacamentoSection />
+        <AcessibilidadeSection />
         <VozTomSection />
         <VocabularioSection />
         <BotoesSection />
@@ -53,9 +56,10 @@ export default function App() {
         <CalloutsSection />
         <ShadcnShowcase />
         <MateriaisSection />
+        <ChangelogSection />
 
         <footer className="border-t border-gray-100 px-8 py-10 text-center text-[13px] text-muted-foreground md:px-16">
-          Vixlens Design System · v0.5.0 · ds.vixlens.com.br
+          Vixlens Design System · v0.6.0 · ds.vixlens.com.br
         </footer>
       </main>
 

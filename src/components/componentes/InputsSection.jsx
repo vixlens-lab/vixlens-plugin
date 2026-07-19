@@ -1,6 +1,14 @@
 import { Section, SubTitle } from '../Section.jsx'
 import { Input } from '../ui/input.jsx'
 import { Button } from '../ui/button.jsx'
+import { PropsTable, DosDonts } from './ComponentDocs.jsx'
+
+const INPUT_PROPS = [
+  { prop: 'type', tipo: 'text | email | password | number …', padrao: '"text"', desc: 'Tipo do campo HTML — define teclado, validação e mascaramento.' },
+  { prop: 'placeholder', tipo: 'string', padrao: '—', desc: 'Texto de exemplo dentro do campo. Não substitui o label.' },
+  { prop: 'disabled', tipo: 'boolean', padrao: 'false', desc: 'Desabilita o campo, bloqueando foco e edição.' },
+  { prop: 'value / onChange', tipo: 'string / function', padrao: '—', desc: 'Par controlado — o valor vem do estado e onChange o atualiza.' },
+]
 
 export default function InputsSection() {
   return (
@@ -44,6 +52,41 @@ export default function InputsSection() {
           </div>
         ))}
       </div>
+
+      <SubTitle className="mt-14">Estados</SubTitle>
+      <div className="mb-2 max-w-md">
+        <div className="flex flex-col gap-5">
+          <label className="flex flex-col gap-2">
+            <span className="text-[11px] uppercase tracking-[0.1em] text-gray-400">Default</span>
+            <Input placeholder="Digite aqui" />
+          </label>
+          <label className="flex flex-col gap-2">
+            <span className="text-[11px] uppercase tracking-[0.1em] text-gray-400">Foco (ring)</span>
+            <Input placeholder="Clique para ver o ring de foco" />
+          </label>
+          <label className="flex flex-col gap-2">
+            <span className="text-[11px] uppercase tracking-[0.1em] text-gray-400">Disabled</span>
+            <Input placeholder="Indisponível" disabled />
+          </label>
+        </div>
+      </div>
+
+      <SubTitle className="mt-14">Props</SubTitle>
+      <PropsTable rows={INPUT_PROPS} />
+
+      <SubTitle className="mt-12">Do &amp; Don't</SubTitle>
+      <DosDonts
+        dos={[
+          'Sempre associar um label ao campo.',
+          'Usar o placeholder como exemplo, não como label.',
+          'Mostrar mensagem de erro clara abaixo do campo.',
+        ]}
+        donts={[
+          'Usar o placeholder no lugar do label.',
+          'Deixar o campo sem indicação visível de foco.',
+          'Largura minúscula para um dado longo (e-mail, endereço).',
+        ]}
+      />
     </Section>
   )
 }

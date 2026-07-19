@@ -1,7 +1,15 @@
-import { Section } from '../Section.jsx'
+import { Section, SubTitle } from '../Section.jsx'
 import { CopyValue } from '../Copy.jsx'
 import tokens from '../../data/tokens.js'
 import { Star, Info, WarningCircle, CheckCircle } from '@phosphor-icons/react'
+import { PropsTable, DosDonts } from './ComponentDocs.jsx'
+
+const CALLOUT_TYPES = [
+  { prop: 'Destaque', tipo: 'barra amarela', padrao: '—', desc: 'Informação de maior relevância no documento. Quando algo precisa saltar aos olhos.' },
+  { prop: 'Informativo', tipo: 'barra roxa', padrao: '—', desc: 'Contexto ou nota complementar. Quando há informação de apoio, não urgente.' },
+  { prop: 'Crítico', tipo: 'barra coral', padrao: '—', desc: 'Alerta, restrição ou risco. Quando ignorar a informação tem consequência.' },
+  { prop: 'Sucesso', tipo: 'barra verde', padrao: '—', desc: 'Confirmação ou resultado positivo. Quando algo foi concluído com êxito.' },
+]
 
 const CALLOUTS = [
   { key: 'highlight', Icon: Star, title: 'Destaque', text: 'Informação de maior relevância no documento. Barra amarela.' },
@@ -38,6 +46,23 @@ export default function CalloutsSection() {
           </div>
         ))}
       </div>
+
+      <SubTitle className="mt-14">Tipos &amp; quando usar</SubTitle>
+      <PropsTable rows={CALLOUT_TYPES} />
+
+      <SubTitle className="mt-12">Do &amp; Don't</SubTitle>
+      <DosDonts
+        dos={[
+          'Escolher o tipo pelo significado da mensagem.',
+          'Texto curto e acionável.',
+          'De 1 a 2 callouts por documento.',
+        ]}
+        donts={[
+          'Usar Crítico para tudo.',
+          'Empilhar muitos callouts seguidos.',
+          'Usar a cor sem o significado correspondente.',
+        ]}
+      />
     </Section>
   )
 }

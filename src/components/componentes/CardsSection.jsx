@@ -1,6 +1,16 @@
 import { Section, SubTitle } from '../Section.jsx'
 import { ArrowRight, Eye } from '@phosphor-icons/react'
 import { Button } from '../ui/button.jsx'
+import { PropsTable, DosDonts } from './ComponentDocs.jsx'
+
+const CARD_ANATOMY = [
+  { prop: 'Card', tipo: 'container', padrao: '—', desc: 'Raiz do card — radius 32, padding 32, fundo branco e sombra suave.' },
+  { prop: 'CardHeader', tipo: 'slot', padrao: '—', desc: 'Topo do card — agrupa título e descrição com espaçamento próprio.' },
+  { prop: 'CardTitle', tipo: 'slot', padrao: '—', desc: 'Título do card — curto e direto, um assunto por card.' },
+  { prop: 'CardDescription', tipo: 'slot', padrao: '—', desc: 'Texto de apoio ao título, em tom secundário.' },
+  { prop: 'CardContent', tipo: 'slot', padrao: '—', desc: 'Corpo do card — conteúdo principal (texto, imagem, campos).' },
+  { prop: 'CardFooter', tipo: 'slot', padrao: '—', desc: 'Rodapé do card — reservado para ações (botões, links).' },
+]
 
 const FEATURES = [
   { t: 'Lentes avançadas', d: 'Free-Form, tratamentos premium e linha completa para todos os perfis.' },
@@ -128,6 +138,23 @@ export default function CardsSection() {
           <Button variant="dark" className="w-fit gap-2">Ver linha completa <ArrowRight size={16} weight="bold" /></Button>
         </div>
       </div>
+
+      <SubTitle className="mt-14">Anatomia &amp; Props</SubTitle>
+      <PropsTable rows={CARD_ANATOMY} />
+
+      <SubTitle className="mt-12">Do &amp; Don't</SubTitle>
+      <DosDonts
+        dos={[
+          'Um assunto por card.',
+          'Título curto e direto.',
+          'Concentrar as ações no footer.',
+        ]}
+        donts={[
+          'Card dentro de card.',
+          'Sombra pesada — a sombra é suave.',
+          'Conteúdo espremido, sem o padding de 32.',
+        ]}
+      />
     </Section>
   )
 }

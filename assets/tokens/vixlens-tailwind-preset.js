@@ -1,4 +1,4 @@
-// Vixlens DS 3.0 — Tailwind preset. Fonte: vixlens-tokens.json
+// Vixlens DS 5.0 — Tailwind preset. Fonte: vixlens-tokens.json
 // uso: presets: [require('./vixlens-tailwind-preset.js')]
 module.exports = {
   theme: {

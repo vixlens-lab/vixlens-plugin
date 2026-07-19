@@ -1,7 +1,7 @@
 {
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "name": "Vixlens Design System",
-  "version": "3.0",
+  "version": "5.0",
   "source": "https://ds.vixlens.com.br",
   "description": "Fonte única de tokens do DS Vixlens. Site, skill de UI e qualquer produto consomem daqui.",
   "color": {
@@ -144,7 +144,7 @@
   "layout": {
     "container-produto": {
       "value": "1422px",
-      "comment": "Canvas premium Figma 3.0 (páginas de produto)."
+      "comment": "Canvas premium Figma 5.0 (páginas de produto)."
     },
     "container-ds-site": {
       "value": "1100px",

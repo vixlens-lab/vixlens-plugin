@@ -1,4 +1,4 @@
-export const version = 'v0.5.0'
+export const version = 'v0.6.0'
 
 export const navGroups = [
   {
@@ -17,6 +17,7 @@ export const navGroups = [
       { label: 'Tokens de forma', href: '#tokens', dot: '#606F7F' },
       { label: 'Iconografia', href: '#iconografia', dot: '#606F7F' },
       { label: 'Espaçamento', href: '#espacamento', dot: '#606F7F' },
+      { label: 'Acessibilidade', href: '#acessibilidade', dot: '#30D389' },
     ],
   },
   {
@@ -40,6 +41,12 @@ export const navGroups = [
     label: 'Materiais',
     items: [
       { label: 'Templates', href: '#materiais', dot: '#0439D9', soon: true },
+    ],
+  },
+  {
+    label: 'Sobre o sistema',
+    items: [
+      { label: 'Changelog', href: '#changelog', dot: '#FAC617' },
     ],
   },
 ]

@@ -1,6 +1,14 @@
 import { ArrowRight } from '@phosphor-icons/react'
 import { Section, SubTitle } from '../Section.jsx'
 import { Button } from '../ui/button.jsx'
+import { PropsTable, DosDonts } from './ComponentDocs.jsx'
+
+const BUTTON_PROPS = [
+  { prop: 'variant', tipo: 'default | dark | secondary | outline | ghost | destructive | link', padrao: '"default"', desc: 'Estilo visual. default = amarelo (CTA), dark = preto sobre fundo claro.' },
+  { prop: 'size', tipo: 'sm | default | lg | icon', padrao: '"default"', desc: 'Altura e padding. lg para CTAs, icon só para ícone (use aria-label).' },
+  { prop: 'asChild', tipo: 'boolean', padrao: 'false', desc: 'Renderiza o filho como raiz (ex.: <a>) mantendo os estilos do botão.' },
+  { prop: 'disabled', tipo: 'boolean', padrao: 'false', desc: 'Desabilita o botão e reduz a opacidade, bloqueando o clique.' },
+]
 
 export default function BotoesSection() {
   return (
@@ -101,6 +109,23 @@ export default function BotoesSection() {
           </tbody>
         </table>
       </div>
+
+      <SubTitle className="mt-14">Props</SubTitle>
+      <PropsTable rows={BUTTON_PROPS} />
+
+      <SubTitle className="mt-12">Do &amp; Don't</SubTitle>
+      <DosDonts
+        dos={[
+          'Usar variant default (amarelo) para a ação primária.',
+          'No máximo uma ação primária por tela.',
+          'Texto de ação curto, começando por um verbo.',
+        ]}
+        donts={[
+          'Dois botões amarelos competindo na mesma tela.',
+          'Texto genérico como "Clique aqui".',
+          'Usar variant link como botão de destaque.',
+        ]}
+      />
     </Section>
   )
 }

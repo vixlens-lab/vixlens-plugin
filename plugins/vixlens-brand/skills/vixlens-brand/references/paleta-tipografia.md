@@ -1,4 +1,4 @@
-# Paleta e Tipografia Vixlens — DS 3.0
+# Paleta e Tipografia Vixlens — DS 5.0
 
 > **Regra de ouro (60-30-10):** Preto e Branco são a base dominante (~60%). Amarelo é secondary — faixas finas, CTAs, labels de alto impacto (~15%). Azul é accent de último recurso — apenas em visualizações de dados ou 1 elemento por documento (~5%). Cor usada em excesso perde exclusividade e impacto.
 
@@ -131,7 +131,7 @@ Usada exclusivamente em contextos digitais: site, plataformas, dashboards, apres
 ## Iconografia
 
 ### Ícones de linha de produto (Cards Hero)
-SVG customizados do Figma Vixlens 3.0. Cada ícone é fixo à sua linha:
+SVG customizados do Figma Vixlens 5.0. Cada ícone é fixo à sua linha:
 - Freevix — círculo (lente)
 - AR Reflecta — símbolo AR (flocos)
 - Essilor — olho (eye)
@@ -164,7 +164,7 @@ Biblioteca padrão para interfaces digitais. CDN: `https://unpkg.com/@phosphor-i
 - Linha divisória #D1D5DB
 - "Vixlens Laboratório Óptico — [mês/ano]" Mont Light 9pt, #606F7F · "Página N" à direita
 
-### Callouts — cores atualizadas (DS 3.0)
+### Callouts — cores atualizadas (DS 5.0)
 - **Destaque** → barra #FCD341, fundo #FFFBEB, label #92730A
 - **Informativo** → barra #615FFF, fundo #EFEFFF, label #615FFF
 - **Crítico** → barra #FF6566, fundo #FFF0F0, label #E03535
@@ -186,4 +186,4 @@ Biblioteca padrão para interfaces digitais. CDN: `https://unpkg.com/@phosphor-i
 | Repositório GitHub         | https://github.com/vixlenslab/vixlens-ds                 |
 | Branch principal           | `main` — deploy automático via Vercel a cada push        |
 
-> Versão atual: DS 3.0 · Plugin v0.2.0 · Deploy: 08/05/2026
+> Versão atual: DS 5.0 · Plugin v0.2.0 · Deploy: 08/05/2026

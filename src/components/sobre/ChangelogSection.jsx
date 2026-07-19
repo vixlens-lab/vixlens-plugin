@@ -1,0 +1,185 @@
+import { Section, SubTitle } from '../Section.jsx'
+import { Sparkle, Wrench, Plus, ArrowUp } from '@phosphor-icons/react'
+
+// Tipos de mudança — ícone + cor por categoria (Novo / Melhoria / Correção).
+const TIPOS = {
+  novo: {
+    label: 'Novo',
+    Icon: Plus,
+    pill: 'bg-vix-amarelo text-vix-preto',
+    dot: 'text-vix-preto',
+  },
+  melhoria: {
+    label: 'Melhoria',
+    Icon: ArrowUp,
+    pill: 'bg-vix-azul/10 text-vix-azul',
+    dot: 'text-vix-azul',
+  },
+  correcao: {
+    label: 'Correção',
+    Icon: Wrench,
+    pill: 'bg-vix-cinza-card text-gray-500',
+    dot: 'text-gray-400',
+  },
+}
+
+const ORDEM = ['novo', 'melhoria', 'correcao']
+
+// Timeline — mais recente em cima. Dados reais do DS.
+const VERSOES = [
+  {
+    versao: 'v0.6.0',
+    data: '19/07/2026',
+    atual: true,
+    mudancas: [
+      ['novo', 'Copiar cor/token em 1 clique — cores, callouts, radius, espaçamento e classes utilitárias'],
+      ['novo', 'Página de Changelog + versionamento (SemVer)'],
+      ['novo', 'Auditoria de Acessibilidade — contraste WCAG AA/AAA'],
+      ['novo', "Documentação por componente — estados, props, do / don't"],
+    ],
+  },
+  {
+    versao: 'v0.5.0',
+    data: '17/07/2026',
+    mudancas: [
+      ['novo', 'Rebuild completo em React (Vite + Tailwind + shadcn/ui)'],
+      ['novo', 'Adota estilo luma (preset b6GgLgzgW) + base color mauve, mantendo cores/fontes Vixlens'],
+      ['novo', 'Fonte única de tokens (JSON / CSS / Tailwind preset), exportável'],
+      ['novo', 'Iconografia (Phosphor principal + Lucide do shadcn) com exemplos e links'],
+      ['novo', 'Handoff dev (comando do preset) + link da biblioteca no Figma'],
+      ['novo', 'Seção Materiais (scaffold "em breve")'],
+      ['melhoria', 'Escala tipográfica ligada ao token (H1 64 → mobile 40; headings múltiplos de 4)'],
+    ],
+  },
+  {
+    versao: 'v0.4.0',
+    data: '17/07/2026',
+    mudancas: [
+      ['novo', 'Sistema de marcas multi-formato — 81 conceitos em SVG / PNG / PDF / WebP + 5 brand kits'],
+      ['correcao', 'Padroniza preto #1D1D1F e amarelo #FAC617; rampa de cinza completa'],
+    ],
+  },
+  {
+    versao: 'Anterior',
+    data: 'mai–jun/2026',
+    neutro: true,
+    resumo: 'Ajustes de marca, galeria de fotografia, tipografia mobile, Reflecta; repo renomeado p/ vixlens-ds.',
+  },
+]
+
+function VersaoBadge({ versao, atual, neutro }) {
+  const tone = atual
+    ? 'bg-vix-amarelo text-vix-preto'
+    : neutro
+      ? 'bg-vix-cinza-card text-gray-500'
+      : 'bg-vix-preto text-white'
+  return (
+    <span className={`inline-flex items-center rounded-vix-chip px-2.5 py-1 font-mono text-[13px] font-bold tracking-tight ${tone}`}>
+      {versao}
+    </span>
+  )
+}
+
+function TipoGrupo({ tipo, itens }) {
+  const { label, Icon, pill, dot } = TIPOS[tipo]
+  return (
+    <div>
+      <div className="mb-2.5 flex items-center gap-1.5">
+        <span className={`inline-flex items-center gap-1 rounded-vix-chip px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.08em] ${pill}`}>
+          <Icon size={11} weight="bold" />
+          {label}
+        </span>
+      </div>
+      <ul className="flex flex-col gap-1.5">
+        {itens.map((texto) => (
+          <li key={texto} className="flex items-start gap-2 text-[13px] leading-relaxed text-gray-600">
+            <Icon size={13} weight="bold" className={`mt-[3px] shrink-0 ${dot}`} />
+            <span>{texto}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+function VersaoCard({ versao }) {
+  const grupos = versao.mudancas
+    ? ORDEM.map((tipo) => [tipo, versao.mudancas.filter(([t]) => t === tipo).map(([, texto]) => texto)]).filter(
+        ([, itens]) => itens.length > 0,
+      )
+    : []
+
+  return (
+    <div
+      className={`grid grid-cols-1 gap-5 rounded-vix-card border p-6 md:grid-cols-[180px_1fr] md:gap-8 md:p-7 ${
+        versao.atual ? 'border-vix-amarelo bg-vix-amarelo-light/40' : 'border-gray-100 bg-white'
+      }`}
+    >
+      <div className="flex flex-row flex-wrap items-center gap-2.5 md:flex-col md:items-start md:gap-3">
+        <VersaoBadge versao={versao.versao} atual={versao.atual} neutro={versao.neutro} />
+        {versao.atual && (
+          <span className="inline-flex items-center gap-1 rounded-vix-chip bg-vix-preto px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.08em] text-white">
+            <Sparkle size={11} weight="fill" className="text-vix-amarelo" />
+            Atual
+          </span>
+        )}
+        <span className="font-mono text-[12px] text-gray-400">{versao.data}</span>
+      </div>
+
+      <div className="flex flex-col gap-5">
+        {versao.resumo ? (
+          <p className="text-[13px] leading-relaxed text-gray-500">{versao.resumo}</p>
+        ) : (
+          grupos.map(([tipo, itens]) => <TipoGrupo key={tipo} tipo={tipo} itens={itens} />)
+        )}
+      </div>
+    </div>
+  )
+}
+
+export default function ChangelogSection() {
+  return (
+    <Section
+      id="changelog"
+      eyebrow="— Sobre o sistema"
+      title="Changelog"
+      desc="O que mudou em cada versão do Design System, da mais recente pra mais antiga. Sem enrolação: o que entrou, o que melhorou, o que foi corrigido."
+    >
+      {/* Esquema de versionamento — SemVer */}
+      <div className="mb-10 flex flex-col gap-4 rounded-vix-card border border-gray-100 bg-vix-cinza-card p-5 sm:flex-row sm:items-center sm:gap-6">
+        <VersaoBadge versao="v0.6.0" atual />
+        <p className="text-[13px] leading-relaxed text-gray-600">
+          Seguimos <span className="font-bold text-vix-preto">Semantic Versioning</span> (MAJOR.MINOR.PATCH):{' '}
+          <span className="font-bold text-vix-preto">MAJOR</span> muda quando algo quebra,{' '}
+          <span className="font-bold text-vix-preto">MINOR</span> quando adiciona sem quebrar e{' '}
+          <span className="font-bold text-vix-preto">PATCH</span> quando corrige.
+        </p>
+      </div>
+
+      {/* Legenda de tipos */}
+      <SubTitle>Legenda</SubTitle>
+      <div className="mb-9 flex flex-wrap gap-2">
+        {ORDEM.map((tipo) => {
+          const { label, Icon, pill } = TIPOS[tipo]
+          return (
+            <span
+              key={tipo}
+              className={`inline-flex items-center gap-1 rounded-vix-chip px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.08em] ${pill}`}
+            >
+              <Icon size={12} weight="bold" />
+              {label}
+            </span>
+          )
+        })}
+      </div>
+
+      {/* Timeline */}
+      <SubTitle>Histórico</SubTitle>
+      <div className="flex flex-col gap-4">
+        {VERSOES.map((versao) => (
+          <VersaoCard key={versao.versao + versao.data} versao={versao} />
+        ))}
+      </div>
+    </Section>
+  )
+}
