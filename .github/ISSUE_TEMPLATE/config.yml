@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentação do DS
+    url: https://ds.vixlens.com.br
+    about: Veja tokens, componentes e o guia de contribuição antes de abrir uma issue.

@@ -49,7 +49,7 @@ export default function TipografiaSection() {
               </div>
             ))}
           </div>
-          <a href="https://fonts.google.com/specimen/Host+Grotesk" target="_blank" rel="noopener" className="mt-6 inline-flex rounded-vix-button bg-vix-amarelo px-5 py-2.5 text-sm font-bold text-vix-preto transition-colors hover:bg-vix-amarelo-hover">
+          <a href="https://fonts.google.com/specimen/Host+Grotesk" target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex rounded-vix-button bg-vix-amarelo px-5 py-2.5 text-sm font-bold text-vix-preto transition-colors hover:bg-vix-amarelo-hover">
             Abrir no Google Fonts
           </a>
         </div>

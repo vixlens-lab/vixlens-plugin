@@ -6,9 +6,15 @@ Repo: https://github.com/vixlenslab/vixlens-ds · No ar: https://ds.vixlens.com.
 ## Regras de ouro
 
 1. **Fonte única de token é o JSON.** `assets/tokens/vixlens-tokens.json`. Os arquivos `.css` e o preset Tailwind são **gerados** — nunca edite na mão.
-2. **Toda mudança passa por PR.** `main` faz deploy automático (Vercel). O CI (GitHub Actions) roda a guarda de drift de token + build; PR não passa se algo estiver fora de sync.
+2. **Toda mudança passa por PR.** `main` faz deploy automático (Vercel). O CI (GitHub Actions) roda **drift de token + lint + build + auditoria de acessibilidade (Lighthouse)**; PR não passa se drift, lint ou build quebrarem.
 3. **Deploy sempre com autor `vixlens-lab-bot <bot@vixlens.com.br>`.**
-4. **Mudança grande (novo token, novo componente, quebra):** abra uma _issue_ / RFC curta antes, pra alinhar. Pequena (texto, fix): PR direto.
+4. **Mudança grande (novo token, novo componente, quebra):** abra uma _issue_ usando o template **RFC** antes, pra alinhar. Pequena (texto, fix): PR direto.
+
+## Donos & decisão
+
+- Quem revisa/aprova está em [`.github/CODEOWNERS`](.github/CODEOWNERS) — preencha com os handles reais do time e ligue "require review from Code Owners" em Settings → Branches pra tornar a revisão obrigatória.
+- **RFC** decide mudança grande: abra a issue (template RFC), alinhe, então PR. Quebra (MAJOR) sempre passa por RFC.
+- Templates em `.github/`: RFC, pedido de componente e checklist de PR.
 
 ## Mudar um token (cor, raio, espaçamento, tipografia)
 

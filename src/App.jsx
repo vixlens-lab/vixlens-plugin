@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar.jsx'
 import Search from './components/Search.jsx'
 import Hero from './components/Hero.jsx'
 import BackToTop from './components/BackToTop.jsx'
+import ComecarSection from './components/sobre/ComecarSection.jsx'
 import MarcaSection from './components/marca/MarcaSection.jsx'
 import FotografiaSection from './components/marca/FotografiaSection.jsx'
 import CoresSection from './components/fundamentos/CoresSection.jsx'
@@ -45,6 +46,7 @@ export default function App() {
 
       <main className="md:ml-[260px]">
         <Hero />
+        <ComecarSection />
         <MarcaSection />
         <FotografiaSection />
         <CoresSection />
@@ -67,7 +69,7 @@ export default function App() {
         <ContribuirSection />
 
         <footer className="border-t border-gray-100 px-8 py-10 text-center text-[13px] text-muted-foreground md:px-16">
-          Vixlens Design System · v0.7.0 · ds.vixlens.com.br
+          Vixlens Design System · v0.8.0 · ds.vixlens.com.br
         </footer>
       </main>
 

@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Tokens em sync + build
+    name: Tokens + lint + build + a11y
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -23,5 +23,14 @@ jobs:
       - name: Guarda de drift de token (CSS/preset batem com o JSON?)
         run: npm run tokens:check
 
+      - name: Lint
+        run: npm run lint
+
       - name: Build
         run: npm run build
+
+      - name: Auditoria de acessibilidade (Lighthouse)
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: ./lighthouserc.json
+          temporaryPublicStorage: true

@@ -49,7 +49,7 @@ export default function IconografiaSection() {
           <a
             href="https://phosphoricons.com"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             className="mt-6 inline-flex w-fit items-center gap-1.5 rounded-vix-button border border-gray-200 px-3.5 py-2 text-[12px] font-bold text-vix-preto transition-colors hover:bg-gray-50"
           >
             <ArrowSquareOut size={14} weight="bold" /> Acessar Phosphor
@@ -73,7 +73,7 @@ export default function IconografiaSection() {
           <a
             href="https://lucide.dev/icons/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             className="mt-6 inline-flex w-fit items-center gap-1.5 rounded-vix-button border border-gray-200 px-3.5 py-2 text-[12px] font-bold text-vix-preto transition-colors hover:bg-gray-50"
           >
             <ArrowSquareOut size={14} weight="bold" /> Acessar Lucide

@@ -1,6 +1,12 @@
-export const version = 'v0.7.0'
+export const version = 'v0.8.0'
 
 export const navGroups = [
+  {
+    label: 'Início',
+    items: [
+      { label: 'Comece aqui', href: '#comecar', dot: '#FAC617' },
+    ],
+  },
   {
     label: 'Marca',
     items: [

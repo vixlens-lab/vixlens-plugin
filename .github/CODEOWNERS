@@ -1,0 +1,11 @@
+# CODEOWNERS — quem revisa/aprova mudanças no DS.
+# Descomente e troque pelos handles/times reais do GitHub pra ativar
+# a revisão obrigatória (Settings → Branches → require review from Code Owners).
+#
+# Dono geral do DS:
+# *                          @vixlenslab/design-system
+#
+# Donos por área (opcional):
+# assets/tokens/             @<dono-dos-tokens>
+# src/components/ui/         @<dono-dos-componentes>
+# .github/                   @<dono-da-infra>

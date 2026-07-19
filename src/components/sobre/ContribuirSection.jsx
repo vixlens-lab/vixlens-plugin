@@ -66,7 +66,7 @@ npm run tokens:check`}
         <a
           href={`${REPO}/blob/main/CONTRIBUTING.md`}
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 rounded-vix-button bg-vix-preto px-4 py-2.5 text-[13px] font-bold text-white transition-colors hover:bg-[#333333]"
         >
           <ArrowSquareOut size={15} weight="bold" /> Guia completo (CONTRIBUTING.md)
@@ -74,7 +74,7 @@ npm run tokens:check`}
         <a
           href={REPO}
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 rounded-vix-button border border-gray-200 px-4 py-2.5 text-[13px] font-bold text-vix-preto transition-colors hover:bg-gray-50"
         >
           <ArrowSquareOut size={15} weight="bold" /> Repositório

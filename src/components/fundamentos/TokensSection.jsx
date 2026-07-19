@@ -85,7 +85,7 @@ export default function TokensSection() {
           <a
             href="https://www.figma.com/design/xVXZpMF3PY5khaGElq0Mvz/Vixlens-DS-Luma"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-vix-button bg-vix-preto px-3.5 py-2 text-[12px] font-bold text-white transition-colors hover:bg-[#333333]"
           >
             <ArrowSquareOut size={14} weight="bold" /> Figma — Biblioteca
@@ -93,7 +93,7 @@ export default function TokensSection() {
           <a
             href="https://lucide.dev/icons/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-vix-button border border-gray-200 px-3.5 py-2 text-[12px] font-bold text-vix-preto transition-colors hover:bg-gray-50"
           >
             <ArrowSquareOut size={14} weight="bold" /> Icon Library — Lucide
@@ -101,7 +101,7 @@ export default function TokensSection() {
           <a
             href="https://ui.shadcn.com/create?preset=b6GgLgzgW"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-vix-button border border-gray-200 px-3.5 py-2 text-[12px] font-bold text-vix-preto transition-colors hover:bg-gray-50"
           >
             <ArrowSquareOut size={14} weight="bold" /> Preset shadcn
