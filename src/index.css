@@ -29,6 +29,12 @@
     --input: 300 6% 90%;
     --ring: 293 8% 45%;
     --radius: 1rem;
+    /* data-viz — paleta categórica (fonte: tokens.json color.chart) */
+    --chart-1: #FAC617;
+    --chart-2: #0439D9;
+    --chart-3: #615FFF;
+    --chart-4: #30D389;
+    --chart-5: #606F7F;
   }
   * {
     border-color: hsl(var(--border));

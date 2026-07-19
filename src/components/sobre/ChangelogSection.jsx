@@ -28,9 +28,18 @@ const ORDEM = ['novo', 'melhoria', 'correcao']
 // Timeline — mais recente em cima. Dados reais do DS.
 const VERSOES = [
   {
-    versao: 'v0.8.0',
+    versao: 'v0.9.0',
     data: '19/07/2026',
     atual: true,
+    mudancas: [
+      ['novo', 'Data-viz — gráficos (shadcn Charts / recharts) com paleta categórica Vixlens + guia de cor pra dado'],
+      ['novo', 'Playground — controles de prop ao vivo (Button, Badge, Alert, Input) com o código atualizando junto'],
+      ['novo', 'Paleta de gráfico nos tokens (color.chart 1–5) + vars --chart-*'],
+    ],
+  },
+  {
+    versao: 'v0.8.0',
+    data: '19/07/2026',
     mudancas: [
       ['novo', '"Comece aqui" — onboarding do consumidor: como puxar tokens (CSS/Tailwind) e usar os componentes'],
       ['novo', 'Lint no CI (ESLint + regras de acessibilidade jsx-a11y)'],
@@ -170,7 +179,7 @@ export default function ChangelogSection() {
     >
       {/* Esquema de versionamento — SemVer */}
       <div className="mb-10 flex flex-col gap-4 rounded-vix-card border border-gray-100 bg-vix-cinza-card p-5 sm:flex-row sm:items-center sm:gap-6">
-        <VersaoBadge versao="v0.8.0" atual />
+        <VersaoBadge versao="v0.9.0" atual />
         <p className="text-[13px] leading-relaxed text-gray-600">
           Seguimos <span className="font-bold text-vix-preto">Semantic Versioning</span> (MAJOR.MINOR.PATCH):{' '}
           <span className="font-bold text-vix-preto">MAJOR</span> muda quando algo quebra,{' '}

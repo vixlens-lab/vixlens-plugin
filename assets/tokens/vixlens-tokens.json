@@ -99,6 +99,14 @@
         "bg": "#EDFBF4",
         "bar": "#30D389"
       }
+    },
+    "chart": {
+      "comment": "Paleta categórica para gráficos (data-viz). 5 séries distintas.",
+      "1": { "value": "#FAC617" },
+      "2": { "value": "#0439D9" },
+      "3": { "value": "#615FFF" },
+      "4": { "value": "#30D389" },
+      "5": { "value": "#606F7F" }
     }
   },
   "distribution": {

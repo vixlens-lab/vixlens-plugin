@@ -28,6 +28,13 @@ module.exports = {
           'guard': '#00782D',
           'express': '#92BB36',
           'blue-protect-sh': '#134B97'
+        },
+        'vix-chart': {
+          '1': '#FAC617',
+          '2': '#0439D9',
+          '3': '#615FFF',
+          '4': '#30D389',
+          '5': '#606F7F'
         }
       },
       borderRadius: {

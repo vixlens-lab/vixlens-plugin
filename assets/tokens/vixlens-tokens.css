@@ -29,6 +29,11 @@
   --vix-callout-informative-bg: #EFEFFF; --vix-callout-informative-bar: #615FFF;
   --vix-callout-critical-bg: #FFF0F0; --vix-callout-critical-bar: #FF6566;
   --vix-callout-success-bg: #EDFBF4; --vix-callout-success-bar: #30D389;
+  --vix-chart-1: #FAC617;
+  --vix-chart-2: #0439D9;
+  --vix-chart-3: #615FFF;
+  --vix-chart-4: #30D389;
+  --vix-chart-5: #606F7F;
   /* raio */
   --vix-radius-card: 32px;
   --vix-radius-button: 32px;

@@ -1,4 +1,4 @@
-export const version = 'v0.8.0'
+export const version = 'v0.9.0'
 
 export const navGroups = [
   {
@@ -26,6 +26,7 @@ export const navGroups = [
       { label: 'Espaçamento', href: '#espacamento', dot: '#606F7F' },
       { label: 'Grid & breakpoints', href: '#grid', dot: '#606F7F' },
       { label: 'Acessibilidade', href: '#acessibilidade', dot: '#30D389' },
+      { label: 'Data-viz', href: '#dataviz', dot: '#615FFF' },
     ],
   },
   {
@@ -43,6 +44,7 @@ export const navGroups = [
       { label: 'Cards', href: '#cards', dot: '#F5F5F7' },
       { label: 'Callouts', href: '#callouts', dot: '#FAC617' },
       { label: 'Biblioteca shadcn', href: '#shadcn', dot: '#0439D9' },
+      { label: 'Playground', href: '#playground', dot: '#FAC617' },
     ],
   },
   {

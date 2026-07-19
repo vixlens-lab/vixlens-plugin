@@ -35,6 +35,8 @@ function buildCss() {
       L.push(`  --vix-${k}: ${v.value};`)
     } else if (k === 'gray') {
       for (const [g, gv] of Object.entries(v)) if (g !== 'comment') L.push(`  --vix-gray-${g}: ${gv.value};`)
+    } else if (k === 'chart') {
+      for (const [c, cv] of Object.entries(v)) if (c !== 'comment') L.push(`  --vix-chart-${c}: ${cv.value};`)
     } else if (k === 'reflecta') {
       for (const [r, rv] of Object.entries(v)) if (r !== 'comment') L.push(`  --vix-reflecta-${r}: ${rv.value};`)
     } else if (k === 'azul-tint') {
@@ -79,6 +81,7 @@ function buildPreset() {
     if (k === 'comment') continue
     if (isColor(v)) colors[`vix-${k}`] = v.value
     else if (k === 'gray') colors['vix-gray'] = Object.fromEntries(Object.entries(v).filter(([g]) => g !== 'comment').map(([g, gv]) => [g, gv.value]))
+    else if (k === 'chart') colors['vix-chart'] = Object.fromEntries(Object.entries(v).filter(([c]) => c !== 'comment').map(([c, cv]) => [c, cv.value]))
     else if (k === 'reflecta') colors.reflecta = Object.fromEntries(Object.entries(v).filter(([r]) => r !== 'comment').map(([r, rv]) => [r, rv.value]))
     else if (k === 'azul-tint') for (const [a, av] of Object.entries(v)) if (a !== 'comment') colors[`vix-azul-${a}`] = av.value
     else if (k === 'callout') {
