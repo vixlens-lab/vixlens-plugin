@@ -1,5 +1,6 @@
 import { CheckCircle, XCircle, WarningCircle } from '@phosphor-icons/react'
 import { Section, SubTitle } from '../Section.jsx'
+import { DosDonts } from '../componentes/ComponentDocs.jsx'
 import tokens from '../../data/tokens.js'
 
 // WCAG 2.1 — cálculo real de contraste (ratios computados, não chutados).
@@ -119,7 +120,7 @@ export default function AcessibilidadeSection() {
   return (
     <Section
       id="acessibilidade"
-      eyebrow="08 — Fundamentos"
+      eyebrow="10 — Fundamentos"
       title="Acessibilidade"
       desc="Contraste de cor conforme WCAG 2.1. Todo par texto/fundo da marca testado — mira AA no mínimo."
     >
@@ -201,6 +202,110 @@ export default function AcessibilidadeSection() {
         Referência de contraste de UI (bordas, ícones, foco): mínimo 3.0:1 contra o fundo adjacente. Texto grande = a partir de 18px, ou
         14px em negrito. Ratios acima computados em tempo real a partir dos tokens da marca.
       </p>
+
+      {/* ─────────────────────────────────────────────────────────────
+          Acessibilidade além do contraste — foco, teclado, movimento, cor
+         ───────────────────────────────────────────────────────────── */}
+
+      <SubTitle className="mt-12">Foco visível</SubTitle>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-vix-preto">
+        Todo elemento interativo mostra um anel de foco quando alcançado por teclado. O DS aplica{' '}
+        <code className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-[12px] text-vix-azul">focus-visible:ring-[3px] focus-visible:ring-ring/30</code>{' '}
+        em botões, inputs e controles. Nunca remova o <code className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-[12px] text-vix-azul">outline</code> sem
+        colocar um substituto visível — foco invisível deixa quem navega por teclado sem saber onde está.
+      </p>
+      <div className="mb-4 rounded-vix-card border border-gray-200 bg-white p-8">
+        <div className="flex flex-wrap items-center gap-6">
+          <button
+            type="button"
+            className="rounded-vix-button bg-vix-preto px-5 py-2.5 text-sm font-semibold text-white ring-[3px] ring-ring/30"
+          >
+            Botão com foco
+          </button>
+          <input
+            readOnly
+            value="Campo com foco"
+            aria-label="Exemplo de campo com anel de foco"
+            className="rounded-vix-input border border-vix-preto bg-white px-4 py-2.5 text-sm text-vix-preto outline-none ring-[3px] ring-ring/30"
+          />
+          <span className="font-mono text-[11px] text-gray-400">ring-[3px] · ring-ring/30</span>
+        </div>
+      </div>
+
+      <SubTitle className="mt-12">Navegação por teclado</SubTitle>
+      <p className="mb-5 max-w-3xl text-sm leading-relaxed text-vix-preto">
+        A interface inteira funciona sem mouse. Percorra com Tab e confirme cada item:
+      </p>
+      <ul className="mb-4 grid grid-cols-1 gap-3 md:grid-cols-2">
+        {[
+          'Tudo alcançável por Tab, na mesma ordem em que aparece na tela.',
+          'Enter e Espaço ativam botões e controles.',
+          'Esc fecha modais, sheets e overlays abertos.',
+          'O foco fica preso dentro de modais enquanto estão abertos.',
+          'Sem armadilha de foco — nada prende o Tab fora de um overlay.',
+          'Setas navegam dentro de grupos (radio, tabs, select).',
+        ].map((t) => (
+          <li key={t} className="flex gap-2.5 text-[13px] leading-relaxed text-vix-preto">
+            <CheckCircle weight="fill" className="mt-0.5 h-4 w-4 shrink-0 text-[#00782D]" />
+            <span>{t}</span>
+          </li>
+        ))}
+      </ul>
+
+      <SubTitle className="mt-12">Movimento reduzido</SubTitle>
+      <p className="mb-5 max-w-3xl text-sm leading-relaxed text-vix-preto">
+        Quem ativa <code className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-[12px] text-vix-azul">prefers-reduced-motion</code> no sistema pediu
+        menos movimento — respeite. Mantenha só transições essenciais (foco, abrir/fechar) e corte parallax, autoplay e deslocamentos grandes de tela.
+      </p>
+      <div className="mb-4 overflow-x-auto rounded-vix-input border border-gray-200 bg-gray-50 p-5">
+        <pre className="font-mono text-[12px] leading-relaxed text-vix-preto">
+          <code>{`@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+// Tailwind: use a variante motion-reduce
+<div className="transition-transform motion-reduce:transition-none" />`}</code>
+        </pre>
+      </div>
+
+      <SubTitle className="mt-12">Além da cor (daltonismo)</SubTitle>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-vix-preto">
+        Cor nunca é o único sinal. Se a diferença entre &ldquo;deu certo&rdquo; e &ldquo;deu erro&rdquo; for só verde vs. vermelho, quem tem daltonismo
+        não distingue. Todo estado carrega <b className="text-vix-preto">ícone + cor + texto</b>. Os callouts do DS já seguem isso: cada um leva um ícone
+        próprio além da cor de fundo.
+      </p>
+      <div className="mb-6 flex flex-col gap-3">
+        <div className="flex items-center gap-2.5 rounded-vix-input border border-[#00782D]/25 bg-[#EDFBF4] px-4 py-3 text-[13px] text-[#00782D]">
+          <CheckCircle weight="fill" className="h-4 w-4 shrink-0" />
+          <span>Cadastro salvo com sucesso.</span>
+        </div>
+        <div className="flex items-center gap-2.5 rounded-vix-input border border-red-200 bg-red-50 px-4 py-3 text-[13px] text-red-600">
+          <XCircle weight="fill" className="h-4 w-4 shrink-0" />
+          <span>Não foi possível salvar. Verifique os campos destacados.</span>
+        </div>
+      </div>
+      <p className="mb-8 max-w-3xl text-sm leading-relaxed text-vix-preto">
+        Alvo de toque mínimo de <b className="text-vix-preto">44×44px</b> em qualquer controle clicável — dedos não miram como cursores. Botões,
+        ícones-botão e links de ação respeitam esse mínimo.
+      </p>
+
+      <DosDonts
+        dos={[
+          'Anel de foco visível em todo elemento interativo (focus-visible:ring).',
+          'Ícone + cor + texto em cada estado de erro, sucesso e alerta.',
+          'Respeitar prefers-reduced-motion: só movimento essencial.',
+          'Alvo de toque mínimo de 44×44px em controles clicáveis.',
+        ]}
+        donts={[
+          'outline:none sem substituto — foco invisível ao teclado.',
+          'Comunicar status só por cor (verde/vermelho), sem ícone nem texto.',
+          'Autoplay, parallax ou movimento grande para quem pediu reduzir.',
+          'Áreas de clique menores que 44px espremidas lado a lado.',
+        ]}
+      />
     </Section>
   )
 }

@@ -69,6 +69,18 @@ export function CopyButton({ value, label, tone = 'light', size = 14, className 
   )
 }
 
+// Bloco de código escuro com botão de copiar (canto superior direito)
+export function CodeBlock({ code, className = '' }) {
+  return (
+    <div className={`group relative overflow-hidden rounded-vix-input bg-vix-preto ${className}`}>
+      <pre className="overflow-x-auto px-4 py-3.5 pr-12 font-mono text-[12.5px] leading-relaxed text-white/90">
+        <code>{code}</code>
+      </pre>
+      <CopyButton value={code} label="código" tone="dark" className="absolute right-2 top-2" />
+    </div>
+  )
+}
+
 // Valor clicável (mono por padrão) — o texto inteiro copia; ícone aparece no hover
 export function CopyValue({ value, children, tone = 'light', mono = true, size = 12, className = '' }) {
   const { copied, copy } = useCopy()

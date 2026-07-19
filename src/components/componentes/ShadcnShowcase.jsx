@@ -19,13 +19,37 @@ import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, Dialog
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from '@/components/ui/tooltip'
 import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover'
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components/ui/table'
-import { WarningCircle } from '@phosphor-icons/react'
+import { WarningCircle, CaretDown } from '@phosphor-icons/react'
+import { PropsTable } from './ComponentDocs.jsx'
+import shadcnProps from '../../data/shadcnProps.js'
 
-function Cell({ title, children }) {
+/**
+ * PropsDocs — bloco <details> nativo, discreto, com a doc de props do componente.
+ * docKey: chave em shadcnProps. label opcional exibido ao lado de "Props".
+ */
+function PropsDocs({ docKey, label }) {
+  const entry = shadcnProps[docKey]
+  if (!entry) return null
+  return (
+    <details className="group mt-1 w-full border-t border-gray-100 pt-3">
+      <summary className="flex cursor-pointer list-none items-center gap-1.5 text-[11px] font-medium uppercase tracking-[0.1em] text-gray-400 transition-colors hover:text-vix-preto [&::-webkit-details-marker]:hidden">
+        <CaretDown size={11} weight="bold" className="transition-transform duration-200 group-open:rotate-180" />
+        Props{label ? <span className="text-gray-300 normal-case tracking-normal">· {label}</span> : null}
+      </summary>
+      <div className="mt-3 flex flex-col gap-3">
+        <p className="text-[12px] leading-relaxed text-gray-500">{entry.uso}</p>
+        <PropsTable rows={entry.props} />
+      </div>
+    </details>
+  )
+}
+
+function Cell({ title, children, docKey }) {
   return (
     <div className="flex flex-col gap-4 rounded-vix-input border border-gray-200 bg-white p-6">
       <div className="text-xs font-bold uppercase tracking-[0.08em] text-gray-500">{title}</div>
       <div className="flex flex-1 flex-wrap items-center gap-4">{children}</div>
+      {docKey && <PropsDocs docKey={docKey} />}
     </div>
   )
 }
@@ -42,19 +66,19 @@ export default function ShadcnShowcase() {
       >
         <SubTitle>Seleção & entrada</SubTitle>
         <div className="mb-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <Cell title="Switch">
+          <Cell title="Switch" docKey="switch">
             <Switch defaultChecked /> <Switch />
           </Cell>
-          <Cell title="Checkbox">
+          <Cell title="Checkbox" docKey="checkbox">
             <div className="flex items-center gap-2"><Checkbox id="c1" defaultChecked /><Label htmlFor="c1">Aceito</Label></div>
           </Cell>
-          <Cell title="Radio">
+          <Cell title="Radio" docKey="radio">
             <RadioGroup defaultValue="a" className="flex gap-4">
               <div className="flex items-center gap-2"><RadioGroupItem value="a" id="ra" /><Label htmlFor="ra">Opção A</Label></div>
               <div className="flex items-center gap-2"><RadioGroupItem value="b" id="rb" /><Label htmlFor="rb">Opção B</Label></div>
             </RadioGroup>
           </Cell>
-          <Cell title="Select">
+          <Cell title="Select" docKey="select">
             <Select>
               <SelectTrigger className="w-48"><SelectValue placeholder="Escolha uma lente" /></SelectTrigger>
               <SelectContent>
@@ -64,30 +88,30 @@ export default function ShadcnShowcase() {
               </SelectContent>
             </Select>
           </Cell>
-          <Cell title="Slider">
+          <Cell title="Slider" docKey="slider">
             <div className="w-full">
               <Slider value={slider} onValueChange={setSlider} max={100} step={1} />
               <div className="mt-2 font-mono text-xs text-gray-500">{slider[0]}%</div>
             </div>
           </Cell>
-          <Cell title="Textarea">
+          <Cell title="Textarea" docKey="textarea">
             <Textarea placeholder="Observações do pedido..." className="min-h-[80px]" />
           </Cell>
         </div>
 
         <SubTitle>Feedback & dados</SubTitle>
         <div className="mb-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <Cell title="Badge">
+          <Cell title="Badge" docKey="badge">
             <Badge>Novo</Badge> <Badge variant="secondary">Beta</Badge> <Badge variant="outline">v0.4</Badge> <Badge variant="destructive">Crítico</Badge>
           </Cell>
-          <Cell title="Progress">
+          <Cell title="Progress" docKey="progress">
             <div className="w-full"><Progress value={slider[0]} /></div>
           </Cell>
-          <Cell title="Avatar">
+          <Cell title="Avatar" docKey="avatar">
             <Avatar><AvatarFallback>VX</AvatarFallback></Avatar>
             <Avatar><AvatarFallback className="bg-vix-amarelo text-vix-preto">MK</AvatarFallback></Avatar>
           </Cell>
-          <Cell title="Separator">
+          <Cell title="Separator" docKey="separator">
             <div className="w-full text-sm text-gray-500">Acima<Separator className="my-3" />Abaixo</div>
           </Cell>
           <div className="md:col-span-2">
@@ -96,11 +120,13 @@ export default function ShadcnShowcase() {
               <AlertTitle>Atenção</AlertTitle>
               <AlertDescription>Alerta com o tema Vixlens. Barra e ícone on-brand.</AlertDescription>
             </Alert>
+            <PropsDocs docKey="alert" label="Alert" />
           </div>
         </div>
 
         <SubTitle>Overlays</SubTitle>
-        <div className="mb-10 flex flex-wrap gap-4">
+        <div className="mb-10">
+          <div className="flex flex-wrap gap-4">
           <Dialog>
             <DialogTrigger asChild><Button variant="dark">Abrir Dialog</Button></DialogTrigger>
             <DialogContent>
@@ -122,6 +148,12 @@ export default function ShadcnShowcase() {
             <TooltipTrigger asChild><Button variant="secondary">Hover pro Tooltip</Button></TooltipTrigger>
             <TooltipContent>Tooltip Vixlens</TooltipContent>
           </Tooltip>
+          </div>
+          <div className="mt-5 flex flex-col gap-1">
+            <PropsDocs docKey="dialog" label="Dialog" />
+            <PropsDocs docKey="popover" label="Popover" />
+            <PropsDocs docKey="tooltip" label="Tooltip" />
+          </div>
         </div>
 
         <SubTitle>Navegação & conteúdo</SubTitle>
@@ -137,12 +169,14 @@ export default function ShadcnShowcase() {
               <TabsContent value="lentes" className="pt-4 text-[13px] text-gray-600">Linha Freevix, 11 produtos.</TabsContent>
               <TabsContent value="ar" className="pt-4 text-[13px] text-gray-600">Tratamentos antirreflexo.</TabsContent>
             </Tabs>
+            <PropsDocs docKey="tabs" label="Tabs" />
           </div>
           <div className="rounded-vix-input border border-gray-200 bg-white p-6">
             <Accordion type="single" collapsible>
               <AccordionItem value="1"><AccordionTrigger>O que é a Matriz Marca Própria?</AccordionTrigger><AccordionContent>Espelho da tabela Vixlens: material, índice e desenho da lente.</AccordionContent></AccordionItem>
               <AccordionItem value="2"><AccordionTrigger>Como funciona o AR Reflecta?</AccordionTrigger><AccordionContent>Reflexo residual mínimo, cada cor é um tipo de tratamento.</AccordionContent></AccordionItem>
             </Accordion>
+            <PropsDocs docKey="accordion" label="Accordion" />
           </div>
         </div>
 
@@ -157,6 +191,9 @@ export default function ShadcnShowcase() {
               <TableRow><TableCell>Reflecta Guard</TableCell><TableCell>Reflecta</TableCell><TableCell>SVG · PNG · PDF · WebP</TableCell></TableRow>
             </TableBody>
           </Table>
+        </div>
+        <div className="mt-4">
+          <PropsDocs docKey="table" label="Table" />
         </div>
       </Section>
     </TooltipProvider>

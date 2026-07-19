@@ -3,9 +3,9 @@ name: vixlens-brand
 description: Carrega o sistema completo de marca Vixlens — paleta, tipografia, voz e vocabulário canônico para documentos institucionais B2B. Use quando o usuário pedir qualquer documento, texto ou comunicação da Vixlens, ou quando mencionar "padrão Vixlens", "marca Vixlens", "no padrão Vix", "identidade Vixlens".
 ---
 
-# Skill Mestre — Vixlens Brand (DS 5.0)
+# Skill Mestre — Vixlens Brand
 
-> **⚠️ Versão do DS:** vigente = **V5.0**. A fonte da versão é sempre o DS vivo em `ds.vixlens.com.br` — confirme a versão atual lá antes de aplicar; se divergir deste arquivo, o DS vivo manda.
+> **⚠️ Sempre alinhe ao DS online:** a fonte da verdade é o DS vivo em `ds.vixlens.com.br` — confirme lá antes de aplicar; se algum valor divergir deste arquivo, o DS vivo manda. Não pine versão.
 
 Ao ser invocada, carregue as três referências abaixo e aplique em qualquer output gerado nesta sessão:
 

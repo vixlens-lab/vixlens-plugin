@@ -42,6 +42,18 @@ export default function Sidebar({ open, onClose }) {
             Laboratório Óptico
           </div>
           <div className="mt-1 text-[11px] text-white/30">Design System · {version}</div>
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new Event('open-search'))}
+            className="mt-4 flex w-full items-center gap-2 rounded-vix-input border border-white/15 bg-white/5 px-3 py-2 text-[13px] text-white/50 transition-colors hover:border-white/25 hover:text-white/80"
+          >
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+            Buscar
+            <kbd className="ml-auto rounded border border-white/15 px-1.5 py-0.5 font-mono text-[10px] text-white/40">⌘K</kbd>
+          </button>
         </div>
 
         {/* nav — única área que scrolla */}

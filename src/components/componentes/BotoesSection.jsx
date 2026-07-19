@@ -2,6 +2,7 @@ import { ArrowRight } from '@phosphor-icons/react'
 import { Section, SubTitle } from '../Section.jsx'
 import { Button } from '../ui/button.jsx'
 import { PropsTable, DosDonts } from './ComponentDocs.jsx'
+import { CodeBlock } from '../Copy.jsx'
 
 const BUTTON_PROPS = [
   { prop: 'variant', tipo: 'default | dark | secondary | outline | ghost | destructive | link', padrao: '"default"', desc: 'Estilo visual. default = amarelo (CTA), dark = preto sobre fundo claro.' },
@@ -125,6 +126,16 @@ export default function BotoesSection() {
           'Texto genérico como "Clique aqui".',
           'Usar variant link como botão de destaque.',
         ]}
+      />
+
+      <SubTitle className="mt-12">Código</SubTitle>
+      <CodeBlock
+        code={`import { Button } from '@/components/ui/button'
+
+<Button>Ação</Button>
+<Button variant="dark">Ação</Button>
+<Button variant="outline">Ação</Button>
+<Button size="lg">Ação</Button>`}
       />
     </Section>
   )

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Sidebar from './components/Sidebar.jsx'
+import Search from './components/Search.jsx'
 import Hero from './components/Hero.jsx'
 import BackToTop from './components/BackToTop.jsx'
 import MarcaSection from './components/marca/MarcaSection.jsx'
@@ -7,8 +8,10 @@ import FotografiaSection from './components/marca/FotografiaSection.jsx'
 import CoresSection from './components/fundamentos/CoresSection.jsx'
 import TipografiaSection from './components/fundamentos/TipografiaSection.jsx'
 import TokensSection from './components/fundamentos/TokensSection.jsx'
+import ElevacaoSection from './components/fundamentos/ElevacaoSection.jsx'
 import IconografiaSection from './components/fundamentos/IconografiaSection.jsx'
 import EspacamentoSection from './components/fundamentos/EspacamentoSection.jsx'
+import GridSection from './components/fundamentos/GridSection.jsx'
 import AcessibilidadeSection from './components/fundamentos/AcessibilidadeSection.jsx'
 import VozTomSection from './components/voz/VozTomSection.jsx'
 import VocabularioSection from './components/voz/VocabularioSection.jsx'
@@ -25,6 +28,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white font-vix">
+      <Search />
       <Sidebar open={navOpen} onClose={() => setNavOpen(false)} />
 
       {/* botão hamburguer (mobile) */}
@@ -45,8 +49,10 @@ export default function App() {
         <CoresSection />
         <TipografiaSection />
         <TokensSection />
+        <ElevacaoSection />
         <IconografiaSection />
         <EspacamentoSection />
+        <GridSection />
         <AcessibilidadeSection />
         <VozTomSection />
         <VocabularioSection />

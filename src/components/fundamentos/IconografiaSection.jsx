@@ -26,7 +26,7 @@ export default function IconografiaSection() {
   return (
     <Section
       id="iconografia"
-      eyebrow="06 — Fundamentos"
+      eyebrow="07 — Fundamentos"
       title="Iconografia"
       desc="Phosphor é o sistema principal de ícones da Vixlens (UI, documentos, comunicações); os componentes shadcn/ui usam Lucide internamente. Regular para UI geral, Bold em botões, Fill em estados ativos. Nunca misturar pesos na mesma tela."
     >

@@ -2,6 +2,7 @@ import { Section, SubTitle } from '../Section.jsx'
 import { Input } from '../ui/input.jsx'
 import { Button } from '../ui/button.jsx'
 import { PropsTable, DosDonts } from './ComponentDocs.jsx'
+import { CodeBlock } from '../Copy.jsx'
 
 const INPUT_PROPS = [
   { prop: 'type', tipo: 'text | email | password | number …', padrao: '"text"', desc: 'Tipo do campo HTML — define teclado, validação e mascaramento.' },
@@ -86,6 +87,15 @@ export default function InputsSection() {
           'Deixar o campo sem indicação visível de foco.',
           'Largura minúscula para um dado longo (e-mail, endereço).',
         ]}
+      />
+
+      <SubTitle className="mt-12">Código</SubTitle>
+      <CodeBlock
+        code={`import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+
+<Label htmlFor="otica">Nome da ótica</Label>
+<Input id="otica" placeholder="Ex: Ótica Vixlens" />`}
       />
     </Section>
   )

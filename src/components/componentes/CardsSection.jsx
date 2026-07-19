@@ -2,6 +2,7 @@ import { Section, SubTitle } from '../Section.jsx'
 import { ArrowRight, Eye } from '@phosphor-icons/react'
 import { Button } from '../ui/button.jsx'
 import { PropsTable, DosDonts } from './ComponentDocs.jsx'
+import { CodeBlock } from '../Copy.jsx'
 
 const CARD_ANATOMY = [
   { prop: 'Card', tipo: 'container', padrao: '—', desc: 'Raiz do card — radius 32, padding 32, fundo branco e sombra suave.' },
@@ -154,6 +155,19 @@ export default function CardsSection() {
           'Sombra pesada — a sombra é suave.',
           'Conteúdo espremido, sem o padding de 32.',
         ]}
+      />
+
+      <SubTitle className="mt-12">Código</SubTitle>
+      <CodeBlock
+        code={`import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
+
+<Card>
+  <CardHeader>
+    <CardTitle>Título</CardTitle>
+    <CardDescription>Descrição curta.</CardDescription>
+  </CardHeader>
+  <CardContent>Conteúdo do card</CardContent>
+</Card>`}
       />
     </Section>
   )

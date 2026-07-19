@@ -22,7 +22,7 @@ export default function EspacamentoSection() {
   return (
     <Section
       id="espacamento"
-      eyebrow="07 — Fundamentos"
+      eyebrow="08 — Fundamentos"
       title="Espaçamento"
       desc="Sistema derivado do Figma Vixlens 3.0. Base 8px, âncora 40px (space-8). Nunca inventar valores intermediários como 35 ou 45px."
     >

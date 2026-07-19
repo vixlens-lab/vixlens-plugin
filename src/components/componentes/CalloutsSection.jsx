@@ -1,5 +1,5 @@
 import { Section, SubTitle } from '../Section.jsx'
-import { CopyValue } from '../Copy.jsx'
+import { CopyValue, CodeBlock } from '../Copy.jsx'
 import tokens from '../../data/tokens.js'
 import { Star, Info, WarningCircle, CheckCircle } from '@phosphor-icons/react'
 import { PropsTable, DosDonts } from './ComponentDocs.jsx'
@@ -62,6 +62,22 @@ export default function CalloutsSection() {
           'Empilhar muitos callouts seguidos.',
           'Usar a cor sem o significado correspondente.',
         ]}
+      />
+
+      <SubTitle className="mt-12">Código</SubTitle>
+      <CodeBlock
+        code={`import { Star } from '@phosphor-icons/react'
+
+<div
+  className="flex items-start gap-3 rounded-r-lg border-l-4 p-4"
+  style={{ background: '#FFFBEB', borderColor: '#FCD341' }}
+>
+  <Star weight="fill" style={{ color: '#FCD341' }} />
+  <div>
+    <div className="font-bold">Destaque</div>
+    <p>Mensagem do callout.</p>
+  </div>
+</div>`}
       />
     </Section>
   )
