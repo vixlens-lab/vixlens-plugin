@@ -43,25 +43,41 @@ export default function CoresSection() {
       title="Cores"
       desc="A paleta Vixlens é intencionalmente restrita. Quatro cores primárias, usadas com rigor. Preto lidera — é a cor de maior presença. Amarelo e Azul são de impacto. Branco é estrutural."
     >
-      {/* Regra 60-30-10 — bloco de destaque */}
-      <div className="mb-14 overflow-hidden rounded-vix-card border border-gray-200">
-        <div className="flex h-40 w-full">
-          <div className="flex w-[60%] flex-col justify-end bg-vix-preto p-5">
-            <div className="text-3xl font-extrabold text-white md:text-5xl">60%</div>
-            <div className="mt-1 text-[13px] font-medium text-white/60">Preto &amp; Branco — dominam todo layout</div>
-          </div>
-          <div className="flex w-[30%] flex-col justify-end bg-vix-amarelo p-5">
-            <div className="text-3xl font-extrabold text-vix-preto md:text-5xl">30%</div>
-            <div className="mt-1 text-[13px] font-medium text-vix-preto/70">Amarelo — destaques, CTAs, faixas</div>
-          </div>
-          <div className="flex w-[10%] flex-col justify-end bg-vix-azul p-3">
-            <div className="text-xl font-extrabold text-white md:text-3xl">10%</div>
-            <div className="mt-1 hidden text-[11px] font-medium text-white/70 lg:block">Azul — acento</div>
-          </div>
+      {/* Regra 60-30-10 — barra de proporção + legenda */}
+      <div className="mb-14 rounded-vix-card border border-gray-200 p-6 md:p-8">
+        <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+          <span className="text-[15px] font-bold text-vix-preto">Regra 60-30-10</span>
+          <span className="text-[13px] text-gray-500">a proporção que mantém a identidade coesa.</span>
         </div>
-        <div className="flex items-center gap-2 border-t border-gray-200 bg-white px-5 py-3">
-          <span className="text-xs font-bold uppercase tracking-[0.1em] text-vix-preto">Regra 60-30-10</span>
-          <span className="text-[13px] text-gray-500">— a proporção que mantém a identidade coesa. Azul nunca domina; nunca em hero ou header.</span>
+
+        <div className="mt-5 flex h-5 w-full overflow-hidden rounded-full">
+          <div className="w-[60%] bg-vix-preto" />
+          <div className="w-[30%] bg-vix-amarelo" />
+          <div className="w-[10%] bg-vix-azul" />
+        </div>
+
+        <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-3">
+          <div className="flex items-start gap-3">
+            <span className="mt-1 h-9 w-9 shrink-0 rounded-xl bg-vix-preto" />
+            <div>
+              <div className="text-xl font-extrabold leading-tight text-vix-preto">60%</div>
+              <div className="text-[13px] leading-snug text-gray-500">Preto &amp; Branco — dominam todo layout</div>
+            </div>
+          </div>
+          <div className="flex items-start gap-3">
+            <span className="mt-1 h-9 w-9 shrink-0 rounded-xl bg-vix-amarelo" />
+            <div>
+              <div className="text-xl font-extrabold leading-tight text-vix-preto">30%</div>
+              <div className="text-[13px] leading-snug text-gray-500">Amarelo — destaques, CTAs, faixas</div>
+            </div>
+          </div>
+          <div className="flex items-start gap-3">
+            <span className="mt-1 h-9 w-9 shrink-0 rounded-xl bg-vix-azul" />
+            <div>
+              <div className="text-xl font-extrabold leading-tight text-vix-preto">10%</div>
+              <div className="text-[13px] leading-snug text-gray-500">Azul — acento de último recurso. Nunca em hero ou header.</div>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -26,7 +26,7 @@ const FREEVIX = [
 ]
 const OUTROS = [
   ['Astera', 'Lente para controle de miopia infantil'],
-  ['VIX Total', 'Produto âncora da linha'],
+  ['VIX Total', 'Multifocal de entrada — produto âncora da linha'],
   ['Tecnologia Vix Slim', 'Lentes até 30% mais finas e leves para altas dioptrias'],
 ]
 const REFLECTA = [

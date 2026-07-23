@@ -73,7 +73,7 @@ export function CopyButton({ value, label, tone = 'light', size = 14, className 
 export function CodeBlock({ code, className = '' }) {
   return (
     <div className={`group relative overflow-hidden rounded-vix-input bg-vix-preto ${className}`}>
-      <pre className="overflow-x-auto px-4 py-3.5 pr-12 font-mono text-[12.5px] leading-relaxed text-white/90">
+      <pre className="overflow-x-auto whitespace-pre-wrap break-words px-4 py-3.5 pr-12 font-mono text-[12.5px] leading-relaxed text-white/90">
         <code>{code}</code>
       </pre>
       <CopyButton value={code} label="código" tone="dark" className="absolute right-2 top-2" />

@@ -53,3 +53,23 @@ body {
   color: var(--vix-preto);
   -webkit-font-smoothing: antialiased;
 }
+
+/* scroll horizontal discreto — todo container com overflow-x-auto (carrossel, tabelas, código) */
+.overflow-x-auto {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(29, 29, 31, 0.15) transparent;
+}
+.overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: rgba(29, 29, 31, 0.15);
+  border-radius: 999px;
+}
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: rgba(29, 29, 31, 0.3);
+}

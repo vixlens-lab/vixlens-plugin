@@ -28,9 +28,22 @@ const ORDEM = ['novo', 'melhoria', 'correcao']
 // Timeline — mais recente em cima. Dados reais do DS.
 const VERSOES = [
   {
+    versao: 'v0.9.1',
+    data: '23/07/2026',
+    atual: true,
+    mudancas: [
+      ['correcao', 'Selects do Playground: seta com respiro da borda (chevron próprio)'],
+      ['correcao', 'Blocos de código quebram linha no mobile (nada mais cortado) + card do Playground sem estourar na horizontal'],
+      ['melhoria', 'Regra 60-30-10 redesenhada — barra de proporção + legenda (mobile e desktop)'],
+      ['correcao', 'Fotografia: caixas "Sem AR" / "Reflecta AR" agora embaixo, cada uma dentro do seu lado da foto'],
+      ['melhoria', 'Scroll horizontal fino e discreto em todo o site (carrossel, tabelas, código)'],
+      ['correcao', 'Accordion: removida a linha dupla (underline do título + borda do último item)'],
+      ['correcao', 'Vocabulário: VIX Total marcada como multifocal de entrada'],
+    ],
+  },
+  {
     versao: 'v0.9.0',
     data: '19/07/2026',
-    atual: true,
     mudancas: [
       ['novo', 'Data-viz — gráficos (shadcn Charts / recharts) com paleta categórica Vixlens + guia de cor pra dado'],
       ['novo', 'Playground — controles de prop ao vivo (Button, Badge, Alert, Input) com o código atualizando junto'],
@@ -179,7 +192,7 @@ export default function ChangelogSection() {
     >
       {/* Esquema de versionamento — SemVer */}
       <div className="mb-10 flex flex-col gap-4 rounded-vix-card border border-gray-100 bg-vix-cinza-card p-5 sm:flex-row sm:items-center sm:gap-6">
-        <VersaoBadge versao="v0.9.0" atual />
+        <VersaoBadge versao="v0.9.1" atual />
         <p className="text-[13px] leading-relaxed text-gray-600">
           Seguimos <span className="font-bold text-vix-preto">Semantic Versioning</span> (MAJOR.MINOR.PATCH):{' '}
           <span className="font-bold text-vix-preto">MAJOR</span> muda quando algo quebra,{' '}

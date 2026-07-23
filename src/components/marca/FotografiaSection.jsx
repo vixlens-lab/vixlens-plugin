@@ -89,13 +89,13 @@ export default function FotografiaSection() {
         <div className="absolute left-1/2 top-4 -translate-x-1/2 whitespace-nowrap rounded-full bg-vix-preto/85 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-vix-amarelo backdrop-blur">
           Diferença visual do tratamento AR
         </div>
-        <div className="absolute left-[8%] top-1/2 -translate-y-1/2 rounded-[10px] bg-[#dc2626]/90 px-4 py-2.5 text-center backdrop-blur">
+        <div className="absolute bottom-3 left-3 right-[53%] rounded-[10px] bg-[#dc2626]/90 px-3 py-2 text-center backdrop-blur md:bottom-5 md:left-[5%] md:right-[55%]">
           <div className="mb-0.5 text-[10px] font-bold uppercase tracking-[0.1em] text-white">✗ Sem AR</div>
-          <div className="text-[11px] text-white/80">Reflexo opaco · olhos encobertos</div>
+          <div className="text-[11px] leading-snug text-white/80">Reflexo opaco · olhos encobertos</div>
         </div>
-        <div className="absolute right-[8%] top-1/2 -translate-y-1/2 rounded-[10px] bg-[#10a166]/90 px-4 py-2.5 text-center backdrop-blur">
+        <div className="absolute bottom-3 left-[53%] right-3 rounded-[10px] bg-[#10a166]/90 px-3 py-2 text-center backdrop-blur md:bottom-5 md:left-[55%] md:right-[5%]">
           <div className="mb-0.5 text-[10px] font-bold uppercase tracking-[0.1em] text-white">✓ Reflecta AR</div>
-          <div className="text-[11px] text-white/80">Residual mínimo · olhos visíveis</div>
+          <div className="text-[11px] leading-snug text-white/80">Residual mínimo · olhos visíveis</div>
         </div>
       </div>
 

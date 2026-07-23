@@ -1,4 +1,5 @@
 import { useState, useId } from 'react'
+import { CaretDown } from '@phosphor-icons/react'
 import { CodeBlock } from '../Copy.jsx'
 
 // Playground reutilizável — controles ao vivo.
@@ -24,7 +25,7 @@ export function Playground({ title, controls = [], render, code }) {
       )}
 
       {/* Preview */}
-      <div className="flex min-h-[140px] items-center justify-center bg-vix-cinza-card/60 px-6 py-8">
+      <div className="flex min-h-[140px] items-center justify-center overflow-hidden bg-vix-cinza-card/60 px-6 py-8 [&>*]:max-w-full">
         {render(state)}
       </div>
 
@@ -43,18 +44,25 @@ export function Playground({ title, controls = [], render, code }) {
               </label>
 
               {c.type === 'select' ? (
-                <select
-                  id={id}
-                  value={state[c.key]}
-                  onChange={(e) => set(c.key, e.target.value)}
-                  className="rounded-vix-input border border-gray-200 bg-white px-3 py-1.5 text-sm text-vix-preto transition-[color,box-shadow] focus:border-vix-preto focus:outline-none focus:ring-[3px] focus:ring-ring/30"
-                >
-                  {(c.options || []).map((o) => (
-                    <option key={o.value} value={o.value}>
-                      {o.label}
-                    </option>
-                  ))}
-                </select>
+                <span className="relative inline-flex w-fit">
+                  <select
+                    id={id}
+                    value={state[c.key]}
+                    onChange={(e) => set(c.key, e.target.value)}
+                    className="appearance-none rounded-vix-input border border-gray-200 bg-white py-1.5 pl-3 pr-10 text-sm text-vix-preto transition-[color,box-shadow] focus:border-vix-preto focus:outline-none focus:ring-[3px] focus:ring-ring/30"
+                  >
+                    {(c.options || []).map((o) => (
+                      <option key={o.value} value={o.value}>
+                        {o.label}
+                      </option>
+                    ))}
+                  </select>
+                  <CaretDown
+                    size={13}
+                    weight="bold"
+                    className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400"
+                  />
+                </span>
               ) : (
                 <button
                   id={id}
@@ -82,8 +90,8 @@ export function Playground({ title, controls = [], render, code }) {
       </div>
 
       {/* Código */}
-      <div className="border-t border-gray-200 p-4">
-        <CodeBlock code={code(state)} />
+      <div className="min-w-0 border-t border-gray-200 p-4">
+        <CodeBlock code={code(state)} className="min-w-0" />
       </div>
     </div>
   )
