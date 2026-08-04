@@ -44,7 +44,7 @@ export default function Sidebar({ open, onClose }) {
           <div className="mt-3 text-[10px] font-bold uppercase tracking-[0.18em] text-vix-amarelo">
             Laboratório Óptico
           </div>
-          <div className="mt-1 text-[11px] text-white/30">Design System · {version}</div>
+          <div className="mt-1 text-[11px] text-white/60">Design System · {version}</div>
           <button
             type="button"
             onClick={() => window.dispatchEvent(new Event('open-search'))}
@@ -55,7 +55,7 @@ export default function Sidebar({ open, onClose }) {
               <path d="m21 21-4.3-4.3" />
             </svg>
             Buscar
-            <kbd className="ml-auto rounded border border-white/15 px-1.5 py-0.5 font-mono text-[10px] text-white/40">⌘K</kbd>
+            <kbd className="ml-auto rounded border border-white/15 px-1.5 py-0.5 font-mono text-[10px] text-white/65">⌘K</kbd>
           </button>
         </div>
 
@@ -74,7 +74,7 @@ export default function Sidebar({ open, onClose }) {
                   >
                     <span className="h-1.5 w-1.5 rounded-full bg-white/20" />
                     {item.label}
-                    <span className="ml-auto rounded-full bg-white/10 px-1.5 py-0.5 text-[9px] font-bold text-white/40">
+                    <span className="ml-auto rounded-full bg-white/10 px-1.5 py-0.5 text-[9px] font-bold text-white/65">
                       EM BREVE
                     </span>
                   </span>
@@ -102,7 +102,7 @@ export default function Sidebar({ open, onClose }) {
           ))}
         </nav>
 
-        <div className="shrink-0 border-t border-white/10 px-6 py-5 text-[11px] text-white/30">
+        <div className="shrink-0 border-t border-white/10 px-6 py-5 text-[11px] text-white/60">
           Vixlens © 2026
         </div>
       </aside>

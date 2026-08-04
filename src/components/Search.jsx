@@ -124,23 +124,23 @@ export default function Search() {
         className="relative w-full max-w-lg overflow-hidden rounded-vix-card bg-white shadow-2xl ring-1 ring-black/10"
       >
         <div className="flex items-center gap-3 border-b border-gray-100 px-4 py-3">
-          <MagnifyingGlass size={18} className="shrink-0 text-gray-500" />
+          <MagnifyingGlass size={18} className="shrink-0 text-gray-600" />
           <input
             ref={inputRef}
             value={q}
             onChange={(e) => setQ(e.target.value)}
             onKeyDown={onKeyDown}
             placeholder="Buscar seção, token ou componente…"
-            className="flex-1 bg-transparent text-[15px] text-vix-preto outline-none placeholder:text-gray-500"
+            className="flex-1 bg-transparent text-[15px] text-vix-preto outline-none placeholder:text-gray-600"
           />
-          <kbd className="shrink-0 rounded-md border border-gray-200 px-1.5 py-0.5 font-mono text-[10px] text-gray-500">
+          <kbd className="shrink-0 rounded-md border border-gray-200 px-1.5 py-0.5 font-mono text-[10px] text-gray-600">
             esc
           </kbd>
         </div>
 
         <div ref={listRef} className="max-h-[52vh] overflow-y-auto py-2">
           {results.length === 0 ? (
-            <div className="px-4 py-8 text-center text-[13px] text-gray-500">
+            <div className="px-4 py-8 text-center text-[13px] text-gray-600">
               Nada encontrado para “{q}”.
             </div>
           ) : (
@@ -162,15 +162,15 @@ export default function Search() {
                     style={{ background: item.dot || '#606F7F' }}
                   />
                   <span className="text-[14px] font-medium text-vix-preto">{item.label}</span>
-                  <span className="ml-auto text-[11px] text-gray-500">{item.group}</span>
-                  {isActive && <span className="shrink-0 font-mono text-[13px] text-gray-500">↵</span>}
+                  <span className="ml-auto text-[11px] text-gray-600">{item.group}</span>
+                  {isActive && <span className="shrink-0 font-mono text-[13px] text-gray-600">↵</span>}
                 </button>
               )
             })
           )}
         </div>
 
-        <div className="flex items-center gap-4 border-t border-gray-100 bg-gray-50/60 px-4 py-2 text-[11px] text-gray-500">
+        <div className="flex items-center gap-4 border-t border-gray-100 bg-gray-50/60 px-4 py-2 text-[11px] text-gray-600">
           <span><b className="font-mono text-gray-600">↑↓</b> navegar</span>
           <span><b className="font-mono text-gray-600">↵</b> abrir</span>
           <span><b className="font-mono text-gray-600">esc</b> fechar</span>

@@ -28,7 +28,7 @@ export default function BotoesSection() {
           </div>
         </div>
         <div className="rounded-vix-card bg-vix-preto p-8">
-          <SubTitle className="border-white/15 text-white/45">Fundo escuro</SubTitle>
+          <SubTitle className="border-white/15 text-white/65">Fundo escuro</SubTitle>
           <div className="flex flex-wrap items-center gap-4">
             <Button size="lg">Ação principal</Button>
             <Button variant="outlineDark" size="lg">Secundário</Button>

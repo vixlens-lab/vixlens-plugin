@@ -57,7 +57,7 @@ export default function ElevacaoSection() {
 
             <div className="flex items-baseline justify-between gap-2">
               <span className="text-sm font-bold text-vix-preto">{n.nome}</span>
-              <span className="text-[11px] font-bold uppercase tracking-[0.06em] text-gray-500">
+              <span className="text-[11px] font-bold uppercase tracking-[0.06em] text-gray-600">
                 {n.nivel}
               </span>
             </div>

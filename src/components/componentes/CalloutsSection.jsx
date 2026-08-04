@@ -38,9 +38,9 @@ export default function CalloutsSection() {
             <div>
               <div className="text-sm font-bold text-vix-preto">{title}</div>
               <div className="mt-0.5 text-[13px] leading-relaxed text-gray-600">{text}</div>
-              <div className="mt-1.5 flex flex-wrap items-center gap-x-0.5 font-mono text-[10px] uppercase text-gray-500">
-                bg <CopyValue value={c[key].bg} size={11} className="text-[10px] uppercase text-gray-500" />
-                · bar <CopyValue value={c[key].bar} size={11} className="text-[10px] uppercase text-gray-500" />
+              <div className="mt-1.5 flex flex-wrap items-center gap-x-0.5 font-mono text-[10px] uppercase text-gray-600">
+                bg <CopyValue value={c[key].bg} size={11} className="text-[10px] uppercase text-gray-600" />
+                · bar <CopyValue value={c[key].bar} size={11} className="text-[10px] uppercase text-gray-600" />
               </div>
             </div>
           </div>

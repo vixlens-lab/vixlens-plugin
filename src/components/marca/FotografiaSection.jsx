@@ -110,7 +110,7 @@ export default function FotografiaSection() {
             </div>
             <div className="bg-[#FFF0F0] p-3.5">
               <div className="mb-2.5 flex h-[90px] items-center justify-center rounded-[10px] border-[1.5px] border-dashed border-[#FECDD3] bg-gray-100">
-                <e.Icon size={24} className="text-gray-500" />
+                <e.Icon size={24} className="text-gray-600" />
               </div>
               <div className="text-[11px] leading-relaxed text-gray-700">{e.d}</div>
             </div>
@@ -123,7 +123,7 @@ export default function FotografiaSection() {
       <div className="mb-12 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {SPECS.map(([label, val, sub]) => (
           <div key={label} className="rounded-2xl bg-vix-cinza-card p-5">
-            <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.1em] text-gray-500">{label}</div>
+            <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.1em] text-gray-600">{label}</div>
             <div className="text-[22px] font-bold text-vix-preto">{val}</div>
             <div className="mt-1 text-xs text-gray-600">{sub}</div>
           </div>

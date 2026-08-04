@@ -38,7 +38,7 @@ export function Playground({ title, controls = [], render, code }) {
             <div key={c.key} className="flex flex-col gap-1.5">
               <label
                 htmlFor={id}
-                className="text-[11px] font-bold uppercase tracking-[0.08em] text-gray-500"
+                className="text-[11px] font-bold uppercase tracking-[0.08em] text-gray-600"
               >
                 {c.label}
               </label>
@@ -60,7 +60,7 @@ export function Playground({ title, controls = [], render, code }) {
                   <CaretDown
                     size={13}
                     weight="bold"
-                    className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-500"
+                    className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-600"
                   />
                 </span>
               ) : (

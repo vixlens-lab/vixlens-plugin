@@ -42,7 +42,7 @@ export default function CardsSection() {
           {FEATURES.map((f) => (
             <div key={f.t} className="flex min-h-[320px] flex-col rounded-vix-card bg-white p-6">
               <div className="mb-5 flex h-32 items-center justify-center rounded-[36px] bg-vix-cinza-card">
-                <Eye size={32} weight="regular" className="text-gray-300" />
+                <Eye size={32} weight="regular" className="text-gray-600" />
               </div>
               <div className="flex flex-1 flex-col gap-2.5">
                 <div className="text-[22px] font-bold leading-tight text-vix-preto">{f.t}</div>
@@ -60,7 +60,7 @@ export default function CardsSection() {
       <div className="mb-14 grid grid-cols-2 gap-3 md:grid-cols-3">
         {SPECS.map(([k, v]) => (
           <div key={k} className="rounded-lg bg-vix-cinza-card px-3.5 py-3">
-            <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-gray-500">{k}</div>
+            <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-gray-600">{k}</div>
             <div className="mt-0.5 text-[13px] font-bold text-vix-preto">{v}</div>
           </div>
         ))}
@@ -115,7 +115,7 @@ export default function CardsSection() {
         {CARROSSEL.map((p) => (
           <div key={p.n} className="flex w-[200px] shrink-0 flex-col rounded-xl border border-gray-200 bg-white p-4">
             <div className="mb-4 flex h-28 items-center justify-center rounded-lg bg-vix-cinza-card">
-              <Eye size={28} className="text-gray-300" />
+              <Eye size={28} className="text-gray-600" />
             </div>
             <div className="text-[15px] font-bold text-vix-preto">{p.n}</div>
             <div className="mt-0.5 text-xs text-vix-cinza">{p.t}</div>

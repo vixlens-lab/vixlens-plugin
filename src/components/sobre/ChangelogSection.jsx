@@ -19,7 +19,7 @@ const TIPOS = {
     label: 'Correção',
     Icon: Wrench,
     pill: 'bg-vix-cinza-card text-gray-600',
-    dot: 'text-gray-500',
+    dot: 'text-gray-600',
   },
 }
 
@@ -168,7 +168,7 @@ function VersaoCard({ versao }) {
             Atual
           </span>
         )}
-        <span className="font-mono text-[12px] text-gray-500">{versao.data}</span>
+        <span className="font-mono text-[12px] text-gray-600">{versao.data}</span>
       </div>
 
       <div className="flex flex-col gap-5">

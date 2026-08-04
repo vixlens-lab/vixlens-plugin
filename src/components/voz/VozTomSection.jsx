@@ -51,26 +51,26 @@ export default function VozTomSection() {
             <div className="flex flex-wrap items-center gap-3 bg-vix-preto px-6 py-4">
               <span className="rounded-vix-chip bg-vix-amarelo/15 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-vix-amarelo">{v.id}</span>
               <span className="text-[15px] font-bold text-white">{v.nome}</span>
-              <span className="ml-auto text-xs text-white/40">{v.ref}</span>
+              <span className="ml-auto text-xs text-white/65">{v.ref}</span>
             </div>
             <div className="bg-white p-6">
               <div className="mb-4 grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <div>
-                  <div className="mb-1.5 text-[9px] font-bold uppercase tracking-[0.12em] text-gray-500">Quando usar</div>
+                  <div className="mb-1.5 text-[9px] font-bold uppercase tracking-[0.12em] text-gray-600">Quando usar</div>
                   <div className="text-[13px] text-gray-600">{v.quando}</div>
                 </div>
                 <div>
-                  <div className="mb-1.5 text-[9px] font-bold uppercase tracking-[0.12em] text-gray-500">Tom</div>
+                  <div className="mb-1.5 text-[9px] font-bold uppercase tracking-[0.12em] text-gray-600">Tom</div>
                   <div className="text-[13px] text-gray-600">{v.tom}</div>
                 </div>
               </div>
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                <div className="rounded-r-lg border-l-[3px] border-[#10B981] bg-[#F0FDF4] px-3.5 py-3">
-                  <div className="mb-1.5 text-[9px] font-bold uppercase tracking-[0.1em] text-[#10B981]">✓ Certo</div>
+                <div className="rounded-r-lg border-l-[3px] border-[#00782D] bg-[#F0FDF4] px-3.5 py-3">
+                  <div className="mb-1.5 text-[9px] font-bold uppercase tracking-[0.1em] text-[#00782D]">✓ Certo</div>
                   <div className="text-[13px] text-vix-preto">&ldquo;{v.certo}&rdquo;</div>
                 </div>
-                <div className="rounded-r-lg border-l-[3px] border-[#EF4444] bg-[#FEF2F2] px-3.5 py-3">
-                  <div className="mb-1.5 text-[9px] font-bold uppercase tracking-[0.1em] text-[#EF4444]">✗ Errado</div>
+                <div className="rounded-r-lg border-l-[3px] border-[#B91C1C] bg-[#FEF2F2] px-3.5 py-3">
+                  <div className="mb-1.5 text-[9px] font-bold uppercase tracking-[0.1em] text-[#B91C1C]">✗ Errado</div>
                   <div className="text-[13px] text-gray-600">&ldquo;{v.errado}&rdquo;</div>
                 </div>
               </div>
@@ -81,13 +81,13 @@ export default function VozTomSection() {
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="rounded-vix-card border border-gray-200 p-7">
-          <div className="mb-3 text-sm font-bold text-[#10B981]">Sempre</div>
+          <div className="mb-3 text-sm font-bold text-[#00782D]">Sempre</div>
           <ul className="flex flex-col gap-2">
             {SEMPRE.map((t) => <li key={t} className="text-[13px] text-gray-600">· {t}</li>)}
           </ul>
         </div>
         <div className="rounded-vix-card border border-gray-200 p-7">
-          <div className="mb-3 text-sm font-bold text-[#EF4444]">Nunca</div>
+          <div className="mb-3 text-sm font-bold text-[#B91C1C]">Nunca</div>
           <ul className="flex flex-col gap-2">
             {NUNCA.map((t) => <li key={t} className="text-[13px] text-gray-600">· {t}</li>)}
           </ul>

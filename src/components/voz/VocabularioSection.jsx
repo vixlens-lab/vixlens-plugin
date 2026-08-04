@@ -76,9 +76,9 @@ export default function VocabularioSection() {
         <table className="w-full border-collapse text-[13px]">
           <thead>
             <tr className="border-b border-gray-200">
-              <th className="px-3.5 py-2.5 text-left text-[10px] font-bold uppercase tracking-[0.08em] text-gray-500">Produto</th>
-              <th className="px-3.5 py-2.5 text-left text-[10px] font-bold uppercase tracking-[0.08em] text-gray-500">Tipo</th>
-              <th className="px-3.5 py-2.5 text-left text-[10px] font-bold uppercase tracking-[0.08em] text-gray-500">Diferencial</th>
+              <th className="px-3.5 py-2.5 text-left text-[10px] font-bold uppercase tracking-[0.08em] text-gray-600">Produto</th>
+              <th className="px-3.5 py-2.5 text-left text-[10px] font-bold uppercase tracking-[0.08em] text-gray-600">Tipo</th>
+              <th className="px-3.5 py-2.5 text-left text-[10px] font-bold uppercase tracking-[0.08em] text-gray-600">Diferencial</th>
             </tr>
           </thead>
           <tbody>

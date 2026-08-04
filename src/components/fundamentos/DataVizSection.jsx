@@ -144,7 +144,7 @@ export default function DataVizSection() {
             <div className="px-3 py-2.5">
               <div className="text-[13px] font-bold text-vix-preto">{s.name}</div>
               <div className="text-[11px] font-mono uppercase text-gray-600">{s.hex}</div>
-              <div className="mt-1 text-[11px] leading-snug text-gray-500">{s.note}</div>
+              <div className="mt-1 text-[11px] leading-snug text-gray-600">{s.note}</div>
             </div>
           </div>
         ))}

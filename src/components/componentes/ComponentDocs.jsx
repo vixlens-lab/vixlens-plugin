@@ -97,7 +97,7 @@ export function StatesRow({ children, label }) {
   return (
     <div className="flex flex-col gap-2">
       {label && (
-        <div className="text-[11px] uppercase tracking-[0.1em] text-gray-500">{label}</div>
+        <div className="text-[11px] uppercase tracking-[0.1em] text-gray-600">{label}</div>
       )}
       <div className="flex flex-wrap items-center gap-4">{children}</div>
     </div>

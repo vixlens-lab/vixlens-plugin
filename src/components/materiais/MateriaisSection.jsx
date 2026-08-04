@@ -32,7 +32,7 @@ function DisabledBtn({ label, kind }) {
   return (
     <span
       aria-disabled="true"
-      className="inline-flex cursor-default items-center gap-1.5 rounded-vix-button border border-gray-200 bg-vix-cinza-card px-3 py-1.5 text-[11px] font-bold text-gray-500"
+      className="inline-flex cursor-default items-center gap-1.5 rounded-vix-button border border-gray-200 bg-vix-cinza-card px-3 py-1.5 text-[11px] font-bold text-gray-600"
     >
       <Icon size={13} weight="bold" />
       {label}

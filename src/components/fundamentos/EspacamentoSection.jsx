@@ -36,7 +36,7 @@ export default function EspacamentoSection() {
                 anchor ? 'bg-vix-preto text-white' : 'bg-vix-cinza-card'
               }`}
             >
-              <div className={`text-[11px] font-bold uppercase tracking-[0.06em] ${anchor ? 'text-gray-500' : 'text-gray-600'}`}>
+              <div className={`text-[11px] font-bold uppercase tracking-[0.06em] ${anchor ? 'text-gray-600' : 'text-gray-600'}`}>
                 {token}
               </div>
               <CopyValue
