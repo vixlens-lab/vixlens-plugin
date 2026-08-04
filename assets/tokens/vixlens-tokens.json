@@ -68,7 +68,7 @@
       "700": {
         "value": "#374151"
       },
-      "comment": "Rampa neutra do DS (escala Tailwind). Texto secundário, bordas, fundos sutis."
+      "comment": "Rampa neutra do DS (escala Tailwind). Texto secundário, bordas, fundos sutis. ATENÇÃO de contraste: gray-500 (#6B7280) sobre cinza-card (#F5F5F7) dá 4.44:1 e reprova em WCAG AA (mínimo 4.5). Dentro de card cinza, use gray-600 (#4B5563) — 6.94:1. Em texto terciário evite gray-400 (#9CA3AF): só 2.53:1 sobre branco."
     },
     "reflecta": {
       "guard": {
@@ -102,11 +102,21 @@
     },
     "chart": {
       "comment": "Paleta categórica para gráficos (data-viz). 5 séries distintas.",
-      "1": { "value": "#FAC617" },
-      "2": { "value": "#0439D9" },
-      "3": { "value": "#615FFF" },
-      "4": { "value": "#30D389" },
-      "5": { "value": "#606F7F" }
+      "1": {
+        "value": "#FAC617"
+      },
+      "2": {
+        "value": "#0439D9"
+      },
+      "3": {
+        "value": "#615FFF"
+      },
+      "4": {
+        "value": "#30D389"
+      },
+      "5": {
+        "value": "#606F7F"
+      }
     }
   },
   "distribution": {

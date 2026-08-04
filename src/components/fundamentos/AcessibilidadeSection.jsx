@@ -19,6 +19,9 @@ const AMARELO = c.amarelo.value      // #FAC617
 const AZUL = c.azul.value            // #0439D9
 // --muted-foreground = hsl(293 8% 45%) → #7A6A7C (não existe hex no JSON de tokens)
 const MUTED = '#7A6A7C'
+const CINZA_CARD = c['cinza-card'].value   // #F5F5F7
+const GRAY_500 = c.gray['500'].value       // #6B7280
+const GRAY_600 = c.gray['600'].value       // #4B5563
 const co = c.callout
 
 const mk = (fg, bg, extra) => ({ fg, bg, r: ratio(fg, bg), ...extra })
@@ -85,6 +88,8 @@ export default function AcessibilidadeSection() {
     mk(AZUL, BRANCO, { name: 'Azul sobre Branco', use: 'Links' }),
     mk(AMARELO, BRANCO, { name: 'Amarelo sobre Branco', use: 'Anti-exemplo — não usar amarelo como texto sobre branco', anti: true }),
     mk(MUTED, BRANCO, { name: 'Cinza texto (muted) sobre Branco', use: 'Texto secundário — token --muted-foreground' }),
+    mk(GRAY_600, CINZA_CARD, { name: 'Gray 600 sobre BG Cinza', use: 'Texto secundário dentro de card — o par correto' }),
+    mk(GRAY_500, CINZA_CARD, { name: 'Gray 500 sobre BG Cinza', use: 'Anti-exemplo — dois tokens do DS que juntos reprovam em AA', anti: true }),
   ]
 
   const calloutPairs = [
@@ -100,18 +105,22 @@ export default function AcessibilidadeSection() {
   const allAA = aaPass === total
   const realPairs = allPairs.filter((p) => !p.anti)
   const realAllAA = realPairs.every((p) => p.r >= TH.aa)
-  const antiPair = allPairs.find((p) => p.anti)
+  const antiPairs = allPairs.filter((p) => p.anti)
+  const antiPair = antiPairs[0]
+  const antiGray = allPairs.find((p) => p.fg === GRAY_500)
 
   const doList = [
     'Preto sobre amarelo em todo CTA e faixa — 10.54:1, folgado no AAA.',
     'Amarelo apenas como fundo ou destaque, nunca como texto.',
     'Azul de acento com moderação; branco sobre azul passa AAA em botão.',
     'Corpo mínimo de 16px; nunca abaixo de 12px.',
+    'Dentro de card cinza, subir um degrau da rampa: Gray 600 no lugar de Gray 500.',
     'Foco sempre visível — outline com contraste de UI ≥ 3.0 contra o fundo.',
   ]
   const dontList = [
     `Amarelo como texto sobre branco — ${antiPair.r.toFixed(2)}:1, ilegível.`,
     'Inverter o par preto/amarelo — texto amarelo sobre preto perde contraste de leitura.',
+    `Gray 500 como texto sobre BG Cinza #F5F5F7 — ${antiGray.r.toFixed(2)}:1, reprova por pouco. Use Gray 600 nesse fundo.`,
     'Cinza claro de texto sobre fundos coloridos ou tints de callout.',
     'Remover o outline de foco de qualquer elemento interativo.',
     'Reduzir corpo abaixo do tamanho legível para caber mais conteúdo.',
