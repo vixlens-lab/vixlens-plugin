@@ -6,29 +6,45 @@
   },
   "metadata": {
     "description": "Plugins oficiais Vixlens — sistema de marca, documentos institucionais, comunicação B2B e interfaces",
-    "version": "1.1.0",
-    "pluginRoot": "./plugins"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "vixlens-brand",
-      "source": "vixlens-brand",
+      "source": "./plugins/vixlens-brand",
       "description": "Sistema de marca Vixlens DS — paleta, tipografia (Mont + Host Grotesk), voz e vocabulário canônico, mais skills para comunicado interno, manual de cliente, proposta comercial B2B e aplicação do Design System em documentos, decks e planilhas",
       "version": "0.3.0",
       "author": {
         "name": "Otávio Torres"
       },
-      "keywords": ["vixlens", "marca", "brand", "laboratorio-optico", "documentos", "b2b", "design-system"]
+      "keywords": [
+        "vixlens",
+        "marca",
+        "brand",
+        "laboratorio-optico",
+        "documentos",
+        "b2b",
+        "design-system"
+      ]
     },
     {
       "name": "vixlens-ui",
-      "source": "vixlens-ui",
+      "source": "./plugins/vixlens-ui",
       "description": "Skills de interface Vixlens — arquitetura de UI em React + Tailwind fiel ao Design System e auditoria de 80 boas práticas de UI (tipografia, cores, botões, grid, ícones, imagens, formulários)",
       "version": "0.1.0",
       "author": {
         "name": "Otávio Torres"
       },
-      "keywords": ["vixlens", "ui", "ux", "design-system", "react", "tailwind", "auditoria", "boas-praticas"]
+      "keywords": [
+        "vixlens",
+        "ui",
+        "ux",
+        "design-system",
+        "react",
+        "tailwind",
+        "auditoria",
+        "boas-praticas"
+      ]
     }
   ]
 }
