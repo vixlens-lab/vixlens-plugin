@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Plugins oficiais Vixlens — sistema de marca, documentos institucionais, comunicação B2B e interfaces",
-    "version": "1.1.0"
+    "version": "1.2.0"
   },
   "plugins": [
     {
@@ -31,7 +31,7 @@
       "name": "vixlens-ui",
       "source": "./plugins/vixlens-ui",
       "description": "Skills de interface Vixlens — arquitetura de UI em React + Tailwind fiel ao Design System e auditoria de 80 boas práticas de UI (tipografia, cores, botões, grid, ícones, imagens, formulários)",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "author": {
         "name": "Otávio Torres"
       },

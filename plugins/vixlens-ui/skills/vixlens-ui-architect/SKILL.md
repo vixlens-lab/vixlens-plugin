@@ -18,8 +18,8 @@ You have access to the absolute branding tokens, assets, and design files of Vix
 
 ## 1. Core System & Environment
 - **Target Tech Stack:** React, Tailwind CSS, **shadcn/ui** (component base — https://ui.shadcn.com), Framer Motion, Phosphor Icons.
-- **Component base:** build interactive components (Button, Input, Card, Dialog, Tabs, etc.) on **shadcn/ui**, restyled to the Vixlens tokens — never ship shadcn defaults. Map shadcn's CSS variables to the Vixlens tokens (`--vix-*`): primary → Preto/Amarelo, radius → the shape tokens (57/30/12/6), etc. Compose and skin; don't reinvent primitives.
-- **Output Container:** Always utilize the Claude Artifacts window to preview and package self-contained, responsive UI layouts.
+- **Component base:** build interactive components (Button, Input, Card, Dialog, Tabs, etc.) on **shadcn/ui**, restyled to the Vixlens tokens — never ship shadcn defaults. Map shadcn's CSS variables to the Vixlens tokens (`--vix-*`): primary → Preto/Amarelo, radius → the shape tokens (32/32/24/12), etc. Compose and skin; don't reinvent primitives.
+- **Output target:** if the work belongs to an existing project or repository, deliver **files in the project** and verify them in the dev server. Never package that as a self-contained page — doing so throws away the tokens and components the project already has. Reach for a **Claude Artifact** only when there is no project to write into: a quick mockup, exploring variants side by side, or something to show someone who will not run code.
 
 ## 2. Brand Design Tokens (Strict Compliance)
 You must explicitly map every generated class to the exact HEX tokens specified in the Vixlens Design System:
@@ -96,12 +96,14 @@ Every component must follow the exact border-radius tokens from the Vixlens Desi
 
 | Token | Value | Assigned Component |
 |---|---|---|
-| **Card Large** | `57px` | Content cards and featured sections |
-| **Button** | `30px` | All buttons (pill format) |
-| **Input** | `12px` | Form fields and text inputs |
-| **Chip / Badge** | `6px` | Tags, badges, and category chips |
+| **Card** | `32px` | Cards and content blocks (luma `rounded-4xl`) |
+| **Button** | `32px` | All buttons (luma `rounded-4xl`, near-pill) |
+| **Input** | `24px` | Inputs, selects, popovers (luma `rounded-3xl`) |
+| **Chip / Badge** | `12px` | Chips, tags, small badges |
 
-> Never invent intermediate values. These four tokens are the only allowed border-radius values in the system. (Legacy components on the DS site still carry older radii like 16/20/24px — those are being migrated and are NOT reference values.)
+> Never invent intermediate values. These four tokens are the only allowed border-radius values in the system.
+>
+> Authoritative source: `https://ds.vixlens.com.br/assets/tokens/vixlens-tokens.json` (`radius`). Fetch it before shipping — it is machine-readable and always current. The 57/30/12/6 set that used to live here was the pre-luma geometry and is retired; do not resurrect it.
 
 ## 5. Button System
 There are only two button types. Maximum one primary button per section.
@@ -109,28 +111,28 @@ There are only two button types. Maximum one primary button per section.
 **Primary — Dark Background:**
 
 ```
-className="bg-[#FAC617] text-[#1D1D1F] font-bold rounded-[30px] px-8 py-3.5 text-lg
+className="bg-[#FAC617] text-[#1D1D1F] font-bold rounded-[32px] px-8 py-3.5 text-lg
 hover:bg-[#E5A800] focus:ring-3 focus:ring-[#1D1D1F]"
 ```
 
 **Primary — Light Background:**
 
 ```
-className="bg-[#1D1D1F] text-[#F5F5F7] font-bold rounded-[30px] px-8 py-3.5 text-lg
+className="bg-[#1D1D1F] text-[#F5F5F7] font-bold rounded-[32px] px-8 py-3.5 text-lg
 hover:bg-[#333333] focus:ring-3 focus:ring-[#FAC617]"
 ```
 
 **Secondary — Dark Background:**
 
 ```
-className="border-2 border-white text-white bg-transparent rounded-[30px] px-[30px] py-3
+className="border-2 border-white text-white bg-transparent rounded-[32px] px-[30px] py-3
 hover:bg-white/10"
 ```
 
 **Secondary — Light Background:**
 
 ```
-className="border-2 border-[#1D1D1F] text-[#1D1D1F] bg-transparent rounded-[30px] px-[30px] py-3
+className="border-2 border-[#1D1D1F] text-[#1D1D1F] bg-transparent rounded-[32px] px-[30px] py-3
 hover:bg-[#1D1D1F]/5"
 ```
 
@@ -150,14 +152,14 @@ hover:bg-[#1D1D1F]/5"
 All form fields follow these exact specs from the Vixlens Figma (partner registration form):
 
 ```
-className="h-14 px-5 py-3.5 rounded-[12px] border border-[#606F7F]
+className="h-14 px-5 py-3.5 rounded-[24px] border border-[#606F7F]
 focus:border-[#1D1D1F] focus:outline-none bg-white
 text-[#1D1D1F] text-lg placeholder:text-[#606F7F]
 disabled:bg-[#F9FAFB] disabled:text-[#D1D5DB]"
 ```
 
 - **Height:** always 56px — never reduced
-- **Border radius:** always 12px — never squared, never pill
+- **Border radius:** always 24px — never squared, never pill
 - **Max width:** 400px in centered forms / 100% in full-width layouts
 - **Background:** always white
 
@@ -238,7 +240,9 @@ Analyze incoming structural layout files (like WIREFRAMES) and route interface e
 - **Forms / Partner Registration:** White background, gray borders `#606F7F`, black focus ring
 
 ## 11. Grid & Layout System (Premium Desktop)
-- **Container / Max Width:** All main content wrappers MUST be constrained to `max-w-[1422px] mx-auto w-full` (Figma premium canvas)
+- **Container / Max Width:** two layout tokens, pick by page type —
+  - `container-produto` → `max-w-[1422px] mx-auto w-full` (Figma premium canvas; product and marketing pages)
+  - `container-ds-site` → `max-w-[1100px] mx-auto w-full` (documentation, catalogues, internal tools — the DS site itself uses this)
 - **Section Padding:** `px-16` lateral (64px) / `py-[72px]` to `py-[80px]` vertical
 - **Card Gutters:** Always use 30px spacing (`gap-[30px]`) between cards
 - **Alignment:** Never stretch content to raw screen edges. Respect the 1422px bounding box.
