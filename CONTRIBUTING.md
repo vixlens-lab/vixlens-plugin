@@ -63,3 +63,38 @@ npm run dev          # dev server
 npm run build        # build de produção (roda tokens:check antes)
 npm run tokens:build # regenera os exports de token
 ```
+
+## Skills e plugins
+
+As skills dos plugins (`plugins/*/skills/*/SKILL.md`) são validadas por
+`npm run skills:check`, que roda sozinho no `prebuild` e no CI.
+
+Ative o hook de pre-push uma vez por clone:
+
+```bash
+npm run hooks:setup
+```
+
+O que ele barra:
+
+- frontmatter que não é YAML válido
+- `name` divergente do nome da pasta, ou `description` faltando
+- arquivo citado em `references/` que não existe
+- versão do `plugin.json` diferente da do `marketplace.json`
+- `source` do marketplace sem o `./` no começo
+
+### Cuidado com dois-pontos no `description`
+
+`description:` sem aspas é escalar YAML puro. Um dois-pontos seguido de espaço
+no meio do texto (`Triggers: `, `Para: `) faz o YAML inteiro falhar — e a skill
+carrega com **metadata vazia**, sem erro nenhum. Na prática ela para de
+disparar por contexto e só responde se você digitar o nome.
+
+Escreva sempre em bloco:
+
+```yaml
+description: >-
+  Texto livre, com Triggers: "isso", "aquilo" — sem precisar escapar nada.
+```
+
+Quatro das sete skills ficaram semanas nesse estado antes de alguém notar.

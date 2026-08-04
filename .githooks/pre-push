@@ -1,0 +1,18 @@
+#!/bin/sh
+# Barra o push se alguma skill estiver com o frontmatter quebrado ou as versoes
+# dessincronizadas. O modo de falha que motivou isso e silencioso: a skill sobe,
+# instala, aparece na lista — e nunca dispara, porque o YAML invalido derrubou
+# a description sem avisar ninguem.
+#
+# Ativar uma vez por clone:  npm run hooks:setup
+# Pular num caso especifico: git push --no-verify
+
+echo "pre-push: validando skills e versoes dos plugins..."
+
+if ! node scripts/validate-skills.mjs; then
+  echo ""
+  echo "push barrado. corrija os erros acima, ou use --no-verify se souber o que esta fazendo."
+  exit 1
+fi
+
+exit 0
