@@ -171,9 +171,9 @@ export default function Search() {
         </div>
 
         <div className="flex items-center gap-4 border-t border-gray-100 bg-gray-50/60 px-4 py-2 text-[11px] text-gray-400">
-          <span><b className="font-mono text-gray-500">↑↓</b> navegar</span>
-          <span><b className="font-mono text-gray-500">↵</b> abrir</span>
-          <span><b className="font-mono text-gray-500">esc</b> fechar</span>
+          <span><b className="font-mono text-gray-600">↑↓</b> navegar</span>
+          <span><b className="font-mono text-gray-600">↵</b> abrir</span>
+          <span><b className="font-mono text-gray-600">esc</b> fechar</span>
         </div>
       </div>
     </div>

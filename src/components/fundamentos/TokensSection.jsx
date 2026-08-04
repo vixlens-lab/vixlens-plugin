@@ -26,7 +26,7 @@ export default function TokensSection() {
               <div className="mx-auto mb-4 h-14 w-20 bg-vix-preto" style={{ borderRadius: v }} />
               <div className="text-[13px] font-bold text-vix-preto">{r.name}</div>
               <CopyValue value={v} className="text-sm font-bold text-vix-azul">{v}</CopyValue>
-              <div className="mt-1.5 text-[11px] leading-snug text-gray-500">{r.use}</div>
+              <div className="mt-1.5 text-[11px] leading-snug text-gray-600">{r.use}</div>
             </div>
           )
         })}
@@ -76,7 +76,7 @@ export default function TokensSection() {
           </code>
           <CopyButton value="npx shadcn@latest init --preset b6GgLgzgW" label="comando" tone="dark" className="ml-auto" />
         </div>
-        <p className="mt-3 text-[12px] leading-relaxed text-gray-500">
+        <p className="mt-3 text-[12px] leading-relaxed text-gray-600">
           Depois é só aplicar os tokens Vixlens (JSON/CSS/Tailwind acima) por cima — cores, radius e
           tipografia já saem on-brand. O mesmo sistema está no <b className="text-vix-preto">Figma</b>{' '}
           (foundations, 14 componentes, dark & light) pra quem desenha.

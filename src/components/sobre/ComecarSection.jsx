@@ -209,7 +209,7 @@ export default function ComecarSection() {
               <div className="flex items-center gap-2 text-[15px] font-bold text-vix-preto">
                 {o.label}
                 {o.kbd && (
-                  <kbd className="rounded-md border border-gray-200 bg-white px-1.5 py-0.5 font-mono text-[11px] font-bold text-gray-500">
+                  <kbd className="rounded-md border border-gray-200 bg-white px-1.5 py-0.5 font-mono text-[11px] font-bold text-gray-600">
                     {o.kbd}
                   </kbd>
                 )}

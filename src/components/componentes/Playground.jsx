@@ -19,7 +19,7 @@ export function Playground({ title, controls = [], render, code }) {
   return (
     <div className="overflow-hidden rounded-vix-card border border-gray-200 bg-white">
       {title && (
-        <div className="border-b border-gray-100 px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-gray-500">
+        <div className="border-b border-gray-100 px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-gray-600">
           {title}
         </div>
       )}
@@ -73,7 +73,7 @@ export function Playground({ title, controls = [], render, code }) {
                   className={`inline-flex w-fit items-center gap-2 rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
                     on
                       ? 'border-transparent bg-vix-preto text-white'
-                      : 'border-gray-200 bg-white text-gray-500 hover:bg-gray-50'
+                      : 'border-gray-200 bg-white text-gray-600 hover:bg-gray-50'
                   }`}
                 >
                   <span

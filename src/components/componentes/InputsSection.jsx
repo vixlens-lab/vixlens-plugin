@@ -54,7 +54,7 @@ export default function InputsSection() {
           ['Foco', '#1D1D1F'],
         ].map(([k, v]) => (
           <div key={k} className="rounded-vix-input border border-gray-200 p-4">
-            <div className="text-[11px] font-bold uppercase tracking-wide text-gray-500">{k}</div>
+            <div className="text-[11px] font-bold uppercase tracking-wide text-gray-600">{k}</div>
             <div className="mt-1 font-mono text-sm font-bold text-vix-preto">{v}</div>
           </div>
         ))}

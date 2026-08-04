@@ -10,7 +10,7 @@ export function PropsTable({ rows = [] }) {
     <div className="overflow-x-auto rounded-vix-input border border-gray-200">
       <table className="w-full min-w-[560px] text-left text-[13px]">
         <thead>
-          <tr className="border-b border-gray-200 bg-gray-50 text-[11px] font-bold uppercase tracking-[0.08em] text-gray-500">
+          <tr className="border-b border-gray-200 bg-gray-50 text-[11px] font-bold uppercase tracking-[0.08em] text-gray-600">
             <th className="px-5 py-3 font-bold">Prop</th>
             <th className="px-5 py-3 font-bold">Tipo</th>
             <th className="px-5 py-3 font-bold">Padrão</th>
@@ -21,7 +21,7 @@ export function PropsTable({ rows = [] }) {
           {rows.map((r) => (
             <tr key={r.prop}>
               <td className="px-5 py-3.5 font-mono text-[12px] text-vix-azul">{r.prop}</td>
-              <td className="px-5 py-3.5 font-mono text-[12px] text-gray-500">{r.tipo}</td>
+              <td className="px-5 py-3.5 font-mono text-[12px] text-gray-600">{r.tipo}</td>
               <td className="px-5 py-3.5 font-mono text-[12px] text-vix-preto">{r.padrao || '—'}</td>
               <td className="px-5 py-3.5 text-gray-600">{r.desc}</td>
             </tr>

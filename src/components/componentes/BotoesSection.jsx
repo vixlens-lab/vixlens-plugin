@@ -57,7 +57,7 @@ export default function BotoesSection() {
 
       {/* Guia de tamanhos — base shadcn, com sugestão de texto */}
       <SubTitle>Guia de tamanhos</SubTitle>
-      <p className="-mt-2 mb-5 max-w-2xl text-[13px] leading-relaxed text-gray-500">
+      <p className="-mt-2 mb-5 max-w-2xl text-[13px] leading-relaxed text-gray-600">
         Tudo em <b className="text-vix-preto">px</b>. <b className="text-vix-preto">Altura</b> = altura total do botão.{' '}
         <b className="text-vix-preto">Padding lateral</b> = espaço interno à esquerda e à direita do texto
         (ex.: 12px de cada lado). Radius 32px (luma, quase pill). Texto 14px no padrão, 16px só no Large.
@@ -65,7 +65,7 @@ export default function BotoesSection() {
       <div className="overflow-x-auto rounded-vix-input border border-gray-200">
         <table className="w-full min-w-[720px] text-left text-[13px]">
           <thead>
-            <tr className="border-b border-gray-200 bg-gray-50 text-[11px] font-bold uppercase tracking-[0.08em] text-gray-500">
+            <tr className="border-b border-gray-200 bg-gray-50 text-[11px] font-bold uppercase tracking-[0.08em] text-gray-600">
               <th className="px-5 py-3 font-bold">Exemplo</th>
               <th className="px-5 py-3 font-bold">Tamanho</th>
               <th className="px-5 py-3 font-bold">Altura</th>
@@ -86,7 +86,7 @@ export default function BotoesSection() {
                 </td>
                 <td className="px-5 py-4">
                   <div className="font-bold text-vix-preto">{r.label}</div>
-                  <div className="font-mono text-[11px] text-gray-500">size="{r.size}"</div>
+                  <div className="font-mono text-[11px] text-gray-600">size="{r.size}"</div>
                 </td>
                 <td className="px-5 py-4 font-mono text-[13px] font-bold text-vix-preto">{r.alt}</td>
                 <td className="px-5 py-4 font-mono text-[13px] text-gray-600">{r.pad}</td>
@@ -100,7 +100,7 @@ export default function BotoesSection() {
               </td>
               <td className="px-5 py-4">
                 <div className="font-bold text-vix-preto">Icon</div>
-                <div className="font-mono text-[11px] text-gray-500">size="icon"</div>
+                <div className="font-mono text-[11px] text-gray-600">size="icon"</div>
               </td>
               <td className="px-5 py-4 font-mono text-[13px] font-bold text-vix-preto">36×36px</td>
               <td className="px-5 py-4 font-mono text-[13px] text-gray-600">—</td>

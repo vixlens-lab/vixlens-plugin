@@ -10,7 +10,7 @@ function Rule({ Icon, title, children }) {
       <Icon size={20} weight="bold" className="mt-0.5 shrink-0 text-vix-azul" />
       <div>
         <div className="text-[14px] font-bold text-vix-preto">{title}</div>
-        <div className="mt-0.5 text-[13px] leading-relaxed text-gray-500">{children}</div>
+        <div className="mt-0.5 text-[13px] leading-relaxed text-gray-600">{children}</div>
       </div>
     </div>
   )
@@ -25,7 +25,7 @@ export default function ContribuirSection() {
       desc="Como propor e aplicar mudanças no DS. A fonte única de token é o JSON — o resto é gerado, e o CI garante que não saia de sync."
     >
       <SubTitle>Mudar um token</SubTitle>
-      <p className="-mt-2 mb-4 max-w-2xl text-[13px] leading-relaxed text-gray-500">
+      <p className="-mt-2 mb-4 max-w-2xl text-[13px] leading-relaxed text-gray-600">
         Cor, raio, espaçamento e tipografia saem de <b className="text-vix-preto">vixlens-tokens.json</b>. Os
         arquivos <span className="font-mono text-[12px]">.css</span> e o preset Tailwind são gerados — nunca edite na
         mão (o <span className="font-mono text-[12px]">tokens:check</span> barra).

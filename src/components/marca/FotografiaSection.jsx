@@ -78,7 +78,7 @@ export default function FotografiaSection() {
       </div>
 
       <SubTitle>Comparativo de tratamento AR</SubTitle>
-      <p className="mb-5 text-[13px] leading-relaxed text-gray-500">
+      <p className="mb-5 text-[13px] leading-relaxed text-gray-600">
         O reflexo residual do AR é uma qualidade técnica — não um defeito visual. A diferença entre
         lente sem tratamento e com Reflecta é imediatamente visível. Use em materiais de venda e
         treinamento.
@@ -125,7 +125,7 @@ export default function FotografiaSection() {
           <div key={label} className="rounded-2xl bg-vix-cinza-card p-5">
             <div className="mb-3 text-[10px] font-bold uppercase tracking-[0.1em] text-gray-400">{label}</div>
             <div className="text-[22px] font-bold text-vix-preto">{val}</div>
-            <div className="mt-1 text-xs text-gray-500">{sub}</div>
+            <div className="mt-1 text-xs text-gray-600">{sub}</div>
           </div>
         ))}
       </div>

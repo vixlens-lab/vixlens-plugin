@@ -99,7 +99,7 @@ export default function TipografiaSection() {
 
       {/* Escala completa — equivalência desktop ↔ mobile */}
       <SubTitle>Escala (Host Grotesk) — desktop ↔ mobile</SubTitle>
-      <p className="-mt-2 mb-6 max-w-2xl text-[13px] leading-relaxed text-gray-500">
+      <p className="-mt-2 mb-6 max-w-2xl text-[13px] leading-relaxed text-gray-600">
         Cada nível colapsa de desktop para mobile mantendo a proporção. As amostras abaixo estão
         renderizadas na escala real (H1 cai de <b className="text-vix-preto">64&nbsp;px → 40&nbsp;px</b>),
         com o line-height e o tracking exatos de cada nível.
@@ -155,7 +155,7 @@ export default function TipografiaSection() {
 
       {/* Escala utilitária Tailwind/shadcn — ligada ao token */}
       <SubTitle className="mt-14">Escala utilitária (Tailwind / shadcn)</SubTitle>
-      <p className="-mt-2 mb-5 max-w-2xl text-[13px] leading-relaxed text-gray-500">
+      <p className="-mt-2 mb-5 max-w-2xl text-[13px] leading-relaxed text-gray-600">
         As classes utilitárias que o shadcn usa na UI. <b className="text-vix-preto">text-xs / text-sm / text-base
         saem do token</b> (caption 12 · label 14 · parágrafo 16) — mudar o token muda as utilities. O shadcn não
         tem escala própria: usa essas classes do Tailwind direto no componente.
@@ -163,7 +163,7 @@ export default function TipografiaSection() {
       <div className="mb-14 overflow-x-auto rounded-vix-input border border-gray-200">
         <table className="w-full min-w-[560px] text-left text-[13px]">
           <thead>
-            <tr className="border-b border-gray-200 bg-gray-50 text-[11px] font-bold uppercase tracking-[0.08em] text-gray-500">
+            <tr className="border-b border-gray-200 bg-gray-50 text-[11px] font-bold uppercase tracking-[0.08em] text-gray-600">
               <th className="px-5 py-3 font-bold">Utility</th>
               <th className="px-5 py-3 font-bold">px</th>
               <th className="px-5 py-3 font-bold">Onde o shadcn usa</th>
@@ -203,7 +203,7 @@ export default function TipografiaSection() {
             <div className="w-40 shrink-0">
               <div className="text-[13px] font-bold text-vix-preto">{n}</div>
               <div className="mt-0.5 font-mono text-[11px] text-vix-azul">{pt} pt · {wName}</div>
-              <div className="mt-0.5 text-[11px] text-gray-500">{u}</div>
+              <div className="mt-0.5 text-[11px] text-gray-600">{u}</div>
             </div>
             <div
               className="min-w-0 flex-1 truncate text-vix-preto"

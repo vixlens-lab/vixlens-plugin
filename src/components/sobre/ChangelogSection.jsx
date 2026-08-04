@@ -18,7 +18,7 @@ const TIPOS = {
   correcao: {
     label: 'Correção',
     Icon: Wrench,
-    pill: 'bg-vix-cinza-card text-gray-500',
+    pill: 'bg-vix-cinza-card text-gray-600',
     dot: 'text-gray-400',
   },
 }
@@ -116,7 +116,7 @@ function VersaoBadge({ versao, atual, neutro }) {
   const tone = atual
     ? 'bg-vix-amarelo text-vix-preto'
     : neutro
-      ? 'bg-vix-cinza-card text-gray-500'
+      ? 'bg-vix-cinza-card text-gray-600'
       : 'bg-vix-preto text-white'
   return (
     <span className={`inline-flex items-center rounded-vix-chip px-2.5 py-1 font-mono text-[13px] font-bold tracking-tight ${tone}`}>
@@ -173,7 +173,7 @@ function VersaoCard({ versao }) {
 
       <div className="flex flex-col gap-5">
         {versao.resumo ? (
-          <p className="text-[13px] leading-relaxed text-gray-500">{versao.resumo}</p>
+          <p className="text-[13px] leading-relaxed text-gray-600">{versao.resumo}</p>
         ) : (
           grupos.map(([tipo, itens]) => <TipoGrupo key={tipo} tipo={tipo} itens={itens} />)
         )}

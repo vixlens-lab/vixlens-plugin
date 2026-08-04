@@ -73,7 +73,7 @@ export default function ElevacaoSection() {
             </code>
 
             <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{n.sombra}.</p>
-            <p className="mt-2 text-xs leading-relaxed text-gray-500">{n.uso}</p>
+            <p className="mt-2 text-xs leading-relaxed text-gray-600">{n.uso}</p>
           </div>
         ))}
       </div>

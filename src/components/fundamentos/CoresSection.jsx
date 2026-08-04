@@ -13,7 +13,7 @@ function Swatch({ name, hex, note, big }) {
       </div>
       <div className="px-3 py-2.5">
         <div className="text-[13px] font-bold text-vix-preto">{name}</div>
-        <CopyValue value={hex} className="text-[11px] uppercase text-gray-500">{hex}</CopyValue>
+        <CopyValue value={hex} className="text-[11px] uppercase text-gray-600">{hex}</CopyValue>
         {note && <div className="mt-1 text-[11px] leading-snug text-gray-400">{note}</div>}
       </div>
     </div>
@@ -47,7 +47,7 @@ export default function CoresSection() {
       <div className="mb-14 rounded-vix-card border border-gray-200 p-6 md:p-8">
         <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
           <span className="text-[15px] font-bold text-vix-preto">Regra 60-30-10</span>
-          <span className="text-[13px] text-gray-500">a proporção que mantém a identidade coesa.</span>
+          <span className="text-[13px] text-gray-600">a proporção que mantém a identidade coesa.</span>
         </div>
 
         <div className="mt-5 flex h-5 w-full overflow-hidden rounded-full">
@@ -61,21 +61,21 @@ export default function CoresSection() {
             <span className="mt-1 h-9 w-9 shrink-0 rounded-xl bg-vix-preto" />
             <div>
               <div className="text-xl font-extrabold leading-tight text-vix-preto">60%</div>
-              <div className="text-[13px] leading-snug text-gray-500">Preto &amp; Branco — dominam todo layout</div>
+              <div className="text-[13px] leading-snug text-gray-600">Preto &amp; Branco — dominam todo layout</div>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <span className="mt-1 h-9 w-9 shrink-0 rounded-xl bg-vix-amarelo" />
             <div>
               <div className="text-xl font-extrabold leading-tight text-vix-preto">30%</div>
-              <div className="text-[13px] leading-snug text-gray-500">Amarelo — destaques, CTAs, faixas</div>
+              <div className="text-[13px] leading-snug text-gray-600">Amarelo — destaques, CTAs, faixas</div>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <span className="mt-1 h-9 w-9 shrink-0 rounded-xl bg-vix-azul" />
             <div>
               <div className="text-xl font-extrabold leading-tight text-vix-preto">10%</div>
-              <div className="text-[13px] leading-snug text-gray-500">Azul — acento de último recurso. Nunca em hero ou header.</div>
+              <div className="text-[13px] leading-snug text-gray-600">Azul — acento de último recurso. Nunca em hero ou header.</div>
             </div>
           </div>
         </div>

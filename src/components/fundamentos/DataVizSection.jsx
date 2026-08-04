@@ -143,7 +143,7 @@ export default function DataVizSection() {
             <div className="h-16" style={{ background: `var(--${s.key})` }} />
             <div className="px-3 py-2.5">
               <div className="text-[13px] font-bold text-vix-preto">{s.name}</div>
-              <div className="text-[11px] font-mono uppercase text-gray-500">{s.hex}</div>
+              <div className="text-[11px] font-mono uppercase text-gray-600">{s.hex}</div>
               <div className="mt-1 text-[11px] leading-snug text-gray-400">{s.note}</div>
             </div>
           </div>
@@ -211,7 +211,7 @@ export default function DataVizSection() {
 
         {/* Nota */}
         <div className="flex flex-col justify-center rounded-vix-card border border-dashed border-gray-200 bg-vix-cinza-card p-6">
-          <div className="text-[13px] font-bold uppercase tracking-[0.1em] text-gray-500">Leitura</div>
+          <div className="text-[13px] font-bold uppercase tracking-[0.1em] text-gray-600">Leitura</div>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
             Todo gráfico usa <span className="font-mono">ChartContainer</span> com um{' '}
             <span className="font-mono">config</span> — o container gera as vars{' '}

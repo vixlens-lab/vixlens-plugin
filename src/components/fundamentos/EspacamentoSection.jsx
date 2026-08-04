@@ -36,7 +36,7 @@ export default function EspacamentoSection() {
                 anchor ? 'bg-vix-preto text-white' : 'bg-vix-cinza-card'
               }`}
             >
-              <div className={`text-[11px] font-bold uppercase tracking-[0.06em] ${anchor ? 'text-gray-400' : 'text-gray-500'}`}>
+              <div className={`text-[11px] font-bold uppercase tracking-[0.06em] ${anchor ? 'text-gray-400' : 'text-gray-600'}`}>
                 {token}
               </div>
               <CopyValue
@@ -48,7 +48,7 @@ export default function EspacamentoSection() {
                 {value}
               </CopyValue>
               <div className="h-1 rounded-full" style={{ width: value, background: anchor ? '#FAC617' : '#1D1D1F' }} />
-              <div className={`hidden text-xs md:block ${anchor ? 'text-white/70' : 'text-gray-500'}`}>{USE[token]}</div>
+              <div className={`hidden text-xs md:block ${anchor ? 'text-white/70' : 'text-gray-600'}`}>{USE[token]}</div>
             </div>
           )
         })}

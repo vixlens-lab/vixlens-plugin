@@ -13,7 +13,7 @@ export function CardTitle({ className, ...props }) {
   return <h3 className={cn('text-xl font-bold text-vix-preto', className)} {...props} />
 }
 export function CardDescription({ className, ...props }) {
-  return <p className={cn('text-[15px] leading-relaxed text-gray-500', className)} {...props} />
+  return <p className={cn('text-[15px] leading-relaxed text-gray-600', className)} {...props} />
 }
 export function CardContent({ className, ...props }) {
   return <div className={cn('p-8 pt-0', className)} {...props} />

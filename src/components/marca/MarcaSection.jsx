@@ -51,7 +51,7 @@ function KitCard({ line }) {
     <div className="mb-2 mt-6 flex flex-col items-start gap-4 rounded-vix-card border border-gray-200 bg-vix-cinza-card p-8 md:flex-row md:items-center md:justify-between">
       <div>
         <div className="text-lg font-bold text-vix-preto">Brand Kit — {line.title}</div>
-        <div className="mt-1.5 text-[13px] leading-relaxed text-gray-500">
+        <div className="mt-1.5 text-[13px] leading-relaxed text-gray-600">
           Pacote com tudo: {n} variações × 4 formatos (SVG, PNG, PDF, WebP) num único .zip.
         </div>
       </div>
@@ -78,7 +78,7 @@ export default function MarcaSection() {
       {manifest.lines.map((line, li) => (
         <div key={line.id} className={li > 0 ? 'mt-14' : ''}>
           <SubTitle>{line.title}</SubTitle>
-          {line.desc && <p className="-mt-1 mb-5 max-w-2xl text-[13px] leading-relaxed text-gray-500">{line.desc}</p>}
+          {line.desc && <p className="-mt-1 mb-5 max-w-2xl text-[13px] leading-relaxed text-gray-600">{line.desc}</p>}
           {line.groups.map((g) => (
             <div key={g.prod}>
               {g.label && <div className="mb-3.5 mt-7 text-xs font-bold text-vix-preto">{g.label}</div>}

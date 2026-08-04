@@ -94,7 +94,7 @@ export default function CardsSection() {
             <Eye size={24} className="text-vix-preto" />
           </div>
           <div className="text-xl font-bold text-vix-preto">Tratamento AR Reflecta</div>
-          <p className="mt-2 text-[15px] leading-relaxed text-gray-500">
+          <p className="mt-2 text-[15px] leading-relaxed text-gray-600">
             Reflexo residual mínimo. Cada cor representa um tipo de tratamento antirreflexo.
           </p>
         </div>

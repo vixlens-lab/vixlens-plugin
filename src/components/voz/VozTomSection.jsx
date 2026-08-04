@@ -71,7 +71,7 @@ export default function VozTomSection() {
                 </div>
                 <div className="rounded-r-lg border-l-[3px] border-[#EF4444] bg-[#FEF2F2] px-3.5 py-3">
                   <div className="mb-1.5 text-[9px] font-bold uppercase tracking-[0.1em] text-[#EF4444]">✗ Errado</div>
-                  <div className="text-[13px] text-gray-500">&ldquo;{v.errado}&rdquo;</div>
+                  <div className="text-[13px] text-gray-600">&ldquo;{v.errado}&rdquo;</div>
                 </div>
               </div>
             </div>

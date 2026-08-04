@@ -37,7 +37,7 @@ export default function IconografiaSection() {
           <div className="flex items-start justify-between gap-3">
             <div>
               <div className="text-[15px] font-bold text-vix-preto">Phosphor Icons</div>
-              <div className="mt-0.5 text-[12px] leading-relaxed text-gray-500">Ícones da UI, documentos e comunicações Vixlens.</div>
+              <div className="mt-0.5 text-[12px] leading-relaxed text-gray-600">Ícones da UI, documentos e comunicações Vixlens.</div>
             </div>
             <span className="shrink-0 rounded-vix-chip bg-vix-amarelo-light px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.06em] text-vix-preto">Principal</span>
           </div>
@@ -61,9 +61,9 @@ export default function IconografiaSection() {
           <div className="flex items-start justify-between gap-3">
             <div>
               <div className="text-[15px] font-bold text-vix-preto">Lucide</div>
-              <div className="mt-0.5 text-[12px] leading-relaxed text-gray-500">Usada internamente pelos componentes shadcn/ui.</div>
+              <div className="mt-0.5 text-[12px] leading-relaxed text-gray-600">Usada internamente pelos componentes shadcn/ui.</div>
             </div>
-            <span className="shrink-0 rounded-vix-chip bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.06em] text-gray-500">shadcn</span>
+            <span className="shrink-0 rounded-vix-chip bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.06em] text-gray-600">shadcn</span>
           </div>
           <div className="mt-5 flex flex-wrap gap-4 text-vix-preto">
             {[LuHome, LuSearch, LuUser, LuSettings, LuBell, LuCheck, LuEye, LuStar].map((Icon, i) => (
@@ -88,7 +88,7 @@ export default function IconografiaSection() {
             <Star size={s.px} weight="regular" className="text-vix-preto" />
             <div>
               <div className="text-[13px] font-bold text-vix-preto">{s.px}px</div>
-              <div className="text-[11px] leading-snug text-gray-500">{s.use}</div>
+              <div className="text-[11px] leading-snug text-gray-600">{s.use}</div>
             </div>
           </div>
         ))}
@@ -108,7 +108,7 @@ export default function IconografiaSection() {
             <Icon size={28} weight="fill" style={{ color }} />
             <div>
               <div className="text-[13px] font-bold text-vix-preto">{label}</div>
-              <div className="font-mono text-[11px] uppercase text-gray-500">{color}</div>
+              <div className="font-mono text-[11px] uppercase text-gray-600">{color}</div>
             </div>
           </div>
         ))}

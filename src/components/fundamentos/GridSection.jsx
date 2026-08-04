@@ -21,7 +21,7 @@ export default function GridSection() {
     >
       {/* 1 — Breakpoints */}
       <SubTitle>Breakpoints</SubTitle>
-      <p className="-mt-2 mb-6 max-w-2xl text-[13px] leading-relaxed text-gray-500">
+      <p className="-mt-2 mb-6 max-w-2xl text-[13px] leading-relaxed text-gray-600">
         Mobile-first: <b className="text-vix-preto">sem prefixo é o estado base (mobile)</b>. Cada prefixo
         aplica dali para cima. O <span className="font-mono text-vix-azul">md</span> (768&nbsp;px) é o breakpoint
         principal do DS — onde a sidebar aparece e o conteúdo ganha margem.
@@ -29,7 +29,7 @@ export default function GridSection() {
       <div className="mb-14 overflow-x-auto rounded-vix-input border border-gray-200">
         <table className="w-full min-w-[560px] text-left text-[13px]">
           <thead>
-            <tr className="border-b border-gray-200 bg-gray-50 text-[11px] font-bold uppercase tracking-[0.08em] text-gray-500">
+            <tr className="border-b border-gray-200 bg-gray-50 text-[11px] font-bold uppercase tracking-[0.08em] text-gray-600">
               <th className="px-5 py-3 font-bold">Prefixo</th>
               <th className="px-5 py-3 font-bold">Largura mínima</th>
               <th className="px-5 py-3 font-bold">Uso típico</th>
@@ -58,7 +58,7 @@ export default function GridSection() {
 
       {/* 2 — Container */}
       <SubTitle>Container</SubTitle>
-      <p className="-mt-2 mb-6 max-w-2xl text-[13px] leading-relaxed text-gray-500">
+      <p className="-mt-2 mb-6 max-w-2xl text-[13px] leading-relaxed text-gray-600">
         Conteúdo com largura de leitura confortável — <span className="font-mono text-vix-azul">max-w-2xl</span> /
         <span className="font-mono text-vix-azul"> max-w-3xl</span> para texto. O padding lateral cresce com a tela:
         <span className="font-mono text-vix-azul"> px-8 md:px-16</span>.
@@ -78,7 +78,7 @@ export default function GridSection() {
 
       {/* 3 — Grid responsivo */}
       <SubTitle>Grid responsivo</SubTitle>
-      <p className="-mt-2 mb-6 max-w-2xl text-[13px] leading-relaxed text-gray-500">
+      <p className="-mt-2 mb-6 max-w-2xl text-[13px] leading-relaxed text-gray-600">
         Padrão <span className="font-mono text-vix-azul">grid-cols-N</span> + <span className="font-mono text-vix-azul">gap</span> do
         token. Os blocos abaixo são reais: <span className="font-mono text-vix-azul">grid-cols-2 md:grid-cols-4</span> —
         2 colunas no mobile, 4 a partir do <span className="font-mono text-vix-azul">md</span>. Redimensione para ver reflowar.
@@ -94,7 +94,7 @@ export default function GridSection() {
         {Array.from({ length: 8 }, (_, i) => (
           <div
             key={i}
-            className="flex h-24 items-center justify-center rounded-vix-input bg-vix-cinza-card font-mono text-sm font-bold text-gray-500"
+            className="flex h-24 items-center justify-center rounded-vix-input bg-vix-cinza-card font-mono text-sm font-bold text-gray-600"
           >
             {i + 1}
           </div>

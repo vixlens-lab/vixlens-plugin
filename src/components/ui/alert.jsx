@@ -29,9 +29,9 @@ const Alert = React.forwardRef(({ className, variant, ...props }, ref) => (
 Alert.displayName = "Alert"
 
 const AlertTitle = React.forwardRef(({ className, ...props }, ref) => (
-  // O conteudo vem por children no ponto de uso; o lint nao enxerga isso.
-  // eslint-disable-next-line jsx-a11y/heading-has-content
-  <h5
+  // Era <h5> e quebrava a ordem de cabecalhos da pagina (h2 -> h5). E rotulo
+  // do componente, nao cabecalho de documento, entao sai da arvore de headings.
+  <div
     ref={ref}
     className={cn("mb-1 font-medium leading-none tracking-tight", className)}
     {...props} />

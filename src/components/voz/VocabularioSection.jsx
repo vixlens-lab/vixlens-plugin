@@ -63,7 +63,7 @@ export default function VocabularioSection() {
             {TERMOS.map(([canon, nunca], i) => (
               <tr key={canon} className={`border-b border-gray-100 ${i % 2 ? 'bg-gray-50' : ''}`}>
                 <td className="px-4 py-3 font-bold text-vix-preto">{canon}</td>
-                <td className="px-4 py-3 text-gray-500">{nunca}</td>
+                <td className="px-4 py-3 text-gray-600">{nunca}</td>
               </tr>
             ))}
           </tbody>
@@ -85,8 +85,8 @@ export default function VocabularioSection() {
             {FREEVIX.map(([p, t, d], i) => (
               <tr key={p} className={`border-b border-gray-100 ${i % 2 ? 'bg-gray-50' : ''}`}>
                 <td className="whitespace-nowrap px-3.5 py-2.5 font-bold text-vix-preto">{p}</td>
-                <td className="px-3.5 py-2.5 text-gray-500">{t}</td>
-                <td className="px-3.5 py-2.5 text-gray-500">{d}</td>
+                <td className="px-3.5 py-2.5 text-gray-600">{t}</td>
+                <td className="px-3.5 py-2.5 text-gray-600">{d}</td>
               </tr>
             ))}
           </tbody>
@@ -99,7 +99,7 @@ export default function VocabularioSection() {
             {OUTROS.map(([n, d], i) => (
               <div key={n} className={`border-b border-gray-100 px-3.5 py-3 last:border-0 ${i % 2 ? 'bg-gray-50' : ''}`}>
                 <div className="text-[13px] font-bold text-vix-preto">{n}</div>
-                <div className="text-xs text-gray-500">{d}</div>
+                <div className="text-xs text-gray-600">{d}</div>
               </div>
             ))}
           </div>
@@ -110,7 +110,7 @@ export default function VocabularioSection() {
             {REFLECTA.map(([n, d], i) => (
               <div key={n} className={`border-b border-gray-100 px-3.5 py-3 last:border-0 ${i % 2 ? 'bg-gray-50' : ''}`}>
                 <div className="text-[13px] font-bold text-vix-preto">{n}</div>
-                <div className="text-xs text-gray-500">{d}</div>
+                <div className="text-xs text-gray-600">{d}</div>
               </div>
             ))}
           </div>

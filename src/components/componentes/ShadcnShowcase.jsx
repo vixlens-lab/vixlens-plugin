@@ -37,7 +37,7 @@ function PropsDocs({ docKey, label }) {
         Props{label ? <span className="text-gray-300 normal-case tracking-normal">· {label}</span> : null}
       </summary>
       <div className="mt-3 flex flex-col gap-3">
-        <p className="text-[12px] leading-relaxed text-gray-500">{entry.uso}</p>
+        <p className="text-[12px] leading-relaxed text-gray-600">{entry.uso}</p>
         <PropsTable rows={entry.props} />
       </div>
     </details>
@@ -47,7 +47,7 @@ function PropsDocs({ docKey, label }) {
 function Cell({ title, children, docKey }) {
   return (
     <div className="flex flex-col gap-4 rounded-vix-input border border-gray-200 bg-white p-6">
-      <div className="text-xs font-bold uppercase tracking-[0.08em] text-gray-500">{title}</div>
+      <div className="text-xs font-bold uppercase tracking-[0.08em] text-gray-600">{title}</div>
       <div className="flex flex-1 flex-wrap items-center gap-4">{children}</div>
       {docKey && <PropsDocs docKey={docKey} />}
     </div>
@@ -67,7 +67,7 @@ export default function ShadcnShowcase() {
         <SubTitle>Seleção & entrada</SubTitle>
         <div className="mb-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           <Cell title="Switch" docKey="switch">
-            <Switch defaultChecked /> <Switch />
+            <Switch defaultChecked aria-label="Exemplo de switch ligado" /> <Switch aria-label="Exemplo de switch desligado" />
           </Cell>
           <Cell title="Checkbox" docKey="checkbox">
             <div className="flex items-center gap-2"><Checkbox id="c1" defaultChecked /><Label htmlFor="c1">Aceito</Label></div>
@@ -80,7 +80,7 @@ export default function ShadcnShowcase() {
           </Cell>
           <Cell title="Select" docKey="select">
             <Select>
-              <SelectTrigger className="w-48"><SelectValue placeholder="Escolha uma lente" /></SelectTrigger>
+              <SelectTrigger className="w-48" aria-label="Escolha uma lente"><SelectValue placeholder="Escolha uma lente" /></SelectTrigger>
               <SelectContent>
                 <SelectItem value="total">VixTotal</SelectItem>
                 <SelectItem value="one">Freevix One</SelectItem>
@@ -90,8 +90,8 @@ export default function ShadcnShowcase() {
           </Cell>
           <Cell title="Slider" docKey="slider">
             <div className="w-full">
-              <Slider value={slider} onValueChange={setSlider} max={100} step={1} />
-              <div className="mt-2 font-mono text-xs text-gray-500">{slider[0]}%</div>
+              <Slider value={slider} onValueChange={setSlider} max={100} step={1} aria-label="Exemplo de slider" />
+              <div className="mt-2 font-mono text-xs text-gray-600">{slider[0]}%</div>
             </div>
           </Cell>
           <Cell title="Textarea" docKey="textarea">
@@ -105,14 +105,14 @@ export default function ShadcnShowcase() {
             <Badge>Novo</Badge> <Badge variant="secondary">Beta</Badge> <Badge variant="outline">v0.4</Badge> <Badge variant="destructive">Crítico</Badge>
           </Cell>
           <Cell title="Progress" docKey="progress">
-            <div className="w-full"><Progress value={slider[0]} /></div>
+            <div className="w-full"><Progress value={slider[0]} aria-label="Exemplo de barra de progresso" /></div>
           </Cell>
           <Cell title="Avatar" docKey="avatar">
             <Avatar><AvatarFallback>VX</AvatarFallback></Avatar>
             <Avatar><AvatarFallback className="bg-vix-amarelo text-vix-preto">MK</AvatarFallback></Avatar>
           </Cell>
           <Cell title="Separator" docKey="separator">
-            <div className="w-full text-sm text-gray-500">Acima<Separator className="my-3" />Abaixo</div>
+            <div className="w-full text-sm text-gray-600">Acima<Separator className="my-3" />Abaixo</div>
           </Cell>
           <div className="md:col-span-2">
             <Alert>

@@ -63,11 +63,11 @@ export default function MateriaisSection() {
               <div key={card.t} className="flex flex-col gap-3 rounded-vix-input border border-gray-200 bg-white p-6">
                 <div className="flex items-center justify-between gap-2.5">
                   <div className="text-[15px] font-bold text-vix-preto">{card.t}</div>
-                  <span className="shrink-0 rounded-vix-chip bg-vix-cinza-card px-2 py-1 text-[9px] font-bold uppercase tracking-[0.08em] text-gray-500">
+                  <span className="shrink-0 rounded-vix-chip bg-vix-cinza-card px-2 py-1 text-[9px] font-bold uppercase tracking-[0.08em] text-gray-600">
                     Em breve
                   </span>
                 </div>
-                <p className="flex-1 text-[13px] leading-relaxed text-gray-500">{card.d}</p>
+                <p className="flex-1 text-[13px] leading-relaxed text-gray-600">{card.d}</p>
                 <div className="flex flex-wrap gap-1.5">
                   {card.b.map(([label, kind]) => (
                     <DisabledBtn key={label} label={label} kind={kind} />
