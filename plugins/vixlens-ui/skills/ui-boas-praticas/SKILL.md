@@ -1,6 +1,7 @@
 ---
 name: ui-boas-praticas
-description: Audita e corrige interfaces (web/mobile) contra as 80 boas práticas de UI do "Guia de Boas Práticas Aplicáveis para a Criação de Interfaces" (Andrey Knabbenn, v2.0) — tipografia, cores, botões, grid/layout, ícones, imagens, formulários. Use SEMPRE que for criar, revisar, corrigir ou dar parecer sobre qualquer tela, componente, landing page, formulário ou layout — mesmo que o usuário não diga "boas práticas". Triggers: "revisa essa tela", "essa UI tá boa?", "audita a interface", "o que melhorar nesse layout", "review de UI", "checklist de interface", "por que essa tela tá estranha", "ajusta o espaçamento/contraste/hierarquia", "revisa esse formulário", antes de entregar qualquer componente novo.
+description: >-
+  Audita e corrige interfaces (web/mobile) contra as 80 boas práticas de UI do "Guia de Boas Práticas Aplicáveis para a Criação de Interfaces" (Andrey Knabbenn, v2.0) — tipografia, cores, botões, grid/layout, ícones, imagens, formulários. Use SEMPRE que for criar, revisar, corrigir ou dar parecer sobre qualquer tela, componente, landing page, formulário ou layout — mesmo que o usuário não diga "boas práticas". Triggers: "revisa essa tela", "essa UI tá boa?", "audita a interface", "o que melhorar nesse layout", "review de UI", "checklist de interface", "por que essa tela tá estranha", "ajusta o espaçamento/contraste/hierarquia", "revisa esse formulário", antes de entregar qualquer componente novo.
 ---
 
 # Boas práticas de UI — auditoria e aplicação

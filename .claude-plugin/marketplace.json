@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Plugins oficiais Vixlens — sistema de marca, documentos institucionais, comunicação B2B e interfaces",
-    "version": "1.2.0"
+    "version": "1.2.1"
   },
   "plugins": [
     {
       "name": "vixlens-brand",
       "source": "./plugins/vixlens-brand",
       "description": "Sistema de marca Vixlens DS — paleta, tipografia (Mont + Host Grotesk), voz e vocabulário canônico, mais skills para comunicado interno, manual de cliente, proposta comercial B2B e aplicação do Design System em documentos, decks e planilhas",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "author": {
         "name": "Otávio Torres"
       },
@@ -31,7 +31,7 @@
       "name": "vixlens-ui",
       "source": "./plugins/vixlens-ui",
       "description": "Skills de interface Vixlens — arquitetura de UI em React + Tailwind fiel ao Design System e auditoria de 80 boas práticas de UI (tipografia, cores, botões, grid, ícones, imagens, formulários)",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "author": {
         "name": "Otávio Torres"
       },

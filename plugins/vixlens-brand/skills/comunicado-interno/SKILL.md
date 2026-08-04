@@ -1,6 +1,7 @@
 ---
 name: comunicado-interno
-description: Gera comunicados internos para o time Vixlens no padrão de marca. Use quando o usuário digitar /comunicado-interno ou pedir "comunicado para o time", "comunicado interno Vixlens", "avisar o time sobre", "nota interna". Para: equipe comercial, time de produção, coordenadores, gestores.
+description: >-
+  Gera comunicados internos para o time Vixlens no padrão de marca. Use quando o usuário digitar /comunicado-interno ou pedir "comunicado para o time", "comunicado interno Vixlens", "avisar o time sobre", "nota interna". Para: equipe comercial, time de produção, coordenadores, gestores.
 ---
 
 # Skill /comunicado-interno

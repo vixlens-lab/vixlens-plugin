@@ -1,6 +1,7 @@
 ---
 name: vixlens-design-system
-description: Aplica o Design System oficial da Vixlens (cores, tipografia, tokens, componentes, voz e vocabulário canônico) a qualquer documento, apresentação, planilha ou material de marca. Use SEMPRE que for criar, editar ou revisar conteúdo Vixlens — propostas, manuais, memos, cartas, relatórios, decks, planilhas, capas, callouts — mesmo que o usuário não cite "design system", "padrão" ou "marca" explicitamente. Combine este skill com os skills de formato (docx, pptx, pdf, xlsx) e com a Figma: este define O QUE seguir; o de formato define COMO construir o arquivo. Triggers: "documento Vixlens", "proposta", "manual", "apresentação da Vixlens", "no nosso padrão", "padrão da marca", "Freevix", "Reflecta", "Matriz Marca Própria", "EssilorLuxottica".
+description: >-
+  Aplica o Design System oficial da Vixlens (cores, tipografia, tokens, componentes, voz e vocabulário canônico) a qualquer documento, apresentação, planilha ou material de marca. Use SEMPRE que for criar, editar ou revisar conteúdo Vixlens — propostas, manuais, memos, cartas, relatórios, decks, planilhas, capas, callouts — mesmo que o usuário não cite "design system", "padrão" ou "marca" explicitamente. Combine este skill com os skills de formato (docx, pptx, pdf, xlsx) e com a Figma: este define O QUE seguir; o de formato define COMO construir o arquivo. Triggers: "documento Vixlens", "proposta", "manual", "apresentação da Vixlens", "no nosso padrão", "padrão da marca", "Freevix", "Reflecta", "Matriz Marca Própria", "EssilorLuxottica".
 ---
 
 # Vixlens Design System

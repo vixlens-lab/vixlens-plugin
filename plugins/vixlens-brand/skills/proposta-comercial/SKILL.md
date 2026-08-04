@@ -1,6 +1,7 @@
 ---
 name: proposta-comercial
-description: Gera propostas comerciais para novos clientes B2B no padrão Vixlens. Use quando o usuário digitar /proposta-comercial ou pedir "proposta para cliente", "proposta B2B Vixlens", "apresentação comercial", "pitch para ótica". Público-alvo: varejistas ópticos independentes.
+description: >-
+  Gera propostas comerciais para novos clientes B2B no padrão Vixlens. Use quando o usuário digitar /proposta-comercial ou pedir "proposta para cliente", "proposta B2B Vixlens", "apresentação comercial", "pitch para ótica". Público-alvo: varejistas ópticos independentes.
 ---
 
 # Skill /proposta-comercial
