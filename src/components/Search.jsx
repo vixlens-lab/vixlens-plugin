@@ -61,6 +61,9 @@ export default function Search() {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault()
         setOpen((o) => !o)
+      } else if (e.key === 'Escape') {
+        // Global, e não só no input: o foco pode estar em qualquer lugar do modal.
+        setOpen(false)
       }
     }
     const onOpen = () => setOpen(true)
@@ -105,16 +108,20 @@ export default function Search() {
   }
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-start justify-center bg-black/40 px-4 pt-[14vh] backdrop-blur-sm"
-      onClick={close}
-      role="dialog"
-      aria-modal="true"
-      aria-label="Buscar no Design System"
-    >
+    <div className="fixed inset-0 z-50 flex items-start justify-center px-4 pt-[14vh]">
+      {/* O fundo é um botão de verdade: fechar no clique fora precisa existir
+          também para teclado e leitor de tela, não só para o mouse. */}
+      <button
+        type="button"
+        aria-label="Fechar busca"
+        onClick={close}
+        className="absolute inset-0 h-full w-full cursor-default bg-black/40 backdrop-blur-sm"
+      />
       <div
-        className="w-full max-w-lg overflow-hidden rounded-vix-card bg-white shadow-2xl ring-1 ring-black/10"
-        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Buscar no Design System"
+        className="relative w-full max-w-lg overflow-hidden rounded-vix-card bg-white shadow-2xl ring-1 ring-black/10"
       >
         <div className="flex items-center gap-3 border-b border-gray-100 px-4 py-3">
           <MagnifyingGlass size={18} className="shrink-0 text-gray-400" />

@@ -35,6 +35,8 @@ const PaginationLink = ({
   size = "icon",
   ...props
 }) => (
+  // O conteudo vem por children no ponto de uso; o lint nao enxerga isso.
+  // eslint-disable-next-line jsx-a11y/anchor-has-content
   <a
     aria-current={isActive ? "page" : undefined}
     className={cn(buttonVariants({

@@ -21,18 +21,24 @@ export default function InputsSection() {
     >
       <div className="max-w-md">
         <div className="flex flex-col gap-5">
-          <label className="flex flex-col gap-2">
-            <span className="text-sm font-medium text-vix-preto">Nome da ótica</span>
-            <Input placeholder="Ex: Ótica Vixlens" />
-          </label>
-          <label className="flex flex-col gap-2">
-            <span className="text-sm font-medium text-vix-preto">E-mail</span>
-            <Input type="email" placeholder="contato@otica.com.br" />
-          </label>
-          <label className="flex flex-col gap-2">
-            <span className="text-sm font-medium text-vix-preto">Desabilitado</span>
-            <Input placeholder="Indisponível" disabled />
-          </label>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="input-otica" className="text-sm font-medium text-vix-preto">
+              Nome da ótica
+            </label>
+            <Input id="input-otica" placeholder="Ex: Ótica Vixlens" />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="input-email" className="text-sm font-medium text-vix-preto">
+              E-mail
+            </label>
+            <Input id="input-email" type="email" placeholder="contato@otica.com.br" />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="input-desabilitado" className="text-sm font-medium text-vix-preto">
+              Desabilitado
+            </label>
+            <Input id="input-desabilitado" placeholder="Indisponível" disabled />
+          </div>
           <Button variant="dark" className="mt-1 w-full">Enviar cadastro</Button>
         </div>
       </div>
@@ -57,18 +63,26 @@ export default function InputsSection() {
       <SubTitle className="mt-14">Estados</SubTitle>
       <div className="mb-2 max-w-md">
         <div className="flex flex-col gap-5">
-          <label className="flex flex-col gap-2">
-            <span className="text-[11px] uppercase tracking-[0.1em] text-gray-400">Default</span>
-            <Input placeholder="Digite aqui" />
-          </label>
-          <label className="flex flex-col gap-2">
-            <span className="text-[11px] uppercase tracking-[0.1em] text-gray-400">Foco (ring)</span>
-            <Input placeholder="Clique para ver o ring de foco" />
-          </label>
-          <label className="flex flex-col gap-2">
-            <span className="text-[11px] uppercase tracking-[0.1em] text-gray-400">Disabled</span>
-            <Input placeholder="Indisponível" disabled />
-          </label>
+          {/* htmlFor/id explícitos: o label envolvendo o campo já associa, mas os
+              auditores de acessibilidade só reconhecem com a ligação declarada. */}
+          <div className="flex flex-col gap-2">
+            <label htmlFor="input-demo-default" className="text-[11px] uppercase tracking-[0.1em] text-gray-400">
+              Default
+            </label>
+            <Input id="input-demo-default" placeholder="Digite aqui" />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="input-demo-foco" className="text-[11px] uppercase tracking-[0.1em] text-gray-400">
+              Foco (ring)
+            </label>
+            <Input id="input-demo-foco" placeholder="Clique para ver o ring de foco" />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="input-demo-disabled" className="text-[11px] uppercase tracking-[0.1em] text-gray-400">
+              Disabled
+            </label>
+            <Input id="input-demo-disabled" placeholder="Indisponível" disabled />
+          </div>
         </div>
       </div>
 

@@ -27,10 +27,13 @@ export default function Sidebar({ open, onClose }) {
 
   return (
     <>
-      {/* backdrop mobile */}
-      <div
+      {/* backdrop mobile — botão de verdade, para fechar também no teclado */}
+      <button
+        type="button"
+        aria-label="Fechar menu"
+        tabIndex={open ? 0 : -1}
         onClick={onClose}
-        className={`fixed inset-0 z-30 bg-black/40 transition-opacity md:hidden ${open ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
+        className={`fixed inset-0 z-30 h-full w-full cursor-default bg-black/40 transition-opacity md:hidden ${open ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
       />
       <aside
         className={`fixed inset-y-0 left-0 z-40 flex w-[260px] max-w-[85vw] flex-col overflow-hidden bg-vix-preto text-white transition-transform duration-300 md:translate-x-0 ${open ? 'translate-x-0' : '-translate-x-full'}`}

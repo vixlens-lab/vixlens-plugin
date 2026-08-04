@@ -97,12 +97,19 @@ export default function VozTomSection() {
       {/* Checklist antes de publicar */}
       <SubTitle className="mt-14">Checklist antes de publicar</SubTitle>
       <div className="mb-14 grid grid-cols-1 gap-2 sm:grid-cols-2">
-        {CHECKLIST.map((t) => (
-          <label key={t} className="flex cursor-pointer items-center gap-2.5 rounded-lg border border-gray-100 px-3.5 py-2.5">
-            <input type="checkbox" className="h-4 w-4 accent-vix-preto" />
-            <span className="text-[13px] text-gray-600">{t}</span>
-          </label>
-        ))}
+        {CHECKLIST.map((t, i) => {
+          const id = `checklist-voz-${i}`
+          return (
+            <label
+              key={t}
+              htmlFor={id}
+              className="flex cursor-pointer items-center gap-2.5 rounded-lg border border-gray-100 px-3.5 py-2.5"
+            >
+              <input id={id} type="checkbox" className="h-4 w-4 accent-vix-preto" />
+              <span className="text-[13px] text-gray-600">{t}</span>
+            </label>
+          )
+        })}
       </div>
 
       {/* Frases-âncora */}

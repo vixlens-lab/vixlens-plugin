@@ -8,6 +8,8 @@ export function CardHeader({ className, ...props }) {
   return <div className={cn('flex flex-col gap-1.5 p-8', className)} {...props} />
 }
 export function CardTitle({ className, ...props }) {
+  // O conteudo vem por children no ponto de uso; o lint nao enxerga isso.
+  // eslint-disable-next-line jsx-a11y/heading-has-content
   return <h3 className={cn('text-xl font-bold text-vix-preto', className)} {...props} />
 }
 export function CardDescription({ className, ...props }) {
