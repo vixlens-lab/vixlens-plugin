@@ -22,7 +22,10 @@ jobs:
 
       - name: Guarda de drift de token (CSS/preset batem com o JSON?)
         run: npm run tokens:check
-
+        
+      - name: Validar skills dos plugins (frontmatter + versoes)
+        run: npm run skills:check
+        
       - name: Lint
         run: npm run lint
 
