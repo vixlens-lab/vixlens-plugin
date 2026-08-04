@@ -85,20 +85,25 @@
     "callout": {
       "highlight": {
         "bg": "#FFFBEB",
-        "bar": "#FCD341"
+        "bar": "#FCD341",
+        "label": "#92730A"
       },
       "informative": {
         "bg": "#EFEFFF",
-        "bar": "#615FFF"
+        "bar": "#615FFF",
+        "label": "#615FFF"
       },
       "critical": {
         "bg": "#FFF0F0",
-        "bar": "#FF6566"
+        "bar": "#FF6566",
+        "label": "#E03535"
       },
       "success": {
         "bg": "#EDFBF4",
-        "bar": "#30D389"
-      }
+        "bar": "#30D389",
+        "label": "#1A9960"
+      },
+      "comment": "Callout de documento: fundo tint + barra lateral 4px + label. O texto do corpo vai sempre em Preto #1D1D1F sobre o tint (15:1). As cores bar/label sao elementos de UI (icone, barra, borda): minimo 3.0, nunca use como texto de corpo."
     },
     "chart": {
       "comment": "Paleta categórica para gráficos (data-viz). 5 séries distintas.",
