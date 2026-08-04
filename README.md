@@ -35,17 +35,31 @@ Push pra `main` → Vercel publica automaticamente em ds.vixlens.com.br.
 ```bash
 claude plugin marketplace add vixlenslab/vixlens-ds
 claude plugin install vixlens-brand
+claude plugin install vixlens-ui
+```
+
+Para atualizar depois de um push novo:
+
+```bash
+claude plugin marketplace update vixlens-marketplace
 ```
 
 ### Plugins disponíveis
 
 #### `vixlens-brand`
-Sistema completo de marca Vixlens. 4 skills:
+Marca, documentos e comunicação B2B. 5 skills:
 
 - **vixlens-brand** — skill mestre que carrega paleta, tipografia, voz e vocabulário canônico
+- **vixlens-design-system** — aplica o DS em documentos, decks, planilhas e materiais de marca
 - **comunicado-interno** — comunicados para o time no padrão institucional
 - **manual-cliente** — manuais operacionais para clientes ópticos B2B
 - **proposta-comercial** — propostas comerciais para varejistas ópticos independentes
+
+#### `vixlens-ui`
+Interface e código de front-end. 2 skills:
+
+- **vixlens-ui-architect** — interfaces web em React + Tailwind + shadcn fiéis ao DS
+- **ui-boas-praticas** — audita e corrige telas contra 80 boas práticas de UI (tipografia, cores, botões, grid, ícones, imagens, formulários)
 
 ---
 
@@ -57,13 +71,19 @@ site-ds/
 ├── docs/                            ← Docs .md de referência (paleta, tipografia)
 ├── fotos/                           ← Imagens usadas no site
 ├── plugins/
-│   └── vixlens-brand/
+│   ├── vixlens-brand/
+│   │   ├── .claude-plugin/plugin.json
+│   │   └── skills/
+│   │       ├── vixlens-brand/
+│   │       ├── vixlens-design-system/
+│   │       ├── comunicado-interno/
+│   │       ├── manual-cliente/
+│   │       └── proposta-comercial/
+│   └── vixlens-ui/
 │       ├── .claude-plugin/plugin.json
 │       └── skills/
-│           ├── vixlens-brand/
-│           ├── comunicado-interno/
-│           ├── manual-cliente/
-│           └── proposta-comercial/
+│           ├── vixlens-ui-architect/
+│           └── ui-boas-praticas/
 └── .claude-plugin/marketplace.json  ← Manifesto do marketplace
 ```
 
