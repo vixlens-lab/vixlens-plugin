@@ -56,11 +56,11 @@ export default function VozTomSection() {
             <div className="bg-white p-6">
               <div className="mb-4 grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <div>
-                  <div className="mb-1.5 text-[9px] font-bold uppercase tracking-[0.12em] text-gray-400">Quando usar</div>
+                  <div className="mb-1.5 text-[9px] font-bold uppercase tracking-[0.12em] text-gray-500">Quando usar</div>
                   <div className="text-[13px] text-gray-600">{v.quando}</div>
                 </div>
                 <div>
-                  <div className="mb-1.5 text-[9px] font-bold uppercase tracking-[0.12em] text-gray-400">Tom</div>
+                  <div className="mb-1.5 text-[9px] font-bold uppercase tracking-[0.12em] text-gray-500">Tom</div>
                   <div className="text-[13px] text-gray-600">{v.tom}</div>
                 </div>
               </div>

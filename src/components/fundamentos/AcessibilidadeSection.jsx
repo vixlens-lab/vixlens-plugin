@@ -62,7 +62,7 @@ function PairCard({ pair }) {
           </div>
           <div className="text-right">
             <div className={`font-mono text-xl font-bold ${passAA ? 'text-vix-preto' : 'text-red-600'}`}>{r.toFixed(2)}:1</div>
-            <div className="font-mono text-[11px] uppercase text-gray-400">{fg} / {bg}</div>
+            <div className="font-mono text-[11px] uppercase text-gray-500">{fg} / {bg}</div>
           </div>
         </div>
 
@@ -137,7 +137,7 @@ export default function AcessibilidadeSection() {
           </span>
           <div className="font-mono text-5xl font-bold text-vix-preto">
             {aaPass}
-            <span className="text-2xl text-gray-400">/{total}</span>
+            <span className="text-2xl text-gray-500">/{total}</span>
           </div>
           <div className="text-[13px] text-muted-foreground">pares aprovados em AA</div>
         </div>
@@ -228,7 +228,7 @@ export default function AcessibilidadeSection() {
             aria-label="Exemplo de campo com anel de foco"
             className="rounded-vix-input border border-vix-preto bg-white px-4 py-2.5 text-sm text-vix-preto outline-none ring-[3px] ring-ring/30"
           />
-          <span className="font-mono text-[11px] text-gray-400">ring-[3px] · ring-ring/30</span>
+          <span className="font-mono text-[11px] text-gray-500">ring-[3px] · ring-ring/30</span>
         </div>
       </div>
 

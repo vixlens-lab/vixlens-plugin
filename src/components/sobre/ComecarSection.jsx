@@ -217,7 +217,7 @@ export default function ComecarSection() {
                   <ArrowSquareOut
                     size={13}
                     weight="bold"
-                    className="text-gray-400 transition-colors group-hover:text-vix-azul"
+                    className="text-gray-500 transition-colors group-hover:text-vix-azul"
                   />
                 )}
               </div>

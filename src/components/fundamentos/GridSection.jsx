@@ -39,7 +39,7 @@ export default function GridSection() {
             {BREAKPOINTS.map((b) => (
               <tr key={b.prefix} className={b.main ? 'bg-vix-amarelo-light/40' : ''}>
                 <td className="px-5 py-3.5">
-                  <span className={`font-mono ${b.mobile ? 'text-gray-400' : 'text-vix-azul'}`}>{b.prefix}</span>
+                  <span className={`font-mono ${b.mobile ? 'text-gray-500' : 'text-vix-azul'}`}>{b.prefix}</span>
                   {b.main && (
                     <span className="ml-2 rounded-full bg-vix-preto px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.06em] text-white">
                       principal
@@ -64,7 +64,7 @@ export default function GridSection() {
         <span className="font-mono text-vix-azul"> px-8 md:px-16</span>.
       </p>
       <div className="mb-14 rounded-vix-card border border-gray-200 bg-vix-cinza-card px-8 py-8 md:px-16">
-        <div className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.1em] text-gray-400">
+        <div className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.1em] text-gray-500">
           <Monitor size={13} weight="bold" /> Coluna de conteúdo · <span className="font-mono text-vix-azul">max-w-2xl</span>
         </div>
         <div className="mx-auto max-w-2xl rounded-vix-input border border-gray-200 bg-white p-6">
@@ -83,7 +83,7 @@ export default function GridSection() {
         token. Os blocos abaixo são reais: <span className="font-mono text-vix-azul">grid-cols-2 md:grid-cols-4</span> —
         2 colunas no mobile, 4 a partir do <span className="font-mono text-vix-azul">md</span>. Redimensione para ver reflowar.
       </p>
-      <div className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.1em] text-gray-400">
+      <div className="mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.1em] text-gray-500">
         <DeviceMobile size={13} weight="bold" /> grid-cols-2
         <span className="text-gray-300">·</span>
         <Monitor size={13} weight="bold" /> md:grid-cols-4

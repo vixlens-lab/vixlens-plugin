@@ -55,14 +55,14 @@ export default function TipografiaSection() {
         </div>
         {/* Mont */}
         <div className="rounded-vix-card border border-gray-200 bg-white p-8">
-          <div className="text-[11px] font-medium uppercase tracking-[0.08em] text-gray-400">Print · Documentos</div>
+          <div className="text-[11px] font-medium uppercase tracking-[0.08em] text-gray-500">Print · Documentos</div>
           <div className="mt-2 text-5xl font-black leading-none tracking-[0.04em] text-vix-preto">Mont</div>
           <div className="mt-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-vix-cinza">Propostas · Manuais · PDFs</div>
-          <p className="mt-4 text-xs leading-relaxed text-gray-400">Licença comercial requerida. Substituta web: Montserrat (Google Fonts).</p>
+          <p className="mt-4 text-xs leading-relaxed text-gray-500">Licença comercial requerida. Substituta web: Montserrat (Google Fonts).</p>
           <div className="mt-5 flex flex-col gap-1.5">
             {[['Light', 300], ['Regular', 400], ['SemiBold', 600], ['Black', 900]].map(([n, w]) => (
               <div key={n} className="flex items-center border-b border-gray-100 py-1.5 text-vix-preto last:border-0">
-                <span className="w-24 shrink-0 text-xs text-gray-400">{n}</span>
+                <span className="w-24 shrink-0 text-xs text-gray-500">{n}</span>
                 <span className="flex-1 text-right" style={{ fontWeight: w }}>Aa Bb Cc</span>
                 <span className="w-8 shrink-0 text-right text-[10px] text-gray-300">{w}</span>
               </div>
@@ -87,11 +87,11 @@ export default function TipografiaSection() {
         </p>
         <div className="mt-6 flex flex-wrap gap-6">
           <div>
-            <div className="text-[11px] font-medium uppercase tracking-[0.08em] text-gray-400">Escala</div>
+            <div className="text-[11px] font-medium uppercase tracking-[0.08em] text-gray-500">Escala</div>
             <div className="mt-1 text-2xl font-medium text-vix-preto">Centenas de jobs por dia</div>
           </div>
           <div>
-            <div className="text-[11px] font-medium uppercase tracking-[0.08em] text-gray-400">Rastreio</div>
+            <div className="text-[11px] font-medium uppercase tracking-[0.08em] text-gray-500">Rastreio</div>
             <div className="mt-1 text-2xl font-medium text-vix-preto">Cada um monitorado</div>
           </div>
         </div>
@@ -125,7 +125,7 @@ export default function TipografiaSection() {
               {/* amostras lado a lado, na proporção real */}
               <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:gap-10">
                 <div className="min-w-0 flex-1">
-                  <div className="mb-1.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.1em] text-gray-400">
+                  <div className="mb-1.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.1em] text-gray-500">
                     Desktop <span className="font-mono text-vix-azul">{s.desktop}</span>
                   </div>
                   <div
@@ -136,7 +136,7 @@ export default function TipografiaSection() {
                   </div>
                 </div>
                 <div className="min-w-0 flex-1 border-t border-gray-100 pt-4 sm:border-l sm:border-t-0 sm:pl-10 sm:pt-0">
-                  <div className="mb-1.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.1em] text-gray-400">
+                  <div className="mb-1.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.1em] text-gray-500">
                     Mobile <span className="font-mono text-vix-azul">{s.mobile}</span>
                     {same && <span className="font-sans font-medium normal-case tracking-normal text-gray-300">· igual</span>}
                   </div>

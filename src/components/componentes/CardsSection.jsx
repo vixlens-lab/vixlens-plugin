@@ -60,7 +60,7 @@ export default function CardsSection() {
       <div className="mb-14 grid grid-cols-2 gap-3 md:grid-cols-3">
         {SPECS.map(([k, v]) => (
           <div key={k} className="rounded-lg bg-vix-cinza-card px-3.5 py-3">
-            <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-gray-400">{k}</div>
+            <div className="text-[10px] font-bold uppercase tracking-[0.1em] text-gray-500">{k}</div>
             <div className="mt-0.5 text-[13px] font-bold text-vix-preto">{v}</div>
           </div>
         ))}

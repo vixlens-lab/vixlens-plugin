@@ -41,7 +41,7 @@ export function useCopy(timeout = 1400) {
 }
 
 const TONE = {
-  light: { hover: 'hover:bg-black/[0.06]', icon: 'text-gray-400', ok: 'text-green-600' },
+  light: { hover: 'hover:bg-black/[0.06]', icon: 'text-gray-500', ok: 'text-green-600' },
   dark: { hover: 'hover:bg-white/10', icon: 'text-white/50', ok: 'text-vix-amarelo' },
 }
 

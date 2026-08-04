@@ -14,7 +14,7 @@ function Swatch({ name, hex, note, big }) {
       <div className="px-3 py-2.5">
         <div className="text-[13px] font-bold text-vix-preto">{name}</div>
         <CopyValue value={hex} className="text-[11px] uppercase text-gray-600">{hex}</CopyValue>
-        {note && <div className="mt-1 text-[11px] leading-snug text-gray-400">{note}</div>}
+        {note && <div className="mt-1 text-[11px] leading-snug text-gray-500">{note}</div>}
       </div>
     </div>
   )
