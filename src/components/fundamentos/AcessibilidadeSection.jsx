@@ -30,12 +30,13 @@ function StatusBadge({ label, threshold, pass }) {
   return (
     <span
       className={`inline-flex items-center gap-1.5 rounded-vix-chip border px-2 py-1 text-[11px] font-medium ${
-        pass ? 'border-[#00782D]/25 bg-[#EDFBF4] text-[#00782D]' : 'border-red-200 bg-red-50 text-red-600'
+        pass ? 'border-[#00782D]/25 bg-[#EDFBF4] text-[#00782D]' : 'border-[#FF6566]/35 bg-[#FFF0F0] text-[#B91C1C]'
       }`}
     >
       {pass ? <CheckCircle weight="fill" className="h-3.5 w-3.5" /> : <XCircle weight="fill" className="h-3.5 w-3.5" />}
       {label}
-      <span className="font-mono text-[10px] opacity-70">&ge;{threshold.toFixed(1)}</span>
+      {/* sem opacity: ela compoe a cor com o fundo e derruba o contraste do badge */}
+      <span className="font-mono text-[10px]">&ge;{threshold.toFixed(1)}</span>
     </span>
   )
 }
@@ -291,7 +292,7 @@ export default function AcessibilidadeSection() {
           <CheckCircle weight="fill" className="h-4 w-4 shrink-0" />
           <span>Cadastro salvo com sucesso.</span>
         </div>
-        <div className="flex items-center gap-2.5 rounded-vix-input border border-red-200 bg-red-50 px-4 py-3 text-[13px] text-red-600">
+        <div className="flex items-center gap-2.5 rounded-vix-input border border-[#FF6566]/35 bg-[#FFF0F0] px-4 py-3 text-[13px] text-[#B91C1C]">
           <XCircle weight="fill" className="h-4 w-4 shrink-0" />
           <span>Não foi possível salvar. Verifique os campos destacados.</span>
         </div>
