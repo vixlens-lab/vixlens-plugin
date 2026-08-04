@@ -34,7 +34,9 @@ export default function CoresSection() {
   ]
   const grays = Object.entries(c.gray).filter(([k]) => k !== 'comment').map(([k, v]) => ({ name: `gray-${k}`, hex: v.value }))
   const reflecta = Object.entries(c.reflecta).filter(([k]) => k !== 'comment').map(([k, v]) => ({ name: k, hex: v.value }))
-  const callouts = Object.entries(c.callout).map(([k, v]) => ({ name: k, hex: v.bar, note: `bar · fundo ${v.bg}` }))
+  const callouts = Object.entries(c.callout)
+    .filter(([k]) => k !== 'comment')
+    .map(([k, v]) => ({ name: k, hex: v.bar, note: `bar · fundo ${v.bg}` }))
 
   return (
     <Section
