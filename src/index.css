@@ -20,10 +20,11 @@
     --secondary: 300 7% 95%;
     --secondary-foreground: 240 3% 12%;
     --muted: 300 7% 95%;
-    --muted-foreground: 293 8% 45%;
+    --muted-foreground: 293 8% 38%;
     --accent: 300 7% 95%;
     --accent-foreground: 240 3% 12%;
-    --destructive: 0 84% 60%;
+    /* red-700: branco por cima da 6.47. A 60% de luminosidade dava 3.78. */
+    --destructive: 0 74% 42%;
     --destructive-foreground: 0 0% 100%;
     --border: 300 6% 90%;
     --input: 300 6% 90%;

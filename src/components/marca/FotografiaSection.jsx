@@ -106,7 +106,7 @@ export default function FotografiaSection() {
           <div key={e.t} className="overflow-hidden rounded-[14px] border-[1.5px] border-[#FF6566]">
             <div className="flex items-center gap-1.5 bg-[#FF6566] px-3 py-2">
               <XCircle size={13} weight="bold" className="text-white" />
-              <span className="text-[9px] font-bold uppercase tracking-[0.06em] text-white">{e.t}</span>
+              <span className="text-[9px] font-bold uppercase tracking-[0.06em] text-vix-preto">{e.t}</span>
             </div>
             <div className="bg-[#FFF0F0] p-3.5">
               <div className="mb-2.5 flex h-[90px] items-center justify-center rounded-[10px] border-[1.5px] border-dashed border-[#FECDD3] bg-gray-100">
