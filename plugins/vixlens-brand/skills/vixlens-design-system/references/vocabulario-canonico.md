@@ -51,20 +51,30 @@ Estes são exemplos de copy aprovada. Use como balizadores de tom:
 
 ## Portfólio de produtos — nomes canônicos
 
-### Linha Freevix (10 SKUs)
+### Linha de lentes — 13 no total
+
+São **13 lentes**: 10 Freevix + VIX TOTAL + ASTERA + as bifocais. Não diga "11" nem "12".
+
+**Freevix (10 SKUs)** — grafia conforme o material oficial de produto:
 
 | Produto | Categoria | Diferencial principal |
 |---|---|---|
 | **Freevix ONE** | Multifocal | Entrada de linha |
-| **Freevix PREMIUM** | Multifocal | |
+| **Freevix PREMIUM** | Multifocal | Performance visual elevada |
 | **Freevix FREEDOM** | Multifocal | Liberdade de armações |
 | **Freevix IA TECH** | Multifocal | Tecnologia IA |
-| **Freevix VS** | Visão simples | Uso constante de telas |
+| **Freevix VS** | Visão simples | Visão simples com qualidade digital |
 | **Freevix VS HD** | Visão simples | Campo de visão até 30% mais amplo |
-| **Freevix VS RELAX** | Visão simples | Até 80% de redução na fadiga ocular |
-| **Freevix OFFICE ATÉ 4M** | Ocupacional | Visão intermediária ampla (até 4m) |
-| **Freevix DESKVIEW ATÉ 2M** | Ocupacional | Conforto em perto e médias distâncias (até 2m) |
-| **Freevix DESKVIEW ATÉ 1,3M** | Ocupacional | Foco em trabalho de perto (até 1,3m) |
+| **Freevix RELAX** | Visão simples | Até 80% de redução na fadiga ocular |
+| **Freevix OFFICE** | Ocupacional | Visão intermediária ampla |
+| **Freevix DESKVIEW 2** | Ocupacional | Perto e médias distâncias |
+| **Freevix DESKVIEW 1.3** | Ocupacional | Foco em trabalho de perto |
+
+> **Grafia corrigida pelo material oficial:** é **Freevix RELAX** (não "Freevix VS RELAX"), **Freevix OFFICE** (não "OFFICE ATÉ 4M"), **Freevix DESKVIEW 2** e **Freevix DESKVIEW 1.3** (não "ATÉ 2M" / "ATÉ 1,3M"). As distâncias aparecem no diagrama do card, não no nome.
+
+**Fora da linha Freevix:** VIX TOTAL (multifocal de entrada, produto âncora), ASTERA (controle de miopia infantil) e as bifocais.
+
+> **A confirmar:** o nome canônico da linha de bifocais. Até alguém definir, escreva "bifocais" em minúscula e não invente prefixo nem sufixo de produto.
 
 ### Outros produtos
 
@@ -76,11 +86,23 @@ Estes são exemplos de copy aprovada. Use como balizadores de tom:
 
 ### Linha de Antirreflexo Reflecta
 
-| Produto | Performance | Garantia |
-|---|---|---|
-| **Reflecta BlueProtect SH** | Premium Shield, 24 camadas, Ion | 24 meses |
-| **Reflecta Guard** | Premium Shield, 18 camadas, Ion | 12 meses |
-| **Reflecta Express** | Standard Shield, 10 camadas | 12 meses |
+Tabela oficial de comparação do tratamento antirreflexo. Use exatamente estes valores; não estime nem arredonde.
+
+| Atributo | BlueProtect SH | Guard | Express |
+|---|---|---|---|
+| Resistência | Premium Shield | Premium Shield | **Standard** Shield |
+| Antirreflexo | Ion | Ion | Ion |
+| Hidrorrepelente | AquaShield | AquaShield | AquaShield |
+| Liporrepelente | OilShield | OilShield | OilShield |
+| Antiestático | No Dust | No Dust | No Dust |
+| Camadas | 24 | 18 | 10 |
+| Residual | Azul | Verde | Verde |
+| (FPS) UV | sim | — | — |
+| **Garantia** | **24 meses** | **12 meses** | **12 meses** |
+
+Os três têm Ion, AquaShield, OilShield e No Dust. O que separa um do outro é: nível de resistência (Premium x Standard), número de camadas, cor do residual e proteção UV, que só o BlueProtect SH tem.
+
+Nomes de tecnologia com grafia exata, sempre juntos e em CamelCase: **AquaShield**, **OilShield**, **BlueProtect**, **No Dust** (esse com espaço), **Ion**, **Premium Shield**, **Standard Shield**.
 
 > **Só estes três entram em material.** Existe um quarto AR na operação, o Reflecta Go, que não é promovido: não tem assinatura no DS e não deve aparecer em proposta, manual ou comunicado. Se o usuário perguntar dele, responda que está fora do material de marca e não estime especificação nem garantia. O prazo de 3 meses que já circulou em arquivo antigo é dele, nunca do Express.
 

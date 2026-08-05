@@ -202,6 +202,8 @@ Phosphor Icons is the only icon system for all UI, documents, and communications
   - level: `completo` (mark + wordmark) · `reduzido` (wordmark only) · `simbolo` (symbol only)
 - **Lens line (Freevix products):** `<product>-<horizontal|vertical>-<positiva|negativa>`
   - products: `vix-total`, `freevix-one`, `freevix-premium`, `freevix-freedom`, `freevix-ia-tech`, `freevix-vs-hd`, `freevix-relax`, `astera`, `freevix-deskview-1-3m`, `freevix-deskview-2m`, `freevix-office-ate-4m`
+  - This is the asset inventory, not the product list: 13 lenses exist but only these 11 ship a signature. Verified against the DS — `freevix-vs-hd` resolves, `freevix-vs` returns 404.
+  - The slug is not the display name. The DS serves `freevix-office-ate-4m` while the product is called **Freevix OFFICE**; same for `freevix-deskview-1-3m` and **Freevix DESKVIEW 1.3**. Keep the slug for the file and the display name for the copy. Do not "fix" either into the other.
 
 **Variation vocabulary:**
 - `positivo` — colored mark (with yellow), for LIGHT background
@@ -236,7 +238,7 @@ backdrop-blur-[8px]"
 Analyze incoming structural layout files (like WIREFRAMES) and route interface elements according to their dedicated brand zones:
 
 - **Hero / Header:** Centered layout, clean SVG logo (`vixlens-negativo` on dark bg / `vixlens-positivo` on light), floating navigation
-- **Product Cards (Freevix + lens line):** Black canvas with yellow accent stripe, frosted glass badge. The lens line has 11 products (VixTotal, Freevix One/Premium/Freedom/IA Tech/VS HD/Relax, Astera, Deskview 1.3M, Deskview 2M, Office até 4M)
+- **Product Cards (Freevix + lens line):** Black canvas with yellow accent stripe, frosted glass badge. The line has **13 lenses**: 10 Freevix (ONE, PREMIUM, FREEDOM, IA TECH, VS, VS HD, RELAX, OFFICE, DESKVIEW 2, DESKVIEW 1.3) plus VIX TOTAL, ASTERA and the bifocals. Only 11 of them have a signature in the DS — `freevix-vs` and the bifocals have none, so a card for either uses type, not a logo.
 - **Product Cards (Reflecta line):** Use ONLY the corresponding Reflecta product color as accent — Guard `#00782D`, Express `#92BB36` (black text), Blue Protect SH `#134B97`. Never mix Reflecta colors on the same card
 - **News / Academy sections (Vix Academy):** Yellow `#FAC617` callout stripes, black text, clean white cards
 - **Forms / Partner Registration:** White background, gray borders `#606F7F`, black focus ring
