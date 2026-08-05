@@ -70,7 +70,9 @@ São **13 lentes**: 10 Freevix + VIX TOTAL + ASTERA + as bifocais. Não diga "11
 | **Freevix DESKVIEW 2** | Ocupacional | Perto e médias distâncias |
 | **Freevix DESKVIEW 1.3** | Ocupacional | Foco em trabalho de perto |
 
-> **Grafia corrigida pelo material oficial:** é **Freevix RELAX** (não "Freevix VS RELAX"), **Freevix OFFICE** (não "OFFICE ATÉ 4M"), **Freevix DESKVIEW 2** e **Freevix DESKVIEW 1.3** (não "ATÉ 2M" / "ATÉ 1,3M"). As distâncias aparecem no diagrama do card, não no nome.
+> **Nome de exibição x nome de família.** O card oficial estampa **Freevix RELAX**, e a lente é de **visão simples** — o "VS" da forma mais longa "Freevix VS RELAX" é o marcador da família, como em Freevix VS e Freevix VS HD, não um erro. As duas formas existem: use **Freevix RELAX** onde o card manda (arte, capa, título) e a forma com VS onde a família importa (tabela, comparativo, catálogo por categoria).
+>
+> Mesma lógica nos ocupacionais: o card diz **Freevix OFFICE**, **Freevix DESKVIEW 2** e **Freevix DESKVIEW 1.3**; a distância (até 4m, até 2m, até 1,3m) vem do diagrama e aparece nas formas longas de catálogo. Nunca invente uma terceira forma.
 
 **Fora da linha Freevix:** VIX TOTAL (multifocal de entrada, produto âncora), ASTERA (controle de miopia infantil) e as bifocais.
 
