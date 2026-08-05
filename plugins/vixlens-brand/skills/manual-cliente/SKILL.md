@@ -5,6 +5,13 @@ description: Gera um manual operacional para clientes ópticos no padrão Vixlen
 
 # Skill /manual-cliente
 
+## Antes de qualquer coisa: carregue o Design System
+
+Invoque a skill `vixlens-design-system` e leia as referências dela (voz-tom e vocabulario-canonico) antes de escrever uma linha.
+Sem isso os códigos de voz (V1–V5) e os termos canônicos citados aqui não significam nada, e
+o material sai fora do padrão. A fonte da verdade é sempre o DS vivo em https://ds.vixlens.com.br —
+se algum valor deste arquivo divergir, o DS manda.
+
 Gere um manual operacional para clientes ópticos seguindo exatamente o padrão Vixlens de documentos.
 
 ## Antes de começar
@@ -64,12 +71,22 @@ Use V2 (Consultoria de balcão) como base:
 - Antecipe a dúvida antes que o cliente precise perguntar
 - Cliente é protagonista; Vixlens facilita o processo
 
-## Callouts disponíveis
+## Callouts
 
-**ATENÇÃO** (barra Navy): regras críticas, proibições, consequências de erro
-**IMPORTANTE** (barra Amber): destaques comerciais, benefícios principais
-**DICA** (barra Blue): atalhos, boas práticas operacionais
-**O GRANDE DIFERENCIAL** (barra Amber): argumento comercial central — usar para o pitch do portfólio campeão
+Use os quatro callouts do Design System, com a grafia e as cores exatas. Não invente nome nem cor:
+
+| Tipo | Barra | Fundo | Label | Quando |
+|---|---|---|---|---|
+| **Crítico** | `#FF6566` | `#FFF0F0` | `#E03535` | regra obrigatória, proibição, consequência de erro |
+| **Destaque** | `#FCD341` | `#FFFBEB` | `#92730A` | argumento comercial, benefício principal |
+| **Informativo** | `#615FFF` | `#EFEFFF` | `#615FFF` | processo, prazo, passo operacional |
+| **Sucesso** | `#30D389` | `#EDFBF4` | `#1A9960` | confirmação, aprovação, conclusão |
+
+Texto do corpo do callout sempre em Preto `#1D1D1F` sobre o fundo tint. As cores de barra e label
+são elementos de UI: nunca use nenhuma delas como cor de texto corrido.
+
+Para manual de cliente: **Crítico** para regra e proibição, **Destaque** para o diferencial
+comercial e o pitch do portfólio campeão, **Informativo** para atalho e boa prática.
 
 ## Checklist antes de entregar
 

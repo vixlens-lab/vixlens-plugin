@@ -47,13 +47,14 @@ claude plugin marketplace update vixlens-marketplace
 ### Plugins disponíveis
 
 #### `vixlens-brand`
-Marca, documentos e comunicação B2B. 5 skills:
+Marca, documentos e comunicação B2B. 4 skills:
 
-- **vixlens-brand** — skill mestre que carrega paleta, tipografia, voz e vocabulário canônico
-- **vixlens-design-system** — aplica o DS em documentos, decks, planilhas e materiais de marca
+- **vixlens-design-system** — a mestre: paleta, tipografia, tokens, componentes, voz e vocabulário canônico. Os três abaixo carregam ela antes de escrever
 - **comunicado-interno** — comunicados para o time no padrão institucional
 - **manual-cliente** — manuais operacionais para clientes ópticos B2B
 - **proposta-comercial** — propostas comerciais para varejistas ópticos independentes
+
+> A skill `vixlens-brand` foi fundida na `vixlens-design-system` na 0.4.0. Duplicavam 84% das cores e todos os termos canônicos, e já tinham divergido entre si. Se você digitava `vixlens-brand`, passe a usar `vixlens-design-system`.
 
 #### `vixlens-ui`
 Interface e código de front-end. 2 skills:
@@ -74,7 +75,6 @@ site-ds/
 │   ├── vixlens-brand/
 │   │   ├── .claude-plugin/plugin.json
 │   │   └── skills/
-│   │       ├── vixlens-brand/
 │   │       ├── vixlens-design-system/
 │   │       ├── comunicado-interno/
 │   │       ├── manual-cliente/

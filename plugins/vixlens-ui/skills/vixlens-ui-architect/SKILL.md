@@ -69,19 +69,21 @@ Always include the following CSS import at the top of your styling:
 
 ### Type Scale (Host Grotesk):
 
-| Group | Element | Desktop | Mobile | Weight | Line Height |
-|---|---|---|---|---|---|
-| Display | H1 | 96px | 48px | 700 | 100% |
-| Display | H2 | 64px | 36px | 700 | 100% |
-| Display | H3 | 48px | 28px | 700 | 100% |
-| Section | H4 | 32px | 24px | 600 | 120% |
-| Section | H5 | 24px | 20px | 500 | 120% |
-| Section | H6 | 20px | 18px | 500 | 120% |
-| Body | Paragraph | 18px | 16px | 400 | 150% |
-| Body | Bold | 18px | 16px | 600 | 150% |
-| UI | Label | 14px | 14px | 500 | — |
-| UI | Caption | 12px | 12px | 400 | — |
-| UI | Overline | 11px | 11px | 500 | — |
+| Group | Element | Desktop | Mobile | Weight | Line Height | Tracking |
+|---|---|---|---|---|---|---|
+| Display | H1 | 64px | 40px | 700 | 100% | -0.02em |
+| Display | H2 | 48px | 32px | 700 | 100% | -0.02em |
+| Display | H3 | 40px | 28px | 700 | 100% | -0.02em |
+| Section | H4 | 32px | 24px | 600 | 120% | -0.01em |
+| Section | H5 | 24px | 20px | 500 | 120% | -0.01em |
+| Section | H6 | 20px | 16px | 500 | 120% | 0em |
+| Body | Paragraph | 16px | 16px | 400 | 150% | 0em |
+| Body | Bold | 16px | 16px | 600 | 150% | 0em |
+| UI | Label | 14px | 14px | 500 | — | 0.02em |
+| UI | Caption | 12px | 12px | 400 | — | 0em |
+| UI | Overline | 11px | 11px | 500 | — | 0.08em |
+
+Fonte: `https://ds.vixlens.com.br/assets/tokens/vixlens-tokens.json` (`typography.scale`). Busque de lá antes de aplicar — esta tabela é um retrato. A régua anterior deste arquivo (H1 96, H2 64, H3 48, parágrafo 18) era pré-luma e está aposentada.
 
 ### Typography Critical Rules:
 - **NEVER** use italic on any element — it is strictly forbidden
@@ -111,14 +113,14 @@ There are only two button types. Maximum one primary button per section.
 **Primary — Dark Background:**
 
 ```
-className="bg-[#FAC617] text-[#1D1D1F] font-bold rounded-[32px] px-8 py-3.5 text-lg
+className="bg-[#FAC617] text-[#1D1D1F] font-bold rounded-[32px] px-8 py-3.5 text-base
 hover:bg-[#E5A800] focus:ring-3 focus:ring-[#1D1D1F]"
 ```
 
 **Primary — Light Background:**
 
 ```
-className="bg-[#1D1D1F] text-[#F5F5F7] font-bold rounded-[32px] px-8 py-3.5 text-lg
+className="bg-[#1D1D1F] text-[#F5F5F7] font-bold rounded-[32px] px-8 py-3.5 text-base
 hover:bg-[#333333] focus:ring-3 focus:ring-[#FAC617]"
 ```
 
@@ -143,10 +145,10 @@ hover:bg-[#1D1D1F]/5"
 | Focus | Yellow ring 3px | Black ring 3px |
 | Disabled | `bg-[#E5E7EB]` `text-[#9CA3AF]` | same |
 
-**Button Sizes:**
-- Small → `text-sm` (14px)
-- Default → `text-lg` (18px)
-- Large → `text-xl` (20px)
+**Button Sizes** (na régua do DS — 18px não existe mais na escala):
+- Small → `text-sm` (14px, Label)
+- Default → `text-base` (16px, Paragraph)
+- Large → `text-xl` (20px, H6)
 
 ## 6. Input System
 All form fields follow these exact specs from the Vixlens Figma (partner registration form):
@@ -154,7 +156,7 @@ All form fields follow these exact specs from the Vixlens Figma (partner registr
 ```
 className="h-14 px-5 py-3.5 rounded-[24px] border border-[#606F7F]
 focus:border-[#1D1D1F] focus:outline-none bg-white
-text-[#1D1D1F] text-lg placeholder:text-[#606F7F]
+text-[#1D1D1F] text-base placeholder:text-[#606F7F]
 disabled:bg-[#F9FAFB] disabled:text-[#D1D5DB]"
 ```
 

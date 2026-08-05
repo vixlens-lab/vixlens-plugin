@@ -16,7 +16,7 @@ Este skill carrega as **regras**; o arquivo final é construído com o skill de 
 
 1. Identifique o formato do entregável e leia o skill de formato correspondente: `docx` (propostas, manuais, memos, cartas, relatórios), `pdf` (documentos finais para impressão/distribuição), `pptx` (apresentações), `xlsx` (planilhas/tabelas). Para telas, UI ou mockups, use a Figma.
 2. Aplique as regras deste skill: tipografia, cores, tokens, componentes (consulte `references/componentes.md` quando precisar de specs exatas).
-3. **Revise voz e texto** com base em `references/voz-vocabulario.md` — isso vale para TODO texto gerado, não só o visual.
+3. **Revise voz e texto** com base em `references/voz-tom.md` — isso vale para TODO texto gerado, não só o visual.
 4. Rode o **Checklist pré-publicação** (no fim deste arquivo) antes de entregar.
 
 A regra de ouro: a identidade Vixlens é restrita e deliberada. Poucas cores, poucas fontes, frases curtas. Quando em dúvida, prefira o mais sóbrio.
@@ -99,7 +99,7 @@ Specs exatas de **botões, inputs, cards e callouts** (estados, tamanhos, paddin
 
 ## Voz, tom e vocabulário
 
-**Isto se aplica a todo texto gerado.** Leia `references/voz-vocabulario.md` para as 5 vozes, a lista completa de termos canônicos e exemplos. Princípios centrais: institucional mas direto, anti-corporativo-vazio, frases curtas, voz ativa, nenhuma palavra desperdiçada.
+**Isto se aplica a todo texto gerado.** Leia `references/voz-tom.md` para as 5 vozes, a lista completa de termos canônicos e exemplos. Princípios centrais: institucional mas direto, anti-corporativo-vazio, frases curtas, voz ativa, nenhuma palavra desperdiçada.
 
 Erros mais comuns a evitar sempre:
 
@@ -108,6 +108,15 @@ Erros mais comuns a evitar sempre:
 - Nunca % de crescimento ("crescemos X%"), nem valores exatos (faturamento, margem, EBITDA, jobs/dia), nem comparação direta com concorrentes (Hoya, Zeiss, Orgalent), nem referência a M&A/exit/valuation. Use faixas: "centenas de jobs".
 - **"Essilor" nunca isolado → sempre "EssilorLuxottica".**
 - Capitalização exata: **Freevix**, **Astera**, **Reflecta**, **Matriz Marca Própria**, **portfólio campeão Vixlens**, **espelho da tabela Vixlens**.
+
+## Quando parar e escalar
+
+Não gere o material; pergunte primeiro, quando o pedido:
+
+- altera paleta, tipografia ou qualquer regra de marca
+- cita cliente nominalmente sem autorização explícita
+- menciona parceria, contrato ou dado comercial sensível
+- toca em estratégia societária de qualquer forma
 
 ## Checklist pré-publicação
 
@@ -126,5 +135,6 @@ Rode antes de entregar qualquer material:
 
 ## Arquivos de referência
 
-- `references/componentes.md` — specs completas de tipografia digital, botões, inputs, cards, callouts, tokens, logo.
-- `references/voz-vocabulario.md` — 5 vozes, termos canônicos obrigatórios, portfólio de produtos, lista "nunca usar".
+- `references/componentes.md` — specs completas de tipografia digital, botões, inputs, cards, callouts, dashboard escuro, tokens, logo.
+- `references/voz-tom.md` — as 5 referências de voz (V1–V5), regras invioláveis de linguagem, checklist de revisão de copy.
+- `references/vocabulario-canonico.md` — termos obrigatórios com grafia exata, frases-âncora, portfólio de produtos e regras de nomenclatura.

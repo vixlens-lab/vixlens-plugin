@@ -91,6 +91,18 @@ Radius (estilo luma): **Card 32px · Botão 32px · Input 24px · Chip/Badge 12p
 
 Escala de espaçamento (base 8px): 4 / 8 / 12 / 16 / 20 / 24 / 30 / **40 (âncora)** / 48 / 60 / 64 / 80 px. Aplicações: botões h36 (SM h32 / LG h40), padding lateral 16px · inputs h36, padding lateral 14px · cards conteúdo padding 60px 83px · sections padding lateral 64px, vertical 72–80px, max-width 1422px.
 
+## Dashboard escuro
+
+Superfícies para dashboard em tema escuro. Não são cores de marca: existem só para interface de dados.
+
+| Nome | HEX | Uso |
+|---|---|---|
+| BG Escuro | `#0B1220` | Background da tela |
+| BG Card | `#2B3037` | Cards sobre o background escuro |
+| Stroke | `#3E4D62` | Bordas e divisores |
+
+Texto sobre essas superfícies vai em branco ou branco translúcido a partir de 60%, nunca em cinza da rampa neutra.
+
 ## Data-viz (gráficos)
 
 Paleta categórica dedicada — **não** é a cor de marca solta. 5 séries distintas: `#FAC617` (amarelo, lidera) · `#0439D9` (azul) · `#615FFF` (roxo) · `#30D389` (verde) · `#606F7F` (cinza). Vars: `--chart-1`..`--chart-5`. Sequência (uma cor variando de intensidade) quando há ordem/grandeza; categórica quando as séries são independentes. Amarelo nunca como texto fino sobre branco; máx. ~5 séries; começar eixo no zero em barras; sem 3D nem degradê decorativo.

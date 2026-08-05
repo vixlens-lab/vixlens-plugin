@@ -6,6 +6,13 @@ description: >-
 
 # Skill /comunicado-interno
 
+## Antes de qualquer coisa: carregue o Design System
+
+Invoque a skill `vixlens-design-system` e leia as referências dela (voz-tom e vocabulario-canonico) antes de escrever uma linha.
+Sem isso os códigos de voz (V1–V5) e os termos canônicos citados aqui não significam nada, e
+o material sai fora do padrão. A fonte da verdade é sempre o DS vivo em https://ds.vixlens.com.br —
+se algum valor deste arquivo divergir, o DS manda.
+
 Gere comunicados internos para o time Vixlens com clareza operacional e tom institucional direto.
 
 ## Antes de começar
@@ -56,11 +63,22 @@ Regras específicas para comunicados internos:
 - Se há ação obrigatória, destaque em callout ATENÇÃO.
 - Nunca motivacional. Nunca genérico.
 
-## Callouts para comunicados internos
+## Callouts
 
-**ATENÇÃO** (barra Navy): prazo, mudança obrigatória, consequência de não seguir
-**IMPORTANTE** (barra Amber): novo processo, parceria, produto
-**PRAZO** (barra Blue): deadline específico com data
+Use os quatro callouts do Design System, com a grafia e as cores exatas. Não invente nome nem cor:
+
+| Tipo | Barra | Fundo | Label | Quando |
+|---|---|---|---|---|
+| **Crítico** | `#FF6566` | `#FFF0F0` | `#E03535` | regra obrigatória, proibição, consequência de erro |
+| **Destaque** | `#FCD341` | `#FFFBEB` | `#92730A` | argumento comercial, benefício principal |
+| **Informativo** | `#615FFF` | `#EFEFFF` | `#615FFF` | processo, prazo, passo operacional |
+| **Sucesso** | `#30D389` | `#EDFBF4` | `#1A9960` | confirmação, aprovação, conclusão |
+
+Texto do corpo do callout sempre em Preto `#1D1D1F` sobre o fundo tint. As cores de barra e label
+são elementos de UI: nunca use nenhuma delas como cor de texto corrido.
+
+Para comunicado interno: **Crítico** para prazo e mudança obrigatória, **Destaque** para novo
+processo ou parceria, **Informativo** para deadline com data.
 
 ## O que NUNCA incluir em comunicado interno
 

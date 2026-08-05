@@ -6,6 +6,13 @@ description: >-
 
 # Skill /proposta-comercial
 
+## Antes de qualquer coisa: carregue o Design System
+
+Invoque a skill `vixlens-design-system` e leia as referências dela (voz-tom e vocabulario-canonico) antes de escrever uma linha.
+Sem isso os códigos de voz (V1–V5) e os termos canônicos citados aqui não significam nada, e
+o material sai fora do padrão. A fonte da verdade é sempre o DS vivo em https://ds.vixlens.com.br —
+se algum valor deste arquivo divergir, o DS manda.
+
 Gere propostas comerciais para novos clientes B2B — varejistas ópticos independentes — no padrão Vixlens.
 
 ## Antes de começar
@@ -48,7 +55,7 @@ Para propostas que incluam Marca Própria:
 > Toda nova tecnologia incorporada ao portfólio campeão Vixlens fica disponível na sua tabela de marca própria no mesmo momento em que entra na tabela Vixlens. Sem atualização de cadastro, sem renegociação.
 
 Para propostas com foco em portfólio EssilorLuxottica:
-> Acesso ao portfólio completo EssilorLuxottica com produção local no ES — prazo e rastreabilidade de laboratório regional com tecnologia de grupo global.
+> Acesso ao portfólio completo EssilorLuxottica com produção local no ES, com prazo e rastreabilidade de laboratório regional com tecnologia de grupo global.
 
 ### 5. Como funciona (operacional)
 - Resumo do fluxo de pedido em 3-5 steps
@@ -73,11 +80,22 @@ Use V2 (Consultoria de balcão) + V5 (Visão estratégica) combinados:
 - Não comparar com concorrentes
 - Não usar adjetivos vazios: "melhor laboratório", "líder do mercado"
 
-## Callouts para propostas
+## Callouts
 
-**O GRANDE DIFERENCIAL** (barra Amber): pitch principal do produto
-**COMO FUNCIONA** (barra Blue): fluxo operacional simplificado
-**PRÓXIMOS PASSOS** (barra Navy): ação esperada do cliente
+Use os quatro callouts do Design System, com a grafia e as cores exatas. Não invente nome nem cor:
+
+| Tipo | Barra | Fundo | Label | Quando |
+|---|---|---|---|---|
+| **Crítico** | `#FF6566` | `#FFF0F0` | `#E03535` | regra obrigatória, proibição, consequência de erro |
+| **Destaque** | `#FCD341` | `#FFFBEB` | `#92730A` | argumento comercial, benefício principal |
+| **Informativo** | `#615FFF` | `#EFEFFF` | `#615FFF` | processo, prazo, passo operacional |
+| **Sucesso** | `#30D389` | `#EDFBF4` | `#1A9960` | confirmação, aprovação, conclusão |
+
+Texto do corpo do callout sempre em Preto `#1D1D1F` sobre o fundo tint. As cores de barra e label
+são elementos de UI: nunca use nenhuma delas como cor de texto corrido.
+
+Para proposta: **Destaque** para o pitch principal, **Informativo** para o fluxo operacional,
+**Crítico** para a ação esperada do cliente com prazo.
 
 ## Checklist antes de entregar
 
