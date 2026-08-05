@@ -76,13 +76,13 @@ Estes são exemplos de copy aprovada. Use como balizadores de tom:
 
 ### Linha de Antirreflexo Reflecta
 
-| Produto | Performance |
-|---|---|
-| **Reflecta BlueProtect SH** | Premium Shield, 24 camadas, Ion |
-| **Reflecta Guard** | Premium Shield, 18 camadas, Ion |
-| **Reflecta Express** | Standard Shield, 10 camadas |
+| Produto | Performance | Garantia |
+|---|---|---|
+| **Reflecta BlueProtect SH** | Premium Shield, 24 camadas, Ion | 24 meses |
+| **Reflecta Guard** | Premium Shield, 18 camadas, Ion | 12 meses |
+| **Reflecta Express** | Standard Shield, 10 camadas | 12 meses |
 
-> **Garantia: não afirme prazo.** As duas fontes que existiam divergiam no Express (3 meses num arquivo, 12 no outro) e o DS em `ds.vixlens.com.br` não publica prazo nenhum. Enquanto ninguém confirmar, escreva "conforme garantia vigente" e sinalize ao usuário. Garantia errada em proposta é problema comercial, não erro de texto.
+> **Só estes três entram em material.** Existe um quarto AR na operação, o Reflecta Go, que não é promovido: não tem assinatura no DS e não deve aparecer em proposta, manual ou comunicado. Se o usuário perguntar dele, responda que está fora do material de marca e não estime especificação nem garantia. O prazo de 3 meses que já circulou em arquivo antigo é dele, nunca do Express.
 
 ### Regras de nomenclatura de produtos
 
