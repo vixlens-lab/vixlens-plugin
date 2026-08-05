@@ -51,47 +51,60 @@ Estes são exemplos de copy aprovada. Use como balizadores de tom:
 
 ## Portfólio de produtos — nomes canônicos
 
-### Linha de lentes — 13 no total
+### Portfólio de lentes
 
-São **13 lentes**: 10 Freevix + VIX TOTAL + ASTERA + as bifocais. Não diga "11" nem "12".
+Fonte operacional: **Tabela de Preço Vixlens 2026** (última revisão técnica 15/04/2026) e o cardápio "Desvendando as Lentes freevix". Quando a arte de produto e a tabela divergirem, **a tabela manda** — ela é o que a ótica usa pra pedir.
 
-**Freevix (10 SKUs)** — grafia conforme o material oficial de produto:
+**13 lentes:** 10 Freevix + Vix Total + Astera + as bifocais.
 
-| Produto | Categoria | Diferencial principal |
+**Multifocais (5)**
+
+| Produto | Código | Índices |
 |---|---|---|
-| **Freevix ONE** | Multifocal | Entrada de linha |
-| **Freevix PREMIUM** | Multifocal | Performance visual elevada |
-| **Freevix FREEDOM** | Multifocal | Liberdade de armações |
-| **Freevix IA TECH** | Multifocal | Tecnologia IA |
-| **Freevix VS** | Visão simples | Visão simples com qualidade digital |
-| **Freevix VS HD** | Visão simples | Campo de visão até 30% mais amplo |
-| **Freevix RELAX** | Visão simples | Até 80% de redução na fadiga ocular |
-| **Freevix OFFICE** | Ocupacional | Visão intermediária ampla |
-| **Freevix DESKVIEW 2** | Ocupacional | Perto e médias distâncias |
-| **Freevix DESKVIEW 1.3** | Ocupacional | Foco em trabalho de perto |
+| Vix Total | VT | 1.49 · 1.56 · 1.59 · 1.67 |
+| Freevix One | FO | 1.49 · 1.56 · 1.59 · 1.67 |
+| Freevix Premium | FP | 1.49 · 1.56 · 1.59 · 1.67 · 1.74 |
+| Freevix Freedom | FF | 1.49 · 1.56 · 1.59 · 1.67 · 1.74 |
+| Freevix IA Tech | FIA | 1.49 · 1.56 · 1.59 · 1.67 · 1.74 |
 
-**Abreviações nos nomes de produto:**
+**Visão simples (3 Freevix + Astera)**
 
-- **VS** = Visão Simples
-- **VS HD** = Visão Simples HD
+| Produto | Código | Índices |
+|---|---|---|
+| Freevix VS | VS | 1.49 · 1.56 · 1.59 · 1.67 |
+| Freevix VS HD | HD | 1.49 · 1.56 · 1.59 · 1.67 · 1.74 |
+| Freevix VS Relax | — | 1.49 · 1.56 · 1.59 · 1.67 · 1.74 |
+| Astera | AST | 1.49 · 1.56 · 1.59 · 1.67 · 1.74 |
 
-Não são códigos internos: são a categoria da lente escrita curta. Em material para cliente, se a sigla aparecer sozinha e sem contexto, escreva por extenso na primeira menção. Nunca expanda para outra coisa.
+Freevix VS Relax sai em duas adições: **0,75** e **1,00** (linha Digital Comfort). Astera aparece em Visão Simples no cardápio e em "Lentes Especiais" no índice da tabela; as duas classificações são usadas internamente.
 
-> **Nome de exibição x nome de família.** O card oficial estampa **Freevix RELAX**, e a lente é de **visão simples** — o "VS" da forma mais longa "Freevix VS RELAX" é o marcador da família, como em Freevix VS e Freevix VS HD, não um erro. As duas formas existem: use **Freevix RELAX** onde o card manda (arte, capa, título) e a forma com VS onde a família importa (tabela, comparativo, catálogo por categoria).
+**Ocupacionais (3)**
+
+| Produto | Código | Índices |
+|---|---|---|
+| Freevix Deskview até 1,3M | FDV 1,3 | 1.49 · 1.56 · 1.59 · 1.67 |
+| Freevix Deskview até 2M | FDV 2 | 1.49 · 1.56 · 1.59 · 1.67 |
+| Freevix Office até 4M | FOF | 1.49 · 1.56 · 1.59 · 1.67 |
+
+**Bifocais (2 famílias)**
+
+- **Bifocais Convencionais** — Ultex Resina, Ultex Resina Foto, Biovis Resina, Biovis Poli, Biovis Resina Foto
+- **Bifocais Freeform Invisível** — desenhos ULTEX e KRIPTOK, película praticamente invisível
+
+> **A distância faz parte do nome.** É **Freevix Deskview até 1,3M**, **até 2M** e **Freevix Office até 4M** — o cardápio e a tabela grafam assim. A arte de produto encurta para "DESKVIEW 1.3" e "OFFICE", mas o nome de catálogo leva a distância.
 >
-> Mesma lógica nos ocupacionais: o card diz **Freevix OFFICE**, **Freevix DESKVIEW 2** e **Freevix DESKVIEW 1.3**; a distância (até 4m, até 2m, até 1,3m) vem do diagrama e aparece nas formas longas de catálogo. Nunca invente uma terceira forma.
+> **Freevix VS Relax, com o VS.** O cardápio estampa FREEVIX | VS RELAX. VS é Visão Simples, a família da lente. A forma curta "Freevix Relax" aparece só na arte.
 
-**Fora da linha Freevix:** VIX TOTAL (multifocal de entrada, produto âncora), ASTERA (controle de miopia infantil) e as bifocais.
+**Abreviações e códigos**
 
-> **A confirmar:** o nome canônico da linha de bifocais. Até alguém definir, escreva "bifocais" em minúscula e não invente prefixo nem sufixo de produto.
+- **VS** = Visão Simples · **VS HD** = Visão Simples HD · **MF** = multifocal
+- Os códigos (VT, FO, FP, FF, FIA, VS, HD, AST, FDV, FOF) são prefixo de pedido na tabela, não nome comercial. Nunca use o código em material para cliente.
 
-### Outros produtos
+**Tecnologia Vix Slim:** lentes até 30% mais finas e mais leves, para altas dioptrias.
 
-| Produto | Descrição |
-|---|---|
-| **Astera** | Lente para controle de miopia infantil |
-| **VIX Total** | Produto âncora da linha |
-| **Tecnologia Vix Slim** | Lentes até 30% mais finas e leves para altas dioptrias |
+**Astera:** reduz até 60% da progressão da miopia infantil.
+
+**Cada lente sai com um dos três Reflecta** (Express, Guard, Blue Protect SH) ou sem AR — as quatro colunas de preço de toda página da tabela.
 
 ### Linha de Antirreflexo Reflecta
 
@@ -112,6 +125,10 @@ Tabela oficial de comparação do tratamento antirreflexo. Use exatamente estes 
 Os três têm Ion, AquaShield, OilShield e No Dust. O que separa um do outro é: nível de resistência (Premium x Standard), número de camadas, cor do residual e proteção UV, que só o BlueProtect SH tem.
 
 Nomes de tecnologia com grafia exata, sempre juntos e em CamelCase: **AquaShield**, **OilShield**, **BlueProtect**, **No Dust** (esse com espaço), **Ion**, **Premium Shield**, **Standard Shield**.
+
+**Performance (estrelas da tabela):** BlueProtect SH 4/5 · Guard 4/5 · Express 3/5.
+
+**Produção:** solo capixaba, entrega em até 72h.
 
 > **Só estes três entram em material.** Existe um quarto AR na operação, o Reflecta Go, que não é promovido: não tem assinatura no DS e não deve aparecer em proposta, manual ou comunicado. Se o usuário perguntar dele, responda que está fora do material de marca e não estime especificação nem garantia. O prazo de 3 meses que já circulou em arquivo antigo é dele, nunca do Express.
 
