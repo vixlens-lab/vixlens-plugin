@@ -76,7 +76,9 @@ Fonte operacional: **Tabela de Preço Vixlens 2026** (última revisão técnica 
 | Freevix VS Relax | — | 1.49 · 1.56 · 1.59 · 1.67 · 1.74 |
 | Astera | AST | 1.49 · 1.56 · 1.59 · 1.67 · 1.74 |
 
-Freevix VS Relax sai em duas adições: **0,75** e **1,00** (linha Digital Comfort). Astera aparece em Visão Simples no cardápio e em "Lentes Especiais" no índice da tabela; as duas classificações são usadas internamente.
+Freevix VS Relax sai em duas adições: **0,75** e **1,00** (linha Digital Comfort).
+
+**Astera é uma visão simples especial.** É por isso que ela aparece em Visão Simples no cardápio e em "Lentes Especiais" no índice da tabela: as duas leituras estão certas, "especial" qualifica a lente dentro da família VS, não é uma categoria concorrente. Ela também é a única VS que não leva a marca Freevix no nome comercial.
 
 **Ocupacionais (3)**
 
