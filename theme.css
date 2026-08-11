@@ -1,0 +1,62 @@
+/* Tema Vixlens — CSS que as telas consomem junto com os componentes.
+ *
+ * Nas telas (Next.js), importar como PRIMEIRA linha do globals.css:
+ *
+ *   @import 'vixlens-ds/theme.css';
+ *   @tailwind base;
+ *   @tailwind components;
+ *   @tailwind utilities;
+ *
+ * As regras aqui ficam DE FORA de @layer de proposito. Estilo sem camada vence
+ * estilo em camada na cascata, entao o preflight do Tailwind (que vive em
+ * @layer base) nao sobrescreve o tema — independente da ordem do import.
+ */
+
+@import './assets/tokens/vixlens-tokens.css';
+
+/* Tema shadcn/ui — vars mapeadas aos tokens Vixlens (HSL). Todo componente
+   shadcn nasce on-brand. Preto #1D1D1F, Amarelo #FAC617, cinzas do DS. */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 3% 12%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 3% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 3% 12%;
+  --primary: 45 96% 54%;
+  --primary-foreground: 240 3% 12%;
+  --secondary: 300 7% 95%;
+  --secondary-foreground: 240 3% 12%;
+  --muted: 300 7% 95%;
+  --muted-foreground: 293 8% 38%;
+  --accent: 300 7% 95%;
+  --accent-foreground: 240 3% 12%;
+  /* red-700: branco por cima da 6.47. A 60% de luminosidade dava 3.78. */
+  --destructive: 0 74% 42%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 300 6% 90%;
+  --input: 300 6% 90%;
+  --ring: 293 8% 45%;
+  --radius: 1rem;
+  /* data-viz — paleta categorica (fonte: tokens.json color.chart) */
+  --chart-1: #FAC617;
+  --chart-2: #0439D9;
+  --chart-3: #615FFF;
+  --chart-4: #30D389;
+  --chart-5: #606F7F;
+}
+
+/* A borda padrao de todos os elementos NAO fica aqui: ela vem do preflight do
+   Tailwind, via `borderColor.DEFAULT` no tailwind.preset.js. Uma regra `*`
+   neste arquivo perderia pro preflight, que no Tailwind v3 sai sem camada e
+   depois deste import. */
+
+body {
+  margin: 0;
+  font-family: 'Host Grotesk', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: var(--vix-branco);
+  color: var(--vix-preto);
+  -webkit-font-smoothing: antialiased;
+}

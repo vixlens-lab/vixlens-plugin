@@ -1,9 +1,10 @@
 # Vixlens — Design System & Plugin Marketplace
 
-Este repositório serve duas coisas:
+Este repositório serve três coisas:
 
 1. **Vixlens Design System** — publicado em **[ds.vixlens.com.br](https://ds.vixlens.com.br)** (Vercel)
-2. **Vixlens Plugin Marketplace** — plugins para Claude Code e Cowork
+2. **Biblioteca de componentes** — o que as telas Vixlens consomem por dependência
+3. **Vixlens Plugin Marketplace** — plugins para Claude Code e Cowork
 
 ---
 
@@ -28,7 +29,70 @@ Push pra `main` → Vercel publica automaticamente em ds.vixlens.com.br.
 
 ---
 
-## 2. Plugin Marketplace
+## 2. Consumir o DS numa tela
+
+Toda tela Vixlens usa o DS por dependência — nunca copiando componente.
+
+**1. Instalar**
+
+```bash
+npm install github:vixlenslab/vixlens-ds#main
+```
+
+O pacote se builda sozinho na instalação (script `prepare`).
+
+**2. Herdar o Tailwind** — `tailwind.config.js` da tela:
+
+```js
+import vixlens from 'vixlens-ds/tailwind.preset.js'
+
+export default {
+  presets: [vixlens],
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',
+    './node_modules/vixlens-ds/dist-lib/**/*.js', // sem isto as classes dos componentes somem
+  ],
+}
+```
+
+**3. Importar o tema** — primeira linha do `globals.css`:
+
+```css
+@import 'vixlens-ds/theme.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+**4. Usar**
+
+```jsx
+import { Button, Card, CardHeader, cn } from 'vixlens-ds'
+```
+
+São 142 exports (35 componentes shadcn on-brand + `cn`). Os tokens crus, se precisar:
+`import tokens from 'vixlens-ds/tokens'`.
+
+### Por que o preset e não só o CSS
+
+A cor de borda padrão de todo elemento vem de `borderColor.DEFAULT` no preset,
+porque quem emite `*{border-color}` é o preflight do Tailwind. Uma regra `*` no
+`theme.css` não resolveria: o Tailwind v3 não emite `@layer` nativo, então o
+preflight sai sem camada e quem for importado primeiro perde a disputa.
+
+### Builds
+
+| Comando | Sai em | O que é |
+|---|---|---|
+| `npm run build` | `dist/` | site de documentação (o que a Vercel publica) |
+| `npm run build:lib` | `dist-lib/` | biblioteca (o que as telas consomem) |
+
+React, Radix e o resto ficam externos no build de lib — as telas trazem os seus.
+Duas cópias de React no mesmo app quebram hooks em runtime.
+
+---
+
+## 3. Plugin Marketplace
 
 ### Instalação via Claude Code
 
