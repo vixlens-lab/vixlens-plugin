@@ -12,6 +12,7 @@
     ".": "./dist-lib/vixlens-ds.js",
     "./theme.css": "./theme.css",
     "./tailwind.preset.js": "./tailwind.preset.js",
+    "./tailwind.css": "./assets/tokens/vixlens-theme-v4.css",
     "./tokens": "./assets/tokens/vixlens-tokens.json",
     "./package.json": "./package.json"
   },

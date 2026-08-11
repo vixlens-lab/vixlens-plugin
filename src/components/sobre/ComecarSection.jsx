@@ -41,7 +41,7 @@ const CONSUMO = [
     ),
     code: `// tailwind.config.js
 export default {
-  presets: [require('./vixlens-tailwind-preset.js')],
+  presets: [require('./vixlens-tailwind-preset.cjs')],
 }
 
 // no JSX
@@ -128,7 +128,7 @@ const ONDE = [
 const DOWNLOADS = [
   { href: '/assets/tokens/vixlens-tokens.json', label: 'JSON', primary: true },
   { href: '/assets/tokens/vixlens-tokens.css', label: 'CSS' },
-  { href: '/assets/tokens/vixlens-tailwind-preset.js', label: 'Tailwind' },
+  { href: '/assets/tokens/vixlens-tailwind-preset.cjs', label: 'Tailwind' },
 ]
 
 export default function ComecarSection() {

@@ -9,7 +9,7 @@ export default [
     ignores: [
       'dist/**',
       'node_modules/**',
-      'assets/tokens/vixlens-tailwind-preset.js', // gerado (CommonJS)
+      'assets/tokens/vixlens-tailwind-preset.cjs', // gerado (CommonJS)
       'tailwind.config.js', // CommonJS
       'postcss.config.js', // CommonJS
       'src/components/ui/*.figma.jsx', // Code Connect (não é código de app React)

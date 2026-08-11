@@ -13,7 +13,11 @@ import { dirname, join } from 'node:path'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const JSON_PATH = join(root, 'assets/tokens/vixlens-tokens.json')
 const CSS_PATH = join(root, 'assets/tokens/vixlens-tokens.css')
-const PRESET_PATH = join(root, 'assets/tokens/vixlens-tailwind-preset.js')
+// .cjs e nao .js de proposito: o package.json do DS tem "type": "module", entao
+// um .js com module.exports seria lido como ESM e quebraria. O .cjs e legivel
+// tanto por `require` (config Tailwind 3 em CommonJS) quanto por `import`.
+const PRESET_PATH = join(root, 'assets/tokens/vixlens-tailwind-preset.cjs')
+const THEME_V4_PATH = join(root, 'assets/tokens/vixlens-theme-v4.css')
 
 const t = JSON.parse(readFileSync(JSON_PATH, 'utf8'))
 const val = (x) => (x && typeof x === 'object' ? x.value : x) // aceita {value} ou string cru
@@ -74,8 +78,14 @@ function buildCss() {
   return L.join('\n') + '\n'
 }
 
-// ---------- Tailwind preset ----------
-function buildPreset() {
+// ---------- Derivacoes compartilhadas ----------
+// Calculadas UMA vez e consumidas pelo preset (Tailwind 3) e pelo @theme
+// (Tailwind 4). E o que garante que as duas versoes nao divirjam: se algo so
+// existisse num dos dois, seria por esquecimento, e esquecimento e o modo de
+// falha que este arquivo existe pra impedir.
+
+// Cores da marca, na forma aninhada que o Tailwind 3 espera.
+function brandColors() {
   const colors = {}
   for (const [k, v] of Object.entries(t.color)) {
     if (k === 'comment') continue
@@ -90,31 +100,171 @@ function buildPreset() {
       colors['vix-callout'] = co
     }
   }
-  const borderRadius = Object.fromEntries(Object.entries(t.radius).filter(([k]) => k !== 'comment').map(([k, v]) => [`vix-${k}`, val(v)]))
-  const spacing = Object.fromEntries(Object.entries(t.spacing).filter(([k]) => k.startsWith('space-')).map(([k, v]) => [k.replace('space-', ''), val(v)]))
-  const maxWidth = { 'vix-produto': val(t.layout['container-produto']), 'vix-site': val(t.layout['container-ds-site']) }
+  return colors
+}
+
+// As mesmas cores, achatadas em pares nome->valor (o Tailwind 4 nao aninha).
+function flatBrandColors() {
+  const out = []
+  for (const [k, v] of Object.entries(brandColors())) {
+    if (typeof v === 'string') out.push([k, v])
+    else for (const [sub, sv] of Object.entries(v)) out.push([`${k}-${sub}`, sv])
+  }
+  return out
+}
+
+// Ponte shadcn: nomes semanticos apontando para as CSS vars definidas em
+// theme.css. Sem isto, componente shadcn do DS instalado numa tela nasce sem cor.
+const SHADCN = ['border', 'input', 'ring', 'background', 'foreground']
+const SHADCN_PAR = ['primary', 'secondary', 'muted', 'accent', 'destructive', 'popover', 'card']
+
+function shadcnColorsV3() {
+  const c = {}
+  for (const n of SHADCN) c[n] = `hsl(var(--${n}) / <alpha-value>)`
+  for (const n of SHADCN_PAR) {
+    c[n] = { DEFAULT: `hsl(var(--${n}) / <alpha-value>)`, foreground: `hsl(var(--${n}-foreground) / <alpha-value>)` }
+  }
+  return c
+}
+
+const borderRadius = () => ({
+  ...Object.fromEntries(Object.entries(t.radius).filter(([k]) => k !== 'comment').map(([k, v]) => [`vix-${k}`, val(v)])),
+  xl: 'calc(var(--radius) + 4px)',
+  lg: 'var(--radius)',
+  md: 'calc(var(--radius) - 2px)',
+  sm: 'calc(var(--radius) - 4px)',
+})
+
+// space-1 vira vix-1, nao 1: sobrescrever a escala padrao do Tailwind faria
+// p-4 mudar de significado em toda tela que instalasse o preset.
+const spacing = () => Object.fromEntries(
+  Object.entries(t.spacing).filter(([k]) => k.startsWith('space-')).map(([k, v]) => [k.replace('space-', 'vix-'), val(v)]),
+)
+
+const maxWidth = () => ({ 'vix-produto': val(t.layout['container-produto']), 'vix-site': val(t.layout['container-ds-site']) })
+
+// Escala tipografica: cada nivel vira text-vix-<nivel> (desktop) e -m (mobile),
+// carregando tamanho, entrelinha, peso e tracking juntos.
+function typeScale() {
+  const out = []
+  for (const [k, v] of Object.entries(t.typography.scale)) {
+    if (k === 'comment') continue
+    const meta = {
+      lineHeight: v.lineHeight ? String(parseInt(v.lineHeight, 10) / 100) : '1.4',
+      fontWeight: String(v.weight),
+      letterSpacing: v.tracking || '0em',
+    }
+    out.push([`vix-${k}`, v.desktop, meta])
+    out.push([`vix-${k}-m`, v.mobile, meta])
+  }
+  // xs/sm/base ligados ao token: e o que o shadcn usa na UI.
+  const s = t.typography.scale
+  out.push(['xs', s.caption.desktop, { lineHeight: '1rem' }])
+  out.push(['sm', s.label.desktop, { lineHeight: '1.25rem' }])
+  out.push(['base', s.paragraph.desktop, { lineHeight: '1.5rem' }])
+  return out
+}
+
+const FONTS = {
+  vix: ['Host Grotesk', 'sans-serif'],
+  'vix-print': ['Montserrat', 'Mont', 'sans-serif'],
+}
+
+// ---------- Tailwind 3: preset ----------
+function buildPreset() {
+  const colors = { ...brandColors(), ...shadcnColorsV3() }
+  const fontSize = Object.fromEntries(typeScale().map(([k, size, meta]) => [k, [size, meta]]))
 
   const j = (o) => JSON.stringify(o, null, 2).replace(/"([\w-]+)":/g, "'$1':").replace(/"/g, "'")
   return (
-    `// Vixlens DS — Tailwind preset. GERADO por scripts/build-tokens.mjs (fonte: vixlens-tokens.json).\n` +
-    `// uso: presets: [require('./vixlens-tailwind-preset.js')]\n` +
+    `// Vixlens DS — Tailwind 3 preset. GERADO por scripts/build-tokens.mjs (fonte: vixlens-tokens.json).\n` +
+    `// uso: presets: [require('./vixlens-tailwind-preset.cjs')]\n` +
+    `// Tailwind 4? use assets/tokens/vixlens-theme-v4.css.\n` +
     `module.exports = {\n` +
     `  theme: {\n` +
     `    extend: {\n` +
     `      colors: ${j(colors).replace(/\n/g, '\n      ')},\n` +
-    `      borderRadius: ${j(borderRadius).replace(/\n/g, '\n      ')},\n` +
-    `      spacing: ${j(spacing).replace(/\n/g, '\n      ')},\n` +
-    `      maxWidth: ${j(maxWidth).replace(/\n/g, '\n      ')},\n` +
-    `      fontFamily: { vix: ['Host Grotesk', 'sans-serif'], 'vix-print': ['Montserrat', 'Mont', 'sans-serif'] },\n` +
+    `      borderColor: { DEFAULT: 'hsl(var(--border))' },\n` +
+    `      borderRadius: ${j(borderRadius()).replace(/\n/g, '\n      ')},\n` +
+    `      spacing: ${j(spacing()).replace(/\n/g, '\n      ')},\n` +
+    `      maxWidth: ${j(maxWidth()).replace(/\n/g, '\n      ')},\n` +
+    `      fontFamily: ${j(FONTS).replace(/\n/g, '\n      ')},\n` +
+    `      fontSize: ${j(fontSize).replace(/\n/g, '\n      ')},\n` +
     `    },\n` +
     `  },\n` +
     `}\n`
   )
 }
 
+// ---------- Tailwind 4: bloco @theme ----------
+// O Tailwind 4 tirou a configuracao do JavaScript e botou no CSS, e removeu a
+// chave `presets`. Nao ha onde plugar o preset acima — por isso a mesma
+// derivacao sai tambem neste formato, gerada do mesmo JSON.
+function buildThemeV4() {
+  const L = []
+  L.push('/* Vixlens Design System — tema para Tailwind 4. GERADO por scripts/build-tokens.mjs.')
+  L.push('   Fonte: assets/tokens/vixlens-tokens.json — NÃO edite este arquivo na mão, edite o JSON.')
+  L.push('')
+  L.push('   Uso no globals.css da tela, nesta ordem:')
+  L.push('')
+  L.push('     @import "tailwindcss";')
+  L.push('     @import "vixlens-ds/theme.css";      -- valores das CSS vars')
+  L.push('     @import "vixlens-ds/tailwind.css";   -- este arquivo: vars viram utilitario')
+  L.push('')
+  L.push('   Equivalente ao vixlens-tailwind-preset.cjs, que serve o Tailwind 3. */')
+  L.push('')
+  L.push('@theme inline {')
+
+  L.push('  /* cor — marca */')
+  for (const [k, v] of flatBrandColors()) L.push(`  --color-${k}: ${v};`)
+
+  L.push('')
+  L.push('  /* cor — ponte shadcn (as vars vem do theme.css) */')
+  for (const n of SHADCN) L.push(`  --color-${n}: hsl(var(--${n}));`)
+  for (const n of SHADCN_PAR) {
+    L.push(`  --color-${n}: hsl(var(--${n}));`)
+    L.push(`  --color-${n}-foreground: hsl(var(--${n}-foreground));`)
+  }
+
+  L.push('')
+  L.push('  /* raio */')
+  for (const [k, v] of Object.entries(borderRadius())) L.push(`  --radius-${k}: ${v};`)
+
+  L.push('')
+  L.push('  /* espaçamento */')
+  for (const [k, v] of Object.entries(spacing())) L.push(`  --spacing-${k}: ${v};`)
+
+  L.push('')
+  L.push('  /* largura de container */')
+  for (const [k, v] of Object.entries(maxWidth())) L.push(`  --container-${k}: ${v};`)
+
+  L.push('')
+  L.push('  /* família tipográfica */')
+  for (const [k, v] of Object.entries(FONTS)) L.push(`  --font-${k}: ${v.map((f) => (f.includes(' ') ? `'${f}'` : f)).join(', ')};`)
+
+  L.push('')
+  L.push('  /* escala tipográfica */')
+  for (const [k, size, meta] of typeScale()) {
+    L.push(`  --text-${k}: ${size};`)
+    if (meta.lineHeight) L.push(`  --text-${k}--line-height: ${meta.lineHeight};`)
+    if (meta.fontWeight) L.push(`  --text-${k}--font-weight: ${meta.fontWeight};`)
+    if (meta.letterSpacing) L.push(`  --text-${k}--letter-spacing: ${meta.letterSpacing};`)
+  }
+
+  L.push('}')
+  L.push('')
+  L.push('/* A borda padrão de todo elemento. No Tailwind 3 isto sai do preflight via')
+  L.push('   borderColor.DEFAULT; no 4 o preflight usa currentColor, então declaramos. */')
+  L.push('*, ::before, ::after {')
+  L.push('  border-color: hsl(var(--border));')
+  L.push('}')
+  return L.join('\n') + '\n'
+}
+
 const outputs = [
   [CSS_PATH, buildCss()],
   [PRESET_PATH, buildPreset()],
+  [THEME_V4_PATH, buildThemeV4()],
 ]
 const norm = (s) => s.replace(/\r\n/g, '\n')
 
@@ -128,7 +278,7 @@ if (process.argv.includes('--check')) {
     }
   }
   if (drift) process.exit(1)
-  console.log('✓ tokens em sync (CSS + preset batem com o JSON)')
+  console.log('✓ tokens em sync (CSS + preset Tailwind 3 + @theme Tailwind 4 batem com o JSON)')
 } else {
   for (const [path, content] of outputs) {
     writeFileSync(path, content)

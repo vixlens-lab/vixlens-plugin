@@ -32,7 +32,7 @@ npm run tokens:check
 git add assets/tokens/
 ```
 
-Nunca edite `vixlens-tokens.css` nem `vixlens-tailwind-preset.js` diretamente — o `tokens:check` (e o CI) vão barrar.
+Nunca edite `vixlens-tokens.css` nem `vixlens-tailwind-preset.cjs` diretamente — o `tokens:check` (e o CI) vão barrar.
 
 ## Adicionar um componente
 

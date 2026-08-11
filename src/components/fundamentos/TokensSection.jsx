@@ -45,7 +45,7 @@ export default function TokensSection() {
           {[
             { href: '/assets/tokens/vixlens-tokens.json', label: 'JSON', primary: true },
             { href: '/assets/tokens/vixlens-tokens.css', label: 'CSS' },
-            { href: '/assets/tokens/vixlens-tailwind-preset.js', label: 'Tailwind' },
+            { href: '/assets/tokens/vixlens-tailwind-preset.cjs', label: 'Tailwind' },
           ].map((f) => (
             <a
               key={f.label}

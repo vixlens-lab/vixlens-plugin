@@ -1,0 +1,195 @@
+/* Vixlens Design System — tema para Tailwind 4. GERADO por scripts/build-tokens.mjs.
+   Fonte: assets/tokens/vixlens-tokens.json — NÃO edite este arquivo na mão, edite o JSON.
+
+   Uso no globals.css da tela, nesta ordem:
+
+     @import "tailwindcss";
+     @import "vixlens-ds/theme.css";      -- valores das CSS vars
+     @import "vixlens-ds/tailwind.css";   -- este arquivo: vars viram utilitario
+
+   Equivalente ao vixlens-tailwind-preset.cjs, que serve o Tailwind 3. */
+
+@theme inline {
+  /* cor — marca */
+  --color-vix-preto: #1D1D1F;
+  --color-vix-branco: #FFFFFF;
+  --color-vix-cinza-card: #F5F5F7;
+  --color-vix-amarelo: #FAC617;
+  --color-vix-amarelo-hover: #E5A800;
+  --color-vix-azul: #0439D9;
+  --color-vix-azul-10: #EAF0FF;
+  --color-vix-azul-20: #C0CDFA;
+  --color-vix-amarelo-light: #FEF3C7;
+  --color-vix-cinza-borda: #606F7F;
+  --color-vix-gray-50: #F9FAFB;
+  --color-vix-gray-100: #F3F4F6;
+  --color-vix-gray-200: #E5E7EB;
+  --color-vix-gray-300: #D1D5DB;
+  --color-vix-gray-400: #9CA3AF;
+  --color-vix-gray-500: #6B7280;
+  --color-vix-gray-600: #4B5563;
+  --color-vix-gray-700: #374151;
+  --color-reflecta-guard: #00782D;
+  --color-reflecta-express: #92BB36;
+  --color-reflecta-blue-protect-sh: #134B97;
+  --color-vix-chart-1: #FAC617;
+  --color-vix-chart-2: #0439D9;
+  --color-vix-chart-3: #615FFF;
+  --color-vix-chart-4: #30D389;
+  --color-vix-chart-5: #606F7F;
+
+  /* cor — ponte shadcn (as vars vem do theme.css) */
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  /* raio */
+  --radius-vix-card: 32px;
+  --radius-vix-button: 32px;
+  --radius-vix-input: 24px;
+  --radius-vix-chip: 12px;
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* espaçamento */
+  --spacing-vix-1: 4px;
+  --spacing-vix-2: 8px;
+  --spacing-vix-3: 12px;
+  --spacing-vix-4: 16px;
+  --spacing-vix-5: 20px;
+  --spacing-vix-6: 24px;
+  --spacing-vix-7: 30px;
+  --spacing-vix-8: 40px;
+  --spacing-vix-9: 48px;
+  --spacing-vix-10: 60px;
+  --spacing-vix-11: 64px;
+  --spacing-vix-12: 80px;
+
+  /* largura de container */
+  --container-vix-produto: 1422px;
+  --container-vix-site: 1100px;
+
+  /* família tipográfica */
+  --font-vix: 'Host Grotesk', sans-serif;
+  --font-vix-print: Montserrat, Mont, sans-serif;
+
+  /* escala tipográfica */
+  --text-vix-h1: 64px;
+  --text-vix-h1--line-height: 1;
+  --text-vix-h1--font-weight: 700;
+  --text-vix-h1--letter-spacing: -0.02em;
+  --text-vix-h1-m: 40px;
+  --text-vix-h1-m--line-height: 1;
+  --text-vix-h1-m--font-weight: 700;
+  --text-vix-h1-m--letter-spacing: -0.02em;
+  --text-vix-h2: 48px;
+  --text-vix-h2--line-height: 1;
+  --text-vix-h2--font-weight: 700;
+  --text-vix-h2--letter-spacing: -0.02em;
+  --text-vix-h2-m: 32px;
+  --text-vix-h2-m--line-height: 1;
+  --text-vix-h2-m--font-weight: 700;
+  --text-vix-h2-m--letter-spacing: -0.02em;
+  --text-vix-h3: 40px;
+  --text-vix-h3--line-height: 1;
+  --text-vix-h3--font-weight: 700;
+  --text-vix-h3--letter-spacing: -0.02em;
+  --text-vix-h3-m: 28px;
+  --text-vix-h3-m--line-height: 1;
+  --text-vix-h3-m--font-weight: 700;
+  --text-vix-h3-m--letter-spacing: -0.02em;
+  --text-vix-h4: 32px;
+  --text-vix-h4--line-height: 1.2;
+  --text-vix-h4--font-weight: 600;
+  --text-vix-h4--letter-spacing: -0.01em;
+  --text-vix-h4-m: 24px;
+  --text-vix-h4-m--line-height: 1.2;
+  --text-vix-h4-m--font-weight: 600;
+  --text-vix-h4-m--letter-spacing: -0.01em;
+  --text-vix-h5: 24px;
+  --text-vix-h5--line-height: 1.2;
+  --text-vix-h5--font-weight: 500;
+  --text-vix-h5--letter-spacing: -0.01em;
+  --text-vix-h5-m: 20px;
+  --text-vix-h5-m--line-height: 1.2;
+  --text-vix-h5-m--font-weight: 500;
+  --text-vix-h5-m--letter-spacing: -0.01em;
+  --text-vix-h6: 20px;
+  --text-vix-h6--line-height: 1.2;
+  --text-vix-h6--font-weight: 500;
+  --text-vix-h6--letter-spacing: 0em;
+  --text-vix-h6-m: 16px;
+  --text-vix-h6-m--line-height: 1.2;
+  --text-vix-h6-m--font-weight: 500;
+  --text-vix-h6-m--letter-spacing: 0em;
+  --text-vix-paragraph: 16px;
+  --text-vix-paragraph--line-height: 1.5;
+  --text-vix-paragraph--font-weight: 400;
+  --text-vix-paragraph--letter-spacing: 0em;
+  --text-vix-paragraph-m: 16px;
+  --text-vix-paragraph-m--line-height: 1.5;
+  --text-vix-paragraph-m--font-weight: 400;
+  --text-vix-paragraph-m--letter-spacing: 0em;
+  --text-vix-bold: 16px;
+  --text-vix-bold--line-height: 1.5;
+  --text-vix-bold--font-weight: 600;
+  --text-vix-bold--letter-spacing: 0em;
+  --text-vix-bold-m: 16px;
+  --text-vix-bold-m--line-height: 1.5;
+  --text-vix-bold-m--font-weight: 600;
+  --text-vix-bold-m--letter-spacing: 0em;
+  --text-vix-label: 14px;
+  --text-vix-label--line-height: 1.4;
+  --text-vix-label--font-weight: 500;
+  --text-vix-label--letter-spacing: 0.02em;
+  --text-vix-label-m: 14px;
+  --text-vix-label-m--line-height: 1.4;
+  --text-vix-label-m--font-weight: 500;
+  --text-vix-label-m--letter-spacing: 0.02em;
+  --text-vix-caption: 12px;
+  --text-vix-caption--line-height: 1.4;
+  --text-vix-caption--font-weight: 400;
+  --text-vix-caption--letter-spacing: 0em;
+  --text-vix-caption-m: 12px;
+  --text-vix-caption-m--line-height: 1.4;
+  --text-vix-caption-m--font-weight: 400;
+  --text-vix-caption-m--letter-spacing: 0em;
+  --text-vix-overline: 11px;
+  --text-vix-overline--line-height: 1.4;
+  --text-vix-overline--font-weight: 500;
+  --text-vix-overline--letter-spacing: 0.08em;
+  --text-vix-overline-m: 11px;
+  --text-vix-overline-m--line-height: 1.4;
+  --text-vix-overline-m--font-weight: 500;
+  --text-vix-overline-m--letter-spacing: 0.08em;
+  --text-xs: 12px;
+  --text-xs--line-height: 1rem;
+  --text-sm: 14px;
+  --text-sm--line-height: 1.25rem;
+  --text-base: 16px;
+  --text-base--line-height: 1.5rem;
+}
+
+/* A borda padrão de todo elemento. No Tailwind 3 isto sai do preflight via
+   borderColor.DEFAULT; no 4 o preflight usa currentColor, então declaramos. */
+*, ::before, ::after {
+  border-color: hsl(var(--border));
+}
