@@ -20,5 +20,6 @@ npm-debug.log*
 # Build / cache local
 .cache/
 dist/
+dist-lib/
 .vercel
 _legacy/

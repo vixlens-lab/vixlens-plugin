@@ -3,10 +3,30 @@
   "private": true,
   "version": "0.9.1",
   "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "main": "./dist-lib/vixlens-ds.js",
+  "module": "./dist-lib/vixlens-ds.js",
+  "exports": {
+    ".": "./dist-lib/vixlens-ds.js",
+    "./theme.css": "./theme.css",
+    "./tailwind.preset.js": "./tailwind.preset.js",
+    "./tokens": "./assets/tokens/vixlens-tokens.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist-lib",
+    "theme.css",
+    "tailwind.preset.js",
+    "assets/tokens"
+  ],
   "scripts": {
     "dev": "vite",
     "prebuild": "node scripts/build-tokens.mjs --check && node scripts/validate-skills.mjs",
     "build": "vite build",
+    "build:lib": "vite build --config vite.config.lib.js",
+    "prepare": "npm run build:lib",
     "preview": "vite preview",
     "tokens:build": "node scripts/build-tokens.mjs",
     "tokens:check": "node scripts/build-tokens.mjs --check",
@@ -44,16 +64,20 @@
     "clsx": "^2.1.1",
     "lucide-react": "^1.25.0",
     "next-themes": "^0.4.6",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "recharts": "^2.15.4",
     "sonner": "^2.0.7",
     "tailwind-merge": "^3.6.0",
     "tailwindcss-animate": "^1.0.7"
   },
+  "peerDependencies": {
+    "react": "^18.3.1 || ^19.0.0",
+    "react-dom": "^18.3.1 || ^19.0.0"
+  },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
     "@vitejs/plugin-react": "^4.3.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.39.5",
     "eslint-plugin-jsx-a11y": "^6.10.2",
