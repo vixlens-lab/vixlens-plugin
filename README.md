@@ -6,6 +6,8 @@ Este repositório serve três coisas:
 2. **Biblioteca de componentes** — o que as telas Vixlens consomem por dependência
 3. **Vixlens Plugin Marketplace** — plugins para Claude Code e Cowork
 
+Os critérios de tecnologia de todo projeto Vixlens estão em [STACK.md](./STACK.md) — qual framework escolher, quando subir versão, quando abrir repositório novo.
+
 ---
 
 ## 1. Design System
