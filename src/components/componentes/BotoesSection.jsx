@@ -5,7 +5,7 @@ import { PropsTable, DosDonts } from './ComponentDocs.jsx'
 import { CodeBlock } from '../Copy.jsx'
 
 const BUTTON_PROPS = [
-  { prop: 'variant', tipo: 'default | dark | secondary | outline | ghost | destructive | link', padrao: '"default"', desc: 'Estilo visual. default = amarelo (CTA), dark = preto sobre fundo claro.' },
+  { prop: 'variant', tipo: 'default | dark | secondary | outline-solid | ghost | destructive | link', padrao: '"default"', desc: 'Estilo visual. default = amarelo (CTA), dark = preto sobre fundo claro.' },
   { prop: 'size', tipo: 'sm | default | lg | icon', padrao: '"default"', desc: 'Altura e padding. lg para CTAs, icon só para ícone (use aria-label).' },
   { prop: 'asChild', tipo: 'boolean', padrao: 'false', desc: 'Renderiza o filho como raiz (ex.: <a>) mantendo os estilos do botão.' },
   { prop: 'disabled', tipo: 'boolean', padrao: 'false', desc: 'Desabilita o botão e reduz a opacidade, bloqueando o clique.' },

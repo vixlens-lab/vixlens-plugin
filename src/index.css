@@ -1,12 +1,17 @@
 /* O tema (tokens + vars shadcn + base do body) mora em theme.css, na raiz do
    repo, porque e o mesmo arquivo que as telas consomem via `vixlens-ds/theme.css`.
    Fonte unica: mexeu la, muda aqui e nas telas junto. */
-@import '../theme.css';
+@import '../theme.css' layer(base);
 /* Montserrat = substituta web do Mont (escala print/documentos) */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap')
+layer(base);
+@import 'tailwindcss';
+@import 'tw-animate-css';
+/* O tema do Tailwind e o MESMO que as telas herdam — gerado do
+   vixlens-tokens.json. O site do DS consome o proprio pacote em vez de ter
+   configuracao paralela: se aqui e la fossem arquivos diferentes, a
+   documentacao poderia mostrar uma coisa e a tela renderizar outra. */
+@import '../assets/tokens/vixlens-theme-v4.css';
 
 html {
   scroll-behavior: smooth;

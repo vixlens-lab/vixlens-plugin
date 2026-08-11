@@ -48,7 +48,7 @@ export default function MateriaisSection() {
       title={
         <span className="inline-flex flex-wrap items-center gap-3">
           Materiais
-          <span className="relative -top-0.5 rounded-vix-chip bg-vix-amarelo-light px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.1em] text-vix-preto">
+          <span className="relative -top-0.5 rounded-vix-chip bg-vix-amarelo-light px-2.5 py-1 text-[11px] font-bold uppercase tracking-widest text-vix-preto">
             Em breve
           </span>
         </span>
