@@ -147,6 +147,8 @@ Tipo: Multifocal → `LENTES MULTIFOCAIS SURFAÇADAS`; VS → `LENTES DE VISÃO 
 
 ## Capa, índice e contracapa
 
+**Capa, contracapa e as fotos das páginas de família são trabalho do designer, não da skill.** Gere só os slots tracejados e o texto estrutural; não invente imagem, logo nem dados de contato.
+
 **Capa:** slot `CAPA` 595×470 sangrado no topo, slot `LOGO VIXLENS` 150×46 em (20, 500), título ExtraBold 34 em duas linhas (a segunda em `#6C6C6C`), bloco "EMITIDO PARA" com os dados do cabeçalho do CSV (ótica, CNPJ, responsável, telefone, data), e a nota de disponibilidade em 7pt no pé.
 
 **Índice:** título `QUAL FAMÍLIA ATENDE ESSA RECEITA?` ExtraBold 22 e a matriz de compatibilidade — uma linha por família com chip de cor 14×14 raio 4, nome, tipo, esférico, cilíndrico, adição, altura, diâmetro e página. Larguras `[14,128,73,56,62,60,46,38,18]`, gap 5, container `#E4E4E4`. Família em modo `varia` mostra os dois valores na coluna Alt., em Bold: `16/18mm`. Deixar só um valor ali contradiz a página da família. O cilíndrico da Vix Total vai em `#C81E1E` Bold por ser a única família que para em -4.00. Abaixo da matriz vêm o bloco "COMO LER A TABELA", que precisa explicar os dois modos de altura, e a legenda das 14 bolinhas em duas linhas.
