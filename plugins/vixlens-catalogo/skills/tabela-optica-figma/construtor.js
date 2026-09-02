@@ -189,7 +189,7 @@ for (const [a, b] of TITULOS) {
   t.fontSize = 6.5; t.characters = a + LS + b; t.fills = fill('#FFFFFF');
   t.letterSpacing = { unit: 'PERCENT', value: 0 };
   cabValores.appendChild(t);
-  t.textAutoResize = 'NONE'; t.textAlignHorizontal = 'RIGHT'; t.resize(PW, 16);
+  t.textAutoResize = 'NONE'; t.textAlignHorizontal = 'LEFT'; t.resize(PW, 16);
 }
 
 const registros = DADOS.trim().split('\n').map(l => l.split('~'));
@@ -245,7 +245,7 @@ registros.forEach((d, i) => {
 
   const g = grupoValores(r);
   [d[6], d[7], d[8], d[9]].forEach(v => {
-    celula(g, v, PW, { alinha: v && v.length ? 'RIGHT' : 'CENTER' });
+    celula(g, v, PW, { alinha: v && v.length ? 'LEFT' : 'CENTER' });
   });
 });
 

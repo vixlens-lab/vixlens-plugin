@@ -56,7 +56,7 @@ Zebra: `#FAFAFA` / `#F0F0F0` alternando **só entre linhas de produto** — a li
 
 ### Títulos das colunas de preço
 
-Duas linhas, Bold 6.5pt, alinhadas à direita, separadas por U+2028:
+Duas linhas, Bold 6.5pt, alinhadas à esquerda, separadas por U+2028:
 
 `Sem` / `tratamento` · `Reflecta` / `Express` · `Reflecta` / `Guard` · `Reflecta` / `Blue Protect`
 
@@ -85,7 +85,7 @@ Nunca vírgula. Nunca cortar os dois zeros. `Diâm.`, não `Ø`. O cilíndrico u
 
 ### Preços
 
-Alinhados à direita. Combinação inexistente: `—` **centralizado**.
+Alinhados à esquerda, títulos inclusive. Combinação inexistente: `—` **centralizado**, para ler como ausência e não competir com os números.
 
 ### Bolinhas de cor
 
