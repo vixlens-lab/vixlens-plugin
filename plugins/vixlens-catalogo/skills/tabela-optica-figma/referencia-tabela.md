@@ -54,6 +54,8 @@ Tipografia: Host Grotesk Regular 8pt com `letterSpacing` −4% nas células de d
 
 Zebra: `#FAFAFA` / `#F0F0F0` alternando **só entre linhas de produto** — a linha de cores não entra na contagem. Cabeçalho da tabela `#000000` com texto branco.
 
+**A linha de cores herda o tom da linha de produto acima.** As duas são a mesma lente: o produto e os códigos por cor dele. Se a sub-linha tivesse tom fixo, a zebra sugeriria duas lentes diferentes toda vez que a de cima caísse no tom escuro. É por isso que `corDaLinha` existe no construtor.
+
 ### Títulos das colunas de preço
 
 Duas linhas, Bold 6.5pt, alinhadas à esquerda, separadas por U+2028:

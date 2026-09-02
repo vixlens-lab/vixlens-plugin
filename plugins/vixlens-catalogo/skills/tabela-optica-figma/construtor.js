@@ -193,7 +193,10 @@ for (const [a, b] of TITULOS) {
 }
 
 const registros = DADOS.trim().split('\n').map(l => l.split('~'));
-let zebra = 0, ultimoProduto = null, ultimaCelulaCod = null, inline = 0, linhasCor = 0;
+// corDaLinha guarda a cor da linha de produto atual: a linha de cores é a
+// mesma lente e tem que ficar no mesmo tom, senão a zebra sugere duas lentes.
+let zebra = 0, corDaLinha = '#FAFAFA';
+let ultimoProduto = null, ultimaCelulaCod = null, inline = 0, linhasCor = 0;
 
 registros.forEach((d, i) => {
   if (d[0] === 'SUB') {
@@ -209,7 +212,7 @@ registros.forEach((d, i) => {
       ultimaCelulaCod.characters = '↓';
       ultimaCelulaCod.textAlignHorizontal = 'CENTER';
     }
-    const r = linha('#FAFAFA', 4);
+    const r = linha(corDaLinha, 4);
     r.name = 'subrow';
     const esp = itens.some(m => ESPELHADO.indexOf(m[2]) > -1);
     const wrap = figma.createAutoLayout('HORIZONTAL', { name: 'cores' });
@@ -221,7 +224,8 @@ registros.forEach((d, i) => {
     return;
   }
 
-  const r = linha(zebra++ % 2 === 0 ? '#FAFAFA' : '#F0F0F0', 3);
+  corDaLinha = zebra++ % 2 === 0 ? '#FAFAFA' : '#F0F0F0';
+  const r = linha(corDaLinha, 3);
   ultimaCelulaCod = celula(r, d[0], W[0], { alinha: d[0] ? 'LEFT' : 'CENTER' });
   chipIndice(r, d[1]);
 
