@@ -30,7 +30,7 @@ As quatro densas têm 21 produtos e 6 linhas de cor. Mesmo com o slot no mínimo
 
 Auto-layout vertical, fill na cor da família, raio 20, padding 12/16, gap 2.
 
-- Linha 1: nome da família, Host Grotesk ExtraBold 22 + pílula preta raio 100 com `Alt. mín. NN mm` em Bold 9 branco
+- Linha 1: nome da família, Host Grotesk ExtraBold 22 + pílula preta raio 100 em Bold 9 branco, com o texto que a seção **Altura** definir
 - Linha 2: tipo da lente + `//  MARCA PRÓPRIA VIXLENS`, Medium 8
 
 Cor do texto do cabeçalho: preto quando a luminância da cor da família passa de 0.6, branco caso contrário. Fórmula: `0.299R + 0.587G + 0.114B` com canais em 0–1.
@@ -44,11 +44,11 @@ Linha: auto-layout horizontal, raio 30, padding 3/8, gap 5, `counterAxisAlignIte
 |---|---|---|---|
 | 0 | Cód | 24 | texto 8pt |
 | 1 | Índ. | 26 | chip preenchido |
-| 2 | Produto | 160 | frame auto-layout (texto + bolinha opcional) |
-| 3 | Disponibilidade | 98 | texto 6pt, 2 linhas, `#4A4A4A` |
+| 2 | Produto | 136 | frame auto-layout (texto + bolinha opcional) |
+| 3 | Disponibilidade | 122 | texto 6pt, 2 linhas, `#4A4A4A` |
 | 4 | Valores | 210 | grupo auto-layout, gap 10, 4 células de 45 |
 
-Soma: 24 + 26 + 160 + 98 + 210 + (4 gaps × 5) = 538, dentro dos 539 disponíveis (555 internos − 16 de padding).
+Soma: 24 + 26 + 136 + 122 + 210 + (4 gaps × 5) = 538, dentro dos 539 disponíveis (555 internos − 16 de padding).
 
 Tipografia: Host Grotesk Regular 8pt com `letterSpacing` −4% nas células de dado; Bold 8pt (colunas 0–2) e Bold 7pt (3 em diante) no cabeçalho da tabela, `letterSpacing` 0.
 
@@ -99,20 +99,28 @@ Bolinha do Espelhado: círculo 14px, sigla de 3 letras em Bold 4.5pt, código em
 
 Cor do texto dentro da bolinha: mesma regra de luminância.
 
-### Altura divergente da família
+### Altura
 
-A pílula do cabeçalho vale para a família inteira, mas a altura **pode divergir em linhas isoladas** — e diverge para cima, o que é a direção perigosa: sem marcação, a peça promete que a lente monta numa armação menor do que ela aceita, e o erro só aparece na montagem.
+A altura de montagem tem **três modos**, definidos por `CONFIG.altura`. Escolha pelo resultado da checagem de variância, nunca por suposição.
 
-Quando a checagem de variância acusar mais de um valor, confirme na fonte. Se for real, passe a altura no 11º campo do registro em `DADOS` e o construtor desenha uma pílula preta ao lado do nome do produto, dentro dos 160px da coluna Produto. No campo Disponibilidade não cabe: a linha 2 com a altura pede 114px numa coluna de 98.
+| `CONFIG.altura` | Quando | Cabeçalho | Linha |
+|---|---|---|---|
+| `'16 mm'` | um único valor na família inteira | `Alt. mín. 16 mm` | nada |
+| `'varia'` | dois ou mais valores na família | `Alt. mín. varia por lente` | `\| Alt. NNmm` no fim da linha 2, **em todas as linhas** |
+| `null` | visão simples, o CSV não traz altura | sem pílula | nada |
 
-Confirmadas na fonte no CSV de 2026, com print do catálogo de origem:
+No modo `varia`, cada registro de `DADOS` precisa trazer a sua altura no 11º campo. O construtor lança erro se faltar — melhor quebrar do que publicar uma linha sem altura.
 
-| Família | Linha | Altura da linha | Altura da família |
+**Por que em todas as linhas e não só nas divergentes.** Marcar só a exceção obriga quem lê a inferir o resto do cabeçalho. Funciona com uma exceção, quebra com cinco. E a divergência costuma ser para cima: sem a altura explícita, a peça promete que a lente monta numa armação menor do que ela aceita, e o erro só aparece na montagem, virando refação.
+
+No CSV de 2026 duas famílias caem no modo `varia`, ambas confirmadas contra o catálogo de origem — não são erro de exportação:
+
+| Família | Linha | Altura da linha | Resto da família |
 |---|---|---|---|
 | Freevix Freedom | 1.59 Poli Transitions Gen S | 18mm | 16mm |
 | Freevix IA Tech | 1.74 Resina Transitions Gen S | 18mm | 14mm |
 
-Nas duas, o diâmetro também sobe para 75. Não são erro de digitação do CSV — o catálogo de origem traz os mesmos valores.
+Nas duas o diâmetro também sobe para 75.
 
 ## Paleta
 
@@ -125,8 +133,8 @@ Valores conferidos contra o CSV de 2026. Cilíndrico e Adição mudam por famíl
 | 02 | VIX TOTAL | `#F7B200` | 18 mm | -4.00 | 1.00 a 3.50 | 120 |
 | 03 | FREEVIX ONE | `#EF7F02` | 18 mm | -6.00 | 0.50 a 5.00 | 120 |
 | 04 | FREEVIX PREMIUM | `#D94F2B` | 16 mm | -6.00 | 0.50 a 5.00 | **0** |
-| 05 | FREEVIX FREEDOM | `#B5306B` | 16 mm | -6.00 | 0.50 a 5.00 | **0** |
-| 06 | FREEVIX IA TECH | `#7A4BC4` | 14 mm | -6.00 | 0.50 a 5.00 | **0** |
+| 05 | FREEVIX FREEDOM | `#B5306B` | varia | -6.00 | 0.50 a 5.00 | **0** |
+| 06 | FREEVIX IA TECH | `#7A4BC4` | varia | -6.00 | 0.50 a 5.00 | **0** |
 | 07 | FREEVIX VS HD | `#006BB2` | null | -6.00 | null | **0** |
 | 08 | VS RELAX 0,50 | `#2E9BD6` | null | -6.00 | null | 120 |
 | 09 | VS RELAX 0,75 | `#5BB8E0` | null | -6.00 | null | 120 |

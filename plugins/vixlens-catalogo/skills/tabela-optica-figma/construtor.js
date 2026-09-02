@@ -5,8 +5,8 @@
 //   produto: cod~indice~nome~diam~esfMais~esfMenos~p1~p2~p3~p4[~altura]
 //   cores:   SUB~codigo Cor | codigo Cor | ...
 //
-// O 11o campo é opcional e só existe quando a altura da linha difere da
-// altura da família: entra como pílula preta ao lado do nome do produto.
+// O 11o campo, altura, é obrigatório quando CONFIG.altura === 'varia' e
+// ignorado nos outros casos. Ver "Altura" em referencia-tabela.md.
 // Campo de preço vazio vira travessão. Cod vazio vira seta quando houver linha
 // de cores logo abaixo.
 
@@ -47,7 +47,7 @@ const CORES = {
 };
 const ESPELHADO = ['Prata', 'Dourado', 'Azul', 'Rosa'];
 
-const W = [24, 26, 160, 98];
+const W = [24, 26, 136, 122];
 const PW = 45;
 const TITULOS = [['Sem', 'tratamento'], ['Reflecta', 'Express'], ['Reflecta', 'Guard'], ['Reflecta', 'Blue Protect']];
 
@@ -82,13 +82,16 @@ const texto = (parent, chars, style, size, cor) => {
   return t;
 };
 texto(linhaTitulo, CONFIG.familia, 'ExtraBold', 22, corTitulo);
-// Famílias de visão simples não têm altura de montagem: pílula omitida.
+// altura: 'NN mm' = igual na família inteira, vale a pílula.
+//         'varia'  = cada linha traz a sua, a pílula só avisa.
+//         null     = visão simples, não tem altura de montagem.
 if (CONFIG.altura) {
   const pilula = figma.createAutoLayout('HORIZONTAL', { name: 'altura' });
   pilula.fills = fill('#000000'); pilula.cornerRadius = 100;
   pilula.paddingTop = 4; pilula.paddingBottom = 4; pilula.paddingLeft = 10; pilula.paddingRight = 10;
   linhaTitulo.appendChild(pilula);
-  texto(pilula, 'Alt. mín. ' + CONFIG.altura, 'Bold', 9, '#FFFFFF');
+  const rotulo = CONFIG.altura === 'varia' ? 'Alt. mín. varia por lente' : 'Alt. mín. ' + CONFIG.altura;
+  texto(pilula, rotulo, 'Bold', 9, '#FFFFFF');
 }
 texto(hdr, CONFIG.tipo + '  //  MARCA PRÓPRIA VIXLENS', 'Medium', 8, corTitulo);
 
@@ -228,22 +231,15 @@ registros.forEach((d, i) => {
   prod.resize(W[2], prod.height); prod.layoutSizingHorizontal = 'FIXED';
   const nome = texto(prod, d[2], 'Regular', 8, '#000000');
   nome.letterSpacing = { unit: 'PERCENT', value: -4 };
-  // Altura divergente da família: pílula na própria linha. A do cabeçalho
-  // vale para o resto, e sem esta marca a peça prometeria uma armação menor
-  // do que a lente aceita.
-  if (d[10]) {
-    const excecao = figma.createAutoLayout('HORIZONTAL', { name: 'excecao altura' });
-    excecao.fills = fill('#000000'); excecao.cornerRadius = 100;
-    excecao.paddingTop = 2; excecao.paddingBottom = 2; excecao.paddingLeft = 6; excecao.paddingRight = 6;
-    excecao.counterAxisAlignItems = 'CENTER';
-    prod.appendChild(excecao);
-    const t = texto(excecao, d[10], 'Bold', 6.5, '#FFFFFF');
-    t.letterSpacing = { unit: 'PERCENT', value: -2 };
-  }
   ultimoProduto = prod;
 
   // Visão simples não tem adição: a segunda linha fica só com o diâmetro.
-  const l2 = (CONFIG.adicao ? 'Add. ' + CONFIG.adicao + ' | ' : '') + 'Diâm. ' + d[3] + 'mm';
+  let l2 = (CONFIG.adicao ? 'Add. ' + CONFIG.adicao + ' | ' : '') + 'Diâm. ' + d[3] + 'mm';
+  // Família com alturas diferentes: a altura é dado de linha, em toda linha.
+  if (CONFIG.altura === 'varia') {
+    if (!d[10]) throw new Error('altura varia na familia mas a linha nao traz a dela: ' + d[0] + ' ' + d[2]);
+    l2 += ' | Alt. ' + d[10];
+  }
   const disp = 'Esf. ' + dec(d[4]) + ' a ' + dec(d[5]) + ' | Cil. até ' + CONFIG.cilindro + LS + l2;
   celula(r, disp, W[3], { size: 6, h: 16, cor: '#4A4A4A' });
 

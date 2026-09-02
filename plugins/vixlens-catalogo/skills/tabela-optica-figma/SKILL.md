@@ -38,7 +38,7 @@ Se algum dos três estiver faltando, pergunte antes de construir.
 ## Fluxo
 
 1. **Parsear o CSV** para linhas normalizadas, separando produtos de linhas `cod. por cor`. O índice de refração sai do começo da descrição e vira campo próprio: `1.49 Resina Sun+` → `1.49` + `Resina Sun+`.
-2. **Conferir constantes por família**: Cilíndrico, Adição e Altura costumam ter um único valor por família. Rode a checagem de variância — se aparecer mais de um valor, é exceção real ou erro de digitação na fonte, e precisa ser reportado ao usuário antes de seguir.
+2. **Conferir constantes por família**: Cilíndrico, Adição e Altura costumam ter um único valor por família. Rode a checagem de variância. Se a **altura** vier com mais de um valor, a família entra no modo `varia` e a altura passa a ser dado de linha, impressa em toda linha — ver "Altura" em `referencia-tabela.md`. Se **cilíndrico ou adição** variarem, pare e reporte: o formato atual assume os dois constantes por família.
 3. **Criar as 15 páginas** com rodapé numerado, depois capa e contracapa.
 4. **Construir cada família** com `construtor.js`. Uma chamada `use_figma` por família, ou duas famílias por chamada — não mais que isso, o script fica grande demais.
 5. **Construir o índice** com a matriz de compatibilidade, o bloco "como ler" e a legenda das bolinhas.
