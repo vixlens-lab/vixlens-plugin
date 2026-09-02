@@ -39,8 +39,8 @@ const CORES = {
   'Ametista': ['#54317B', 'A'], 'Safira': ['#1C5A95', 'S'], 'Âmbar': ['#754D17', 'Â'],
   'Esmeralda': ['#106943', 'E'], 'Rubi': ['#711533', 'R'], 'G15': ['#3F4A3C', 'G'],
   'Black': ['#1A1A1A', 'B'],
-  'Prata': ['#A9AEB2', 'REP'], 'Dourado': ['#B3A400', 'RED'],
-  'Azul': ['#0A2BC9', 'REA'], 'Rosa': ['#F2AEDA', 'RER']
+  'Prata': ['#9EADB0', 'REP'], 'Dourado': ['#BDB024', 'RED'],
+  'Azul': ['#0538D9', 'REA'], 'Rosa': ['#FFA1FF', 'RER']
 };
 const ESPELHADO = ['Prata', 'Dourado', 'Azul', 'Rosa'];
 

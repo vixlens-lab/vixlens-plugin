@@ -147,12 +147,11 @@ Valores do V7, confirmados contra a legenda Transitions da Essilor:
 
 Freevix Colors: G15 `#3F4A3C` (G), Black `#1A1A1A` (B), Marrom reaproveita o hex acima.
 
-Espelhado, com sigla de 3 letras: Prata `#A9AEB2` (REP), Dourado `#B3A400` (RED), Azul `#0A2BC9` (REA), Rosa `#F2AEDA` (RER).
+Espelhado, com sigla de 3 letras — hex confirmados pelo Otávio em 02/09/2026: Prata `#9EADB0` (REP), Dourado `#BDB024` (RED), Azul `#0538D9` (REA), Rosa `#FFA1FF` (RER).
 
 ## Pendências não fechadas com o usuário
 
 Confirme antes de assumir:
 
-1. **Hex do Espelhado** — amostrados de um print comprimido, nunca confirmados na fonte.
-2. **Siglas de 3 letras** — hoje só o Espelhado usa. Se o padrão valer para Freevix Colors e Transitions, resolveria a colisão de iniciais: Ametista e Azul são ambas `A`, Rubi e Rosa são ambas `R`.
-3. **Alturas divergentes** — no CSV de 2026, `Freevix Freedom / 1.59 Poli Transitions Gen S` tem 18mm contra 16mm das outras 20 linhas, e `Freevix IA Tech / 1.74 Resina Transitions Gen S` tem 18mm contra 14mm. Como a altura virou valor único na pílula do cabeçalho, essas exceções se perdem. Reportar sempre que aparecerem.
+1. **Siglas de 3 letras** — hoje só o Espelhado usa. Se o padrão valer para Freevix Colors e Transitions, resolveria a colisão de iniciais: Ametista e Azul são ambas `A`, Rubi e Rosa são ambas `R`.
+2. **Alturas divergentes** — no CSV de 2026, `Freevix Freedom / 1.59 Poli Transitions Gen S` tem 18mm contra 16mm das outras 20 linhas, e `Freevix IA Tech / 1.74 Resina Transitions Gen S` tem 18mm contra 14mm. Como a altura virou valor único na pílula do cabeçalho, essas exceções se perdem. Reportar sempre que aparecerem.
