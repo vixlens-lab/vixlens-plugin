@@ -2,8 +2,11 @@
 // Ajuste CONFIG e DADOS. O resto é fixo.
 //
 // DADOS: uma linha por registro, campos separados por ~
-//   produto: cod~indice~nome~diam~esfMais~esfMenos~p1~p2~p3~p4
+//   produto: cod~indice~nome~diam~esfMais~esfMenos~p1~p2~p3~p4[~altura]
 //   cores:   SUB~codigo Cor | codigo Cor | ...
+//
+// O 11o campo é opcional e só existe quando a altura da linha difere da
+// altura da família: entra como pílula preta ao lado do nome do produto.
 // Campo de preço vazio vira travessão. Cod vazio vira seta quando houver linha
 // de cores logo abaixo.
 
@@ -225,6 +228,18 @@ registros.forEach((d, i) => {
   prod.resize(W[2], prod.height); prod.layoutSizingHorizontal = 'FIXED';
   const nome = texto(prod, d[2], 'Regular', 8, '#000000');
   nome.letterSpacing = { unit: 'PERCENT', value: -4 };
+  // Altura divergente da família: pílula na própria linha. A do cabeçalho
+  // vale para o resto, e sem esta marca a peça prometeria uma armação menor
+  // do que a lente aceita.
+  if (d[10]) {
+    const excecao = figma.createAutoLayout('HORIZONTAL', { name: 'excecao altura' });
+    excecao.fills = fill('#000000'); excecao.cornerRadius = 100;
+    excecao.paddingTop = 2; excecao.paddingBottom = 2; excecao.paddingLeft = 6; excecao.paddingRight = 6;
+    excecao.counterAxisAlignItems = 'CENTER';
+    prod.appendChild(excecao);
+    const t = texto(excecao, d[10], 'Bold', 6.5, '#FFFFFF');
+    t.letterSpacing = { unit: 'PERCENT', value: -2 };
+  }
   ultimoProduto = prod;
 
   // Visão simples não tem adição: a segunda linha fica só com o diâmetro.

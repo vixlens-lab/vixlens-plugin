@@ -99,6 +99,21 @@ Bolinha do Espelhado: círculo 14px, sigla de 3 letras em Bold 4.5pt, código em
 
 Cor do texto dentro da bolinha: mesma regra de luminância.
 
+### Altura divergente da família
+
+A pílula do cabeçalho vale para a família inteira, mas a altura **pode divergir em linhas isoladas** — e diverge para cima, o que é a direção perigosa: sem marcação, a peça promete que a lente monta numa armação menor do que ela aceita, e o erro só aparece na montagem.
+
+Quando a checagem de variância acusar mais de um valor, confirme na fonte. Se for real, passe a altura no 11º campo do registro em `DADOS` e o construtor desenha uma pílula preta ao lado do nome do produto, dentro dos 160px da coluna Produto. No campo Disponibilidade não cabe: a linha 2 com a altura pede 114px numa coluna de 98.
+
+Confirmadas na fonte no CSV de 2026, com print do catálogo de origem:
+
+| Família | Linha | Altura da linha | Altura da família |
+|---|---|---|---|
+| Freevix Freedom | 1.59 Poli Transitions Gen S | 18mm | 16mm |
+| Freevix IA Tech | 1.74 Resina Transitions Gen S | 18mm | 14mm |
+
+Nas duas, o diâmetro também sobe para 75. Não são erro de digitação do CSV — o catálogo de origem traz os mesmos valores.
+
 ## Paleta
 
 ### Famílias — CONFIG completo
@@ -154,4 +169,4 @@ Espelhado, com sigla de 3 letras — hex confirmados pelo Otávio em 02/09/2026:
 Confirme antes de assumir:
 
 1. **Siglas de 3 letras** — hoje só o Espelhado usa. Se o padrão valer para Freevix Colors e Transitions, resolveria a colisão de iniciais: Ametista e Azul são ambas `A`, Rubi e Rosa são ambas `R`.
-2. **Alturas divergentes** — no CSV de 2026, `Freevix Freedom / 1.59 Poli Transitions Gen S` tem 18mm contra 16mm das outras 20 linhas, e `Freevix IA Tech / 1.74 Resina Transitions Gen S` tem 18mm contra 14mm. Como a altura virou valor único na pílula do cabeçalho, essas exceções se perdem. Reportar sempre que aparecerem.
+
