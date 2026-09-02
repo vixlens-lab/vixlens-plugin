@@ -1,0 +1,17 @@
+{
+  "name": "vixlens-catalogo",
+  "version": "0.1.0",
+  "description": "Geração do catálogo A4 de tabela de preço no Figma a partir do CSV por ótica — grid, paleta das 12 famílias, bolinhas de código por cor e validação de contagem contra a fonte",
+  "author": {
+    "name": "Otávio Torres"
+  },
+  "keywords": [
+    "vixlens",
+    "catalogo",
+    "tabela-de-preco",
+    "figma",
+    "lentes",
+    "marca-propria",
+    "laboratorio-optico"
+  ]
+}

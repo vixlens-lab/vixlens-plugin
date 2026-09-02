@@ -5,8 +5,8 @@
     "email": "contato@vixlens.com.br"
   },
   "metadata": {
-    "description": "Plugins oficiais Vixlens — sistema de marca, documentos institucionais, comunicação B2B e interfaces",
-    "version": "1.6.0"
+    "description": "Plugins oficiais Vixlens — sistema de marca, documentos institucionais, comunicação B2B, interfaces e catálogo de preço",
+    "version": "1.7.0"
   },
   "plugins": [
     {
@@ -44,6 +44,24 @@
         "tailwind",
         "auditoria",
         "boas-praticas"
+      ]
+    },
+    {
+      "name": "vixlens-catalogo",
+      "source": "./plugins/vixlens-catalogo",
+      "description": "Geração do catálogo A4 de tabela de preço no Figma a partir do CSV por ótica — grid, paleta das 12 famílias, bolinhas de código por cor e validação de contagem contra a fonte",
+      "version": "0.1.0",
+      "author": {
+        "name": "Otávio Torres"
+      },
+      "keywords": [
+        "vixlens",
+        "catalogo",
+        "tabela-de-preco",
+        "figma",
+        "lentes",
+        "marca-propria",
+        "laboratorio-optico"
       ]
     }
   ]
