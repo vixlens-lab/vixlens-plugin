@@ -42,8 +42,8 @@ const CORES = {
   'Ametista': ['#54317B', 'A'], 'Safira': ['#1C5A95', 'S'], 'Âmbar': ['#754D17', 'Â'],
   'Esmeralda': ['#106943', 'E'], 'Rubi': ['#711533', 'R'], 'G15': ['#3F4A3C', 'G'],
   'Black': ['#1A1A1A', 'B'],
-  'Prata': ['#9EADB0', 'REP'], 'Dourado': ['#BDB024', 'RED'],
-  'Azul': ['#0538D9', 'REA'], 'Rosa': ['#FFA1FF', 'RER']
+  'Prata': ['#9EADB0', 'EP'], 'Dourado': ['#BDB024', 'ED'],
+  'Azul': ['#0538D9', 'EA'], 'Rosa': ['#FFA1FF', 'ER']
 };
 const ESPELHADO = ['Prata', 'Dourado', 'Azul', 'Rosa'];
 
@@ -159,7 +159,7 @@ const bolinha = (parent, nome, codigo, grande) => {
   chip.appendChild(dot);
   const sigla = figma.createText();
   sigla.fontName = { family: 'Host Grotesk', style: 'Bold' };
-  sigla.fontSize = grande ? 4.5 : 5;
+  sigla.fontSize = 5;
   sigla.characters = grande ? par[1] : par[1].charAt(0);
   sigla.fills = fill(contraste(par[0]));
   sigla.letterSpacing = { unit: 'PERCENT', value: -4 };

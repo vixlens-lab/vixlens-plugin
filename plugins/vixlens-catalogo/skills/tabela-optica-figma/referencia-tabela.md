@@ -95,7 +95,7 @@ Conjunto com **duas ou mais cores**: linha própria logo abaixo, fill `#FAFAFA`,
 
 Bolinha padrão: círculo 10px, raio 100, inicial da cor em Bold 5pt centralizada, código em Regular 6pt ao lado com gap 2.
 
-Bolinha do Espelhado: círculo 14px, sigla de 3 letras em Bold 4.5pt, código em Regular 7.5pt, gap 3 no par e 10 entre pares, precedida do rótulo `COD:` em Bold 7pt `#4A4A4A`.
+Bolinha do Espelhado: círculo 14px, sigla de duas letras em Bold 5pt, código em Regular 7.5pt, gap 3 no par e 10 entre pares, precedida do rótulo `COD:` em Bold 7pt `#4A4A4A`.
 
 Cor do texto dentro da bolinha: mesma regra de luminância.
 
@@ -170,7 +170,13 @@ Valores do V7, confirmados contra a legenda Transitions da Essilor:
 
 Freevix Colors: G15 `#3F4A3C` (G), Black `#1A1A1A` (B), Marrom reaproveita o hex acima.
 
-Espelhado, com sigla de 3 letras — hex confirmados pelo Otávio em 02/09/2026: Prata `#9EADB0` (REP), Dourado `#BDB024` (RED), Azul `#0538D9` (REA), Rosa `#FFA1FF` (RER).
+Espelhado — hex e siglas conferidos contra a legenda oficial da Vixlens em 02/09/2026: Prata `#9EADB0` (EP), Dourado `#BDB024` (ED), Azul `#0538D9` (EA), Rosa `#FFA1FF` (ER). Sigla e sempre E de Espelhado + inicial da cor, em duas letras.
+
+### Legenda de cores no indice
+
+A legenda oficial agrupa por tratamento, nao por cor. Reproduza os tres grupos, nesta ordem: **TRANSITIONS GEN S** com as oito cores em duas colunas, **TRANSITIONS XTRACTIVE** so com Cinza, e **FREEVIX COLOR** com Marrom, G15 e Black numa coluna e os quatro Espelhado na outra. Bolinha 12px, rotulo Regular 7.5pt, titulo do grupo Bold 7.5pt com tracking +2%.
+
+Na legenda oficial, Ametista e Ambar dividem a letra A. Mantivemos `A` para Ametista e `A` com circunflexo para Ambar, que desempata sem fugir do padrao — as duas aparecem juntas em toda linha de Transitions Gen S.
 
 ## Pendências não fechadas com o usuário
 
