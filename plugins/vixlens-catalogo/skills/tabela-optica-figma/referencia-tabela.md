@@ -176,11 +176,4 @@ Espelhado — hex e siglas conferidos contra a legenda oficial da Vixlens em 02/
 
 A legenda oficial agrupa por tratamento, nao por cor. Reproduza os tres grupos, nesta ordem: **TRANSITIONS GEN S** com as oito cores em duas colunas, **TRANSITIONS XTRACTIVE** so com Cinza, e **FREEVIX COLOR** com Marrom, G15 e Black numa coluna e os quatro Espelhado na outra. Bolinha 12px, rotulo Regular 7.5pt, titulo do grupo Bold 7.5pt com tracking +2%.
 
-Na legenda oficial, Ametista e Ambar dividem a letra A. Mantivemos `A` para Ametista e `A` com circunflexo para Ambar, que desempata sem fugir do padrao — as duas aparecem juntas em toda linha de Transitions Gen S.
-
-## Pendências não fechadas com o usuário
-
-Confirme antes de assumir:
-
-1. **Siglas de 3 letras** — hoje só o Espelhado usa. Se o padrão valer para Freevix Colors e Transitions, resolveria a colisão de iniciais: Ametista e Azul são ambas `A`, Rubi e Rosa são ambas `R`.
-
+Na legenda oficial, Ametista e Ambar dividem a letra A. Mantivemos `A` para Ametista e `Â` para Âmbar — aprovado pelo Otávio em 02/09/2026, desempata sem fugir do padrão — as duas aparecem juntas em toda linha de Transitions Gen S.
