@@ -47,8 +47,10 @@ const razao = (a, b) => {
   return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05);
 };
 const contraste = bg => (razao('#FFFFFF', bg) >= razao('#000000', bg) ? '#FFFFFF' : '#000000');
-// 20% da cor sobre branco: o chip de índice em 6.5pt precisa de mais folga que
-// os 4.5:1 do WCAG, que foi calibrado para 14pt.
+// 20% da cor sobre branco. O chip de índice tem 6.5pt, e os 4.5:1 do WCAG foram
+// calibrados para 14pt: com preenchimento na cor cheia, seis das doze famílias
+// ficam entre 4.82:1 (OFFICE NEAR) e 6.78:1, e o número some no balcão.
+// Tintado, as doze ficam entre 9.83:1 e 12.14:1.
 const tinta20 = h => {
   const c = canais(h);
   const v = x => ('0' + Math.round(0.20 * x + 0.80 * 255).toString(16)).slice(-2);
@@ -202,8 +204,8 @@ const bolinha = (parent, nome, codigo, grande) => {
   texto(chip, codigo, 'Regular', grande ? 7.5 : 6, TINTA);
 };
 
-// Chip preenchido na cor cheia deixava o número em 5.10:1 nas cores de meio-tom
-// (PRO, OFFICE NEAR). Em 6.5pt isso não se lê: fundo em 20%, borda na cor cheia.
+// Fundo tintado, contorno na cor cheia, número em TINTA. Mantém a identidade
+// da família e resolve o contraste que o preenchimento sólido não alcança.
 const chipIndice = (parent, ind) => {
   const c = figma.createFrame();
   c.name = 'ind ' + ind; c.resize(26, 13); c.cornerRadius = 4;
