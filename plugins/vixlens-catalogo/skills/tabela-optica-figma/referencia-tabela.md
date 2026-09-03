@@ -152,6 +152,20 @@ Bolinha do Espelhado: círculo 14px, sigla de duas letras em Bold 5pt, código e
 
 Cor do texto dentro da bolinha: mesma regra de contraste WCAG.
 
+### Ordem das cores — fixa, não vem do CSV
+
+A sequência é sempre a mesma, independente da ordem em que o CSV listar os códigos. **Ordene antes de desenhar.**
+
+| Conjunto | Ordem |
+|---|---|
+| Transitions Gen S | Cinza · Marrom · Verde · Ametista · Safira · Âmbar · Esmeralda · Rubi |
+| Freevix Colors | Marrom · G15 · Black |
+| Espelhado | Prata · Dourado · Azul · Rosa |
+
+Lentes com menos cores usam a **subsequência**, sem reordenar: `Marrom · Verde · Ametista` está certo; `Verde · Marrom` não.
+
+**Why:** a bolinha é o elemento que o balcão usa para achar a cor, e a posição vira memória muscular. Se a ordem muda de página para página, o atendente perde o atalho e volta a ler código por código. Confirmado com o Otávio em 03/09/2026.
+
 ### Nome do produto quando o preço varia por cor
 
 Se as cores de uma mesma lente têm preços diferentes, cada faixa vira linha própria. O nome precisa dizer de quais cores fala:
