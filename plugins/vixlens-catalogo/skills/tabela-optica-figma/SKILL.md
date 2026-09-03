@@ -33,17 +33,18 @@ Constrói o catálogo A4 inteiro no Figma a partir do CSV de tabela de preço po
 
 **Faça as três de uma vez, numa rodada só.** Espalhá-las pelo processo confunde quem está pedindo a tabela.
 
-### 1. Para quem é a peça
+### 1. A tabela é de custo ou de venda
 
-Decide qual das três bases de preço do CSV entra — e muda a nota legal da capa.
+Decide qual base de preço do CSV entra — e muda a nota legal da capa.
 
-| Resposta | Colunas | Nota da capa |
-|---|---|---|
-| Balcão da ótica → consumidor final | `Venda por par …` | valores são sugestão; o preço final é livre da ótica |
-| Vixlens → ótica, tabela cheia | `Tabelão por par …` | condição comercial, com validade; sem desconto no cabeçalho |
-| Vixlens → ótica, com o desconto dela | `Custo pago por par …` | condição comercial, com validade; o desconto aparece no cabeçalho |
+| Resposta | Colunas | Para quem | Nota da capa |
+|---|---|---|---|
+| **Venda** | `Venda por par …` | balcão da ótica → consumidor final | valores são sugestão; o preço final é livre da ótica |
+| **Custo** | `Custo pago por par …` | Vixlens → ótica | condição comercial, com validade; o desconto da ótica aparece no cabeçalho |
 
-**Markup e Lucro nunca entram na peça**, em nenhuma das três.
+**Custo é sempre `Custo pago por par`**, nunca `Tabelão por par`. O tabelão é o preço de lista antes do desconto; o custo pago é o que aquela ótica realmente paga. Com desconto 0% os dois são iguais, então ler o custo pago acerta nos dois casos — e quando há desconto, é ele o número verdadeiro para aquela ótica.
+
+**Markup e Lucro nunca entram na peça**, nas duas.
 
 **A skill lê o CSV, nunca recalcula preço.** Não aplica markup, não arredonda valor, não deriva uma base a partir de outra. A única transformação sobre o número é cosmética: `CONFIG.centavos` corta as casas decimais na exibição.
 
