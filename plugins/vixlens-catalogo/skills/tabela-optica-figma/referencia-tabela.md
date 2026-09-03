@@ -200,7 +200,7 @@ Tipo: Multifocal → `LENTES MULTIFOCAIS SURFAÇADAS`; VS → `LENTES DE VISÃO 
 
 ### Marca própria de terceiro
 
-Uma ótica com linha própria (ex.: OPTIMA, das Óticas Native) reaproveita a paleta pela **família Vixlens equivalente**, e as specs de receita saem do CSV Vixlens quando a planilha da ótica não as traz. Registre o mapeamento antes de construir.
+Uma ótica com linha própria (ex.: OPTIMA, das Óticas Native) reaproveita a paleta pela **família Vixlens equivalente**. Registre o mapeamento antes de construir.
 
 ### Cores de lente
 
