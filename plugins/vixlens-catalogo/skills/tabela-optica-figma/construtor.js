@@ -19,7 +19,7 @@ const CONFIG = {
   cilindro: '-6.00',      // vira pílula no cabeçalho
   adicao: '0.50 a 5.00',  // vira pílula; null em visão simples
   alturaImagem: 120,      // ponto de partida; o slot cresce até preencher a página
-  simbolos: true,         // Ø e ↕ em vez de "Diâm." e "Alt."
+  simbolos: true,         // padrao da casa; false volta para "Diâm." e "Alt."
   centavos: false         // preços sem casas decimais
 };
 

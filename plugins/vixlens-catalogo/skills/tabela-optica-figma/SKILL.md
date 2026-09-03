@@ -25,19 +25,52 @@ Constrói o catálogo A4 inteiro no Figma a partir do CSV de tabela de preço po
 
 **Não usar para:** o formato antigo de 12 colunas; peças que não sejam tabela de preço.
 
-## Entrada obrigatória
+## Entrada
 
-Antes de construir, tenha:
+**CSV** no layout de 28 colunas do simulador: `Lente;Descrição;cod.;Diâm;Altura;Esf +;Esf -;Cilíndrico;Adição;Tabelão×4;Desconto;Custo×4;Markup Sem AR;Markup Com AR;Venda×4;Lucro×4`, separador `;`. Linhas cujo primeiro campo é vazio e o segundo começa com `cod. por cor:` são continuação da linha anterior.
 
-1. **CSV** no layout de 28 colunas do simulador: `Lente;Descrição;cod.;Diâm;Altura;Esf +;Esf -;Cilíndrico;Adição;Tabelão×4;Desconto;Custo×4;Markup Sem AR;Markup Com AR;Venda×4;Lucro×4`, separador `;`. Linhas cujo primeiro campo é vazio e o segundo começa com `cod. por cor:` são continuação da linha anterior.
-2. **Quais colunas de preço** entram. Padrão: só as `Venda`. Tabelão, Custo, Markup e Lucro **nunca** vão para a peça — são dado interno da ótica.
-3. **Cor da família** (ver `referencia-tabela.md`). Marca própria de terceiro herda a cor da família Vixlens equivalente.
+## Perguntas antes de rodar
 
-Se algum dos três estiver faltando, pergunte antes de construir.
+**Faça as três de uma vez, numa rodada só.** Espalhá-las pelo processo confunde quem está pedindo a tabela.
+
+### 1. Para quem é a peça
+
+Decide qual das três bases de preço do CSV entra — e muda a nota legal da capa.
+
+| Resposta | Colunas | Nota da capa |
+|---|---|---|
+| Balcão da ótica → consumidor final | `Venda por par …` | valores são sugestão; o preço final é livre da ótica |
+| Vixlens → ótica, tabela cheia | `Tabelão por par …` | condição comercial, com validade; sem desconto no cabeçalho |
+| Vixlens → ótica, com o desconto dela | `Custo pago por par …` | condição comercial, com validade; o desconto aparece no cabeçalho |
+
+**Markup e Lucro nunca entram na peça**, em nenhuma das três.
+
+### 2. Destino no Figma
+
+Arquivo novo ou link de um existente. Não dá para inferir — pergunte sempre.
+
+### 3. Centavos
+
+`R$ 2.826` ou `R$ 2.826,40`. `CONFIG.centavos`, padrão `false` (corta por truncamento, não arredonda).
+
+## Pergunte só quando o dado exigir
+
+- **Família fora das 12 conhecidas** (marca própria de terceiro, como a linha OPTIMA das Óticas Native): para qual família Vixlens ela mapeia. Isso define cor, tipo e as specs de receita que a planilha da ótica normalmente não traz.
+- **Achados de qualidade no CSV**: preço divergente entre cores da mesma lente, dobras exatas de 2×, descrições duplicadas. Reporte os números e pergunte **uma vez**, com o diagnóstico pronto — nunca linha a linha.
+
+## Resolva sozinho, não pergunte
+
+| Item | Como |
+|---|---|
+| Cor e tipo da família | Bate o nome contra as 12 famílias de `referencia-tabela.md` |
+| Dados da ótica na capa | Saem do cabeçalho do CSV; só pergunte se vierem vazios |
+| Quantas páginas e onde quebrar | Automático, pela altura da tabela |
+| Modo de altura (fixa / varia / null) | Sai da checagem de variância |
+| Símbolos Ø e ↕ | Padrão da casa. O índice traz a legenda. `CONFIG.simbolos: false` volta para "Diâm." e "Alt." se alguém pedir |
 
 ## Fluxo
 
-1. **Parsear o CSV** para linhas normalizadas, separando produtos de linhas `cod. por cor`. O índice de refração sai do começo da descrição e vira campo próprio: `1.49 Resina Sun+` → `1.49` + `Resina Sun+`.
+1. **Parsear o CSV** para linhas normalizadas, lendo a base de preco escolhida na pergunta 1 e separando produtos de linhas `cod. por cor`. O índice de refração sai do começo da descrição e vira campo próprio: `1.49 Resina Sun+` → `1.49` + `Resina Sun+`.
 2. **Conferir constantes por família**: Cilíndrico, Adição e Altura costumam ter um único valor por família. Rode a checagem de variância. Cilindro e adição viram pílulas no cabeçalho; se **variarem dentro da família**, pare e reporte — o formato assume os dois constantes. Se a **altura** vier com mais de um valor, a família entra no modo `varia`.
 3. **Empacotar em páginas.** Estime a altura (fórmula em `referencia-tabela.md`), corte em limites de índice e equilibre as metades. Só então numere as páginas.
 4. **Criar os frames** de página com rodapé numerado, depois capa e contracapa.

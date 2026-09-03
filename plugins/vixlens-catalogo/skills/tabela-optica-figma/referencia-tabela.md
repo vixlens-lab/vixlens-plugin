@@ -126,7 +126,7 @@ Com `CONFIG.altura === 'varia'`, a altura entra na segunda linha: `Ø75 | ↕18`
 
 `Ø` é **U+00D8**, não U+2300 — o sinal de diâmetro tem desenho de minúscula e some no 6pt. `↕` é U+2195. Os dois existem na Host Grotesk.
 
-O catálogo Vixlens fechou em `Diâm.` por extenso em 02/09/2026; o Native pediu símbolo no mesmo dia. Por isso é flag, não regra.
+**Símbolo é o padrão da casa** (`simbolos: true`). O bloco "COMO LER A TABELA" do índice é obrigado a explicar os dois — símbolo sem legenda é ícone sem rótulo. Use `false` só quando alguém pedir por extenso.
 
 ### Preços — `CONFIG.centavos`
 
@@ -225,7 +225,17 @@ Ametista e Âmbar dividem a letra A na legenda oficial. Mantivemos `A` para Amet
 
 **Capa, contracapa e as fotos das páginas de família são trabalho do designer, não da skill.** Gere só os slots tracejados e o texto estrutural; não invente imagem, logo nem dados de contato.
 
-**Capa:** slot `CAPA` 595×470 sangrado no topo, slot `LOGO VIXLENS` 150×46 em (20, 500), título ExtraBold 34 em duas linhas (a segunda em `#6C6C6C`), bloco "EMITIDO PARA" com os dados do cabeçalho do CSV (ótica, CNPJ, responsável, telefone, desconto, data), e a nota de disponibilidade em 7pt no pé.
+**Capa:** slot `CAPA` 595×470 sangrado no topo, slot `LOGO VIXLENS` 150×46 em (20, 500), título ExtraBold 34 em duas linhas (a segunda em `#6C6C6C`), bloco "EMITIDO PARA" com os dados do cabeçalho do CSV (ótica, CNPJ, responsável, telefone, desconto, data), e a nota legal em 7pt no pé.
+
+**A nota legal muda com a base de preço** escolhida na pergunta 1 do SKILL:
+
+| Base | Nota |
+|---|---|
+| `Venda por par` | os valores são **sugestão** de venda por par, calculados sobre o custo praticado; a definição do preço final ao consumidor é livre e exclusiva da ótica |
+| `Tabelão por par` | **condição comercial** do laboratório, por par, sujeita a validade e confirmação no pedido |
+| `Custo pago por par` | **condição comercial** já com o desconto da ótica; o desconto aparece no cabeçalho e a peça é nominal àquela ótica |
+
+Dizer "sugestão, preço livre" numa peça de tabela cheia é falso — aquilo é o preço do laboratório, não sugestão.
 
 **Índice:** título `QUAL FAMÍLIA ATENDE ESSA RECEITA?` ExtraBold 22 e a matriz de compatibilidade — uma linha por família com chip de cor 14×14 raio 4, nome, tipo, esférico, cilíndrico, adição, altura, diâmetro e página. Larguras `[14,128,65,70,56,60,46,38,18]`, gap 5, container `#E4E4E4`. Família em modo `varia` mostra os dois valores na coluna Alt., em Bold: `16/18mm`. Deixar só um valor ali contradiz a página da família. Uma família que pare num cilindro menor que as outras vai em `#C81E1E` Bold.
 
