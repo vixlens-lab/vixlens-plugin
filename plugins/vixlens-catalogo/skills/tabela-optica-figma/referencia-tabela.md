@@ -186,6 +186,7 @@ No modo `varia`, cada registro de `DADOS` precisa trazer a sua altura no 11º ca
 | FREEVIX PREMIUM | `#D94F2B` | 16 mm | -6.00 | 0.50 a 5.00 |
 | FREEVIX FREEDOM | `#B5306B` | varia | -6.00 | 0.50 a 5.00 |
 | FREEVIX IA TECH | `#7A4BC4` | varia | -6.00 | 0.50 a 5.00 |
+| FREEVIX VISÃO SIMPLES | `#00497A` | null | **-4.00** | null |
 | FREEVIX VS HD | `#006BB2` | null | -6.00 | null |
 | VS RELAX 0,50 | `#2E9BD6` | null | -6.00 | null |
 | VS RELAX 0,75 | `#5BB8E0` | null | -6.00 | null |
@@ -196,7 +197,11 @@ No modo `varia`, cada registro de `DADOS` precisa trazer a sua altura no 11º ca
 
 Cilindro e adição mudam por família — **nunca reaproveite os da anterior**, confira contra o CSV.
 
+**Duas famílias param em -4.00**, contra -6.00 de todas as outras: Vix Total e Freevix Visão Simples. São as duas de entrada de cada linha (multifocal e visão simples). Na matriz do índice, marque o cilindro delas em `#C81E1E` Bold — é a diferença que mais gera pedido errado no balcão.
+
 Tipo: Multifocal → `LENTES MULTIFOCAIS SURFAÇADAS`; VS → `LENTES DE VISÃO SIMPLES SURFAÇADAS`; ocupacional → `LENTES OCUPACIONAIS SURFAÇADAS`.
+
+**Freevix Visão Simples está no tabelão mas ainda não sai no CSV.** Conferido em 03/09/2026 contra `tabelona_vixlens_2026_digital_v16` (página 13, logo antes da VS HD) e contra o export do simulador, que traz 12 famílias e não inclui essa. A paleta lista as 13; a página só existe quando o CSV passar a exportá-la. Se o CSV vier sem ela, não é erro — não invente a página.
 
 ### Marca própria de terceiro
 
@@ -236,7 +241,7 @@ Ametista e Âmbar dividem a letra A na legenda oficial. Mantivemos `A` para Amet
 
 Dizer "sugestão, preço livre" numa peça de custo é falso — aquilo é o preço do laboratório, não sugestão.
 
-**Índice:** título `QUAL FAMÍLIA ATENDE ESSA RECEITA?` ExtraBold 22 e a matriz de compatibilidade — uma linha por família com chip de cor 14×14 raio 4, nome, tipo, esférico, cilíndrico, adição, altura, diâmetro e página. Larguras `[14,128,65,70,56,60,46,38,18]`, gap 5, container `#E4E4E4`. Família em modo `varia` mostra os dois valores na coluna Alt., em Bold: `16/18mm`. Deixar só um valor ali contradiz a página da família. Uma família que pare num cilindro menor que as outras vai em `#C81E1E` Bold.
+**Índice:** título `QUAL FAMÍLIA ATENDE ESSA RECEITA?` ExtraBold 22 e a matriz de compatibilidade — uma linha por família com chip de cor 14×14 raio 4, nome, tipo, esférico, cilíndrico, adição, altura, diâmetro e página. Larguras `[14,128,65,70,56,60,46,38,18]`, gap 5, container `#E4E4E4`. Família em modo `varia` mostra os dois valores na coluna Alt., em Bold: `16/18mm`. Deixar só um valor ali contradiz a página da família. As famílias que param num cilindro menor que as outras (Vix Total e Freevix Visão Simples, ambas em -4.00) vão em `#C81E1E` Bold.
 
 Abaixo da matriz vêm o bloco **COMO LER A TABELA** e a legenda das bolinhas. O bloco precisa explicar os dois modos de altura e, quando `CONFIG.simbolos` estiver ligado, **o que significam `Ø` e `↕`** — símbolo sem legenda é ícone sem rótulo.
 

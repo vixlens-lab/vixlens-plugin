@@ -60,14 +60,14 @@ Arquivo novo ou link de um existente. Não dá para inferir — pergunte sempre.
 
 ## Pergunte só quando o dado exigir
 
-- **Família fora das 12 conhecidas** (marca própria de terceiro, como a linha OPTIMA das Óticas Native): para qual família Vixlens ela mapeia. Define a cor e o tipo da página.
+- **Família fora das 13 conhecidas** (marca própria de terceiro, como a linha OPTIMA das Óticas Native): para qual família Vixlens ela mapeia. Define a cor e o tipo da página.
 - **Achados de qualidade no CSV**: preço divergente entre cores da mesma lente, dobras exatas de 2×, descrições duplicadas. Reporte os números e pergunte **uma vez**, com o diagnóstico pronto — nunca linha a linha.
 
 ## Resolva sozinho, não pergunte
 
 | Item | Como |
 |---|---|
-| Cor e tipo da família | Bate o nome contra as 12 famílias de `referencia-tabela.md` |
+| Cor e tipo da família | Bate o nome contra as 13 famílias de `referencia-tabela.md` |
 | Dados da ótica na capa | Saem do cabeçalho do CSV; só pergunte se vierem vazios |
 | Quantas páginas e onde quebrar | Automático, pela altura da tabela |
 | Modo de altura (fixa / varia / null) | Sai da checagem de variância |
@@ -105,7 +105,7 @@ Contraste é o único item que **sempre** exige número calculado, nunca olhôme
 
 | Sintoma | Causa | Correção |
 |---|---|---|
-| Texto claro ilegível sobre a cor da família | Escolha por luminância perceptual `0.299/0.587/0.114 > 0.6` em vez de razão WCAG | Usar `razao()` e escolher o lado de maior contraste. Errava em 6 das 12 famílias |
+| Texto claro ilegível sobre a cor da família | Escolha por luminância perceptual `0.299/0.587/0.114 > 0.6` em vez de razão WCAG | Usar `razao()` e escolher o lado de maior contraste. Errava em 6 das 12 famílias que existiam então |
 | Número do chip de índice sumido | 4,5:1 é piso de 14pt; o chip tem 6.5pt | Fundo em 20% da cor + borda na cor cheia + texto `#2F2F2F` |
 | Separador de índice apagado | Cor da família sobre branco reprova em 9 das 12 | Texto preto; a cor vai só na régua |
 | Rodapé e imagem saltam de posição | `findOne(n => n.name.indexOf('Tabela ')===0)` casou com um nó de TEXTO — o Figma nomeia texto pelo conteúdo | Sempre filtrar por `n.type === 'FRAME'` |
