@@ -8,11 +8,16 @@ export default [
   {
     ignores: [
       'dist/**',
+      'dist-lib/**', // gerado por build:lib
       'node_modules/**',
       'assets/tokens/vixlens-tailwind-preset.cjs', // gerado (CommonJS)
       'tailwind.config.js', // CommonJS
       'postcss.config.js', // CommonJS
       'src/components/ui/*.figma.jsx', // Code Connect (não é código de app React)
+      // Fragmento colado dentro do use_figma, que envolve tudo numa funcao async:
+      // tem await e return no topo. Os dois sao validos la, e incompativeis entre
+      // si num modulo ES — await exige module, return de topo exige script.
+      'plugins/**/construtor.js',
     ],
   },
   js.configs.recommended,
