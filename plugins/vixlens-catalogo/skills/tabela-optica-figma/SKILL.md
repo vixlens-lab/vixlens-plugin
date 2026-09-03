@@ -45,6 +45,10 @@ Decide qual das três bases de preço do CSV entra — e muda a nota legal da ca
 
 **Markup e Lucro nunca entram na peça**, em nenhuma das três.
 
+**A skill lê o CSV, nunca recalcula preço.** Não aplica markup, não arredonda valor, não deriva uma base a partir de outra. A única transformação sobre o número é cosmética: `CONFIG.centavos` corta as casas decimais na exibição.
+
+Se os valores do CSV estiverem errados, o erro sai impresso. Toda decisão de preço — markup, desconto, normalização de anomalia — pertence à etapa que **gera** o CSV, que é anterior a esta skill e não faz parte dela. Ao receber um CSV, rode a checagem de coerência antes de construir: `venda = custo × markup` em todas as linhas, e as quatro colunas de preço em ordem crescente. Divergência aí é problema da fonte, não da peça — reporte antes de gerar 20 páginas em cima de número errado.
+
 ### 2. Destino no Figma
 
 Arquivo novo ou link de um existente. Não dá para inferir — pergunte sempre.
