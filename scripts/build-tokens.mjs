@@ -100,6 +100,12 @@ function brandColors() {
       colors['vix-callout'] = co
     }
   }
+  // `cinza-borda` e o cinza de texto secundario, placeholder E borda. O nome do
+  // token so conta a ultima funcao, entao o config do site sempre expos ele
+  // tambem como `vix-cinza` — e ha uso espalhado com esse nome (texto de apoio,
+  // placeholder de input). Mantido como apelido do MESMO token: quem some com
+  // isto quebra a cor, quem duplica o valor cria drift.
+  colors['vix-cinza'] = t.color['cinza-borda'].value
   return colors
 }
 
@@ -208,6 +214,7 @@ function buildThemeV4() {
   L.push('   Uso no globals.css da tela, nesta ordem:')
   L.push('')
   L.push('     @import "tailwindcss";')
+  L.push('     @import "tw-animate-css";            -- se a tela usa animate-in/out')
   L.push('     @import "vixlens-ds/theme.css";      -- valores das CSS vars')
   L.push('     @import "vixlens-ds/tailwind.css";   -- este arquivo: vars viram utilitario')
   L.push('')
@@ -254,9 +261,17 @@ function buildThemeV4() {
   L.push('}')
   L.push('')
   L.push('/* A borda padrão de todo elemento. No Tailwind 3 isto sai do preflight via')
-  L.push('   borderColor.DEFAULT; no 4 o preflight usa currentColor, então declaramos. */')
-  L.push('*, ::before, ::after {')
-  L.push('  border-color: hsl(var(--border));')
+  L.push('   borderColor.DEFAULT; no 4 o preflight passou a usar currentColor, então')
+  L.push('   precisa ser declarado. Sem isto, toda borda do sistema herda a cor do')
+  L.push('   texto — preto sobre branco em vez do cinza do tema. */')
+  L.push('@layer base {')
+  L.push('  *,')
+  L.push('  ::after,')
+  L.push('  ::before,')
+  L.push('  ::backdrop,')
+  L.push('  ::file-selector-button {')
+  L.push('    border-color: hsl(var(--border));')
+  L.push('  }')
   L.push('}')
   return L.join('\n') + '\n'
 }

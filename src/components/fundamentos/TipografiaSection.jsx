@@ -81,7 +81,7 @@ export default function TipografiaSection() {
         <h3 className="mt-3 text-4xl font-bold leading-[1.05] tracking-[-0.02em] text-vix-preto md:text-6xl">
           Sua ótica cresce com a Matriz Marca Própria.
         </h3>
-        <p className="mt-5 max-w-2xl text-lg leading-[1.5] text-gray-600">
+        <p className="mt-5 max-w-2xl text-lg leading-normal text-gray-600">
           Material, índice e desenho da lente espelhados automaticamente. O consultor abre, confere e
           envia — sem renegociação, sem aditivo. A tipografia carrega a autoridade técnica sem gritar.
         </p>
@@ -125,7 +125,7 @@ export default function TipografiaSection() {
               {/* amostras lado a lado, na proporção real */}
               <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:gap-10">
                 <div className="min-w-0 flex-1">
-                  <div className="mb-1.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.1em] text-gray-600">
+                  <div className="mb-1.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-gray-600">
                     Desktop <span className="font-mono text-vix-azul">{s.desktop}</span>
                   </div>
                   <div
@@ -136,7 +136,7 @@ export default function TipografiaSection() {
                   </div>
                 </div>
                 <div className="min-w-0 flex-1 border-t border-gray-100 pt-4 sm:border-l sm:border-t-0 sm:pl-10 sm:pt-0">
-                  <div className="mb-1.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.1em] text-gray-600">
+                  <div className="mb-1.5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-gray-600">
                     Mobile <span className="font-mono text-vix-azul">{s.mobile}</span>
                     {same && <span className="font-sans font-medium normal-case tracking-normal text-gray-600">· igual</span>}
                   </div>

@@ -71,7 +71,7 @@ const shadcnProps = {
   badge: {
     uso: 'Rotular status, categoria ou contagem em um selo compacto.',
     props: [
-      { prop: 'variant', tipo: "'default' | 'secondary' | 'destructive' | 'outline'", padrao: "'default'", desc: 'Estilo visual do selo.' },
+      { prop: 'variant', tipo: "'default' | 'secondary' | 'destructive' | 'outline-solid'", padrao: "'default'", desc: 'Estilo visual do selo.' },
       { prop: 'className', tipo: 'string', padrao: '—', desc: 'Classes extras para ajustes pontuais.' },
       { prop: 'children', tipo: 'ReactNode', padrao: '—', desc: 'Conteúdo (texto ou ícone + texto).' },
     ],

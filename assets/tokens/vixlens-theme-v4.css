@@ -4,6 +4,7 @@
    Uso no globals.css da tela, nesta ordem:
 
      @import "tailwindcss";
+     @import "tw-animate-css";            -- se a tela usa animate-in/out
      @import "vixlens-ds/theme.css";      -- valores das CSS vars
      @import "vixlens-ds/tailwind.css";   -- este arquivo: vars viram utilitario
 
@@ -37,6 +38,7 @@
   --color-vix-chart-3: #615FFF;
   --color-vix-chart-4: #30D389;
   --color-vix-chart-5: #606F7F;
+  --color-vix-cinza: #606F7F;
 
   /* cor — ponte shadcn (as vars vem do theme.css) */
   --color-border: hsl(var(--border));
@@ -189,7 +191,15 @@
 }
 
 /* A borda padrão de todo elemento. No Tailwind 3 isto sai do preflight via
-   borderColor.DEFAULT; no 4 o preflight usa currentColor, então declaramos. */
-*, ::before, ::after {
-  border-color: hsl(var(--border));
+   borderColor.DEFAULT; no 4 o preflight passou a usar currentColor, então
+   precisa ser declarado. Sem isto, toda borda do sistema herda a cor do
+   texto — preto sobre branco em vez do cinza do tema. */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: hsl(var(--border));
+  }
 }

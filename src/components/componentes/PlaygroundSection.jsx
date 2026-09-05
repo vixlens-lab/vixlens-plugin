@@ -59,7 +59,7 @@ export default function PlaygroundSection() {
                 { value: 'default', label: 'default' },
                 { value: 'dark', label: 'dark' },
                 { value: 'secondary', label: 'secondary' },
-                { value: 'outline', label: 'outline' },
+                { value: 'outline-solid', label: 'outline-solid' },
                 { value: 'ghost', label: 'ghost' },
                 { value: 'destructive', label: 'destructive' },
                 { value: 'link', label: 'link' },
@@ -99,7 +99,7 @@ export default function PlaygroundSection() {
                 { value: 'default', label: 'default' },
                 { value: 'secondary', label: 'secondary' },
                 { value: 'destructive', label: 'destructive' },
-                { value: 'outline', label: 'outline' },
+                { value: 'outline-solid', label: 'outline-solid' },
               ],
             },
           ]}
